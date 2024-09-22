@@ -70,6 +70,7 @@ namespace HelperJS
     /// <summary>
     /// Easing function to use.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Easing
     {
         [EnumMember(Value = "linear")]
@@ -164,5 +165,56 @@ namespace HelperJS
 
         [EnumMember(Value = "easeInOutBounce")]
         EaseInOutBounce,
+    }
+
+    /// <summary>
+    /// Alignment of the title.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Align
+    {
+        [EnumMember(Value = "center")]
+        Center,
+
+        [EnumMember(Value = "start")]
+        Start,
+
+        [EnumMember(Value = "end")]
+        End
+    }
+
+    /// <summary>
+    /// Alignment of the title.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Position
+    {
+        [EnumMember(Value = "top")]
+        Top,
+
+        [EnumMember(Value = "left")]
+        Left,
+
+        [EnumMember(Value = "bottom")]
+        Bottom
+    }
+
+    /// <summary>
+    /// Weight
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Weight
+    {
+        [EnumMember(Value = "normal")]
+        Normal,
+
+        [EnumMember(Value = "bold")]
+        Bold,
+
+        [EnumMember(Value = "lighter")]
+        Lighter,
+
+        [EnumMember(Value = "bolder")]
+        Bolder
     }
 }

@@ -2,7 +2,7 @@
 {
     public class Title
     {
-        public string Align { get; set; }
+        public Align? Align { get; set; }
 
         public string Color { get; set; }
 
@@ -10,9 +10,9 @@
 
         public bool? FullSize { get; set; }
 
-        public string Position { get; set; }
+        public Position? Position { get; set; }
 
-        public string Font { get; set; }
+        public ChartFont Font { get; set; }
 
         public int? Padding { get; set; }
 
