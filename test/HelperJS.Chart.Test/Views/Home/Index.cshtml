@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var line = Html.JS().Chart()
+    .Line("line")
+    .Data(d => d
+        .Labels("a", "b")
+        .Datasets(ds =>
+            {
+                ds.Add("chart 1")
+                .Data(1.0, 3.5);
+
+                ds.Add("chart 2")
+                .Data(1.0, 2.5);
+            }))
+    .Options(o =>
+        o.Plugins(p =>
+            {
+                p.Title(t => t.Text("title").Display(true));
+            }
+        ));
+
+    var test = "";
+}
+
+@line.Render()

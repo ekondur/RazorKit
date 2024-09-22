@@ -1,0 +1,15 @@
+﻿namespace HelperJS.Chart.Models
+{
+    public class Plugins
+    {
+        public Legend Legend { get; set; }
+
+        public Title Title { get; set; }
+
+        public Title Subtitle { get; set; }
+
+        public ToolTip Tooltip { get; set; }
+
+        public Colors Colors { get; set; }
+    }
+}
