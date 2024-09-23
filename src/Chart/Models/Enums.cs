@@ -202,19 +202,14 @@ namespace HelperJS
     /// <summary>
     /// Weight
     /// </summary>
-    [JsonConverter(typeof(StringEnumConverter))]
     public enum Weight
     {
-        [EnumMember(Value = "normal")]
         Normal,
 
-        [EnumMember(Value = "bold")]
         Bold,
 
-        [EnumMember(Value = "lighter")]
         Lighter,
 
-        [EnumMember(Value = "bolder")]
         Bolder
     }
 }

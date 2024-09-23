@@ -1,4 +1,5 @@
 ﻿using HelperJS.Chart.Models;
+using System;
 
 namespace HelperJS.Chart.Builders
 {
@@ -6,10 +7,12 @@ namespace HelperJS.Chart.Builders
     {
         private readonly ChartJs _chart;
         private readonly Title _title;
+        private readonly bool _isSubtitle;
 
         public TitleBuilder(ChartJs chart, bool isSubtitle)
         {
             _chart = chart;
+            _isSubtitle = isSubtitle;
 
             if (isSubtitle)
             {
@@ -79,13 +82,14 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// 
+        /// Font builder
         /// </summary>
-        /// <param name="font"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public TitleBuilder Font(ChartFont font)
+        public TitleBuilder Font(Action<FontBuilder> action)
         {
-            _title.Font = font;
+            var builder = new FontBuilder(_chart, _isSubtitle);
+            action(builder);
             return this;
         }
 

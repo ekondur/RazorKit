@@ -27,7 +27,8 @@
     .Options(o =>
         o.Plugins(p =>
             {
-                p.Title(t => t.Text("title").Display(true).Position(Position.Top));
+                p.Title(t => t.Text("title").Display(true).Position(Position.Top)
+                    .Font(f => f.Weight(Weight.Bolder).Size(20.5)));
             }
         ));
 
