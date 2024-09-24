@@ -16,14 +16,14 @@ namespace HelperJS.Chart.Builders
 
         public PluginsBuilder Title(Action<TitleBuilder> action)
         {
-            var builder = new TitleBuilder(_chart, false);
+            var builder = new TitleBuilder(_chart, BuilderSource.Title);
             action(builder);
             return this;
         }
 
         public PluginsBuilder Subtitle(Action<TitleBuilder> action)
         {
-            var builder = new TitleBuilder(_chart, true);
+            var builder = new TitleBuilder(_chart, BuilderSource.Subtitle);
             action(builder);
             return this;
         }

@@ -7,20 +7,21 @@ namespace HelperJS.Chart.Builders
     {
         private readonly ChartJs _chart;
         private readonly Title _title;
-        private readonly bool _isSubtitle;
+        private readonly BuilderSource _source;
 
-        public TitleBuilder(ChartJs chart, bool isSubtitle)
+        public TitleBuilder(ChartJs chart, BuilderSource source)
         {
             _chart = chart;
-            _isSubtitle = isSubtitle;
+            _source = source;
 
-            if (isSubtitle)
+            switch (source)
             {
-                _chart.Options.Plugins.Subtitle = _title = new Title();
-            }
-            else
-            {
-                _chart.Options.Plugins.Title = _title = new Title();
+                case BuilderSource.Title:
+                    _chart.Options.Plugins.Title = _title = new Title();
+                    break;
+                case BuilderSource.Subtitle:
+                    _chart.Options.Plugins.Subtitle = _title = new Title();
+                    break;
             }
         }
 
@@ -88,17 +89,27 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TitleBuilder Font(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, _isSubtitle);
+            var builder = new FontBuilder(_chart, _source);
             action(builder);
             return this;
         }
 
+        /// <summary>
+        /// Padding around the title.
+        /// </summary>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         public TitleBuilder Padding(int padding)
         {
             _title.Padding = padding;
             return this;
         }
 
+        /// <summary>
+        /// The string title.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public TitleBuilder Text(params string[] text)
         {
             _title.Text = text;

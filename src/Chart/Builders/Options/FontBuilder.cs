@@ -14,18 +14,25 @@ namespace HelperJS.Chart.Builders
         /// Font Builder
         /// </summary>
         /// <param name="chart"></param>
-        /// <param name="isSubtitle"></param>
-        public FontBuilder(ChartJs chart, bool isSubtitle)
+        /// <param name="source"></param>
+        public FontBuilder(ChartJs chart, BuilderSource source)
         {
             _chart = chart;
 
-            if (isSubtitle)
+            switch (source)
             {
-                _font = _chart.Options.Plugins.Subtitle.Font = new ChartFont();
-            }
-            else
-            {
-                _font = _chart.Options.Plugins.Title.Font = new ChartFont();
+                case BuilderSource.Title:
+                    _font = _chart.Options.Plugins.Title.Font = new ChartFont();
+                    break;
+                case BuilderSource.Subtitle:
+                    _font = _chart.Options.Plugins.Subtitle.Font = new ChartFont();
+                    break;
+                case BuilderSource.LegendTitle:
+                    _font = _chart.Options.Plugins.Legend.Title.Font = new ChartFont();
+                    break;
+                case BuilderSource.LegendLabels:
+                    _font = _chart.Options.Plugins.Legend.Labels.Font = new ChartFont();
+                    break;
             }
         }
 

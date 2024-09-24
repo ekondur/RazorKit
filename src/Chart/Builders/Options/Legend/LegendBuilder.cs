@@ -133,9 +133,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public LegendBuilder Labels(Action<LegendLabelBuilder> action)
+        public LegendBuilder Labels(Action<LegendLabelsBuilder> action)
         {
-            var builder = new LegendLabelBuilder(_chart);
+            var builder = new LegendLabelsBuilder(_chart);
             action(builder);
             return this;
         }

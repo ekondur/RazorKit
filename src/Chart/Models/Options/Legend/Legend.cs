@@ -22,7 +22,7 @@ namespace HelperJS.Chart.Models
         public string OnLeave { get; set; }
 
         public bool? Reverse { get; set; }
-        public LegendLabel Labels { get; set; }
+        public LegendLabels Labels { get; set; }
         public bool? Rtl { get; set; }
         public string TextDirection { get; set; }
         public LegendTitle Title { get; set; }

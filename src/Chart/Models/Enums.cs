@@ -168,7 +168,7 @@ namespace HelperJS
     }
 
     /// <summary>
-    /// Alignment of the title.
+    /// Alignment
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum Align
@@ -181,6 +181,22 @@ namespace HelperJS
 
         [EnumMember(Value = "end")]
         End
+    }
+
+    /// <summary>
+    /// Alignment of the title.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum TextAlign
+    {
+        [EnumMember(Value = "center")]
+        Center,
+
+        [EnumMember(Value = "left")]
+        Left,
+
+        [EnumMember(Value = "right")]
+        Right
     }
 
     /// <summary>
@@ -233,5 +249,13 @@ namespace HelperJS
 
         [EnumMember(Value = "chartArea")]
         ChartArea
+    }
+
+    public enum BuilderSource
+    {
+        Title,
+        Subtitle,
+        LegendTitle,
+        LegendLabels
     }
 }
