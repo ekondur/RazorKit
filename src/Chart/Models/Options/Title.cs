@@ -10,7 +10,7 @@
 
         public bool? FullSize { get; set; }
 
-        public Position? Position { get; set; }
+        public TitlePosition? Position { get; set; }
 
         public ChartFont Font { get; set; }
 

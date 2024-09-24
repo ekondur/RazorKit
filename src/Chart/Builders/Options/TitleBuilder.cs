@@ -75,7 +75,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="position"></param>
         /// <returns></returns>
-        public TitleBuilder Position(Position position)
+        public TitleBuilder Position(TitlePosition position)
         {
             _title.Position = position;
             return this;

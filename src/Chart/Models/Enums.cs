@@ -184,10 +184,10 @@ namespace HelperJS
     }
 
     /// <summary>
-    /// Alignment of the title.
+    /// Position of the title.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum Position
+    public enum TitlePosition
     {
         [EnumMember(Value = "top")]
         Top,
@@ -211,5 +211,27 @@ namespace HelperJS
         Lighter,
 
         Bolder
+    }
+
+    /// <summary>
+    /// Position of the legend.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum LegendPosition
+    {
+        [EnumMember(Value = "top")]
+        Top,
+
+        [EnumMember(Value = "left")]
+        Left,
+
+        [EnumMember(Value = "bottom")]
+        Bottom,
+
+        [EnumMember(Value = "right")]
+        Right,
+
+        [EnumMember(Value = "chartArea")]
+        ChartArea
     }
 }

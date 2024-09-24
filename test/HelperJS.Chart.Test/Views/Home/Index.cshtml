@@ -9,6 +9,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<script>
+      function handleHover(evt, item, legend) {
+            console.log("test");
+      }
+</script>
+
 @using HelperJS
 
 @{
@@ -27,8 +33,10 @@
     .Options(o =>
         o.Plugins(p =>
             {
-                p.Title(t => t.Text("title").Display(true).Position(Position.Top)
+                p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
                     .Font(f => f.Weight(Weight.Bolder).Size(20.5)));
+
+                p.Legend(l => l.Display(true).OnHover("handleHover"));
             }
         ));
 
