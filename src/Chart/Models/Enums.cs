@@ -251,11 +251,39 @@ namespace HelperJS
         ChartArea
     }
 
+    /// <summary>
+    /// BuilderSource
+    /// </summary>
     public enum BuilderSource
     {
         Title,
         Subtitle,
         LegendTitle,
-        LegendLabels
+        LegendLabels,
+        TooltipTitleFont,
+        TooltipBodyFont,
+        TooltipFooterFont
+    }
+
+    /// <summary>
+    /// Mode
+    /// </summary>
+    public enum Mode
+    {
+        Point,
+        Nearest,
+        Index,
+        Dataset,
+        X,
+        Y
+    }
+
+    /// <summary>
+    /// Position
+    /// </summary>
+    public enum Position
+    {
+        Average,
+        Nearest
     }
 }

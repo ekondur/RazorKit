@@ -33,6 +33,16 @@ namespace HelperJS.Chart.Builders
                 case BuilderSource.LegendLabels:
                     _font = _chart.Options.Plugins.Legend.Labels.Font = new ChartFont();
                     break;
+                case BuilderSource.TooltipTitleFont:
+                    _font = _chart.Options.Plugins.Tooltip.TitleFont = new ChartFont();
+                    break;
+                case BuilderSource.TooltipBodyFont:
+                    _font = _chart.Options.Plugins.Tooltip.BodyFont = new ChartFont();
+                    break;
+                case BuilderSource.TooltipFooterFont:
+                    _font = _chart.Options.Plugins.Tooltip.FooterFont = new ChartFont();
+                    break;
+
             }
         }
 
