@@ -1,7 +1,18 @@
-﻿namespace HelperJS.Chart.Models
+﻿using HelperJS.Chart.Converters;
+using Newtonsoft.Json;
+
+namespace HelperJS.Chart.Models
 {
     public class Options
     {
+        public bool? Responsive { get; set; }
+        public bool? MaintainAspectRatio { get; set; }
+        public int? AspectRatio { get; set; }
+
+        [JsonConverter(typeof(NoQuotesStringConverter))]
+        public string OnResize { get; set; }
+
+        public int? ResizeDelay { get; set; }
         public Animation Animation { get; set; }
         public Scales Scales { get; set; }
         public Plugins Plugins { get; set; }
