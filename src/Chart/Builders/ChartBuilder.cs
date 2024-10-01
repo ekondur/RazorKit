@@ -6,9 +6,8 @@ namespace HelperJS.Chart.Builders
     public class ChartBuilder
     {
         internal ChartJs Chart { get; private set; } = new ChartJs();
-
         internal string CanvasId { get; private set; }
-        internal bool UseCanvas { get; set; }
+        internal bool UseCanvas { get; private set; }
 
         /// <summary>
         /// Configure line chart. if 'useCanvas' is disabled, the canvas element should be also defined.

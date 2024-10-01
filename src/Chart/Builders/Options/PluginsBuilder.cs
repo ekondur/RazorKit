@@ -50,5 +50,17 @@ namespace HelperJS.Chart.Builders
             action(builder);
             return this;
         }
+
+        /// <summary>
+        /// Configure Tooltip.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public PluginsBuilder Tooltip(Action<TooltipBuilder> action)
+        {
+            var builder = new TooltipBuilder(_chart);
+            action(builder);
+            return this;
+        }
     }
 }

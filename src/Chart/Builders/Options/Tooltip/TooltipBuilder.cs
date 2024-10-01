@@ -3,7 +3,7 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
-    internal class TooltipBuilder
+    public class TooltipBuilder
     {
         private readonly ChartJs _chart;
         private readonly ToolTip _toolTip;

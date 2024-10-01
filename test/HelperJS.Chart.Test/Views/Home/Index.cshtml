@@ -37,8 +37,11 @@
                     .Font(f => f.Weight(Weight.Bolder).Size(20.5)));
 
                 p.Legend(l => l.Display(true).OnHover("handleHover"));
+
+                p.Tooltip(t => t.Enabled(true));
+
             }
-        ).Layout(l => l.Padding(50))      
+        ).Layout(l => l.Padding(50))
        );
 
     var test = "";
