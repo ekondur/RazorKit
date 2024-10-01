@@ -3,7 +3,7 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
-    public class TooltipBuilder
+    internal class TooltipBuilder
     {
         private readonly ChartJs _chart;
         private readonly ToolTip _toolTip;
@@ -155,7 +155,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder TitleFont(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, BuilderSource.TooltipTitleFont);
+            var builder = new FontBuilder(_chart, FontSource.TooltipTitleFont);
             action(builder);
             return this;
         }
@@ -211,7 +211,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder BodyFont(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, BuilderSource.TooltipBodyFont);
+            var builder = new FontBuilder(_chart, FontSource.TooltipBodyFont);
             action(builder);
             return this;
         }
@@ -256,7 +256,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder FooterFont(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, BuilderSource.TooltipFooterFont);
+            var builder = new FontBuilder(_chart, FontSource.TooltipFooterFont);
             action(builder);
             return this;
         }
@@ -312,7 +312,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder Padding(Action<PaddingBuilder> action)
         {
-            var builder = new PaddingBuilder(_chart);
+            var builder = new PaddingBuilder(_chart, PaddingSource.Tooltip);
             action(builder);
             return this;
         }

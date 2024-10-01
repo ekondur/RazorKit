@@ -251,10 +251,11 @@ namespace HelperJS
         ChartArea
     }
 
+
     /// <summary>
-    /// BuilderSource
+    /// Font Source
     /// </summary>
-    public enum BuilderSource
+    public enum FontSource
     {
         Title,
         Subtitle,
@@ -263,6 +264,16 @@ namespace HelperJS
         TooltipTitleFont,
         TooltipBodyFont,
         TooltipFooterFont
+    }
+
+    /// <summary>
+    /// Padding Source
+    /// </summary>
+    public enum PaddingSource
+    {
+        Layout,
+        Tooltip,
+        Title
     }
 
     /// <summary>

@@ -15,31 +15,31 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="chart"></param>
         /// <param name="source"></param>
-        public FontBuilder(ChartJs chart, BuilderSource source)
+        public FontBuilder(ChartJs chart, FontSource source)
         {
             _chart = chart;
 
             switch (source)
             {
-                case BuilderSource.Title:
+                case FontSource.Title:
                     _font = _chart.Options.Plugins.Title.Font = new ChartFont();
                     break;
-                case BuilderSource.Subtitle:
+                case FontSource.Subtitle:
                     _font = _chart.Options.Plugins.Subtitle.Font = new ChartFont();
                     break;
-                case BuilderSource.LegendTitle:
+                case FontSource.LegendTitle:
                     _font = _chart.Options.Plugins.Legend.Title.Font = new ChartFont();
                     break;
-                case BuilderSource.LegendLabels:
+                case FontSource.LegendLabels:
                     _font = _chart.Options.Plugins.Legend.Labels.Font = new ChartFont();
                     break;
-                case BuilderSource.TooltipTitleFont:
+                case FontSource.TooltipTitleFont:
                     _font = _chart.Options.Plugins.Tooltip.TitleFont = new ChartFont();
                     break;
-                case BuilderSource.TooltipBodyFont:
+                case FontSource.TooltipBodyFont:
                     _font = _chart.Options.Plugins.Tooltip.BodyFont = new ChartFont();
                     break;
-                case BuilderSource.TooltipFooterFont:
+                case FontSource.TooltipFooterFont:
                     _font = _chart.Options.Plugins.Tooltip.FooterFont = new ChartFont();
                     break;
 

@@ -17,11 +17,5 @@ namespace HelperJS.Chart.Builders.Line
             action(builder);
             return this;
         }
-
-        public LineBuilder Canvas(bool useCanvas)
-        {
-            UseCanvas = useCanvas;
-            return this;
-        }
     }
 }

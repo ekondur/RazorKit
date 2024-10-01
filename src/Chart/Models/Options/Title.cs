@@ -14,7 +14,7 @@
 
         public ChartFont Font { get; set; }
 
-        public int? Padding { get; set; }
+        public Padding Padding { get; set; }
 
         public string[] Text { get; set; }
     }

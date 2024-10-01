@@ -7,10 +7,22 @@ namespace HelperJS.Chart.Builders
         private readonly ChartJs _chart;
         private readonly Padding _padding;
 
-        public PaddingBuilder(ChartJs chart)
+        public PaddingBuilder(ChartJs chart, PaddingSource source)
         {
             _chart = chart;
-            _padding = _chart.Options.Plugins.Tooltip.Padding = new Padding();
+
+            switch (source)
+            {
+                case PaddingSource.Layout:
+                    _padding = _chart.Options.Layout.Padding = new Padding();
+                    break;
+                case PaddingSource.Tooltip:
+                    _padding = _chart.Options.Plugins.Tooltip.Padding = new Padding();
+                    break;
+                case PaddingSource.Title:
+                    _padding = _chart.Options.Plugins.Title.Padding = new Padding();
+                    break;
+            }
         }
 
         /// <summary>

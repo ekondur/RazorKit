@@ -43,7 +43,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LegendTitleBuilder Font(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, BuilderSource.LegendTitle);
+            var builder = new FontBuilder(_chart, FontSource.LegendTitle);
             action(builder);
             return this;
         }
