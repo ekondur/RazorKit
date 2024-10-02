@@ -74,6 +74,17 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
+        /// Set a language code.
+        /// </summary>
+        /// <param name="locale"></param>
+        /// <returns></returns>
+        public OptionsBuilder Locale(string locale)
+        {
+            _options.Locale = locale;
+            return this;
+        }
+
+        /// <summary>
         /// Configure plugins.
         /// </summary>
         /// <param name="action"></param>

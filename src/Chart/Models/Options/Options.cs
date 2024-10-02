@@ -13,6 +13,7 @@ namespace HelperJS.Chart.Models
         public string OnResize { get; set; }
 
         public int? ResizeDelay { get; set; }
+        public string Locale { get; set; }
         public Animation Animation { get; set; }
         public Scales Scales { get; set; }
         public Plugins Plugins { get; set; }
