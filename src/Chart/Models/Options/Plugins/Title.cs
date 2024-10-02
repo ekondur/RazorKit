@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class Title
+    class Title
     {
         public Align? Align { get; set; }
 

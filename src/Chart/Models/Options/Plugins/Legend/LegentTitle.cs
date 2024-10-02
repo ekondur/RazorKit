@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class LegendTitle
+    class LegendTitle
     {
         public string Color { get; set; }
         public bool? Display { get; set; }

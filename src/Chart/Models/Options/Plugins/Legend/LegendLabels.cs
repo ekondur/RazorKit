@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    public class LegendLabels
+    class LegendLabels
     {
         public int? BoxWidth { get; set; }
         public int? BoxHeight { get; set; }

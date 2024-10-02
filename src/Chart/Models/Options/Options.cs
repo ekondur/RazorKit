@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    public class Options
+    class Options
     {
         public bool? Responsive { get; set; }
         public bool? MaintainAspectRatio { get; set; }

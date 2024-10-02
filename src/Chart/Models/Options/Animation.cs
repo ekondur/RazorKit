@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    public class Animation
+    class Animation
     {
         public int? Duration { get; set; }
         public Easing? Easing { get; set; }

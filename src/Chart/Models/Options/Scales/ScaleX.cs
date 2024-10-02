@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class ScaleX
+    class ScaleX
     {
     }
 }

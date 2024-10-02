@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class Plugins
+    class Plugins
     {
         public Legend Legend { get; set; }
 

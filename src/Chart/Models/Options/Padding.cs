@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class Padding
+    class Padding
     {
         public int? Left { get; set; }
         public int? Right { get; set; }

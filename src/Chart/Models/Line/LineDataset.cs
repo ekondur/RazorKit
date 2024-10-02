@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models.Line
 {
-    internal class LineDataset : PointDataset
+    class LineDataset : PointDataset
     {
         public string BorderCapStyle { get; set; }
         public double[] BorderDash { get; set; }

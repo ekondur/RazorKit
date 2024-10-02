@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    public class ToolTip
+    class ToolTip
     {
         public bool? Enabled { get; set; }
 

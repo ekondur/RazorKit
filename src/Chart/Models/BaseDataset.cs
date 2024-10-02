@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class BaseDataset
+    class BaseDataset
     {
         public string BackgroundColor { get; set; }
         public string BorderColor { get; set; }

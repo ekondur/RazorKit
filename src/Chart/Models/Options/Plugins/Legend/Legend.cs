@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    public class Legend
+    class Legend
     {
         public bool? Display { get; set; }
         public LegendPosition Position { get; set; }

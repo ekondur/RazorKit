@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class ChartFont
+    class ChartFont
     {
         public string Family { get; set; }
         public double? Size { get; set; }

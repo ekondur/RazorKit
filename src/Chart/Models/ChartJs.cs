@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class ChartJs
+    class ChartJs
     {
         public string Type { get; set; }
         public Data Data { get; set; }

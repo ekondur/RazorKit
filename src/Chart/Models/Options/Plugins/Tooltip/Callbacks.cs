@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    public class Callbacks
+    class Callbacks
     {
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string BeforeTitle { get; set; }

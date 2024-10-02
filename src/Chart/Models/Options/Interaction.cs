@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    public class Interaction
+    class Interaction
     {
         public Mode Mode { get; set; }
         public bool? Intersect { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    internal class LineerDataset : BaseDataset
+    class LineerDataset : BaseDataset
     {
         public string Label { get; set; }
         public int? Order { get; set; }
