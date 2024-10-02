@@ -297,4 +297,23 @@ namespace HelperJS
         Average,
         Nearest
     }
+
+    /// <summary>
+    /// Axis
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Axis
+    {
+        [EnumMember(Value = "x")]
+        X,
+
+        [EnumMember(Value = "y")]
+        Y,
+
+        [EnumMember(Value = "xy")]
+        XY,
+
+        [EnumMember(Value = "r")]
+        R
+    }
 }

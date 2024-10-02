@@ -18,5 +18,6 @@ namespace HelperJS.Chart.Models
         public Scales Scales { get; set; }
         public Plugins Plugins { get; set; }
         public Layout Layout { get; set; }
+        public Interaction Interaction { get; set; }
     }
 }

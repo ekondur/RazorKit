@@ -3,11 +3,18 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// OptionsBuilder
+    /// </summary>
     public class OptionsBuilder
     {
         private readonly ChartJs _chart;
         private readonly Options _options;
 
+        /// <summary>
+        /// OptionsBuilder
+        /// </summary>
+        /// <param name="chart"></param>
         public OptionsBuilder(ChartJs chart)
         {
             _chart = chart;
@@ -116,6 +123,18 @@ namespace HelperJS.Chart.Builders
         public OptionsBuilder Animation(Action<AnimationBuilder> action)
         {
             var builder = new AnimationBuilder(_chart);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Configure Interaction.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public OptionsBuilder Interaction(Action<InteractionBuilder> action)
+        {
+            var builder = new InteractionBuilder(_chart);
             action(builder);
             return this;
         }
