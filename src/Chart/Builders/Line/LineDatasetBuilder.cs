@@ -1,5 +1,6 @@
 ﻿using HelperJS.Chart.Models;
 using HelperJS.Chart.Models.Line;
+using System;
 
 namespace HelperJS.Chart.Builders.Line
 {
@@ -41,11 +42,11 @@ namespace HelperJS.Chart.Builders.Line
         }
 
         /// <summary>
-        /// The line width (in pixels).
+        /// The line width (in pixels). Default 3
         /// </summary>
         /// <param name="width"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BorderWith(double width)
+        public LineDatasetBuilder BorderWith(int width)
         {
             _lineDataset.BorderWith = width;
             return this;
@@ -57,9 +58,22 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="clip"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder Clip(double clip)
+        public LineDatasetBuilder Clip(int clip)
         {
-            _lineDataset.Clip = clip;
+            _lineDataset.Clip = new Clip(clip);
+            return this;
+        }
+
+        /// <summary>
+        /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
+        /// 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns>The LineDatasetBuilder instance.</returns>
+        public LineDatasetBuilder Clip(Action<ClipBuilder> action)
+        {
+            var builder = new ClipBuilder(_lineDataset);
+            action(builder);
             return this;
         }
 
@@ -90,7 +104,7 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="width"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder HoverBorderWidth(double width)
+        public LineDatasetBuilder HoverBorderWidth(int width)
         {
             _lineDataset.HoverBorderWidth = width;
             return this;
@@ -163,22 +177,22 @@ namespace HelperJS.Chart.Builders.Line
         }
 
         /// <summary>
-        /// The width of the point border in pixels.
+        /// The width of the point border in pixels. Default 1
         /// </summary>
         /// <param name="width"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointBorderWidth(double width)
+        public LineDatasetBuilder PointBorderWidth(int width)
         {
             _lineDataset.PointBorderWidth = width;
             return this;
         }
 
         /// <summary>
-        /// The pixel size of the non-displayed point that reacts to mouse events.
+        /// The pixel size of the non-displayed point that reacts to mouse events. Default 1
         /// </summary>
         /// <param name="radius"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHitRadius(double radius)
+        public LineDatasetBuilder PointHitRadius(int radius)
         {
             _lineDataset.PointHitRadius = radius;
             return this;
@@ -207,44 +221,44 @@ namespace HelperJS.Chart.Builders.Line
         }
 
         /// <summary>
-        /// Border width of point when hovered.
+        /// Border width of point when hovered. Default 1
         /// </summary>
         /// <param name="width"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHoverBorderWidth(double width)
+        public LineDatasetBuilder PointHoverBorderWidth(int width)
         {
             _lineDataset.PointHoverBorderWidth = width;
             return this;
         }
 
         /// <summary>
-        /// The radius of the point when hovered.
+        /// The radius of the point when hovered. Default 4
         /// </summary>
         /// <param name="radius"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHoverRadius(double radius)
+        public LineDatasetBuilder PointHoverRadius(int radius)
         {
             _lineDataset.PointHoverRadius = radius;
             return this;
         }
 
         /// <summary>
-        /// The radius of the point shape. If set to 0, the point is not rendered.
+        /// The radius of the point shape. If set to 0, the point is not rendered. Default 3
         /// </summary>
         /// <param name="radius"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointRadius(double radius)
+        public LineDatasetBuilder PointRadius(int radius)
         {
             _lineDataset.PointRadius = radius;
             return this;
         }
 
         /// <summary>
-        /// The rotation of the point in degrees.
+        /// The rotation of the point in degrees. Default 0
         /// </summary>
         /// <param name="rotation"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointRotation(double rotation)
+        public LineDatasetBuilder PointRotation(int rotation)
         {
             _lineDataset.PointRotation = rotation;
             return this;
@@ -279,14 +293,14 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="borderDash"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BorderDash(params double[] borderDash)
+        public LineDatasetBuilder BorderDash(params int[] borderDash)
         {
             _lineDataset.BorderDash = borderDash;
             return this;
         }
 
         /// <summary>
-        /// Offset for line dashes.
+        /// Offset for line dashes. Default 0.0
         /// </summary>
         /// <param name="borderDashOffset"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
@@ -357,7 +371,7 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="hoverBorderDash"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder HoverBorderDash(params double[] hoverBorderDash)
+        public LineDatasetBuilder HoverBorderDash(params int[] hoverBorderDash)
         {
             _lineDataset.HoverBorderDash = hoverBorderDash;
             return this;

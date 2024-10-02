@@ -4,13 +4,13 @@
     {
         public string PointBackgroundColor { get; set; }
         public string PointBorderColor { get; set; }
-        public double? PointBorderWidth { get; set; }
-        public double? PointHitRadius { get; set; }
+        public int? PointBorderWidth { get; set; }
+        public int? PointHitRadius { get; set; }
         public string PointHoverBackgroundColor { get; set; }
         public string PointHoverBorderColor { get; set; }
-        public double? PointHoverBorderWidth { get; set; }
-        public double? PointHoverRadius { get; set; }
-        public double? PointRadius { get; set; }
-        public double? PointRotation { get; set; }
+        public int? PointHoverBorderWidth { get; set; }
+        public int? PointHoverRadius { get; set; }
+        public int? PointRadius { get; set; }
+        public int? PointRotation { get; set; }
     }
 }
