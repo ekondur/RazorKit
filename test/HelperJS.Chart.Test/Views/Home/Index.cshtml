@@ -34,6 +34,7 @@
         o.Plugins(p =>
             {
                 p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
+                .Padding(padding => padding.Bottom(5))
                     .Font(f => f.Weight(Weight.Bolder).Size(20.5)));
 
                 p.Legend(l => l.Display(true).OnHover("handleHover"));

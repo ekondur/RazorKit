@@ -60,7 +60,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Padding between rows of colored boxes. defautl 10
+        /// Padding between rows of colored boxes. Default 10
         /// </summary>
         /// <param name="padding"></param>
         /// <returns></returns>

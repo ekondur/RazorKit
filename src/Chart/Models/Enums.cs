@@ -269,11 +269,12 @@ namespace HelperJS
     /// <summary>
     /// Padding Source
     /// </summary>
-    public enum PaddingSource
+    enum PaddingSource
     {
         Layout,
         Tooltip,
-        Title
+        Title,
+        LegendTitle
     }
 
     /// <summary>

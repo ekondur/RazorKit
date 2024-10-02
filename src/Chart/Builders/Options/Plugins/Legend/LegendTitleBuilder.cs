@@ -3,11 +3,18 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// LegendTitleBuilder
+    /// </summary>
     public class LegendTitleBuilder
     {
         private readonly ChartJs _chart;
         private readonly LegendTitle _legendTitle;
 
+        /// <summary>
+        /// LegendTitleBuilder
+        /// </summary>
+        /// <param name="chart"></param>
         public LegendTitleBuilder(ChartJs chart)
         {
             _chart = chart;
@@ -53,9 +60,21 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="padding"></param>
         /// <returns></returns>
-        public LegendTitleBuilder Padding(double padding)
+        public LegendTitleBuilder Padding(int padding)
         {
-            _legendTitle.Padding = padding;
+            _legendTitle.Padding = new Padding(padding);
+            return this;
+        }
+
+        /// <summary>
+        /// Configure padding around the title.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public LegendTitleBuilder Padding(Action<PaddingBuilder> action)
+        {
+            var builder = new PaddingBuilder(_chart, PaddingSource.LegendTitle);
+
             return this;
         }
 

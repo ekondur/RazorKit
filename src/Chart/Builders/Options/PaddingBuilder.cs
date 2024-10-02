@@ -2,12 +2,15 @@
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Padding Builder
+    /// </summary>
     public class PaddingBuilder
     {
         private readonly ChartJs _chart;
         private readonly Padding _padding;
 
-        public PaddingBuilder(ChartJs chart, PaddingSource source)
+        internal PaddingBuilder(ChartJs chart, PaddingSource source)
         {
             _chart = chart;
 
@@ -21,6 +24,9 @@ namespace HelperJS.Chart.Builders
                     break;
                 case PaddingSource.Title:
                     _padding = _chart.Options.Plugins.Title.Padding = new Padding();
+                    break;
+                case PaddingSource.LegendTitle:
+                    _padding = _chart.Options.Plugins.Legend.Title.Padding = new Padding();
                     break;
             }
         }
