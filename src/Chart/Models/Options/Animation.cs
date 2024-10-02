@@ -1,10 +1,19 @@
-﻿namespace HelperJS.Chart.Models
+﻿using HelperJS.Chart.Converters;
+using Newtonsoft.Json;
+
+namespace HelperJS.Chart.Models
 {
     public class Animation
     {
-        public double? Duration { get; set; }
+        public int? Duration { get; set; }
         public Easing? Easing { get; set; }
-        public double? Delay { get; set; }
+        public int? Delay { get; set; }
         public bool? Loop { get; set; }
+
+        [JsonConverter(typeof(NoQuotesStringConverter))]
+        public string OnProgress { get; set; }
+
+        [JsonConverter(typeof(NoQuotesStringConverter))]
+        public string OnComplete { get; set; }
     }
 }

@@ -107,5 +107,17 @@ namespace HelperJS.Chart.Builders
             action(builder);
             return this;
         }
+
+        /// <summary>
+        /// Configure animation.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public OptionsBuilder Animation(Action<AnimationBuilder> action)
+        {
+            var builder = new AnimationBuilder(_chart);
+            action(builder);
+            return this;
+        }
     }
 }
