@@ -3,18 +3,14 @@
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// AnimationBuilder
+    /// Animation Builder
     /// </summary>
     public class AnimationBuilder
     {
         private readonly ChartJs _chart;
         private readonly Animation _animation;
 
-        /// <summary>
-        /// AnimationBuilder
-        /// </summary>
-        /// <param name="chart"></param>
-        public AnimationBuilder(ChartJs chart)
+        internal AnimationBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Animation = _animation = new Animation();

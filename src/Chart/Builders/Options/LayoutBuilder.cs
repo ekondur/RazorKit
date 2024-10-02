@@ -1,18 +1,17 @@
 ﻿using HelperJS.Chart.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Layout Builder
+    /// </summary>
     public class LayoutBuilder
     {
         private readonly ChartJs _chart;
         private readonly Layout _layout;
 
-        public LayoutBuilder(ChartJs chart)
+        internal LayoutBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Layout = _layout = new Layout();

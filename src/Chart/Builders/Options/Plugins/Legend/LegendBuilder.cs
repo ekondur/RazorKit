@@ -3,12 +3,15 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Legend Builder
+    /// </summary>
     public class LegendBuilder
     {
         private readonly ChartJs _chart;
         private readonly Legend _legend;
 
-        public LegendBuilder(ChartJs chart)
+        internal LegendBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Plugins.Legend = _legend = new Legend();

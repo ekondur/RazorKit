@@ -4,18 +4,14 @@ using System;
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// OptionsBuilder
+    /// Options Builder
     /// </summary>
     public class OptionsBuilder
     {
         private readonly ChartJs _chart;
         private readonly Options _options;
 
-        /// <summary>
-        /// OptionsBuilder
-        /// </summary>
-        /// <param name="chart"></param>
-        public OptionsBuilder(ChartJs chart)
+        internal OptionsBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options = _options = new Options();

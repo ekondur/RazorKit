@@ -4,18 +4,14 @@ using System;
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// LegendTitleBuilder
+    /// LegendTitle Builder
     /// </summary>
     public class LegendTitleBuilder
     {
         private readonly ChartJs _chart;
         private readonly LegendTitle _legendTitle;
 
-        /// <summary>
-        /// LegendTitleBuilder
-        /// </summary>
-        /// <param name="chart"></param>
-        public LegendTitleBuilder(ChartJs chart)
+        internal LegendTitleBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Plugins.Legend.Title = _legendTitle = new LegendTitle();

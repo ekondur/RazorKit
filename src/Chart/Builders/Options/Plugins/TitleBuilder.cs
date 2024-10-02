@@ -3,13 +3,16 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Title Builder
+    /// </summary>
     public class TitleBuilder
     {
         private readonly ChartJs _chart;
         private readonly Title _title;
         private readonly FontSource _source;
 
-        public TitleBuilder(ChartJs chart, FontSource source)
+        internal TitleBuilder(ChartJs chart, FontSource source)
         {
             _chart = chart;
             _source = source;

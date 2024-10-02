@@ -3,12 +3,15 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Tooltip Builder
+    /// </summary>
     public class TooltipBuilder
     {
         private readonly ChartJs _chart;
         private readonly ToolTip _toolTip;
 
-        public TooltipBuilder(ChartJs chart)
+        internal TooltipBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Plugins.Tooltip = _toolTip = new ToolTip();

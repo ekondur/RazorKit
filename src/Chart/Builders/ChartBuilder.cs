@@ -3,6 +3,9 @@ using HelperJS.Chart.Models;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Chart Builder
+    /// </summary>
     public class ChartBuilder
     {
         internal ChartJs Chart { get; private set; } = new ChartJs();

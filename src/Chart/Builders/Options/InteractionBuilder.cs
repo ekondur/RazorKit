@@ -3,18 +3,14 @@
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// InteractionBuilder
+    /// Interaction Builder
     /// </summary>
     public class InteractionBuilder
     {
         private readonly ChartJs _chart;
         private readonly Interaction _interaction;
 
-        /// <summary>
-        /// InteractionBuilder
-        /// </summary>
-        /// <param name="chart"></param>
-        public InteractionBuilder(ChartJs chart)
+        internal InteractionBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Interaction = _interaction = new Interaction();

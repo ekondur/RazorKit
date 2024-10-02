@@ -4,18 +4,14 @@ using HelperJS.Chart.Models.Line;
 namespace HelperJS.Chart.Builders.Line
 {
     /// <summary>
-    /// LineDatasetBuilder class.
+    /// LineDataset Builder
     /// </summary>
     public class LineDatasetBuilder
     {
         private readonly ChartJs _chart;
         private LineDataset _lineDataset;
 
-        /// <summary>
-        /// Initializes a new instance of the LineDatasetBuilder with the specified LineData.
-        /// </summary>
-        /// <param name="chart"></param>
-        public LineDatasetBuilder(ChartJs chart)
+        internal LineDatasetBuilder(ChartJs chart)
         {
             _chart = chart;
         }

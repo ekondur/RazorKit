@@ -3,12 +3,15 @@ using System;
 
 namespace HelperJS.Chart.Builders
 {
+    /// <summary>
+    /// Plugins Builder
+    /// </summary>
     public class PluginsBuilder
     {
         private readonly ChartJs _chart;
         private readonly Plugins _plugins;
 
-        public PluginsBuilder(ChartJs chart)
+        internal PluginsBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Plugins = _plugins = new Plugins();

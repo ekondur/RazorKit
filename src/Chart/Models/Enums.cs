@@ -251,11 +251,7 @@ namespace HelperJS
         ChartArea
     }
 
-
-    /// <summary>
-    /// Font Source
-    /// </summary>
-    public enum FontSource
+    enum FontSource
     {
         Title,
         Subtitle,
@@ -266,9 +262,6 @@ namespace HelperJS
         TooltipFooterFont
     }
 
-    /// <summary>
-    /// Padding Source
-    /// </summary>
     enum PaddingSource
     {
         Layout,

@@ -10,11 +10,7 @@ namespace HelperJS.Chart.Builders
         private readonly ChartJs _chart;
         private readonly Colors _colors;
 
-        /// <summary>
-        /// Colors Builder
-        /// </summary>
-        /// <param name="chart"></param>
-        public ColorsBuilder(ChartJs chart)
+        internal ColorsBuilder(ChartJs chart)
         {
             _chart = chart;
             _chart.Options.Plugins.Colors = _colors = new Colors();

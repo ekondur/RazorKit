@@ -3,19 +3,14 @@
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// Font Builder class
+    /// Font Builder
     /// </summary>
     public class FontBuilder
     {
         private readonly ChartJs _chart;
         private readonly ChartFont _font;
 
-        /// <summary>
-        /// Font Builder
-        /// </summary>
-        /// <param name="chart"></param>
-        /// <param name="source"></param>
-        public FontBuilder(ChartJs chart, FontSource source)
+        internal FontBuilder(ChartJs chart, FontSource source)
         {
             _chart = chart;
 
