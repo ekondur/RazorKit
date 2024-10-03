@@ -310,4 +310,20 @@ namespace HelperJS
         [EnumMember(Value = "r")]
         R
     }
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ChartEvent
+    {
+        [EnumMember(Value = "mousemove")]
+        Mousemove,
+
+        [EnumMember(Value = "mouseout")]
+        Mouseout,
+
+        [EnumMember(Value = "click")]
+        Click,
+
+        [EnumMember(Value = "touchstart")]
+        Touchstart
+    }
 }

@@ -64,6 +64,42 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
+        /// Called when any of the events fire over chartArea. 
+        /// Passed the event, an array of active elements (bars, points, etc), and the chart.
+        /// </summary>
+        /// <param name="onHover"></param>
+        /// <returns></returns>
+        public OptionsBuilder OnHover(string onHover)
+        {
+            _options.OnHover = onHover;
+            return this;
+        }
+
+        /// <summary>
+        /// The events option defines the browser events that the chart should listen to for. 
+        /// Each of these events trigger hover and are passed to plugins. 
+        /// </summary>
+        /// <param name="events"></param>
+        /// <returns></returns>
+        public OptionsBuilder Events(params ChartEvent[] events)
+        {
+            _options.Events = events;
+            return this;
+        }
+
+        /// <summary>
+        /// Called if the event is of type 'mouseup', 'click' or 'contextmenu' over chartArea. 
+        /// Passed the event, an array of active elements, and the chart.
+        /// </summary>
+        /// <param name="onClick"></param>
+        /// <returns></returns>
+        public OptionsBuilder OnClick(string onClick)
+        {
+            _options.OnClick = onClick;
+            return this;
+        }
+
+        /// <summary>
         /// Delay the resize update by the given amount of milliseconds.
         /// This can ease the resize process by debouncing the update of the elements.
         /// Default 0

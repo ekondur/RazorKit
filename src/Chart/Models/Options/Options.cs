@@ -12,6 +12,13 @@ namespace HelperJS.Chart.Models
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string OnResize { get; set; }
 
+        [JsonConverter(typeof(NoQuotesStringConverter))]
+        public string OnHover { get; set; }
+
+        [JsonConverter(typeof(NoQuotesStringConverter))]
+        public string OnClick { get; set; }
+
+        public ChartEvent[] Events { get; set; }
         public int? ResizeDelay { get; set; }
         public string Locale { get; set; }
         public Animation Animation { get; set; }

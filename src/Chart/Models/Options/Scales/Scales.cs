@@ -2,7 +2,7 @@
 {
     class Scales
     {
-        public ScaleY Y { get; set; }
-        public ScaleX X { get; set; }
+        public Scale Y { get; set; }
+        public Scale X { get; set; }
     }
 }

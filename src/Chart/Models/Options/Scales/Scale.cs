@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    class ScaleY
+    class Scale
     {
         public bool BeginAtZero { get; set; }
     }
