@@ -251,25 +251,6 @@ namespace HelperJS
         ChartArea
     }
 
-    enum FontSource
-    {
-        Title,
-        Subtitle,
-        LegendTitle,
-        LegendLabels,
-        TooltipTitleFont,
-        TooltipBodyFont,
-        TooltipFooterFont
-    }
-
-    enum PaddingSource
-    {
-        Layout,
-        Tooltip,
-        Title,
-        LegendTitle
-    }
-
     /// <summary>
     /// Mode
     /// </summary>
@@ -325,5 +306,69 @@ namespace HelperJS
 
         [EnumMember(Value = "touchstart")]
         Touchstart
+    }
+
+    public enum Scales
+    {
+        X,
+        Y
+    }
+
+    /// <summary>
+    /// The bounds property controls the scale boundary strategy (bypassed by min/max options).
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Bounds
+    {
+        /// <summary>
+        /// : makes sure ticks are fully visible, data outside are truncated
+        /// </summary>
+        [EnumMember(Value = "ticks")]
+        Ticks,
+
+        /// <summary>
+        /// : makes sure data are fully visible, labels outside are removed
+        /// </summary>
+        [EnumMember(Value = "data")]
+        Data
+    }
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AxisPosition
+    {
+        [EnumMember(Value = "top")]
+        Top,
+
+        [EnumMember(Value = "left")]
+        Left,
+
+        [EnumMember(Value = "bottom")]
+        Bottom,
+
+        [EnumMember(Value = "right")]
+        Right,
+
+        [EnumMember(Value = "center")]
+        Center
+    }
+
+    // Sources
+    enum FontSource
+    {
+        Title,
+        Subtitle,
+        LegendTitle,
+        LegendLabels,
+        TooltipTitleFont,
+        TooltipBodyFont,
+        TooltipFooterFont
+    }
+
+    enum PaddingSource
+    {
+        Layout,
+        Tooltip,
+        Title,
+        LegendTitle
     }
 }

@@ -19,29 +19,34 @@
 
 @{
     var line = Html.JS().Chart()
-    .Line("line")
-    .Data(d => d
-        .Labels("a", "b")
-        .Datasets(ds =>
-            {
-                ds.Add("chart 1")
-                .Data(1.0, 3.5);
+                    .Line("line")
+                    .Data(d => d
+                        .Labels("a", "b")
+                        .Datasets(ds =>
+                            {
+                                ds.Add("chart 1")
+                                .Data(1.0, 3.5);
 
-                ds.Add("chart 2")
-                .Data(1.0, 2.5);
-            }))
-    .Options(o =>
-        o.Plugins(p =>
-            {
-                p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
-                .Padding(padding => padding.Bottom(5))
-                    .Font(f => f.Weight(Weight.Bolder).Size(20.5)));
+                                ds.Add("chart 2")
+                                .Data(1.0, 2.5);
+                            }))
+                    .Options(o =>
+                        {
+                            o.Plugins(p =>
+                                {
+                                    p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
+                                    .Padding(padding => padding.Bottom(5))
+                                        .Font(f => f.Weight(900).Size(20.5)));
 
-                p.Legend(l => l.Display(true).OnHover("handleHover"));
+                                    p.Legend(l => l.Display(true).OnHover("handleHover"));
 
-            }
-        ).Layout(l => l.Padding(50)).Locale("tr-TR")
-       );
+                                });
+
+                            o.Layout(l => l.Padding(50)).Locale("tr-TR");
+
+                            o.Scales(Scales.X, s => s.Grace(5).BeginAtZero(true));
+                        }
+               );
 
     var test = "";
 }

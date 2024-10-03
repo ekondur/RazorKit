@@ -170,5 +170,31 @@ namespace HelperJS.Chart.Builders
             action(builder);
             return this;
         }
+
+        /// <summary>
+        /// Configure Scales.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public OptionsBuilder Scales(Scales id, Action<ScaleBuilder> action)
+        {
+            var builder = new ScaleBuilder(_chart, id.ToString().ToLower());
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Configure Scales.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public OptionsBuilder Scales(string id, Action<ScaleBuilder> action)
+        {
+            var builder = new ScaleBuilder(_chart, id);
+            action(builder);
+            return this;
+        }
     }
 }

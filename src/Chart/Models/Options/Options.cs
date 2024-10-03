@@ -1,5 +1,6 @@
 ﻿using HelperJS.Chart.Converters;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace HelperJS.Chart.Models
 {
@@ -22,9 +23,16 @@ namespace HelperJS.Chart.Models
         public int? ResizeDelay { get; set; }
         public string Locale { get; set; }
         public Animation Animation { get; set; }
-        public Scales Scales { get; set; }
         public Plugins Plugins { get; set; }
         public Layout Layout { get; set; }
         public Interaction Interaction { get; set; }
+
+        [JsonConverter(typeof(DictionaryAsPropertiesConverter<Scale>))]
+        public Dictionary<string, Scale> Scales { get; set; }
+
+        public Options()
+        {
+            Scales = new Dictionary<string, Scale>();
+        }
     }
 }

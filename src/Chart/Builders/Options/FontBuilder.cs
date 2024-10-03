@@ -91,9 +91,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="weight"></param>
         /// <returns></returns>
-        public FontBuilder Weight(double weight)
+        public FontBuilder Weight(int weight)
         {
-            _font.Weight = weight.ToString();
+            _font.Weight = weight;
             return this;
         }
 
@@ -115,7 +115,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public FontBuilder LineHeight(double lineHeight)
         {
-            _font.LineHeight = lineHeight.ToString();
+            _font.LineHeight = lineHeight;
             return this;
         }
     }
