@@ -57,7 +57,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LegendLabelsBuilder Font(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, FontSource.LegendLabels);
+            _legendLabel.Font = new ChartFont();
+            var builder = new FontBuilder(_legendLabel.Font);
             action(builder);
             return this;
         }

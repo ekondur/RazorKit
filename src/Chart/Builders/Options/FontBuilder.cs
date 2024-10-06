@@ -7,38 +7,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class FontBuilder
     {
-        private readonly ChartJs _chart;
         private readonly ChartFont _font;
 
-        internal FontBuilder(ChartJs chart, FontSource source)
+        internal FontBuilder(ChartFont font)
         {
-            _chart = chart;
-
-            switch (source)
-            {
-                case FontSource.Title:
-                    _font = _chart.Options.Plugins.Title.Font = new ChartFont();
-                    break;
-                case FontSource.Subtitle:
-                    _font = _chart.Options.Plugins.Subtitle.Font = new ChartFont();
-                    break;
-                case FontSource.LegendTitle:
-                    _font = _chart.Options.Plugins.Legend.Title.Font = new ChartFont();
-                    break;
-                case FontSource.LegendLabels:
-                    _font = _chart.Options.Plugins.Legend.Labels.Font = new ChartFont();
-                    break;
-                case FontSource.TooltipTitleFont:
-                    _font = _chart.Options.Plugins.Tooltip.TitleFont = new ChartFont();
-                    break;
-                case FontSource.TooltipBodyFont:
-                    _font = _chart.Options.Plugins.Tooltip.BodyFont = new ChartFont();
-                    break;
-                case FontSource.TooltipFooterFont:
-                    _font = _chart.Options.Plugins.Tooltip.FooterFont = new ChartFont();
-                    break;
-
-            }
+            _font = font;
         }
 
         /// <summary>

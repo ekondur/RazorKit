@@ -351,24 +351,4 @@ namespace HelperJS
         [EnumMember(Value = "center")]
         Center
     }
-
-    // Sources
-    enum FontSource
-    {
-        Title,
-        Subtitle,
-        LegendTitle,
-        LegendLabels,
-        TooltipTitleFont,
-        TooltipBodyFont,
-        TooltipFooterFont
-    }
-
-    enum PaddingSource
-    {
-        Layout,
-        Tooltip,
-        Title,
-        LegendTitle
-    }
 }

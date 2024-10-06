@@ -48,7 +48,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LayoutBuilder Padding(Action<PaddingBuilder> action)
         {
-            var builder = new PaddingBuilder(_chart, PaddingSource.Layout);
+            _layout.Padding = new Padding();
+            var builder = new PaddingBuilder(_layout.Padding);
             action(builder);
             return this;
         }

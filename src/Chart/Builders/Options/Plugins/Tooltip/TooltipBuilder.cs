@@ -158,7 +158,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder TitleFont(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, FontSource.TooltipTitleFont);
+            _toolTip.TitleFont = new ChartFont();
+            var builder = new FontBuilder(_toolTip.TitleFont);
             action(builder);
             return this;
         }
@@ -214,7 +215,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder BodyFont(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, FontSource.TooltipBodyFont);
+            _toolTip.BodyFont = new ChartFont();
+            var builder = new FontBuilder(_toolTip.BodyFont);
             action(builder);
             return this;
         }
@@ -259,7 +261,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder FooterFont(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, FontSource.TooltipFooterFont);
+            _toolTip.FooterFont = new ChartFont();
+            var builder = new FontBuilder(_toolTip.FooterFont);
             action(builder);
             return this;
         }
@@ -315,7 +318,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder Padding(Action<PaddingBuilder> action)
         {
-            var builder = new PaddingBuilder(_chart, PaddingSource.Tooltip);
+            _toolTip.Padding = new Padding();
+            var builder = new PaddingBuilder(_toolTip.Padding);
             action(builder);
             return this;
         }

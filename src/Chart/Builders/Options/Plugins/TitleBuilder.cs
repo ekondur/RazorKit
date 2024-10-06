@@ -10,22 +10,10 @@ namespace HelperJS.Chart.Builders
     {
         private readonly ChartJs _chart;
         private readonly Title _title;
-        private readonly FontSource _source;
 
-        internal TitleBuilder(ChartJs chart, FontSource source)
+        internal TitleBuilder(Title title)
         {
-            _chart = chart;
-            _source = source;
-
-            switch (source)
-            {
-                case FontSource.Title:
-                    _chart.Options.Plugins.Title = _title = new Title();
-                    break;
-                case FontSource.Subtitle:
-                    _chart.Options.Plugins.Subtitle = _title = new Title();
-                    break;
-            }
+            _title = title;
         }
 
         /// <summary>
@@ -92,7 +80,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TitleBuilder Font(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, _source);
+            _title.Font = new ChartFont();
+            var builder = new FontBuilder(_title.Font);
             action(builder);
             return this;
         }
@@ -115,7 +104,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TitleBuilder Padding(Action<PaddingBuilder> action)
         {
-            var builder = new PaddingBuilder(_chart, PaddingSource.Title);
+            _title.Padding = new Padding();
+            var builder = new PaddingBuilder(_title.Padding);
             action(builder);
             return this;
         }

@@ -24,7 +24,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public PluginsBuilder Title(Action<TitleBuilder> action)
         {
-            var builder = new TitleBuilder(_chart, FontSource.Title);
+            _plugins.Title = new Title();
+            var builder = new TitleBuilder(_plugins.Title);
             action(builder);
             return this;
         }
@@ -37,7 +38,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public PluginsBuilder Subtitle(Action<TitleBuilder> action)
         {
-            var builder = new TitleBuilder(_chart, FontSource.Subtitle);
+            _plugins.Subtitle = new Title();
+            var builder = new TitleBuilder(_plugins.Subtitle);
             action(builder);
             return this;
         }

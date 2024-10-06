@@ -46,7 +46,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LegendTitleBuilder Font(Action<FontBuilder> action)
         {
-            var builder = new FontBuilder(_chart, FontSource.LegendTitle);
+            _legendTitle.Font = new ChartFont();
+            var builder = new FontBuilder(_legendTitle.Font);
             action(builder);
             return this;
         }
@@ -69,8 +70,9 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LegendTitleBuilder Padding(Action<PaddingBuilder> action)
         {
-            var builder = new PaddingBuilder(_chart, PaddingSource.LegendTitle);
-
+            _legendTitle.Padding = new Padding();
+            var builder = new PaddingBuilder(_legendTitle.Padding);
+            action(builder);
             return this;
         }
 
