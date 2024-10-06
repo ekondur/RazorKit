@@ -130,7 +130,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Plugins(Action<PluginsBuilder> action)
         {
-            var builder = new PluginsBuilder(_chart);
+            _options.Plugins = new Plugins();
+            var builder = new PluginsBuilder(_options.Plugins);
             action(builder);
             return this;
         }

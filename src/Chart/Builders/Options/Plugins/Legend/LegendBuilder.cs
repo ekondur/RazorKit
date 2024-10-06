@@ -8,13 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class LegendBuilder
     {
-        private readonly ChartJs _chart;
         private readonly Legend _legend;
 
-        internal LegendBuilder(ChartJs chart)
+        internal LegendBuilder(Legend legend)
         {
-            _chart = chart;
-            _chart.Options.Plugins.Legend = _legend = new Legend();
+            _legend = legend;
         }
 
         /// <summary>
@@ -136,9 +134,10 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public LegendBuilder Labels(Action<LegendLabelsBuilder> action)
+        public LegendBuilder Labels(Action<LabelsBuilder> action)
         {
-            var builder = new LegendLabelsBuilder(_chart);
+            _legend.Labels = new Labels();
+            var builder = new LabelsBuilder(_legend.Labels);
             action(builder);
             return this;
         }
@@ -173,7 +172,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LegendBuilder Title(Action<LegendTitleBuilder> action)
         {
-            var builder = new LegendTitleBuilder(_chart);
+            _legend.Title = new LegendTitle();
+            var builder = new LegendTitleBuilder(_legend.Title);
             action(builder);
             return this;
         }

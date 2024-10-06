@@ -8,13 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class PluginsBuilder
     {
-        private readonly ChartJs _chart;
         private readonly Plugins _plugins;
 
-        internal PluginsBuilder(ChartJs chart)
+        internal PluginsBuilder(Plugins plugins)
         {
-            _chart = chart;
-            _chart.Options.Plugins = _plugins = new Plugins();
+            _plugins = plugins;
         }
 
         /// <summary>
@@ -51,7 +49,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public PluginsBuilder Legend(Action<LegendBuilder> action)
         {
-            var builder = new LegendBuilder(_chart);
+            _plugins.Legend = new Legend();
+            var builder = new LegendBuilder(_plugins.Legend);
             action(builder);
             return this;
         }
@@ -63,7 +62,21 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public PluginsBuilder Tooltip(Action<TooltipBuilder> action)
         {
-            var builder = new TooltipBuilder(_chart);
+            _plugins.Tooltip = new ToolTip();
+            var builder = new TooltipBuilder(_plugins.Tooltip);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Configure Colors.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public PluginsBuilder Colors(Action<ColorsBuilder> action)
+        {
+            _plugins.Colors = new Colors();
+            var builder = new ColorsBuilder(_plugins.Colors);
             action(builder);
             return this;
         }

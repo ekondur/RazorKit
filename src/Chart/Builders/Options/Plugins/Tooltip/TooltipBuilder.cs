@@ -8,13 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class TooltipBuilder
     {
-        private readonly ChartJs _chart;
         private readonly ToolTip _toolTip;
 
-        internal TooltipBuilder(ChartJs chart)
+        internal TooltipBuilder(ToolTip toolTip)
         {
-            _chart = chart;
-            _chart.Options.Plugins.Tooltip = _toolTip = new ToolTip();
+            _toolTip = toolTip;
         }
 
         /// <summary>
@@ -102,7 +100,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public TooltipBuilder Callbacks(Action<CallbacksBuilder> action)
         {
-            var builder = new CallbacksBuilder(_chart);
+            _toolTip.Callbacks = new Callbacks();
+            var builder = new CallbacksBuilder(_toolTip.Callbacks);
             action(builder);
             return this;
         }

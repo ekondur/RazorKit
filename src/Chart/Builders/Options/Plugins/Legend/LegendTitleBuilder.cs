@@ -8,13 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class LegendTitleBuilder
     {
-        private readonly ChartJs _chart;
         private readonly LegendTitle _legendTitle;
 
-        internal LegendTitleBuilder(ChartJs chart)
+        internal LegendTitleBuilder(LegendTitle legendTitle)
         {
-            _chart = chart;
-            _chart.Options.Plugins.Legend.Title = _legendTitle = new LegendTitle();
+            _legendTitle = legendTitle;
         }
 
         /// <summary>

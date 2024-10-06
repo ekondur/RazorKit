@@ -7,13 +7,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class CallbacksBuilder
     {
-        private readonly ChartJs _chart;
         private readonly Callbacks _callbacks;
 
-        internal CallbacksBuilder(ChartJs chart)
+        internal CallbacksBuilder(Callbacks callbacks)
         {
-            _chart = chart;
-            _chart.Options.Plugins.Tooltip.Callbacks = _callbacks = new Callbacks();
+            _callbacks = callbacks;
         }
 
         /// <summary>

@@ -4,17 +4,15 @@ using System;
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// LegendLabels Builder
+    /// Labels Builder
     /// </summary>
-    public class LegendLabelsBuilder
+    public class LabelsBuilder
     {
-        private readonly ChartJs _chart;
-        private readonly LegendLabels _legendLabel;
+        private readonly Labels _labels;
 
-        internal LegendLabelsBuilder(ChartJs chart)
+        internal LabelsBuilder(Labels labels)
         {
-            _chart = chart;
-            _chart.Options.Plugins.Legend.Labels = _legendLabel = new LegendLabels();
+            _labels = labels;
         }
 
         /// <summary>
@@ -22,9 +20,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder BoxWidth(int width)
+        public LabelsBuilder BoxWidth(int width)
         {
-            _legendLabel.BoxWidth = width;
+            _labels.BoxWidth = width;
             return this;
         }
 
@@ -33,9 +31,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="height"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder BoxHeight(int height)
+        public LabelsBuilder BoxHeight(int height)
         {
-            _legendLabel.BoxHeight = height;
+            _labels.BoxHeight = height;
             return this;
         }
 
@@ -44,9 +42,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="color"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder Color(string color)
+        public LabelsBuilder Color(string color)
         {
-            _legendLabel.Color = color;
+            _labels.Color = color;
             return this;
         }
 
@@ -55,10 +53,10 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder Font(Action<FontBuilder> action)
+        public LabelsBuilder Font(Action<FontBuilder> action)
         {
-            _legendLabel.Font = new ChartFont();
-            var builder = new FontBuilder(_legendLabel.Font);
+            _labels.Font = new ChartFont();
+            var builder = new FontBuilder(_labels.Font);
             action(builder);
             return this;
         }
@@ -68,9 +66,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="padding"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder Padding(int padding)
+        public LabelsBuilder Padding(int padding)
         {
-            _legendLabel.Padding = padding;
+            _labels.Padding = padding;
             return this;
         }
 
@@ -80,9 +78,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="function"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder GenerateLabels(string function)
+        public LabelsBuilder GenerateLabels(string function)
         {
-            _legendLabel.GenerateLabels = function;
+            _labels.GenerateLabels = function;
             return this;
         }
 
@@ -91,9 +89,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="function"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder Filter(string function)
+        public LabelsBuilder Filter(string function)
         {
-            _legendLabel.Filter = function;
+            _labels.Filter = function;
             return this;
         }
 
@@ -105,9 +103,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="function"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder Sort(string function)
+        public LabelsBuilder Sort(string function)
         {
-            _legendLabel.Sort = function;
+            _labels.Sort = function;
             return this;
         }
 
@@ -116,9 +114,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="pointStyle"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder PointStyle(PointStyle pointStyle)
+        public LabelsBuilder PointStyle(PointStyle pointStyle)
         {
-            _legendLabel.PointStyle = pointStyle;
+            _labels.PointStyle = pointStyle;
             return this;
         }
 
@@ -127,9 +125,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="textAlign"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder TextAlign(TextAlign textAlign)
+        public LabelsBuilder TextAlign(TextAlign textAlign)
         {
-            _legendLabel.TextAlign = textAlign;
+            _labels.TextAlign = textAlign;
             return this;
         }
 
@@ -139,9 +137,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="usePointStyle"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder UsePointStyle(bool usePointStyle)
+        public LabelsBuilder UsePointStyle(bool usePointStyle)
         {
-            _legendLabel.UsePointStyle = usePointStyle;
+            _labels.UsePointStyle = usePointStyle;
             return this;
         }
 
@@ -150,9 +148,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder PointStyleWidth(int width)
+        public LabelsBuilder PointStyleWidth(int width)
         {
-            _legendLabel.PointStyleWidth = width;
+            _labels.PointStyleWidth = width;
             return this;
         }
 
@@ -161,9 +159,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="useBorderRadius"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder UseBorderRadius(bool useBorderRadius)
+        public LabelsBuilder UseBorderRadius(bool useBorderRadius)
         {
-            _legendLabel.UseBorderRadius = useBorderRadius;
+            _labels.UseBorderRadius = useBorderRadius;
             return this;
         }
 
@@ -172,9 +170,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="borderRadius"></param>
         /// <returns></returns>
-        public LegendLabelsBuilder BorderRadius(double borderRadius)
+        public LabelsBuilder BorderRadius(double borderRadius)
         {
-            _legendLabel.BorderRadius = borderRadius;
+            _labels.BorderRadius = borderRadius;
             return this;
         }
     }
