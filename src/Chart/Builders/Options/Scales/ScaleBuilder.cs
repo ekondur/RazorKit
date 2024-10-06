@@ -1,5 +1,6 @@
 ﻿using HelperJS.Chart.Models;
 using System;
+using System.Collections.Generic;
 
 namespace HelperJS.Chart.Builders
 {
@@ -8,14 +9,18 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class ScaleBuilder
     {
-        private readonly ChartJs _chart;
+        private readonly Options _options;
         private readonly Scale _scale;
 
-        internal ScaleBuilder(ChartJs chart, string id)
+        internal ScaleBuilder(Options options, string id)
         {
-            _chart = chart;
+            _options = options;
             _scale = new Scale();
-            _chart.Options.Scales.Add(id, _scale);
+            if (_options.Scales == null)
+            {
+                _options.Scales = new Dictionary<string, Scale>();
+            }
+            _options.Scales.Add(id, _scale);
         }
 
         #region Linear Axis specific options

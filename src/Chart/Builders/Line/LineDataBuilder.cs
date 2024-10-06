@@ -8,12 +8,11 @@ namespace HelperJS.Chart.Builders.Line
     /// </summary>
     public class LineDataBuilder
     {
-        private readonly ChartJs _chart;
+        private readonly Data _data;
 
-        internal LineDataBuilder(ChartJs chart)
+        internal LineDataBuilder(Data data)
         {
-            _chart = chart;
-            _chart.Data = new Data();
+            _data = data;
         }
 
         /// <summary>
@@ -23,7 +22,7 @@ namespace HelperJS.Chart.Builders.Line
         /// <returns>Returns the LineDataBuilder object with assigned labels.</returns>
         public LineDataBuilder Labels(params string[] labels)
         {
-            _chart.Data.Labels = labels;
+            _data.Labels = labels;
             return this;
         }
 
@@ -34,7 +33,7 @@ namespace HelperJS.Chart.Builders.Line
         /// <returns></returns>
         public LineDataBuilder Datasets(Action<LineDatasetBuilder> action)
         {
-            var builder = new LineDatasetBuilder(_chart);
+            var builder = new LineDatasetBuilder(_data);
             action(builder);
             return this;
         }

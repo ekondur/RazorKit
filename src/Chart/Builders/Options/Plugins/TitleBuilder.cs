@@ -8,7 +8,6 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class TitleBuilder
     {
-        private readonly ChartJs _chart;
         private readonly Title _title;
 
         internal TitleBuilder(Title title)

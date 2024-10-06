@@ -9,12 +9,12 @@ namespace HelperJS.Chart.Builders.Line
     /// </summary>
     public class LineDatasetBuilder
     {
-        private readonly ChartJs _chart;
         private LineDataset _lineDataset;
+        private readonly Data _data;
 
-        internal LineDatasetBuilder(ChartJs chart)
+        internal LineDatasetBuilder(Data data)
         {
-            _chart = chart;
+            _data = data;
         }
 
         #region BaseDataset
@@ -123,7 +123,7 @@ namespace HelperJS.Chart.Builders.Line
         {
             _lineDataset = new LineDataset { Label = label };
 
-            _chart.Data.Datasets.Add(_lineDataset);
+            _data.Datasets.Add(_lineDataset);
 
             return this;
         }

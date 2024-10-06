@@ -8,13 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class OptionsBuilder
     {
-        private readonly ChartJs _chart;
         private readonly Options _options;
 
-        internal OptionsBuilder(ChartJs chart)
+        internal OptionsBuilder(Options options)
         {
-            _chart = chart;
-            _chart.Options = _options = new Options();
+            _options = options;
         }
 
         /// <summary>
@@ -143,7 +141,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Layout(Action<LayoutBuilder> action)
         {
-            var builder = new LayoutBuilder(_chart);
+            _options.Layout = new Layout();
+            var builder = new LayoutBuilder(_options.Layout);
             action(builder);
             return this;
         }
@@ -155,7 +154,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Animation(Action<AnimationBuilder> action)
         {
-            var builder = new AnimationBuilder(_chart);
+            _options.Animation = new Animation();
+            var builder = new AnimationBuilder(_options.Animation);
             action(builder);
             return this;
         }
@@ -167,7 +167,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Interaction(Action<InteractionBuilder> action)
         {
-            var builder = new InteractionBuilder(_chart);
+            _options.Interaction = new Interaction();
+            var builder = new InteractionBuilder(_options.Interaction);
             action(builder);
             return this;
         }
@@ -180,7 +181,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Scales(Scales id, Action<ScaleBuilder> action)
         {
-            var builder = new ScaleBuilder(_chart, id.ToString().ToLower());
+            var builder = new ScaleBuilder(_options, id.ToString().ToLower());
             action(builder);
             return this;
         }
@@ -193,7 +194,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Scales(string id, Action<ScaleBuilder> action)
         {
-            var builder = new ScaleBuilder(_chart, id);
+            var builder = new ScaleBuilder(_options, id);
             action(builder);
             return this;
         }

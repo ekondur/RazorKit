@@ -29,10 +29,5 @@ namespace HelperJS.Chart.Models
 
         [JsonConverter(typeof(DictionaryAsPropertiesConverter<Scale>))]
         public Dictionary<string, Scale> Scales { get; set; }
-
-        public Options()
-        {
-            Scales = new Dictionary<string, Scale>();
-        }
     }
 }

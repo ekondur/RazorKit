@@ -8,13 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class LayoutBuilder
     {
-        private readonly ChartJs _chart;
         private readonly Layout _layout;
 
-        internal LayoutBuilder(ChartJs chart)
+        internal LayoutBuilder(Layout layout)
         {
-            _chart = chart;
-            _chart.Options.Layout = _layout = new Layout();
+            _layout = layout;
         }
 
         /// <summary>

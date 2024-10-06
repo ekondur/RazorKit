@@ -8,7 +8,7 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class ChartBuilder
     {
-        internal ChartJs Chart { get; private set; } = new ChartJs();
+        internal ChartJs Chart { get; private set; }
         internal string CanvasId { get; private set; }
         internal bool UseCanvas { get; private set; }
 
@@ -20,7 +20,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LineBuilder Line(string canvasId, bool useCanvas)
         {
-            Chart.Type = "line";
+            Chart = new ChartJs { Type = "line" };
+
             return new LineBuilder { Chart = Chart, CanvasId = canvasId, UseCanvas = useCanvas };
         }
 

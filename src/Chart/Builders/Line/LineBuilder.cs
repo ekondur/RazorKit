@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HelperJS.Chart.Models;
+using System;
 
 namespace HelperJS.Chart.Builders.Line
 {
@@ -14,7 +15,8 @@ namespace HelperJS.Chart.Builders.Line
         /// <returns></returns>
         public LineBuilder Data(Action<LineDataBuilder> action)
         {
-            var builder = new LineDataBuilder(Chart);
+            Chart.Data = new Data();
+            var builder = new LineDataBuilder(Chart.Data);
             action(builder);
             return this;
         }
@@ -26,7 +28,8 @@ namespace HelperJS.Chart.Builders.Line
         /// <returns></returns>
         public LineBuilder Options(Action<OptionsBuilder> action)
         {
-            var builder = new OptionsBuilder(Chart);
+            Chart.Options = new Options();
+            var builder = new OptionsBuilder(Chart.Options);
             action(builder);
             return this;
         }
