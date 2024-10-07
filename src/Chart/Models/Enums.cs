@@ -311,7 +311,8 @@ namespace HelperJS
     public enum Scales
     {
         X,
-        Y
+        Y,
+        R
     }
 
     /// <summary>

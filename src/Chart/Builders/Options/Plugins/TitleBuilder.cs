@@ -114,6 +114,17 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
+        public TitleBuilder Text(string text)
+        {
+            _title.Text = text;
+            return this;
+        }
+
+        /// <summary>
+        /// The string title(s).
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public TitleBuilder Text(params string[] text)
         {
             _title.Text = text;

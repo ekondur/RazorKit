@@ -1,4 +1,7 @@
-﻿namespace HelperJS.Chart.Models
+﻿using HelperJS.Chart.Converters;
+using Newtonsoft.Json;
+
+namespace HelperJS.Chart.Models
 {
     class Title
     {
@@ -16,6 +19,7 @@
 
         public Padding Padding { get; set; }
 
-        public string[] Text { get; set; }
+        [JsonConverter(typeof(StringOrArrayConverter))]
+        public object Text { get; set; }
     }
 }
