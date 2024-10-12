@@ -23,6 +23,54 @@ namespace HelperJS.Chart.Builders
             _options.Scales.Add(id, _scale);
         }
 
+        #region Common options to all axes
+        /// <summary>
+        /// Type of scale being employed. Custom scales can be created and registered with a string key. 
+        /// This allows changing the type of an axis for a chart.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public ScaleBuilder Type(string type)
+        {
+            _scale.Type = type;
+            return this;
+        }
+
+        /// <summary>
+        /// Align pixel values to device pixels. Default false
+        /// </summary>
+        /// <param name="alignToPixels"></param>
+        /// <returns></returns>
+        public ScaleBuilder AlignToPixels(bool alignToPixels)
+        {
+            _scale.AlignToPixels = alignToPixels;
+            return this;
+        }
+
+        /// <summary>
+        /// Background color of the scale area.
+        /// </summary>
+        /// <param name="color"></param>
+        /// <returns></returns>
+        public ScaleBuilder BackgroundColor(string color)
+        {
+            _scale.BackgroundColor = color;
+            return this;
+        }
+
+        /// <summary>
+        /// Border configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ScaleBuilder Border(Action<ScaleBorderBuilder> action)
+        {
+            var builder = new ScaleBorderBuilder(_scale);
+            action(builder);
+            return this;
+        }
+        #endregion
+
         #region Linear Axis specific options
         /// <summary>
         /// if true, scale will include 0 if it is not already included.

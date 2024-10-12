@@ -5,6 +5,14 @@ namespace HelperJS.Chart.Models
 {
     class Scale
     {
+        // Common options to all axes
+        public string Type { get; set; }
+        public bool? AlignToPixels { get; set; }
+        public string BackgroundColor { get; set; }
+        public ScaleBorder Border { get; set; }
+        public object Display { get; set; }
+        public ScaleGrid Grid { get; set; }
+
         // Linear Axis specific options
         public bool? BeginAtZero { get; set; }
 

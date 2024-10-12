@@ -10,49 +10,37 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-      function handleHover(evt, item, legend) {
-            console.log("test");
-      }
+    function handleHover(evt, item, legend) {
+        console.log("test");
+    }
 </script>
 
 @using HelperJS
 
 @{
-    var line = Html.JS().Chart()
-                    .Line("line")
-                    .Data(d => d
-                        .Labels("a", "b")
-                        .Datasets(ds =>
-                            {
-                                ds.Add("chart 1")
-                                .Data(1.0, 3.5);
+    var line = 
+    Html.JS().Chart()
+    .Line("line")
+    .Data(d => d
+        .Labels("a", "b")
+        .Datasets(ds =>
+        {
+            ds.Add("chart 1").Data(1.0, 3.5);
+            ds.Add("chart 2").Data(1.0, 2.5);
+        }))
+        .Options(o =>
+        {
+            o.Plugins(p =>
+            {
+                p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
+                    .Padding(padding => padding.Bottom(5))
+                    .Font(f => f.Weight(900).Size(20.5)));
+                p.Legend(l => l.Display(true).OnHover("handleHover"));
 
-                                ds.Add("chart 2")
-                                .Data(1.0, 2.5);
-                            }))
-                    .Options(o =>
-                        {
-                            o.Plugins(p =>
-                                {
-                                    p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
-                                    .Padding(padding => padding.Bottom(5))
-                                        .Font(f => f.Weight(900).Size(20.5)));
-
-                                    p.Subtitle(st => st.Text("Subtitle").Display(true)
-                                        .Font(f => f.Weight(850)));
-
-                                    p.Legend(l => l.Display(true).OnHover("handleHover"));
-
-                                });
-
-                            o.Layout(l => l.Padding(50)).Locale("tr-TR");
-
-                            o.Scales(Scales.X, s => s.Grace(5).BeginAtZero(true));
-                            o.Scales(Scales.Y, s => s.Grace(5).BeginAtZero(true));
-                        }
-               );
-
-    var test = "";
+            });
+            o.Layout(l => l.Padding(50)).Locale("tr-TR");
+            o.Scales(Scales.X, s => s.Grace(5).BeginAtZero(true));
+        });
 }
 
 @line.Render()
