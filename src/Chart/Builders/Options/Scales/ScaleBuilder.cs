@@ -69,6 +69,29 @@ namespace HelperJS.Chart.Builders
             action(builder);
             return this;
         }
+
+        /// <summary>
+        /// Controls the axis global visibility (visible when true, hidden when false).
+        /// Default true
+        /// </summary>
+        /// <param name="display"></param>
+        /// <returns></returns>
+        public ScaleBuilder Display(bool display)
+        {
+            _scale.Display = display;
+            return this;
+        }
+
+        /// <summary>
+        /// When display: 'auto', the axis is visible only if at least one associated dataset is visible.
+        /// </summary>
+        /// <param name="display"></param>
+        /// <returns></returns>
+        public ScaleBuilder Display(string display)
+        {
+            _scale.Display = display;
+            return this;
+        }
         #endregion
 
         #region Linear Axis specific options

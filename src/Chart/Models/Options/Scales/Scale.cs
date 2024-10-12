@@ -10,6 +10,8 @@ namespace HelperJS.Chart.Models
         public bool? AlignToPixels { get; set; }
         public string BackgroundColor { get; set; }
         public ScaleBorder Border { get; set; }
+
+        [JsonConverter(typeof(StringOrBoolConverter))]
         public object Display { get; set; }
         public ScaleGrid Grid { get; set; }
 
