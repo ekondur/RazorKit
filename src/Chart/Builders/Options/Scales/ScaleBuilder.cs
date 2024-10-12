@@ -9,18 +9,16 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class ScaleBuilder
     {
-        private readonly Options _options;
         private readonly Scale _scale;
 
         internal ScaleBuilder(Options options, string id)
         {
-            _options = options;
             _scale = new Scale();
-            if (_options.Scales == null)
+            if (options.Scales == null)
             {
-                _options.Scales = new Dictionary<string, Scale>();
+                options.Scales = new Dictionary<string, Scale>();
             }
-            _options.Scales.Add(id, _scale);
+            options.Scales.Add(id, _scale);
         }
 
         #region Common options to all axes
@@ -90,6 +88,18 @@ namespace HelperJS.Chart.Builders
         public ScaleBuilder Display(string display)
         {
             _scale.Display = display;
+            return this;
+        }
+
+        /// <summary>
+        /// Grid line configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ScaleBuilder Grid(Action<ScaleGridBuilder> action)
+        {
+            var builder = new ScaleGridBuilder(_scale);
+            action(builder);
             return this;
         }
         #endregion

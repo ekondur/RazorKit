@@ -7,13 +7,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class ScaleBorderBuilder
     {
-        private readonly Scale _scale;
         private readonly ScaleBorder _scaleBorder;
 
         internal ScaleBorderBuilder(Scale scale)
         {
-            _scale = scale;
-            _scale.Border = _scaleBorder = new ScaleBorder();
+            scale.Border = _scaleBorder = new ScaleBorder();
         }
 
         /// <summary>
