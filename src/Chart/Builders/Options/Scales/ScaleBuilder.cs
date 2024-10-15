@@ -204,6 +204,19 @@ namespace HelperJS.Chart.Builders
             _scale.Weight = weight;
             return this;
         }
+
+        /// <summary>
+        /// There are a number of config callbacks that can be used to change parameters in the scale at different points in the update process. 
+        /// The options are supplied at the top level of the axis options.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ScaleBuilder Callbacks(Action<ScaleCallbackBuilder> action)
+        {
+            var builder = new ScaleCallbackBuilder(_scale);
+            action(builder);
+            return this;
+        }
         #endregion
 
         #region Linear Axis specific options

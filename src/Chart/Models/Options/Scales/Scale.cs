@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace HelperJS.Chart.Models
 {
-    class Scale
+    partial class Scale
     {
         // Common options to all axes
         public string Type { get; set; }
