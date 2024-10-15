@@ -3,15 +3,15 @@
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// ScaleGrid Builder
+    /// Grid Configuration
     /// </summary>
-    public class ScaleGridBuilder
+    public class GridBuilder
     {
-        private readonly ScaleGrid _scaleGrid;
+        private readonly Grid _scaleGrid;
 
-        internal ScaleGridBuilder(Scale scale)
+        internal GridBuilder(Scale scale)
         {
-            scale.Grid = _scaleGrid = new ScaleGrid();
+            scale.Grid = _scaleGrid = new Grid();
         }
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="circular"></param>
         /// <returns></returns>
-        public ScaleGridBuilder Circular(bool circular)
+        public GridBuilder Circular(bool circular)
         {
             _scaleGrid.Circular = circular;
             return this;
@@ -31,7 +31,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="color"></param>
         /// <returns></returns>
-        public ScaleGridBuilder Color(string color)
+        public GridBuilder Color(string color)
         {
             _scaleGrid.Color = color;
             return this;
@@ -42,7 +42,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="display"></param>
         /// <returns></returns>
-        public ScaleGridBuilder Display(bool display)
+        public GridBuilder Display(bool display)
         {
             _scaleGrid.Display = display;
             return this;
@@ -55,7 +55,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="drawOnChartArea"></param>
         /// <returns></returns>
-        public ScaleGridBuilder DrawOnChartArea(bool drawOnChartArea)
+        public GridBuilder DrawOnChartArea(bool drawOnChartArea)
         {
             _scaleGrid.DrawOnChartArea = drawOnChartArea;
             return this;
@@ -66,7 +66,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="drawTicks"></param>
         /// <returns></returns>
-        public ScaleGridBuilder DrawTicks(bool drawTicks)
+        public GridBuilder DrawTicks(bool drawTicks)
         {
             _scaleGrid.DrawTicks = drawTicks;
             return this;
@@ -77,7 +77,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
-        public ScaleGridBuilder LineWidth(int width)
+        public GridBuilder LineWidth(int width)
         {
             _scaleGrid.LineWidth = width;
             return this;
@@ -89,7 +89,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="offset"></param>
         /// <returns></returns>
-        public ScaleGridBuilder Offset(bool offset)
+        public GridBuilder Offset(bool offset)
         {
             _scaleGrid.Offset = offset;
             return this;
@@ -101,7 +101,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="borderDash"></param>
         /// <returns></returns>
-        public ScaleGridBuilder TickBorderDash(params int[] borderDash)
+        public GridBuilder TickBorderDash(params int[] borderDash)
         {
             _scaleGrid.TickBorderDash = borderDash;
             return this;
@@ -112,7 +112,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="offset"></param>
         /// <returns></returns>
-        public ScaleGridBuilder TickBorderDashOffset(int offset)
+        public GridBuilder TickBorderDashOffset(int offset)
         {
             _scaleGrid.TickBorderDashOffset = offset;
             return this;
@@ -123,7 +123,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="color"></param>
         /// <returns></returns>
-        public ScaleGridBuilder TickColor(string color)
+        public GridBuilder TickColor(string color)
         {
             _scaleGrid.TickColor = color;
             return this;
@@ -134,7 +134,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public ScaleGridBuilder TickLength(int length)
+        public GridBuilder TickLength(int length)
         {
             _scaleGrid.TickLength = length;
             return this;
@@ -145,7 +145,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
-        public ScaleGridBuilder TickWidth(int width)
+        public GridBuilder TickWidth(int width)
         {
             _scaleGrid.TickWidth = width;
             return this;
@@ -157,7 +157,7 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="z"></param>
         /// <returns></returns>
-        public ScaleGridBuilder Z(int z)
+        public GridBuilder Z(int z)
         {
             _scaleGrid.Z = z;
             return this;

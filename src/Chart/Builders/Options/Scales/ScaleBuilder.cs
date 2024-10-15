@@ -96,9 +96,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public ScaleBuilder Grid(Action<ScaleGridBuilder> action)
+        public ScaleBuilder Grid(Action<GridBuilder> action)
         {
-            var builder = new ScaleGridBuilder(_scale);
+            var builder = new GridBuilder(_scale);
             action(builder);
             return this;
         }

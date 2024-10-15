@@ -22,11 +22,11 @@
     Html.JS().Chart()
     .Line("line")
     .Data(d => d
-        .Labels("a", "b")
+        .Labels("a", "b", "c", "d")
         .Datasets(ds =>
         {
-            ds.Add("chart 1").Data(1.0, 3.5);
-            ds.Add("chart 2").Data(1.0, 2.5);
+            ds.Add("chart 1").Data(1.0, 3.5, 2, 2.5).Tension(0.1);
+            ds.Add("chart 2").Data(1.0, 2.5, 1.5, 2);
         }))
         .Options(o =>
         {
@@ -40,7 +40,7 @@
             });
             o.Layout(l => l.Padding(50)).Locale("tr-TR");
             o.Scales(Scales.X, s => s.Grace(5).BeginAtZero(true).Display("auto")
-                .Grid(g => g.Display(true)));
+                .Grid(g => g.Display(true).Color("green")));
         });
 }
 

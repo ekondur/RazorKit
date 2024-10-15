@@ -1,6 +1,6 @@
 ﻿namespace HelperJS.Chart.Models
 {
-    internal class ScaleGrid
+    internal class Grid
     {
         public bool? Circular { get; set; }
         public string Color { get; set; }

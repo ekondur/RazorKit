@@ -13,7 +13,7 @@ namespace HelperJS.Chart.Models
 
         [JsonConverter(typeof(StringOrBoolConverter))]
         public object Display { get; set; }
-        public ScaleGrid Grid { get; set; }
+        public Grid Grid { get; set; }
         public int? Min { get; set; }
         public int? Max { get; set; }
         public bool? Reverse { get; set; }
