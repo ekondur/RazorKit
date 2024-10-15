@@ -71,7 +71,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// z-index of the border layer. Values less then equal 0 are drawn under datasets, grater than 0 on top.
+        /// z-index of the border layer. Values less than equal 0 are drawn under datasets, grater than 0 on top.
         /// Default 0
         /// </summary>
         /// <param name="z"></param>

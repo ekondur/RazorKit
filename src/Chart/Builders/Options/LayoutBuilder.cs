@@ -40,7 +40,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Configure padding.
+        /// Padding Configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>

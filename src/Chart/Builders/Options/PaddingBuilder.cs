@@ -57,5 +57,29 @@ namespace HelperJS.Chart.Builders
             _padding.Bottom = bottom;
             return this;
         }
+
+        /// <summary>
+        /// This is a shorthand for defining left and right to the same values
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public PaddingBuilder X(int x)
+        {
+            _padding.Left = x;
+            _padding.Right = x;
+            return this;
+        }
+
+        /// <summary>
+        /// This is a shorthand for defining top and bottom to the same values
+        /// </summary>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public PaddingBuilder Y(int y)
+        {
+            _padding.Top = y;
+            _padding.Bottom = y;
+            return this;
+        }
     }
 }

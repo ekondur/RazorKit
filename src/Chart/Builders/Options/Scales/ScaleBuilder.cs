@@ -102,6 +102,108 @@ namespace HelperJS.Chart.Builders
             action(builder);
             return this;
         }
+
+        /// <summary>
+        /// User defined minimum number for the scale, overrides minimum value from data.
+        /// </summary>
+        /// <param name="min"></param>
+        /// <returns></returns>
+        public ScaleBuilder Min(int min)
+        {
+            _scale.Min = min;
+            return this;
+        }
+
+        /// <summary>
+        /// User defined maximum number for the scale, overrides maximum value from data.
+        /// </summary>
+        /// <param name="max"></param>
+        /// <returns></returns>
+        public ScaleBuilder Max(int max)
+        {
+            _scale.Max = max;
+            return this;
+        }
+
+        /// <summary>
+        /// Reverse the scale. Default false
+        /// </summary>
+        /// <param name="reverse"></param>
+        /// <returns></returns>
+        public ScaleBuilder Reverse(bool reverse)
+        {
+            _scale.Reverse = reverse;
+            return this;
+        }
+
+        /// <summary>
+        /// Should the data be stacked.
+        /// </summary>
+        /// <param name="stacked"></param>
+        /// <returns></returns>
+        public ScaleBuilder Stacked(bool stacked)
+        {
+            _scale.Stacked = stacked;
+            return this;
+        }
+
+        /// <summary>
+        /// For some charts, you might want to stack positive and negative values together. 
+        /// That can be achieved by specifying stacked: 'single'.
+        /// </summary>
+        /// <param name="stacked"></param>
+        /// <returns></returns>
+        public ScaleBuilder Stacked(string stacked)
+        {
+            _scale.Stacked = stacked;
+            return this;
+        }
+
+        /// <summary>
+        /// Adjustment used when calculating the maximum data value.
+        /// </summary>
+        /// <param name="suggestedMax"></param>
+        /// <returns></returns>
+        public ScaleBuilder SuggestedMax (int suggestedMax)
+        {
+            _scale.SuggestedMax = suggestedMax;
+            return this;
+        }
+
+        /// <summary>
+        /// Adjustment used when calculating the minimum data value.
+        /// </summary>
+        /// <param name="suggestedMin"></param>
+        /// <returns></returns>
+        public ScaleBuilder SuggestedMin(int suggestedMin)
+        {
+            _scale.SuggestedMin = suggestedMin;
+            return this;
+        }
+
+        /// <summary>
+        /// Tick configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ScaleBuilder Ticks(Action<TicksBuilder> action)
+        {
+            var builder = new TicksBuilder(_scale);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// The weight used to sort the axis. Higher weights are further away from the chart area.
+        /// Default 0
+        /// </summary>
+        /// <param name="weight"></param>
+        /// <returns></returns>
+        public ScaleBuilder Weight(int  weight)
+        {
+            _scale.Weight = weight;
+            return this;
+        }
         #endregion
 
         #region Linear Axis specific options

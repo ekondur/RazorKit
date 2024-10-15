@@ -152,7 +152,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// z-index of the gridline layer. Values less then equal are drawn under datasets, grater then 0 on top.
+        /// z-index of the gridline layer. Values less than equal are drawn under datasets, grater than 0 on top.
         /// Default -1
         /// </summary>
         /// <param name="z"></param>

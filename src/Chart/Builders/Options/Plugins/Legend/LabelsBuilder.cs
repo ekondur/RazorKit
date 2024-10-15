@@ -49,7 +49,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Configure font.
+        /// Font Configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>

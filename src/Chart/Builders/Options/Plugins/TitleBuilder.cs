@@ -73,7 +73,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Font builder
+        /// Font configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
@@ -97,7 +97,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Configure padding.
+        /// Padding Configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
