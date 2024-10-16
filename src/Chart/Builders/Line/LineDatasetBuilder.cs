@@ -144,6 +144,17 @@ namespace HelperJS.Chart.Builders.Line
             _lineDataset.Parsing = new Parsing { XAxisKey = xAxisKey, YAxisKey = yAxisKey };
             return this;
         }
+
+        /// <summary>
+        /// Configure the visibility of the dataset. Using hidden: true will hide the dataset from being rendered in the Chart.
+        /// </summary>
+        /// <param name="hidden"></param>
+        /// <returns></returns>
+        public LineDatasetBuilder Hidden(bool hidden)
+        {
+            _lineDataset.Hidden = hidden;
+            return this;
+        }
         #endregion
 
         #region LinneerDataset
