@@ -22,11 +22,13 @@
     Html.JS().Chart()
     .Line("line")
     .Data(d => d
-        .Labels("a", "b", "c", "d")
+        //.Labels("a", "b", "c", "d")
         .Datasets(ds =>
         {
-            ds.Add("chart 1").Data(1.0, 3.5, 2, 2.5).Tension(0.1);
-            ds.Add("chart 2").Data(1.0, 2.5, 1.5, 2);
+            ds.Add("chart 1")
+            .Data(new { x = "2016-12-25", y = 20 }, new { x = "2016-12-26", y = 10 }, new { x = "2016-12-27", y = 8 })
+            .Tension(0.1);
+            //ds.Add("chart 2").Data(1.0, 2.5, 1.5, 2);
         }))
         .Options(o =>
         {

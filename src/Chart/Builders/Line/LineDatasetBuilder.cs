@@ -271,7 +271,7 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="data">An array of doubles representing the data to be set.</param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder Data(params double[] data)
+        public LineDatasetBuilder Data(params object[] data)
         {
             _lineDataset.Data = data;
             return this;

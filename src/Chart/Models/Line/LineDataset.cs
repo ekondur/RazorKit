@@ -7,7 +7,7 @@
         public double? BorderDashOffset { get; set; }
         public BorderJoinStyle? BorderJoinStyle { get; set; }
         public string CubicInterpolationMode { get; set; }
-        public double[] Data { get; set; }
+        public object[] Data { get; set; }
         public bool? DrawActiveElementsOnTop { get; set; }
         public bool? Fill { get; set; }
         public string HoverBorderCapStyle { get; set; }
