@@ -1,4 +1,5 @@
 ﻿using HelperJS.Chart.Models;
+using HelperJS.Chart.Models.Line;
 using System;
 
 namespace HelperJS.Chart.Builders
@@ -196,6 +197,41 @@ namespace HelperJS.Chart.Builders
         {
             var builder = new ScaleBuilder(_options, id);
             action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. 
+        /// If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public OptionsBuilder Parsing(bool enabled)
+        {
+            _options.Parsing = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Parsing with key.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public OptionsBuilder Parsing(string key)
+        {
+            _options.Parsing = new Parsing { Key = key };
+            return this;
+        }
+
+        /// <summary>
+        /// Parsing with x and y axis keys.
+        /// </summary>
+        /// <param name="xAxisKey"></param>
+        /// <param name="yAxisKey"></param>
+        /// <returns></returns>
+        public OptionsBuilder Parsing(string xAxisKey, string yAxisKey)
+        {
+            _options.Parsing = new Parsing { XAxisKey = xAxisKey, YAxisKey = yAxisKey };
             return this;
         }
     }
