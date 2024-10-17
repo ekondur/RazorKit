@@ -352,4 +352,25 @@ namespace HelperJS
         [EnumMember(Value = "center")]
         Center
     }
+
+    /// <summary>
+    /// Decimation algorithm to use for data.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Algorithm
+    {
+        /// <summary>
+        /// Lttb decimation reduces the number of data points significantly. 
+        /// This is most useful for showing trends in data using only a few data points.
+        /// </summary>
+        [EnumMember(Value = "lttb")]
+        Lttb,
+
+        /// <summary>
+        /// Min/max decimation will preserve peaks in your data but could require up to 4 points for each pixel. 
+        /// This type of decimation would work well for a very noisy signal where you need to see data peaks.
+        /// </summary>
+        [EnumMember(Value = "min-max")]
+        MinMax
+    }
 }

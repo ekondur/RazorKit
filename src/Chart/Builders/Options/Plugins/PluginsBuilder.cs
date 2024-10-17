@@ -56,7 +56,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Configure Tooltip.
+        /// Tooltip Configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
@@ -69,7 +69,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Configure Colors.
+        /// Colors Configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
@@ -77,6 +77,19 @@ namespace HelperJS.Chart.Builders
         {
             _plugins.Colors = new Colors();
             var builder = new ColorsBuilder(_plugins.Colors);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Decimation Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public PluginsBuilder Decimation(Action<DecimationBuilder> action)
+        {
+            _plugins.Decimation = new Decimation();
+            var builder = new DecimationBuilder(_plugins.Decimation);
             action(builder);
             return this;
         }

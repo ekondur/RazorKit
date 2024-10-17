@@ -11,5 +11,7 @@
         public ToolTip Tooltip { get; set; }
 
         public Colors Colors { get; set; }
+
+        public Decimation Decimation { get; set; }
     }
 }
