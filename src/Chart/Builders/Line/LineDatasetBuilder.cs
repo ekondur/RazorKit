@@ -325,11 +325,11 @@ namespace HelperJS.Chart.Builders.Line
         /// <summary>
         /// Cap style of the line.
         /// </summary>
-        /// <param name="borderCapStyle"></param>
+        /// <param name="capStyle"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BorderCapStyle(string borderCapStyle)
+        public LineDatasetBuilder BorderCapStyle(CapStyle capStyle)
         {
-            _lineDataset.BorderCapStyle = borderCapStyle;
+            _lineDataset.BorderCapStyle = capStyle;
             return this;
         }
 
@@ -402,12 +402,12 @@ namespace HelperJS.Chart.Builders.Line
         /// <summary>
         /// Border cap style when hovered.
         /// </summary>
-        /// <param name="hoverBorderCapStyle"></param>
+        /// <param name="capStyle"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
 
-        public LineDatasetBuilder HoverBorderCapStyle(string hoverBorderCapStyle)
+        public LineDatasetBuilder HoverBorderCapStyle(CapStyle capStyle)
         {
-            _lineDataset.HoverBorderCapStyle = hoverBorderCapStyle;
+            _lineDataset.HoverBorderCapStyle = capStyle;
             return this;
         }
 

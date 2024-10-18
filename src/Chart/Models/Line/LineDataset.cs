@@ -2,7 +2,7 @@
 {
     class LineDataset : PointDataset
     {
-        public string BorderCapStyle { get; set; }
+        public CapStyle? BorderCapStyle { get; set; }
         public int[] BorderDash { get; set; }
         public double? BorderDashOffset { get; set; }
         public JoinStyle? BorderJoinStyle { get; set; }
@@ -10,7 +10,7 @@
         public object[] Data { get; set; }
         public bool? DrawActiveElementsOnTop { get; set; }
         public bool? Fill { get; set; }
-        public string HoverBorderCapStyle { get; set; }
+        public CapStyle? HoverBorderCapStyle { get; set; }
         public int[] HoverBorderDash { get; set; }
         public double? HoverBorderDashOffset { get; set; }
         public JoinStyle? HoverBorderJoinStyle { get; set; }
