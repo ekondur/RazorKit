@@ -360,7 +360,7 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="borderJoinStyle"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BorderJoinStyle(BorderJoinStyle borderJoinStyle)
+        public LineDatasetBuilder BorderJoinStyle(JoinStyle borderJoinStyle)
         {
             _lineDataset.BorderJoinStyle = borderJoinStyle;
             return this;
@@ -438,7 +438,7 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="hoverBorderJoinStyle"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder HoverBorderJoinStyle(BorderJoinStyle hoverBorderJoinStyle)
+        public LineDatasetBuilder HoverBorderJoinStyle(JoinStyle hoverBorderJoinStyle)
         {
             _lineDataset.HoverBorderJoinStyle = hoverBorderJoinStyle;
             return this;

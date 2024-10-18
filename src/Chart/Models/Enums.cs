@@ -9,7 +9,7 @@ namespace HelperJS
     /// The default is "miter".
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum BorderJoinStyle
+    public enum JoinStyle
     {
         /// <summary>
         /// Connected segments are joined by extending their outside edges to connect at a single point, with the effect of filling an additional lozenge-shaped area. 
@@ -372,5 +372,60 @@ namespace HelperJS
         /// </summary>
         [EnumMember(Value = "min-max")]
         MinMax
+    }
+
+    /// <summary>
+    /// Line cap style.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum CapStyle
+    {
+        /// <summary>
+        /// The ends of lines are squared off at the endpoints.
+        /// </summary>
+        [EnumMember(Value = "butt")]
+        Butt,
+
+        /// <summary>
+        /// The ends of lines are rounded.
+        /// </summary>
+        [EnumMember(Value = "round")]
+        Round,
+
+        /// <summary>
+        /// The ends of lines are squared off by adding a box with an equal width and half the height of the line's thickness.
+        /// </summary>
+        [EnumMember(Value = "square")]
+        Square
+    }
+
+    public enum Skipped
+    {
+        Start,
+        End,
+        Middle,
+        Bottom,
+        Left,
+        Top,
+        Right,
+    }
+
+    /// <summary>
+    /// Arc stroke alignment.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum BorderAlign
+    {
+        /// <summary>
+        /// Center
+        /// </summary>
+        [EnumMember(Value = "center")]
+        Center,
+
+        /// <summary>
+        /// Inner
+        /// </summary>
+        [EnumMember(Value = "inner")]
+        Inner
     }
 }
