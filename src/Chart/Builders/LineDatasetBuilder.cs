@@ -2,7 +2,7 @@
 using HelperJS.Chart.Models.Line;
 using System;
 
-namespace HelperJS.Chart.Builders.Line
+namespace HelperJS.Chart.Builders
 {
     /// <summary>
     /// LineDataset Builder
@@ -10,11 +10,10 @@ namespace HelperJS.Chart.Builders.Line
     public class LineDatasetBuilder
     {
         private LineDataset _lineDataset;
-        private readonly Data _data;
 
-        internal LineDatasetBuilder(Data data)
+        internal LineDatasetBuilder(LineDataset lineDataset)
         {
-            _data = data;
+            _lineDataset = lineDataset;
         }
 
         #region BaseDataset
@@ -164,12 +163,9 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="label">The label for the dataset which appears in the legend and tooltips.</param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder Add(string label)
+        public LineDatasetBuilder Label(string label)
         {
-            _lineDataset = new LineDataset { Label = label };
-
-            _data.Datasets.Add(_lineDataset);
-
+            _lineDataset.Label = label;
             return this;
         }
 

@@ -1,18 +1,18 @@
 ﻿using HelperJS.Chart.Models;
 using System;
 
-namespace HelperJS.Chart.Builders.Line
+namespace HelperJS.Chart.Builders
 {
     /// <summary>
-    /// LineData Builder
+    /// Data Configuration.
     /// </summary>
-    public class LineDataBuilder
+    public class DataBuilder
     {
-        private readonly Data _data;
+        private readonly ChartJs _chart;
 
-        internal LineDataBuilder(Data data)
+        internal DataBuilder(ChartJs chart)
         {
-            _data = data;
+            _chart = chart;
         }
 
         /// <summary>
@@ -20,9 +20,9 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="labels">An array of labels to assign.</param>
         /// <returns>Returns the LineDataBuilder object with assigned labels.</returns>
-        public LineDataBuilder Labels(params string[] labels)
+        public DataBuilder Labels(params string[] labels)
         {
-            _data.Labels = labels;
+            _chart.Data.Labels = labels;
             return this;
         }
 
@@ -31,9 +31,9 @@ namespace HelperJS.Chart.Builders.Line
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public LineDataBuilder Datasets(Action<LineDatasetBuilder> action)
+        public DataBuilder Datasets(Action<DatasetsBuilder> action)
         {
-            var builder = new LineDatasetBuilder(_data);
+            var builder = new DatasetsBuilder(_chart);
             action(builder);
             return this;
         }

@@ -12,11 +12,30 @@ using HelperJS.Chart.Builders;
 
 namespace HelperJS
 {
+    /// <summary>
+    /// JSHelper
+    /// </summary>
     public partial class JSHelper
     {
-        public ChartBuilder Chart()
+        /// <summary>
+        /// Chart Configuration.
+        /// </summary>
+        /// <param name="canvasId"></param>
+        /// <returns></returns>
+        public ChartBuilder Chart(string canvasId)
         {
-            return new ChartBuilder();
+            return new ChartBuilder(canvasId);
+        }
+
+        /// <summary>
+        /// Chart Configuration.
+        /// </summary>
+        /// <param name="canvasId"></param>
+        /// <param name="useCanvas"></param>
+        /// <returns></returns>
+        public ChartBuilder Chart(string canvasId, bool useCanvas)
+        {
+            return new ChartBuilder(canvasId, useCanvas);
         }
     }
 

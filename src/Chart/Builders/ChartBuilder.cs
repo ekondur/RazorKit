@@ -1,5 +1,5 @@
-﻿using HelperJS.Chart.Builders.Line;
-using HelperJS.Chart.Models;
+﻿using HelperJS.Chart.Models;
+using System;
 
 namespace HelperJS.Chart.Builders
 {
@@ -12,27 +12,44 @@ namespace HelperJS.Chart.Builders
         internal string CanvasId { get; private set; }
         internal bool UseCanvas { get; private set; }
 
-        /// <summary>
-        /// Configure line chart. if 'useCanvas' is disabled, the canvas element should be also defined.
-        /// </summary>
-        /// <param name="canvasId"></param>
-        /// <param name="useCanvas"></param>
-        /// <returns></returns>
-        public LineBuilder Line(string canvasId, bool useCanvas)
+        internal ChartBuilder(string canvasId)
         {
-            Chart = new ChartJs { Type = "line" };
+            CanvasId = canvasId;
+            UseCanvas = true;
+            Chart = new ChartJs();
+        }
 
-            return new LineBuilder { Chart = Chart, CanvasId = canvasId, UseCanvas = useCanvas };
+        internal ChartBuilder(string canvasId, bool useCanvas)
+        {
+            CanvasId = canvasId;
+            UseCanvas = useCanvas;
+            Chart = new ChartJs();
         }
 
         /// <summary>
-        /// Configure line chart
+        /// Configure data.
         /// </summary>
-        /// <param name="canvasId"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public LineBuilder Line(string canvasId)
+        public ChartBuilder Data(Action<DataBuilder> action)
         {
-            return Line(canvasId, true);
+            Chart.Data = new Data();
+            var builder = new DataBuilder(Chart);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Configure options.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ChartBuilder Options(Action<OptionsBuilder> action)
+        {
+            Chart.Options = new Options();
+            var builder = new OptionsBuilder(Chart.Options);
+            action(builder);
+            return this;
         }
     }
 }
