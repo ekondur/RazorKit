@@ -3,7 +3,7 @@ using System;
 
 namespace HelperJS.Chart.Converters
 {
-    internal class ObjectIntConverter<T> : JsonConverter
+    internal class ObjectOrtIntConverter<T> : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {

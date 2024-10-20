@@ -1,9 +1,14 @@
-﻿namespace HelperJS.Chart.Models
+﻿using HelperJS.Chart.Converters;
+using Newtonsoft.Json;
+
+namespace HelperJS.Chart.Models
 {
     internal class PointElement : BaseElement
     {
         public int? Radius { get; set; }
-        public PointStyle? PointStyle { get; set; }
+
+        [JsonConverter(typeof(EnumOrBoolConverter))]
+        public object PointStyle { get; set; }
         public int? Rotation { get; set; }
         public int? HitRadius { get; set; }
         public int? HoverRadius { get; set; }

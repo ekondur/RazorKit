@@ -8,7 +8,7 @@ namespace HelperJS.Chart.Models
         [JsonConverter(typeof(StringOrBoolConverter))]
         public object BorderSkipped { get; set; }
 
-        [JsonConverter(typeof(ObjectIntConverter<BorderRadius>))]
+        [JsonConverter(typeof(ObjectOrtIntConverter<BorderRadius>))]
         public object BorderRadius { get; set; }
 
         [JsonConverter(typeof(StringOrIntConverter))]

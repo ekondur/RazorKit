@@ -27,6 +27,17 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
+        /// Is point style enabled.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public PointElementBuilder PointStyle(bool enabled)
+        {
+            _pointElement.PointStyle = enabled;
+            return this;
+        }
+
+        /// <summary>
         /// Point style.
         /// </summary>
         /// <param name="style"></param>

@@ -185,6 +185,17 @@ namespace HelperJS.Chart.Builders.Line
         }
 
         /// <summary>
+        /// Is style of the point enabled?
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
+        public LineDatasetBuilder PointStyle(bool enabled)
+        {
+            _lineDataset.PointStyle = enabled;
+            return this;
+        }
+
+        /// <summary>
         /// Style of the point.
         /// </summary>
         /// <param name="pointStyle"></param>
@@ -389,11 +400,22 @@ namespace HelperJS.Chart.Builders.Line
         }
 
         /// <summary>
-        /// How to fill the area under the line.
+        /// How to fill the area under the line. Default false
         /// </summary>
         /// <param name="fill"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder Fill(bool fill)
+        {
+            _lineDataset.Fill = fill;
+            return this;
+        }
+
+        /// <summary>
+        /// How to fill the area under the line.
+        /// </summary>
+        /// <param name="fill"></param>
+        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
+        public LineDatasetBuilder Fill(string fill)
         {
             _lineDataset.Fill = fill;
             return this;

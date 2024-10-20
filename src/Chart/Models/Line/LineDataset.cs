@@ -1,4 +1,7 @@
-﻿namespace HelperJS.Chart.Models.Line
+﻿using HelperJS.Chart.Converters;
+using Newtonsoft.Json;
+
+namespace HelperJS.Chart.Models.Line
 {
     class LineDataset : PointDataset
     {
@@ -9,7 +12,9 @@
         public string CubicInterpolationMode { get; set; }
         public object[] Data { get; set; }
         public bool? DrawActiveElementsOnTop { get; set; }
-        public bool? Fill { get; set; }
+
+        [JsonConverter(typeof(StringOrBoolConverter))]
+        public object Fill { get; set; }
         public CapStyle? HoverBorderCapStyle { get; set; }
         public int[] HoverBorderDash { get; set; }
         public double? HoverBorderDashOffset { get; set; }
