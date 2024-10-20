@@ -19,7 +19,7 @@
 
 @{
     var line = 
-    Html.JS().Chart("line")
+    Html.JS().Chart("canvasId")
     .Data(d => d
         .Labels("a", "b", "c", "d")
         .Datasets(ds =>
@@ -31,18 +31,14 @@
             ds.Line().Label("chart 1").Data(2.0, 2.5, 1.5, 3).BackgroundColor("red").Tension(0.1);
             ds.Line().Label("chart 2").Data(1.0, 2, 1.5, 2).BackgroundColor("green");
         }))
-        .Options(o =>
-        {
-            o.Plugins(p =>
-            {
-                p.Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
-                    .Padding(padding => padding.Bottom(5))
-                    .Font(f => f.Weight(900).Size(20.5)));
-                p.Legend(l => l.Display(true).OnHover("handleHover"));
-
-            });
-            o.Layout(l => l.Padding(50)).Locale("tr-TR");
-        });
+    .Options(o => o
+        .Plugins(p => p
+            .Title(t => t.Text("title").Display(true).Position(TitlePosition.Top)
+                .Padding(padding => padding.Bottom(5))
+                .Font(f => f.Weight(900).Size(20.5)))
+            .Legend(l => l.Display(true).OnHover("handleHover")))
+        .Layout(l => l.Padding(50)).Locale("tr-TR")
+    );
 }
 
 @line.Render()
