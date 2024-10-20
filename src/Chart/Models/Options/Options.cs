@@ -26,6 +26,7 @@ namespace HelperJS.Chart.Models
         public Plugins Plugins { get; set; }
         public Layout Layout { get; set; }
         public Interaction Interaction { get; set; }
+        public Elements Elements { get; set; }
 
         [JsonConverter(typeof(DictionaryAsPropertiesConverter<Scale>))]
         public Dictionary<string, Scale> Scales { get; set; }

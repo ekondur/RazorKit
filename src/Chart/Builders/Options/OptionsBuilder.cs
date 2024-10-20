@@ -1,5 +1,4 @@
 ﻿using HelperJS.Chart.Models;
-using HelperJS.Chart.Models.Line;
 using System;
 
 namespace HelperJS.Chart.Builders
@@ -188,7 +187,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Configure Scales.
+        /// Scales Configuration.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="action"></param>
@@ -196,6 +195,19 @@ namespace HelperJS.Chart.Builders
         public OptionsBuilder Scales(string id, Action<ScaleBuilder> action)
         {
             var builder = new ScaleBuilder(_options, id);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Elements Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public OptionsBuilder Elements(Action<ElementsBuilder> action)
+        {
+            _options.Elements = new Elements();
+            var builder = new ElementsBuilder(_options.Elements);
             action(builder);
             return this;
         }
