@@ -399,14 +399,28 @@ namespace HelperJS
         Square
     }
 
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Skipped
     {
+        [EnumMember(Value = "start")]
         Start,
+
+        [EnumMember(Value = "end")]
         End,
+
+        [EnumMember(Value = "middle")]
         Middle,
+
+        [EnumMember(Value = "bottom")]
         Bottom,
+
+        [EnumMember(Value = "left")]
         Left,
+
+        [EnumMember(Value = "top")]
         Top,
+
+        [EnumMember(Value = "right")]
         Right,
     }
 

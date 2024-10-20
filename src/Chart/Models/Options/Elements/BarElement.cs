@@ -5,7 +5,7 @@ namespace HelperJS.Chart.Models
 {
     internal class BarElement : BaseElement
     {
-        [JsonConverter(typeof(StringOrBoolConverter))]
+        [JsonConverter(typeof(EnumOrBoolConverter))]
         public object BorderSkipped { get; set; }
 
         [JsonConverter(typeof(ObjectOrtIntConverter<BorderRadius>))]
@@ -14,7 +14,6 @@ namespace HelperJS.Chart.Models
         [JsonConverter(typeof(StringOrIntConverter))]
         public object InflateAmount { get; set; }
 
-        [JsonConverter(typeof(StringOrBoolConverter))]
-        public object PointStyle { get; set; }
+        public PointStyle PointStyle { get; set; }
     }
 }
