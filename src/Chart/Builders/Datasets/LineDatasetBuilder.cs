@@ -1,160 +1,19 @@
-﻿using HelperJS.Chart.Models;
-using HelperJS.Chart.Models.Line;
-using System;
+﻿using HelperJS.Chart.Models.Line;
 
 namespace HelperJS.Chart.Builders
 {
     /// <summary>
     /// LineDataset Builder
     /// </summary>
-    public class LineDatasetBuilder
+    public class LineDatasetBuilder : BaseDatasetBuilder<LineDatasetBuilder>
     {
         private LineDataset _lineDataset;
 
         internal LineDatasetBuilder(LineDataset lineDataset)
+            : base(lineDataset)
         {
             _lineDataset = lineDataset;
         }
-
-        #region BaseDataset
-
-        /// <summary>
-        /// The line fill color.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BackgroundColor(string color)
-        {
-            _lineDataset.BackgroundColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// The line color.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BorderColor(string color)
-        {
-            _lineDataset.BorderColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// The line width (in pixels). Default 3
-        /// </summary>
-        /// <param name="width"></param>
-        /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder BorderWith(int width)
-        {
-            _lineDataset.BorderWith = width;
-            return this;
-        }
-
-        /// <summary>
-        /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
-        /// 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
-        /// </summary>
-        /// <param name="clip"></param>
-        /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder Clip(int clip)
-        {
-            _lineDataset.Clip = new Clip(clip);
-            return this;
-        }
-
-        /// <summary>
-        /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
-        /// 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
-        /// </summary>
-        /// <param name="action"></param>
-        /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder Clip(Action<ClipBuilder> action)
-        {
-            var builder = new ClipBuilder(_lineDataset);
-            action(builder);
-            return this;
-        }
-
-        /// <summary>
-        /// Background color when hovered.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder HoverBackgroundColor(string color)
-        {
-            _lineDataset.HoverBackgroundColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// Border color when hovered.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder HoverBorderColor(string color)
-        {
-            _lineDataset.HoverBorderColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// The line width (in pixels) when hovered.
-        /// </summary>
-        /// <param name="width"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder HoverBorderWidth(int width)
-        {
-            _lineDataset.HoverBorderWidth = width;
-            return this;
-        }
-
-        /// <summary>
-        /// How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. 
-        /// If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.
-        /// </summary>
-        /// <param name="enabled"></param>
-        /// <returns></returns>
-        public LineDatasetBuilder Parsing(bool enabled)
-        {
-            _lineDataset.Parsing = enabled;
-            return this;
-        }
-
-        /// <summary>
-        /// Parsing with key.
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public LineDatasetBuilder Parsing(string key)
-        {
-            _lineDataset.Parsing = new Parsing { Key = key };
-            return this;
-        }
-
-        /// <summary>
-        /// Parsing with x and y axis keys.
-        /// </summary>
-        /// <param name="xAxisKey"></param>
-        /// <param name="yAxisKey"></param>
-        /// <returns></returns>
-        public LineDatasetBuilder Parsing(string xAxisKey, string yAxisKey)
-        {
-            _lineDataset.Parsing = new Parsing { XAxisKey = xAxisKey, YAxisKey = yAxisKey };
-            return this;
-        }
-
-        /// <summary>
-        /// Configure the visibility of the dataset. Using hidden: true will hide the dataset from being rendered in the Chart.
-        /// </summary>
-        /// <param name="hidden"></param>
-        /// <returns></returns>
-        public LineDatasetBuilder Hidden(bool hidden)
-        {
-            _lineDataset.Hidden = hidden;
-            return this;
-        }
-        #endregion
 
         #region LinneerDataset
 

@@ -28,8 +28,8 @@
             // .Label("chart 1")
             // .Data(new { x = "2016-12-25", y = 20 }, new { x = "2016-12-26", y = 10 }, new { x = "2016-12-27", y = 8 })
             // .Tension(0.1);
-            ds.Line().Label("chart 1").Data(2.0, 2.5, 1.5, 3);
-            ds.Line().Label("chart 2").Data(1.0, 2, 1.5, 2);
+            ds.Line().Label("chart 1").Data(2.0, 2.5, 1.5, 3).BackgroundColor("red").Tension(0.1);
+            ds.Line().Label("chart 2").Data(1.0, 2, 1.5, 2).BackgroundColor("green");
         }))
         .Options(o =>
         {
@@ -42,8 +42,6 @@
 
             });
             o.Layout(l => l.Padding(50)).Locale("tr-TR");
-            o.Scales(Scales.X, s => s.Grace(5).BeginAtZero(true).Display("auto")
-                .Grid(g => g.Display(true).Color("green")));
         });
 }
 

@@ -1,5 +1,4 @@
 ﻿using HelperJS.Chart.Models;
-using HelperJS.Chart.Models.Line;
 
 namespace HelperJS.Chart.Builders
 {
@@ -11,7 +10,7 @@ namespace HelperJS.Chart.Builders
         private readonly BaseDataset _dataset;
         private readonly Clip _clip;
 
-        internal ClipBuilder(LineDataset dataset)
+        internal ClipBuilder(BaseDataset dataset)
         {
             _dataset = dataset;
             _dataset.Clip = _clip = new Clip();
