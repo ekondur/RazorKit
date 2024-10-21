@@ -1,4 +1,5 @@
 ﻿using HelperJS.Chart.Models;
+using System.Collections.Generic;
 
 namespace HelperJS.Chart.Builders
 {
@@ -12,6 +13,16 @@ namespace HelperJS.Chart.Builders
         internal AnimationBuilder(Animation animation)
         {
             _animation = animation;
+        }
+
+        internal AnimationBuilder(Options options, string animation)
+        {
+            _animation = new Animation();
+            if (options.Animations == null)
+            {
+                options.Animations = new Dictionary<string, Animation>();
+            }
+            options.Animations.Add(animation, _animation);
         }
 
         /// <summary>
@@ -77,6 +88,72 @@ namespace HelperJS.Chart.Builders
         public AnimationBuilder OnComplete(string onComplete)
         {
             _animation.OnComplete = onComplete;
+            return this;
+        }
+
+        /// <summary>
+        /// Start value for the animation. Current value is used when undefined.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <returns></returns>
+        public AnimationBuilder From(bool from)
+        {
+            _animation.From = from;
+            return this;
+        }
+
+        /// <summary>
+        /// Start value for the animation. Current value is used when undefined.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <returns></returns>
+        public AnimationBuilder From(int from)
+        {
+            _animation.From = from;
+            return this;
+        }
+
+        /// <summary>
+        /// Start value for the animation. Current value is used when undefined.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <returns></returns>
+        public AnimationBuilder From(string from)
+        {
+            _animation.From = from;
+            return this;
+        }
+
+        /// <summary>
+        /// End value for the animation. Updated value is used when undefined
+        /// </summary>
+        /// <param name="to"></param>
+        /// <returns></returns>
+        public AnimationBuilder To(bool to)
+        {
+            _animation.To = to;
+            return this;
+        }
+
+        /// <summary>
+        /// End value for the animation. Updated value is used when undefined
+        /// </summary>
+        /// <param name="to"></param>
+        /// <returns></returns>
+        public AnimationBuilder To(int to)
+        {
+            _animation.To = to;
+            return this;
+        }
+
+        /// <summary>
+        /// End value for the animation. Updated value is used when undefined
+        /// </summary>
+        /// <param name="to"></param>
+        /// <returns></returns>
+        public AnimationBuilder To(string to)
+        {
+            _animation.To = to;
             return this;
         }
     }

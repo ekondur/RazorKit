@@ -1,4 +1,5 @@
-﻿using HelperJS.Chart.Models;
+﻿using HelperJS.Chart.Extensions;
+using HelperJS.Chart.Models;
 using System;
 
 namespace HelperJS.Chart.Builders
@@ -181,7 +182,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public OptionsBuilder Scales(Scales id, Action<ScaleBuilder> action)
         {
-            var builder = new ScaleBuilder(_options, id.ToString().ToLower());
+            var builder = new ScaleBuilder(_options, id.ToCamelCaseString());
             action(builder);
             return this;
         }
@@ -195,6 +196,19 @@ namespace HelperJS.Chart.Builders
         public OptionsBuilder Scales(string id, Action<ScaleBuilder> action)
         {
             var builder = new ScaleBuilder(_options, id);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Animations options configures which element properties are animated and how.
+        /// </summary>
+        /// <param name="animations"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public OptionsBuilder Animations(Animations animations, Action<AnimationBuilder> action)
+        {
+            var builder = new AnimationBuilder(_options, animations.ToCamelCaseString());
             action(builder);
             return this;
         }
