@@ -1,4 +1,4 @@
-﻿namespace HelperJS.Chart.Models
+﻿namespace HelperJS.Chart.Models.Datasets
 {
     class PointDataset : LineerDataset
     {

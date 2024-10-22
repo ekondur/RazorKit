@@ -5,9 +5,10 @@ namespace HelperJS.Chart.Models
 {
     class BaseDataset
     {
+        public string Type { get; set; }
         public string BackgroundColor { get; set; }
         public string BorderColor { get; set; }
-        public int? BorderWith { get; set; }
+        public int? BorderWidth { get; set; }
         public Clip Clip { get; set; }
         public string HoverBackgroundColor { get; set; }
         public string HoverBorderColor { get; set; }

@@ -34,7 +34,7 @@ namespace HelperJS.Chart.Builders
         public ChartBuilder Data(Action<DataBuilder> action)
         {
             Chart.Data = new Data();
-            var builder = new DataBuilder(Chart);
+            var builder = new DataBuilder(Chart.Data);
             action(builder);
             return this;
         }

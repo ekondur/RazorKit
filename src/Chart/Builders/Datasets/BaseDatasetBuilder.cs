@@ -15,8 +15,6 @@ namespace HelperJS.Chart.Builders
             _dataset = baseDataset;
         }
 
-        #region BaseDataset
-
         /// <summary>
         /// The line fill color.
         /// </summary>
@@ -44,9 +42,9 @@ namespace HelperJS.Chart.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns>The T instance.</returns>
-        public T BorderWith(int width)
+        public T BorderWidth(int width)
         {
-            _dataset.BorderWith = width;
+            _dataset.BorderWidth = width;
             return (T)this;
         }
 
@@ -153,7 +151,5 @@ namespace HelperJS.Chart.Builders
             _dataset.Hidden = hidden;
             return (T)this;
         }
-        #endregion
-
     }
 }

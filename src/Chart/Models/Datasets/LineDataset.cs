@@ -1,7 +1,7 @@
 ﻿using HelperJS.Chart.Converters;
 using Newtonsoft.Json;
 
-namespace HelperJS.Chart.Models.Line
+namespace HelperJS.Chart.Models.Datasets
 {
     class LineDataset : PointDataset
     {

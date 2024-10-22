@@ -1,5 +1,5 @@
 ﻿using HelperJS.Chart.Models;
-using HelperJS.Chart.Models.Line;
+using HelperJS.Chart.Models.Datasets;
 
 namespace HelperJS.Chart.Builders
 {
@@ -8,11 +8,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class DatasetsBuilder
     {
-        private readonly ChartJs _chart;
+        private readonly Data _data;
 
-        internal DatasetsBuilder(ChartJs chart)
+        internal DatasetsBuilder(Data data)
         {
-            _chart = chart;
+            _data = data;
         }
 
         /// <summary>
@@ -21,9 +21,8 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public LineDatasetBuilder Line()
         {
-            _chart.Type = "line";
-            var lineDataset = new LineDataset();
-            _chart.Data.Datasets.Add(lineDataset);
+            var lineDataset = new LineDataset { Type = "line" };
+            _data.Datasets.Add(lineDataset);
             var builder = new LineDatasetBuilder(lineDataset);
             return builder;
         }
