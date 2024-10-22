@@ -1,5 +1,4 @@
 ﻿using HelperJS.Chart.Models;
-using HelperJS.Chart.Models.Datasets;
 
 namespace HelperJS.Chart.Builders
 {

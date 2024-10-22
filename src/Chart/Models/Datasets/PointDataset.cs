@@ -1,6 +1,6 @@
-﻿namespace HelperJS.Chart.Models.Datasets
+﻿namespace HelperJS.Chart.Models
 {
-    class PointDataset : LineerDataset
+    class PointDataset : BaseDataset
     {
         public string PointBackgroundColor { get; set; }
         public string PointBorderColor { get; set; }

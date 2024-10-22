@@ -1,9 +1,9 @@
 ﻿using HelperJS.Chart.Converters;
 using Newtonsoft.Json;
 
-namespace HelperJS.Chart.Models.Datasets
+namespace HelperJS.Chart.Models
 {
-    internal class BarDataset : LineerDataset
+    internal class BarDataset : BaseDataset
     {
         public int? Base { get; set; }
         public double? BarPercentage { get; set; }
