@@ -11,14 +11,14 @@ namespace HelperJS.Chart.Models
         public string BackgroundColor { get; set; }
         public ScaleBorder Border { get; set; }
 
-        [JsonConverter(typeof(StringOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object Display { get; set; }
         public Grid Grid { get; set; }
         public int? Min { get; set; }
         public int? Max { get; set; }
         public bool? Reverse { get; set; }
 
-        [JsonConverter(typeof(StringOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object Stacked { get; set; }
         public int? SuggestedMax { get; set; }
         public int? SuggestedMin { get; set; }
@@ -27,7 +27,7 @@ namespace HelperJS.Chart.Models
 
         // Linear Axis specific options
         public bool? BeginAtZero { get; set; }
-        [JsonConverter(typeof(StringOrIntConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object Grace { get; set; }
 
         // Common options to all cartesian axes

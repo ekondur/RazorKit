@@ -16,10 +16,10 @@ namespace HelperJS.Chart.Models
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string OnComplete { get; set; }
 
-        [JsonConverter(typeof(StringOrIntOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object From { get; set; }
 
-        [JsonConverter(typeof(StringOrIntOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object To { get; set; }
     }
 }

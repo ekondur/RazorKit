@@ -8,10 +8,10 @@ namespace HelperJS.Chart.Models
         public int? Base { get; set; }
         public double? BarPercentage { get; set; }
 
-        [JsonConverter(typeof(StringOrIntConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object BarThickness { get; set; }
 
-        [JsonConverter(typeof(StringOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object BorderSkipped { get; set; }
 
         [JsonConverter(typeof(ObjectOrBoolConverter<BorderWidth>))]

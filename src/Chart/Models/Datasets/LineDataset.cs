@@ -8,7 +8,7 @@ namespace HelperJS.Chart.Models
         public string Label { get; set; }
         public int? Order { get; set; }
 
-        [JsonConverter(typeof(EnumOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter<PointStyle>))]
         public object PointStyle { get; set; }
         public CapStyle? BorderCapStyle { get; set; }
         public int[] BorderDash { get; set; }
@@ -17,7 +17,7 @@ namespace HelperJS.Chart.Models
         public string CubicInterpolationMode { get; set; }
         public bool? DrawActiveElementsOnTop { get; set; }
 
-        [JsonConverter(typeof(StringOrBoolConverter))]
+        [JsonConverter(typeof(DynamicConverter))]
         public object Fill { get; set; }
         public CapStyle? HoverBorderCapStyle { get; set; }
         public int[] HoverBorderDash { get; set; }
