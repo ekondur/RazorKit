@@ -5,7 +5,7 @@ namespace HelperJS.Chart.Builders
     /// <summary>
     /// LineDataset Builder
     /// </summary>
-    public class LineDatasetBuilder : BaseDatasetBuilder<LineDatasetBuilder>
+    public class LineDatasetBuilder : PointDatasetBuilder<LineDatasetBuilder>
     {
         private LineDataset _lineDataset;
 
@@ -14,8 +14,6 @@ namespace HelperJS.Chart.Builders
         {
             _lineDataset = lineDataset;
         }
-
-        #region LinneerDataset
 
         /// <summary>
         /// Add a new dataset.
@@ -60,122 +58,6 @@ namespace HelperJS.Chart.Builders
             _lineDataset.PointStyle = pointStyle;
             return this;
         }
-
-        #endregion
-
-        #region PointDataset
-
-        /// <summary>
-        /// The fill color for points.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointBackgroundColor(string color)
-        {
-            _lineDataset.PointBackgroundColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// The border color for points.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointBorderColor(string color)
-        {
-            _lineDataset.PointBorderColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// The width of the point border in pixels. Default 1
-        /// </summary>
-        /// <param name="width"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointBorderWidth(int width)
-        {
-            _lineDataset.PointBorderWidth = width;
-            return this;
-        }
-
-        /// <summary>
-        /// The pixel size of the non-displayed point that reacts to mouse events. Default 1
-        /// </summary>
-        /// <param name="radius"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHitRadius(int radius)
-        {
-            _lineDataset.PointHitRadius = radius;
-            return this;
-        }
-
-        /// <summary>
-        /// Point background color when hovered.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHoverBackgroundColor(string color)
-        {
-            _lineDataset.PointHoverBackgroundColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// Point border color when hovered.
-        /// </summary>
-        /// <param name="color"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHoverBorderColor(string color)
-        {
-            _lineDataset.PointHoverBorderColor = color;
-            return this;
-        }
-
-        /// <summary>
-        /// Border width of point when hovered. Default 1
-        /// </summary>
-        /// <param name="width"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHoverBorderWidth(int width)
-        {
-            _lineDataset.PointHoverBorderWidth = width;
-            return this;
-        }
-
-        /// <summary>
-        /// The radius of the point when hovered. Default 4
-        /// </summary>
-        /// <param name="radius"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointHoverRadius(int radius)
-        {
-            _lineDataset.PointHoverRadius = radius;
-            return this;
-        }
-
-        /// <summary>
-        /// The radius of the point shape. If set to 0, the point is not rendered. Default 3
-        /// </summary>
-        /// <param name="radius"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointRadius(int radius)
-        {
-            _lineDataset.PointRadius = radius;
-            return this;
-        }
-
-        /// <summary>
-        /// The rotation of the point in degrees. Default 0
-        /// </summary>
-        /// <param name="rotation"></param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder PointRotation(int rotation)
-        {
-            _lineDataset.PointRotation = rotation;
-            return this;
-        }
-
-        #endregion
 
         /// <summary>
         /// Sets the data for the LineDatasetBuilder instance.
