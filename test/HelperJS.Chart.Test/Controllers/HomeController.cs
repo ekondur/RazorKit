@@ -13,12 +13,22 @@ namespace HelperJS.Chart.Test.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Line()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Animation()
+        {
+            return View();
+        }
+
+        public IActionResult Radar()
+        {
+            return View();
+        }
+
+        public IActionResult Mixed()
         {
             return View();
         }

@@ -2,11 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
@@ -42,31 +37,3 @@
 }
 
 @line.Render()
-
-@{
-    var animateLine =
-            Html.JS().Chart("canvasId2")
-            .Data(d => d
-                .Labels("January", "February", "March", "April", "May", "June", "July")
-                .Datasets(ds => ds
-                    .Line().Label("Looping tension")
-                    .Data(65, 59, 80, 81, 26, 55, 40)
-                    .Fill(false)
-                    .BorderColor("rgb(75, 192, 192)")
-                )
-            )
-            .Options(o => o
-                .Animations(Animations.Tension, a => a
-                    .Duration(1000)
-                    .Easing(Easing.Linear)
-                    .Loop(true)
-                    .From(1)
-                    .To(0))
-                .Scales(Scales.Y, s => s
-                    .Min(0)
-                    .Max(100)
-                )
-            );
-}
-
-@animateLine.Render()

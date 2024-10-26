@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var animateLine =
+            Html.JS().Chart("canvasId")
+            .Data(d => d
+                .Labels("January", "February", "March", "April")
+                .Datasets(ds =>
+                {
+                    ds.Radar()
+                    .Label("My First Dataset")
+                    .Data(65, 59, 90, 81)
+                    .Fill(true);
+
+                    ds.Radar()
+                    .Label("My Second Dataset")
+                    .Data(28, 48, 40, 19)
+                    .Fill(true);
+
+                    ds.Line()
+                    .Label("Line Dataset")
+                    .Data(10, 20, 30, 40);
+                })
+            );
+}
+
+@animateLine.Render()

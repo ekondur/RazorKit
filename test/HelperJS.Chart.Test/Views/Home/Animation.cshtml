@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var animateLine =
+            Html.JS().Chart("canvasId")
+            .Data(d => d
+                .Labels("January", "February", "March", "April", "May", "June", "July")
+                .Datasets(ds => ds
+                    .Line().Label("Looping tension")
+                    .Data(65, 59, 80, 81, 26, 55, 40)
+                    .Fill(false)
+                    .BorderColor("rgb(75, 192, 192)")
+                )
+            )
+            .Options(o => o
+                .Animations(Animations.Tension, a => a
+                    .Duration(1000)
+                    .Easing(Easing.Linear)
+                    .Loop(true)
+                    .From(1)
+                    .To(0))
+                .Scales(Scales.Y, s => s
+                    .Min(0)
+                    .Max(100)
+                )
+            );
+}
+
+@animateLine.Render()
