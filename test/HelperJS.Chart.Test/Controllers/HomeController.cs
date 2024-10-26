@@ -33,6 +33,11 @@ namespace HelperJS.Chart.Test.Controllers
             return View();
         }
 
+        public IActionResult Bar()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

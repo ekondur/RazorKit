@@ -34,7 +34,7 @@ namespace HelperJS.Chart.Models
         [JsonConverter(typeof(DictionaryAsPropertiesConverter<Animation>))]
         public Dictionary<string, Animation> Animations { get; set; }
 
-        [JsonConverter(typeof(ObjectOrBoolConverter<Parsing>))]
+        [JsonConverter(typeof(ObjectOrTypeConverter<Parsing>))]
         public object Parsing { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Mixed Charts";
 }
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -13,19 +13,13 @@
                 .Labels("January", "February", "March", "April")
                 .Datasets(ds =>
                 {
-                    ds.Radar()
+                    ds.Bar()
                     .Label("My First Dataset")
-                    .Data(65, 59, 90, 81)
-                    .Fill(true);
-
-                    ds.Radar()
-                    .Label("My Second Dataset")
-                    .Data(28, 48, 40, 19)
-                    .Fill(true);
+                    .Data(10, 20, 30, 40);
 
                     ds.Line()
                     .Label("Line Dataset")
-                    .Data(10, 20, 30, 40);
+                    .Data(50, 40, 45, 50);
                 })
             );
 }

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Bar Chart";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var animateLine =
+            Html.JS().Chart("canvasId")
+            .Data(d => d
+                .Labels("January", "February", "March", "April", "May", "June", "July")
+                .Datasets(ds =>
+                    ds.Bar()
+                    .Label("Bar Chart")
+                    .Data(65, 59, 80, 81, 56, 55, 40)
+                    .BorderWidth(1)
+                )
+            )
+            .Options(o => o
+                .Scales(Scales.Y, s => s.BeginAtZero(true)));
+}
+
+@animateLine.Render()

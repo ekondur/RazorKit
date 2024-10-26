@@ -15,7 +15,7 @@ namespace HelperJS.Chart.Models
         public string HoverBorderColor { get; set; }
         public int? HoverBorderWidth { get; set; }
 
-        [JsonConverter(typeof(ObjectOrBoolConverter<Parsing>))]
+        [JsonConverter(typeof(ObjectOrTypeConverter<Parsing>))]
         public object Parsing { get; set; }
         public bool? Hidden { get; set; }
     }

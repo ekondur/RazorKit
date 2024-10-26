@@ -14,7 +14,7 @@ namespace HelperJS.Chart.Models
         public double? HoverBorderDashOffset { get; set; }
         public JoinStyle? HoverBorderJoinStyle { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter))]
+        [JsonConverter(typeof(TypeConverter))]
         public object Fill { get; set; }
         public string Label { get; set; }
         public int? Order { get; set; }
@@ -30,7 +30,7 @@ namespace HelperJS.Chart.Models
         public int? PointRadius { get; set; }
         public int? PointRotation { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter<PointStyle>))]
+        [JsonConverter(typeof(EnumOrTypeConverter<PointStyle>))]
         public object PointStyle { get; set; }
         public bool? SpanGaps { get; set; }
     }

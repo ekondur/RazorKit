@@ -451,4 +451,21 @@ namespace HelperJS
         [EnumMember(Value = "inner")]
         Inner
     }
+
+    /// <summary>
+    /// The base axis of the dataset. 'x' for vertical bars and 'y' for horizontal bars.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum IndexAxis
+    {
+        /// <summary>
+        /// x axis
+        /// </summary>
+        X,
+
+        /// <summary>
+        /// y axis
+        /// </summary>
+        Y
+    }
 }

@@ -5,13 +5,13 @@ namespace HelperJS.Chart.Models
 {
     internal class BarElement : BaseElement
     {
-        [JsonConverter(typeof(DynamicConverter<Skipped>))]
+        [JsonConverter(typeof(EnumOrTypeConverter<Skipped>))]
         public object BorderSkipped { get; set; }
 
-        [JsonConverter(typeof(ObjectOrtIntConverter<BorderRadius>))]
+        [JsonConverter(typeof(ObjectOrTypeConverter<BorderRadius>))]
         public object BorderRadius { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter))]
+        [JsonConverter(typeof(TypeConverter))]
         public object InflateAmount { get; set; }
 
         public PointStyle PointStyle { get; set; }

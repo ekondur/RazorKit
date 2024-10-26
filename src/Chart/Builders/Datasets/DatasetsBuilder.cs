@@ -16,7 +16,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Line Configuration.
+        /// Add a Line Chart.
         /// </summary>
         /// <returns></returns>
         public LineDatasetBuilder Line()
@@ -28,7 +28,7 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// Radar Configuration.
+        /// Add a Radar Chart.
         /// </summary>
         /// <returns></returns>
         public RadarDatasetBuilder Radar()
@@ -36,6 +36,18 @@ namespace HelperJS.Chart.Builders
             var dataset = new RadarDataset { Type = "radar" };
             _data.Datasets.Add(dataset);
             var builder = new RadarDatasetBuilder(dataset);
+            return builder;
+        }
+
+        /// <summary>
+        /// Add a Bar Chart.
+        /// </summary>
+        /// <returns></returns>
+        public BarDatasetBuilder Bar()
+        {
+            var dataset = new BarDataset { Type = "bar" };
+            _data.Datasets.Add(dataset);
+            var builder = new BarDatasetBuilder(dataset);
             return builder;
         }
     }

@@ -3,24 +3,24 @@ using System;
 
 namespace HelperJS.Chart.Converters
 {
-    internal class ObjectOrtIntConverter<T> : JsonConverter
+    internal class ObjectOrTypeConverter<T> : JsonConverter
     {
         public override bool CanConvert(Type objectType)
         {
-            // Can convert if the type is either T or bool
-            return objectType == typeof(T) || objectType == typeof(int);
+            return objectType == typeof(T) || objectType == typeof(bool) || objectType == typeof(int);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            // If the JSON token is integer, return the integer value
-            if (reader.TokenType == JsonToken.Integer)
+            if (reader.TokenType == JsonToken.Boolean)
             {
                 return (bool)reader.Value;
             }
-
-            // Otherwise, deserialize as type T
-            if (reader.TokenType == JsonToken.String || reader.TokenType == JsonToken.StartObject)
+            else if (reader.TokenType == JsonToken.Integer)
+            {
+                return (int)reader.Value;
+            }
+            else if (reader.TokenType == JsonToken.String || reader.TokenType == JsonToken.StartObject)
             {
                 return serializer.Deserialize<T>(reader);
             }
@@ -30,12 +30,14 @@ namespace HelperJS.Chart.Converters
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            // Write the value as integer if it is a integer
-            if (value is int boolValue)
+            if (value is bool boolValue)
             {
                 writer.WriteValue(boolValue);
             }
-            // Otherwise, serialize it as type T
+            else if (value is int intValue)
+            {
+                writer.WriteValue(intValue);
+            }
             else if (value is T tValue)
             {
                 serializer.Serialize(writer, tValue);

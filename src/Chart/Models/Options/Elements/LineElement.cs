@@ -13,7 +13,7 @@ namespace HelperJS.Chart.Models
         public bool? CapBezierPoints { get; set; }
         public string CubicInterpolationMode { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter))]
+        [JsonConverter(typeof(TypeConverter))]
         public object Fill { get; set; }
 
         public bool? Stepped { get; set; }

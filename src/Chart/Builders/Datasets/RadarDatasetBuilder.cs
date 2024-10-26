@@ -16,10 +16,10 @@ namespace HelperJS.Chart.Builders.Datasets
         }
 
         /// <summary>
-        /// Sets the data for the RadarDatasetBuilder instance.
+        /// Sets the data for the Radar Dataset.
         /// </summary>
         /// <param name="data">An array of doubles representing the data to be set.</param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
+        /// <returns></returns>
         public RadarDatasetBuilder Data(params double[] data)
         {
             _radarDataset.Data = data;

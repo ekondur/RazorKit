@@ -7,7 +7,7 @@ namespace HelperJS.Chart.Models
     {
         public int? Radius { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter<PointStyle>))]
+        [JsonConverter(typeof(EnumOrTypeConverter<PointStyle>))]
         public object PointStyle { get; set; }
         public int? Rotation { get; set; }
         public int? HitRadius { get; set; }

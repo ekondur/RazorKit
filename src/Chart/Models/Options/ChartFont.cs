@@ -9,10 +9,10 @@ namespace HelperJS.Chart.Models
         public double? Size { get; set; }
         public string Style { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter))]
+        [JsonConverter(typeof(TypeConverter))]
         public object Weight { get; set; }
 
-        [JsonConverter(typeof(DynamicConverter))]
+        [JsonConverter(typeof(TypeConverter))]
         public object LineHeight { get; set; }
     }
 }
