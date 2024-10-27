@@ -7,8 +7,12 @@ namespace HelperJS.Chart.Models
     {
         public string Type { get; set; }
         public object[] Data { get; set; }
-        public string BackgroundColor { get; set; }
-        public string BorderColor { get; set; }
+
+        [JsonConverter(typeof(StringOrArrayConverter))]
+        public object BackgroundColor { get; set; }
+
+        [JsonConverter(typeof(StringOrArrayConverter))]
+        public object BorderColor { get; set; }
         public int? BorderWidth { get; set; }
         public Clip Clip { get; set; }
         public string HoverBackgroundColor { get; set; }

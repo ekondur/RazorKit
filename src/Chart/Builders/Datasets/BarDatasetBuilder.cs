@@ -15,6 +15,28 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
+        /// Set Backgrounds colors
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns></returns>
+        public BarDatasetBuilder BackgroundColors(params string[] colors)
+        {
+            _barDataset.BackgroundColor = colors;
+            return this;
+        }
+
+        /// <summary>
+        /// Set Border Colors
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns></returns>
+        public BarDatasetBuilder BorderColors(params string[] colors)
+        {
+            _barDataset.BorderColor = colors;
+            return this;
+        }
+
+        /// <summary>
         /// Base value for the bar in data units along the value axis. If not set, defaults to the value axis base value.
         /// </summary>
         /// <param name="value"></param>
