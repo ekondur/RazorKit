@@ -86,5 +86,17 @@ namespace HelperJS.Chart.Builders
             var builder = new DoughnutPieDatasetBuilder(dataset);
             return builder;
         }
+
+        /// <summary>
+        /// Add a Polar Area Chart.
+        /// </summary>
+        /// <returns></returns>
+        public PolarAreaDatasetBuilder PolarArea()
+        {
+            var dataset = new PolarAreaDataset { Type = "polarArea" };
+            _data.Datasets.Add(dataset);
+            var builder = new PolarAreaDatasetBuilder(dataset);
+            return builder;
+        }
     }
 }

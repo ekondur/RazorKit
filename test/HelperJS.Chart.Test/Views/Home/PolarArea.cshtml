@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Polar Area Chart";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var chart =
+            Html.JS().Chart("canvasId")
+            .Data(d => d
+                .Labels("Red", "Green", "Yellow", "Grey", "Blue")
+                .Datasets(ds =>
+                    ds.PolarArea()
+                    .Label("Polar Area Dataset")
+                    .Data(11, 16, 7, 3, 14)
+                    .BackgroundColors("rgb(255, 99, 132)", "rgb(75, 192, 192)", "rgb(255, 205, 86)", "rgb(201, 203, 207)", "rgb(54, 162, 235)")
+                )
+            );
+}
+
+@chart.Render()
