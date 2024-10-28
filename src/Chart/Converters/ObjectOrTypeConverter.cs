@@ -7,7 +7,7 @@ namespace HelperJS.Chart.Converters
     {
         public override bool CanConvert(Type objectType)
         {
-            return objectType == typeof(T) || objectType == typeof(bool) || objectType == typeof(int);
+            return objectType == typeof(T) || objectType == typeof(bool) || objectType == typeof(int) || objectType == typeof(string);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
@@ -20,7 +20,11 @@ namespace HelperJS.Chart.Converters
             {
                 return (int)reader.Value;
             }
-            else if (reader.TokenType == JsonToken.String || reader.TokenType == JsonToken.StartObject)
+            else if (reader.TokenType == JsonToken.String)
+            {
+                return reader.Value.ToString();
+            }
+            else if (reader.TokenType == JsonToken.StartObject)
             {
                 return serializer.Deserialize<T>(reader);
             }
@@ -37,6 +41,10 @@ namespace HelperJS.Chart.Converters
             else if (value is int intValue)
             {
                 writer.WriteValue(intValue);
+            }
+            else if (value is string strValue)
+            {
+                writer.WriteValue(strValue);
             }
             else if (value is T tValue)
             {

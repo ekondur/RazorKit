@@ -13,5 +13,7 @@
         public Colors Colors { get; set; }
 
         public Decimation Decimation { get; set; }
+
+        public Filler Filler { get; set; }
     }
 }

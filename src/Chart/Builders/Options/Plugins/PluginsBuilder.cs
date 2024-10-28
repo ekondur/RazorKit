@@ -93,5 +93,18 @@ namespace HelperJS.Chart.Builders
             action(builder);
             return this;
         }
+
+        /// <summary>
+        /// Filler Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public PluginsBuilder Filler(Action<FillerBuilder> action)
+        {
+            _plugins.Filler = new Filler();
+            var builder = new FillerBuilder(_plugins.Filler);
+            action(builder);
+            return this;
+        }
     }
 }

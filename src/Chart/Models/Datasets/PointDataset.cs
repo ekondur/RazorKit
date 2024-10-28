@@ -14,7 +14,7 @@ namespace HelperJS.Chart.Models
         public double? HoverBorderDashOffset { get; set; }
         public JoinStyle? HoverBorderJoinStyle { get; set; }
 
-        [JsonConverter(typeof(TypeConverter))]
+        [JsonConverter(typeof(ObjectOrTypeConverter<Fill>))]
         public object Fill { get; set; }
         public int? Order { get; set; }
         public double? Tension { get; set; }

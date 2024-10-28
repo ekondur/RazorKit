@@ -468,4 +468,29 @@ namespace HelperJS
         /// </summary>
         Y
     }
+
+    /// <summary>
+    /// Filler draw time.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum DrawTime
+    {
+        /// <summary>
+        /// Before draw
+        /// </summary>
+        [EnumMember(Value = "beforeDraw")]
+        BeforeDraw,
+
+        /// <summary>
+        /// Before dataset draw
+        /// </summary>
+        [EnumMember(Value = "beforeDatasetDraw")]
+        BeforeDatasetDraw,
+
+        /// <summary>
+        /// Before Datasets draw
+        /// </summary>
+        [EnumMember(Value = "beforeDatasetsDraw")]
+        BeforeDatasetsDraw
+    }
 }

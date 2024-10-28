@@ -1,4 +1,5 @@
 ﻿using HelperJS.Chart.Models;
+using System;
 
 namespace HelperJS.Chart.Builders
 {
@@ -122,6 +123,19 @@ namespace HelperJS.Chart.Builders
         public T Fill(string fill)
         {
             _dataset.Fill = fill;
+            return (T)this;
+        }
+
+        /// <summary>
+        /// Fill Confgiuration for Area Charts.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public T Fill(Action<FillBuilder> action)
+        {
+            _dataset.Fill = new Fill();
+            var builder = new FillBuilder((Fill)_dataset.Fill);
+            action(builder);
             return (T)this;
         }
 
