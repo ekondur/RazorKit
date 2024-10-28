@@ -7,7 +7,7 @@
 @using HelperJS
 
 @{
-    var line =
+    var chart =
     Html.JS().Chart("canvasId")
     .Data(d => d
         .Labels("January", "February", "March", "April", "May", "June", "July")
@@ -22,4 +22,4 @@
     );
 }
 
-@line.Render()
+@chart.Render()

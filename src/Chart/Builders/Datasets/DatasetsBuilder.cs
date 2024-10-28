@@ -50,5 +50,17 @@ namespace HelperJS.Chart.Builders
             var builder = new BarDatasetBuilder(dataset);
             return builder;
         }
+
+        /// <summary>
+        /// Add a Bubble Chart.
+        /// </summary>
+        /// <returns></returns>
+        public BubbleDatasetBuilder Bubble()
+        {
+            var dataset = new BubbleDataset { Type = "bubble" };
+            _data.Datasets.Add(dataset);
+            var builder = new BubbleDatasetBuilder(dataset);
+            return builder;
+        }
     }
 }

@@ -2,16 +2,17 @@
 {
     class Clip
     {
-        public int? Left { get; set; }
-        public int? Right { get; set; }
-        public int? Top { get; set; }
-        public int? Bottom { get; set; }
+        public int? Left { get; private set; }
+        public int? Right { get; private set; }
+        public int? Top { get; private set; }
+        public int? Bottom { get; private set; }
 
-        public Clip() { }
-
-        public Clip(int all)
+        public Clip(int left, int right, int top, int bottom) 
         {
-            Left = Right = Top = Bottom = all;
+            Left = left;
+            Right = right;
+            Top = top;
+            Bottom = bottom;
         }
     }
 }

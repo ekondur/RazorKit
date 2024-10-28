@@ -67,7 +67,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The T instance.</returns>
         public T Clip(int clip)
         {
-            _dataset.Clip = new Clip(clip);
+            _dataset.Clip = clip;
             return (T)this;
         }
 
@@ -75,12 +75,25 @@ namespace HelperJS.Chart.Builders
         /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
         /// 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
         /// </summary>
-        /// <param name="action"></param>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <param name="top"></param>
+        /// <param name="bottom"></param>
         /// <returns>The T instance.</returns>
-        public T Clip(Action<ClipBuilder> action)
+        public T Clip(int left, int right, int top, int bottom)
         {
-            var builder = new ClipBuilder(_dataset);
-            action(builder);
+            _dataset.Clip = new Clip(left, right, top, bottom);
+            return (T)this;
+        }
+
+        /// <summary>
+        /// Is clip enabled?
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public T Clip(bool enabled)
+        {
+            _dataset.Clip = enabled;
             return (T)this;
         }
 

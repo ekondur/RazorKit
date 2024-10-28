@@ -7,7 +7,7 @@
 @using HelperJS
 
 @{
-    var animateLine =
+    var chart =
             Html.JS().Chart("canvasId")
             .Data(d => d
                 .Labels("January", "February", "March", "April", "May", "June", "July")
@@ -32,4 +32,4 @@
             );
 }
 
-@animateLine.Render()
+@chart.Render()

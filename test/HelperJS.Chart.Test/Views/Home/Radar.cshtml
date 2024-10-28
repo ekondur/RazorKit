@@ -7,7 +7,7 @@
 @using HelperJS
 
 @{
-    var animateLine =
+    var chart =
             Html.JS().Chart("canvasId")
             .Data(d => d
                 .Labels("Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running")
@@ -26,4 +26,4 @@
             );
 }
 
-@animateLine.Render()
+@chart.Render()

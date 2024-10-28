@@ -14,7 +14,9 @@ namespace HelperJS.Chart.Models
         [JsonConverter(typeof(StringOrArrayConverter))]
         public object BorderColor { get; set; }
         public int? BorderWidth { get; set; }
-        public Clip Clip { get; set; }
+
+        [JsonConverter(typeof(ObjectOrTypeConverter<Clip>))]
+        public object Clip { get; set; }
         public string HoverBackgroundColor { get; set; }
         public string HoverBorderColor { get; set; }
         public int? HoverBorderWidth { get; set; }

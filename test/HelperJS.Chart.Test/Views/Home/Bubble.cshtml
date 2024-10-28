@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Bubble Chart";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var chart =
+            Html.JS().Chart("canvasId")
+            .Data(d => d
+                .Datasets(ds =>
+                    ds.Bubble()
+                    .Label("Bubble Dataset")
+                    .Data(new { x = 20, y = 30, r = 15 }, new { x = 40, y = 10, r = 10 })
+                )
+            );
+}
+
+@chart.Render()
