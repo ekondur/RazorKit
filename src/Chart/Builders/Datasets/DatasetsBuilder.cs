@@ -98,5 +98,17 @@ namespace HelperJS.Chart.Builders
             var builder = new PolarAreaDatasetBuilder(dataset);
             return builder;
         }
+
+        /// <summary>
+        /// Add a Scatter Chart.
+        /// </summary>
+        /// <returns></returns>
+        public LineDatasetBuilder Scatter()
+        {
+            var dataset = new LineDataset { Type = "scatter" };
+            _data.Datasets.Add(dataset);
+            var builder = new LineDatasetBuilder(dataset);
+            return builder;
+        }
     }
 }
