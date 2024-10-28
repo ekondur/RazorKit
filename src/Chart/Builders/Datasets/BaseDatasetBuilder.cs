@@ -16,6 +16,17 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
+        /// The label for the dataset which appears in the legend and tooltips.
+        /// </summary>
+        /// <param name="label"></param>
+        /// <returns></returns>
+        public T Label(string label)
+        {
+            _dataset.Label = label;
+            return (T)this;
+        }
+
+        /// <summary>
         /// Sets the data for the Dataset.
         /// </summary>
         /// <param name="data">An array of doubles representing the data to be set.</param>

@@ -7,11 +7,11 @@ namespace HelperJS.Chart.Builders
     /// </summary>
     public class BubbleDatasetBuilder : BaseDatasetBuilder<BubbleDatasetBuilder>
     {
-        private readonly BubbleDataset _bubbleDataset;
+        private readonly BubbleDataset _dataset;
 
-        internal BubbleDatasetBuilder(BubbleDataset bubbleDataset) : base(bubbleDataset)
+        internal BubbleDatasetBuilder(BubbleDataset dataset) : base(dataset)
         {
-            _bubbleDataset = bubbleDataset;
+            _dataset = dataset;
         }
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder DrawActiveElementsOnTop(bool drawActiveElementsOnTop)
         {
-            _bubbleDataset.DrawActiveElementsOnTop = drawActiveElementsOnTop;
+            _dataset.DrawActiveElementsOnTop = drawActiveElementsOnTop;
             return this;
         }
 
@@ -32,7 +32,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder HoverRadius(int radius)
         {
-            _bubbleDataset.HoverRadius = radius;
+            _dataset.HoverRadius = radius;
             return this;
         }
 
@@ -43,18 +43,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder HitRadius(int radius)
         {
-            _bubbleDataset.HitRadius = radius;
-            return this;
-        }
-
-        /// <summary>
-        /// The label for the dataset which appears in the legend and tooltips.
-        /// </summary>
-        /// <param name="label"></param>
-        /// <returns></returns>
-        public BubbleDatasetBuilder Label(string label)
-        {
-            _bubbleDataset.Label = label;
+            _dataset.HitRadius = radius;
             return this;
         }
 
@@ -65,7 +54,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder Order(int order)
         {
-            _bubbleDataset.Order = order;
+            _dataset.Order = order;
             return this;
         }
 
@@ -76,7 +65,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder PointStyle(PointStyle style)
         {
-            _bubbleDataset.PointStyle = style;
+            _dataset.PointStyle = style;
             return this;
         }
 
@@ -87,7 +76,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder PointStyle(bool enabled)
         {
-            _bubbleDataset.PointStyle = enabled;
+            _dataset.PointStyle = enabled;
             return this;
         }
 
@@ -98,7 +87,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder Rotation(int rotation)
         {
-            _bubbleDataset.Rotation = rotation;
+            _dataset.Rotation = rotation;
             return this;
         }
 
@@ -109,7 +98,7 @@ namespace HelperJS.Chart.Builders
         /// <returns></returns>
         public BubbleDatasetBuilder Radius(int radius)
         {
-            _bubbleDataset.Radius = radius;
+            _dataset.Radius = radius;
             return this;
         }
     }

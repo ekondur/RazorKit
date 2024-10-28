@@ -8,12 +8,11 @@ namespace HelperJS.Chart.Builders
     /// <typeparam name="T"></typeparam>
     public abstract class PointDatasetBuilder<T> : BaseDatasetBuilder<T> where T : PointDatasetBuilder<T>
     {
-        private readonly PointDataset _pointDataset;
+        private readonly PointDataset _dataset;
 
-        internal PointDatasetBuilder(PointDataset pointDataset)
-            : base(pointDataset)
+        internal PointDatasetBuilder(PointDataset dataset) : base(dataset)
         {
-            _pointDataset = pointDataset;
+            _dataset = dataset;
         }
 
         /// <summary>
@@ -23,7 +22,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance.</returns>
         public T BorderCapStyle(CapStyle capStyle)
         {
-            _pointDataset.BorderCapStyle = capStyle;
+            _dataset.BorderCapStyle = capStyle;
             return (T)this;
         }
 
@@ -34,7 +33,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance.</returns>
         public T BorderDash(params int[] borderDash)
         {
-            _pointDataset.BorderDash = borderDash;
+            _dataset.BorderDash = borderDash;
             return (T)this;
         }
 
@@ -45,7 +44,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance.</returns>
         public T BorderDashOffset(double borderDashOffset)
         {
-            _pointDataset.BorderDashOffset = borderDashOffset;
+            _dataset.BorderDashOffset = borderDashOffset;
             return (T)this;
         }
 
@@ -56,7 +55,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance.</returns>
         public T BorderJoinStyle(JoinStyle borderJoinStyle)
         {
-            _pointDataset.BorderJoinStyle = borderJoinStyle;
+            _dataset.BorderJoinStyle = borderJoinStyle;
             return (T)this;
         }
 
@@ -67,7 +66,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T HoverBorderCapStyle(CapStyle capStyle)
         {
-            _pointDataset.HoverBorderCapStyle = capStyle;
+            _dataset.HoverBorderCapStyle = capStyle;
             return (T)this;
         }
 
@@ -78,7 +77,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T HoverBorderDash(params int[] hoverBorderDash)
         {
-            _pointDataset.HoverBorderDash = hoverBorderDash;
+            _dataset.HoverBorderDash = hoverBorderDash;
             return (T)this;
         }
 
@@ -89,7 +88,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T HoverBorderDashOffset(double hoverBorderDashOffset)
         {
-            _pointDataset.HoverBorderDashOffset = hoverBorderDashOffset;
+            _dataset.HoverBorderDashOffset = hoverBorderDashOffset;
             return (T)this;
         }
 
@@ -100,7 +99,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T HoverBorderJoinStyle(JoinStyle hoverBorderJoinStyle)
         {
-            _pointDataset.HoverBorderJoinStyle = hoverBorderJoinStyle;
+            _dataset.HoverBorderJoinStyle = hoverBorderJoinStyle;
             return (T)this;
         }
 
@@ -111,7 +110,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T Fill(bool fill)
         {
-            _pointDataset.Fill = fill;
+            _dataset.Fill = fill;
             return (T)this;
         }
 
@@ -122,18 +121,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T Fill(string fill)
         {
-            _pointDataset.Fill = fill;
-            return (T)this;
-        }
-
-        /// <summary>
-        /// Add a new dataset.
-        /// </summary>
-        /// <param name="label">The label for the dataset which appears in the legend and tooltips.</param>
-        /// <returns>The LineDatasetBuilder instance.</returns>
-        public T Label(string label)
-        {
-            _pointDataset.Label = label;
+            _dataset.Fill = fill;
             return (T)this;
         }
 
@@ -144,7 +132,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T Order(int order)
         {
-            _pointDataset.Order = order;
+            _dataset.Order = order;
             return (T)this;
         }
 
@@ -155,7 +143,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointBackgroundColor(string color)
         {
-            _pointDataset.PointBackgroundColor = color;
+            _dataset.PointBackgroundColor = color;
             return (T)this;
         }
 
@@ -166,7 +154,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointBorderColor(string color)
         {
-            _pointDataset.PointBorderColor = color;
+            _dataset.PointBorderColor = color;
             return (T)this;
         }
 
@@ -177,7 +165,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointBorderWidth(int width)
         {
-            _pointDataset.PointBorderWidth = width;
+            _dataset.PointBorderWidth = width;
             return (T)this;
         }
 
@@ -188,7 +176,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointHitRadius(int radius)
         {
-            _pointDataset.PointHitRadius = radius;
+            _dataset.PointHitRadius = radius;
             return (T)this;
         }
 
@@ -199,7 +187,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointHoverBackgroundColor(string color)
         {
-            _pointDataset.PointHoverBackgroundColor = color;
+            _dataset.PointHoverBackgroundColor = color;
             return (T)this;
         }
 
@@ -210,7 +198,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointHoverBorderColor(string color)
         {
-            _pointDataset.PointHoverBorderColor = color;
+            _dataset.PointHoverBorderColor = color;
             return (T)this;
         }
 
@@ -221,7 +209,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointHoverBorderWidth(int width)
         {
-            _pointDataset.PointHoverBorderWidth = width;
+            _dataset.PointHoverBorderWidth = width;
             return (T)this;
         }
 
@@ -232,7 +220,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointHoverRadius(int radius)
         {
-            _pointDataset.PointHoverRadius = radius;
+            _dataset.PointHoverRadius = radius;
             return (T)this;
         }
 
@@ -243,7 +231,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointRadius(int radius)
         {
-            _pointDataset.PointRadius = radius;
+            _dataset.PointRadius = radius;
             return (T)this;
         }
 
@@ -254,7 +242,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The PointDatasetBuilder instance with the set data.</returns>
         public T PointRotation(int rotation)
         {
-            _pointDataset.PointRotation = rotation;
+            _dataset.PointRotation = rotation;
             return (T)this;
         }
 
@@ -266,7 +254,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T PointStyle(bool enabled)
         {
-            _pointDataset.PointStyle = enabled;
+            _dataset.PointStyle = enabled;
             return (T)this;
         }
 
@@ -277,7 +265,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T PointStyle(PointStyle pointStyle)
         {
-            _pointDataset.PointStyle = pointStyle;
+            _dataset.PointStyle = pointStyle;
             return (T)this;
         }
 
@@ -289,7 +277,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T SpanGaps(bool spanGaps)
         {
-            _pointDataset.SpanGaps = spanGaps;
+            _dataset.SpanGaps = spanGaps;
             return (T)this;
         }
 
@@ -300,7 +288,7 @@ namespace HelperJS.Chart.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public T Tension(double tension)
         {
-            _pointDataset.Tension = tension;
+            _dataset.Tension = tension;
             return (T)this;
         }
     }

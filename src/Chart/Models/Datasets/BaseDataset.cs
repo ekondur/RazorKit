@@ -6,6 +6,7 @@ namespace HelperJS.Chart.Models
 {
     class BaseDataset
     {
+        public string Label { get; set; }
         public string Type { get; set; }
         public IList<object> Data { get; set; }
 

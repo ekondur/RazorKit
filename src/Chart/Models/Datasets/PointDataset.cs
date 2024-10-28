@@ -16,7 +16,6 @@ namespace HelperJS.Chart.Models
 
         [JsonConverter(typeof(TypeConverter))]
         public object Fill { get; set; }
-        public string Label { get; set; }
         public int? Order { get; set; }
         public double? Tension { get; set; }
         public string PointBackgroundColor { get; set; }

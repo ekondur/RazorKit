@@ -37,7 +37,18 @@ namespace HelperJS.Chart.Test.Controllers
         {
             return View();
         }
+
         public IActionResult Bubble()
+        {
+            return View();
+        }
+
+        public IActionResult Doughnut()
+        {
+            return View();
+        }
+
+        public IActionResult Pie()
         {
             return View();
         }

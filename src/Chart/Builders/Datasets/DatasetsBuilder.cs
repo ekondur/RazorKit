@@ -62,5 +62,29 @@ namespace HelperJS.Chart.Builders
             var builder = new BubbleDatasetBuilder(dataset);
             return builder;
         }
+
+        /// <summary>
+        /// Add a Doughnut Chart.
+        /// </summary>
+        /// <returns></returns>
+        public DoughnutPieDatasetBuilder Doughnut()
+        {
+            var dataset = new DoughnutPieDataset { Type = "doughnut" };
+            _data.Datasets.Add(dataset);
+            var builder = new DoughnutPieDatasetBuilder(dataset);
+            return builder;
+        }
+
+        /// <summary>
+        /// Add a Pie Chart.
+        /// </summary>
+        /// <returns></returns>
+        public DoughnutPieDatasetBuilder Pie()
+        {
+            var dataset = new DoughnutPieDataset { Type = "pie" };
+            _data.Datasets.Add(dataset);
+            var builder = new DoughnutPieDatasetBuilder(dataset);
+            return builder;
+        }
     }
 }

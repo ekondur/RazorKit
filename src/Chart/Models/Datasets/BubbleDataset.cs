@@ -8,7 +8,6 @@ namespace HelperJS.Chart.Models
         public bool? DrawActiveElementsOnTop { get; set; }
         public int? HoverRadius { get; set; }
         public int? HitRadius { get; set; }
-        public string Label { get; set; }
         public int? Order { get; set; }
 
         [JsonConverter(typeof(EnumOrTypeConverter<PointStyle>))]

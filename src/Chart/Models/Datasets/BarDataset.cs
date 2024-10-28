@@ -24,7 +24,6 @@ namespace HelperJS.Chart.Models
         public bool? Grouped { get; set; }
         public int? HoverBorderRadius { get; set; }
         public IndexAxis? IndexAxis { get; set; }
-        public string Label { get; set; }
         public int? Order { get; set; }
         public object PointStyle { get; set; }
         public bool? SkipNull { get; set; }

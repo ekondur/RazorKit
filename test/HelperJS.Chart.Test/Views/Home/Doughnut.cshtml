@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Doughnut Chart";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using HelperJS
+
+@{
+    var chart =
+            Html.JS().Chart("canvasId")
+            .Data(d => d
+                .Labels("Red", "Blue", "Yellow")
+                .Datasets(ds =>
+                    ds.Doughnut()
+                    .Label("Doughnut Dataset")
+                    .Data(300, 50, 100)
+                    .BackgroundColors("red", "blue", "yellow")
+                    .HoverOffset(4)
+                )
+            );
+}
+
+@chart.Render()

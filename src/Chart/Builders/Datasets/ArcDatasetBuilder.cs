@@ -1,6 +1,6 @@
 ﻿using HelperJS.Chart.Models;
 
-namespace HelperJS.Chart.Builders.Datasets
+namespace HelperJS.Chart.Builders
 {
     /// <summary>
     /// Arc Dataset Configuration.
@@ -8,11 +8,22 @@ namespace HelperJS.Chart.Builders.Datasets
     /// <typeparam name="T"></typeparam>
     public abstract class ArcDatasetBuilder<T> : BaseDatasetBuilder<T> where T : ArcDatasetBuilder<T>
     {
-        private readonly ArcDataset _arcDataset;
+        private readonly ArcDataset _dataset;
 
-        internal ArcDatasetBuilder(ArcDataset arcDataset) : base(arcDataset)
+        internal ArcDatasetBuilder(ArcDataset dataset) : base(dataset)
         {
-            _arcDataset = arcDataset;
+            _dataset = dataset;
+        }
+
+        /// <summary>
+        /// Set Backgrounds colors
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns></returns>
+        public T BackgroundColors(params string[] colors)
+        {
+            _dataset.BackgroundColor = colors;
+            return (T)this;
         }
 
         /// <summary>
@@ -22,7 +33,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T BorderAlign(BorderAlign borderAlign)
         {
-            _arcDataset.BorderAlign = borderAlign;
+            _dataset.BorderAlign = borderAlign;
             return (T)this;
         }
 
@@ -33,7 +44,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T BorderDash(params int[] dashes)
         {
-            _arcDataset.BorderDash = dashes;
+            _dataset.BorderDash = dashes;
             return (T)this;
         }
 
@@ -44,7 +55,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T BorderDashOffset(double dashOffset)
         {
-            _arcDataset.BorderDashOffset = dashOffset;
+            _dataset.BorderDashOffset = dashOffset;
             return (T)this;
         }
 
@@ -55,7 +66,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T BorderJoinStyle(JoinStyle joinStyle)
         {
-            _arcDataset.BorderJoinStyle = joinStyle;
+            _dataset.BorderJoinStyle = joinStyle;
             return (T)this;
         }
 
@@ -66,7 +77,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T Data(params int[] data)
         {
-            _arcDataset.Data = data;
+            _dataset.Data = data;
             return (T)this;
         }
 
@@ -77,7 +88,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T HoverBorderDash(params int[] dashes)
         {
-            _arcDataset.HoverBorderDash = dashes;
+            _dataset.HoverBorderDash = dashes;
             return (T)this;
         }
 
@@ -88,7 +99,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T HoverBorderDashOffset(double dashOffset)
         {
-            _arcDataset.HoverBorderDashOffset = dashOffset;
+            _dataset.HoverBorderDashOffset = dashOffset;
             return (T)this;
         }
 
@@ -99,7 +110,7 @@ namespace HelperJS.Chart.Builders.Datasets
         /// <returns></returns>
         public T HoverBorderJoinStyle(JoinStyle joinStyle)
         {
-            _arcDataset.HoverBorderJoinStyle = joinStyle;
+            _dataset.HoverBorderJoinStyle = joinStyle;
             return (T)this;
         }
     }

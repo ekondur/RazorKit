@@ -210,17 +210,6 @@ namespace HelperJS.Chart.Builders
         }
 
         /// <summary>
-        /// The label for the dataset which appears in the legend and tooltips.
-        /// </summary>
-        /// <param name="label"></param>
-        /// <returns></returns>
-        public BarDatasetBuilder Label(string label)
-        {
-            _barDataset.Label = label;
-            return this;
-        }
-
-        /// <summary>
         /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
         /// Default 0
         /// </summary>
