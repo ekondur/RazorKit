@@ -1,12 +1,13 @@
 ﻿using HelperJS.Chart.Converters;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace HelperJS.Chart.Models
 {
     class BaseDataset
     {
         public string Type { get; set; }
-        public object[] Data { get; set; }
+        public IList<object> Data { get; set; }
 
         [JsonConverter(typeof(StringOrArrayConverter))]
         public object BackgroundColor { get; set; }

@@ -1,5 +1,5 @@
 ﻿using HelperJS.Chart.Models;
-using System;
+using System.Collections.Generic;
 
 namespace HelperJS.Chart.Builders
 {
@@ -19,8 +19,19 @@ namespace HelperJS.Chart.Builders
         /// Sets the data for the Dataset.
         /// </summary>
         /// <param name="data">An array of doubles representing the data to be set.</param>
-        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
+        /// <returns></returns>
         public T Data(params object[] data)
+        {
+            _dataset.Data = data;
+            return (T)this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data">An array of doubles representing the data to be set.</param>
+        /// <returns></returns>
+        public T Data(IList<object> data)
         {
             _dataset.Data = data;
             return (T)this;

@@ -7,13 +7,17 @@
 @using HelperJS
 
 @{
+    var data = new List<object> { new { x = 20, y = 30, r = 15 }, new { x = 40, y = 10, r = 10 } };
+}
+
+@{
     var chart =
             Html.JS().Chart("canvasId")
             .Data(d => d
                 .Datasets(ds =>
                     ds.Bubble()
                     .Label("Bubble Dataset")
-                    .Data(new { x = 20, y = 30, r = 15 }, new { x = 40, y = 10, r = 10 })
+                    .Data(data)
                 )
             );
 }
