@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Chart\RazorKit.Chart.csproj" />
+    <ProjectReference Include="..\..\src\Datatable\RazorKit.Datatable.csproj" />
   </ItemGroup>
 
 </Project>

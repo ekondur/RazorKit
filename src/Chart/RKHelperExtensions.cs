@@ -13,16 +13,22 @@ using RazorKit.Chart.Builders;
 namespace RazorKit
 {
     /// <summary>
-    /// JSHelper
+    /// RazorKit Html helper extension.
     /// </summary>
-    public partial class RKHelper
+    public static partial class RKHelperExtensions
     {
         /// <summary>
         /// Chart Configuration.
         /// </summary>
+        /// <param name="htmlHelper"></param>
         /// <param name="canvasId"></param>
         /// <returns></returns>
-        public ChartBuilder Chart(string canvasId)
+
+#if NETCOREAPP
+        public static ChartBuilder Chart(this IHtmlHelper htmlHelper, string canvasId)
+#else
+        public static ChartBuilder Chart(this HtmlHelper htmlHelper, string canvasId)
+#endif
         {
             return new ChartBuilder(canvasId);
         }
@@ -30,41 +36,18 @@ namespace RazorKit
         /// <summary>
         /// Chart Configuration.
         /// </summary>
+        /// <param name="htmlHelper"></param>
         /// <param name="canvasId"></param>
         /// <param name="useCanvas"></param>
         /// <returns></returns>
-        public ChartBuilder Chart(string canvasId, bool useCanvas)
+#if NETCOREAPP
+        public static ChartBuilder Chart(this IHtmlHelper htmlHelper, string canvasId, bool useCanvas)
+#else
+        public static ChartBuilder Chart(this HtmlHelper htmlHelper, string canvasId, bool useCanvas)
+#endif
         {
             return new ChartBuilder(canvasId, useCanvas);
         }
-    }
-
-    /// <summary>
-    /// RazorKit Html helper extension.
-    /// </summary>
-    public static class RKHelperExtension
-    {
-#if NETCOREAPP
-        /// <summary>
-        /// Get an instance of RazorKit Html Helper.
-        /// </summary>
-        /// <param name="htmlHelper"></param>
-        /// <returns></returns>
-        public static RKHelper RK(this IHtmlHelper htmlHelper)
-        {
-            return new RKHelper();
-        }
-#else
-        /// <summary>
-        /// Get an instance of RazorKit Html helper.
-        /// </summary>
-        /// <param name="htmlHelper"></param>
-        /// <returns></returns>
-        public static RKHelper RK(this HtmlHelper htmlHelper)
-        {
-            return new RKHelper();
-        }
-#endif
 
 #if NETCOREAPP
         /// <summary>
