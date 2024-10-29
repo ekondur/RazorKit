@@ -64,4 +64,27 @@ namespace RazorKit
         [EnumMember(Value = "multi+shift")]
         MultiShift
     }
+
+    public enum Operand
+    {
+        Equal,
+        NotEqual,
+        GreaterThan,
+        LessThan,
+        GreaterThanOrEqual,
+        LessThanOrEqual,
+        Contains,
+        StartsWith,
+        EndsWith
+    }
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum OrderBy
+    {
+        [EnumMember(Value = "asc")]
+        Ascending,
+
+        [EnumMember(Value = "desc")]
+        Descending
+    }
 }

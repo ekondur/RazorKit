@@ -14,10 +14,10 @@ namespace RazorKit.Datatable.Builders
     /// </summary>
     public class ColumnBuilder<T>
     {
-        private readonly Models.DatatableJs _dataTable;
+        private readonly DatatableJs _dataTable;
         private Column _column;
 
-        internal ColumnBuilder(Models.DatatableJs dataTable)
+        internal ColumnBuilder(DatatableJs dataTable)
         {
             _dataTable = dataTable;
         }
@@ -31,10 +31,12 @@ namespace RazorKit.Datatable.Builders
         public ColumnBuilder<T> Field<TProp>(Expression<Func<T, TProp>> property)
         {
             var member = property.Body as MemberExpression;
+            var propName = ExpressionHelpers<T>.PropertyName(property);
             _column = new Column
             {
-                Data = ExpressionHelpers<T>.PropertyName(property),
-                Title = member.Member.GetCustomAttribute<DisplayAttribute>()?.Name ?? ExpressionHelpers<T>.PropertyName(property),
+                Data = char.ToLowerInvariant(propName[0]) + propName.Substring(1),
+                Name = propName,
+                Title = member.Member.GetCustomAttribute<DisplayAttribute>()?.Name ?? propName,
                 Render = member.Member.GetCustomAttribute<DisplayFormatAttribute>() != null ? $@"moment(data).format('{member.Member.GetCustomAttribute<DisplayFormatAttribute>().DataFormatString}')" : null,
                 Type = ((PropertyInfo)member.Member).PropertyType
             };

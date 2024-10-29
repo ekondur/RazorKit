@@ -59,6 +59,7 @@ namespace RazorKit.Datatable.Models
         public int? PageLength { get; set; }
         public Language Language { get; set; }
         public Ajax Ajax { get; set; }
+        public IList<object> Data { get; set; }
         public IList<Column> Columns { get; set; } = new List<Column>();
         public Select Select { get; set; }
 
@@ -70,5 +71,7 @@ namespace RazorKit.Datatable.Models
 
         public object[] LengthMenu { get; set; }
         internal string Style { get; set; }
+        internal IList<Filter> Filters { get; set; } = new List<Filter>();
+        internal string Name { get; set; } = "DataTableId";
     }
 }

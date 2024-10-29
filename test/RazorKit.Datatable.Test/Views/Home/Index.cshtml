@@ -16,7 +16,17 @@
                 c.Field(f => f.Id).Visible(false);
                 c.Field(f => f.Name).Title("Name");
             })
-            .Language("tr");
+            .DataSource(ds => ds.URL(Url.Action("GetDataResult")).Method("POST"))
+            .ServerSide(true)
+            .Orders(o =>
+            {
+                o.Add(x => x.Name, OrderBy.Ascending);
+            })
+            .Filters(f =>
+            {
+                f.Add(x => x.Id).GreaterThanOrEqual(1);
+            })
+            ;
 }
 
 @(datatable.Render())

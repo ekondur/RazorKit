@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using RazorKit.Datatable.Models;
-using static System.Net.WebRequestMethods;
 
 namespace RazorKit.Datatable.Builders
 {
@@ -9,8 +9,6 @@ namespace RazorKit.Datatable.Builders
     /// </summary>
     public class DatatableBuilder<T>
     {
-        internal string Id { get; private set; } = "DataTableId";
-        internal bool CamelCaseValue { get; set; }
         internal DatatableJs Datatable { get; set; }
 
         internal DatatableBuilder()
@@ -25,18 +23,69 @@ namespace RazorKit.Datatable.Builders
         /// <returns></returns>
         public DatatableBuilder<T> Name(string name)
         {
-            Id = name;
+            Datatable.Name = name;
             return this;
         }
 
         /// <summary>
         /// Define table columns.
         /// </summary>
-        /// <param name="config"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public DatatableBuilder<T> Columns(Action<ColumnBuilder<T>> config)
+        public DatatableBuilder<T> Columns(Action<ColumnBuilder<T>> action)
         {
             var builder = new ColumnBuilder<T>(Datatable);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Data Source Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> DataSource(Action<DataSourceBuilder> action)
+        {
+            Datatable.Ajax = new Ajax();
+            var builder = new DataSourceBuilder(Datatable.Ajax);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Set object data source.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> DataSource(IList<object> data)
+        {
+            Datatable.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Filter data with request.
+        /// </summary>
+        /// <param name="config"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Filters(Action<FilterBuilder<T>> config)
+        {
+            var builder = new FilterBuilder<T>(Datatable);
+            config(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Enable ordering and set default orders.
+        /// </summary>
+        /// <param name="config"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Orders(Action<OrderBuilder<T>> config)
+        {
+            Datatable.Ordering = true;
+            Datatable.Order = new List<object[]>();
+
+            var builder = new OrderBuilder<T>(Datatable);
             config(builder);
             return this;
         }
@@ -108,6 +157,17 @@ namespace RazorKit.Datatable.Builders
                 Datatable.ServerSide = false;
             }
             Datatable.Paging = paging;
+            return this;
+        }
+
+        /// <summary>
+        /// Enable server-side processing mode.
+        /// </summary>
+        /// <param name="serverSide"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> ServerSide(bool serverSide)
+        {
+            Datatable.ServerSide = serverSide;
             return this;
         }
 

@@ -1,3 +1,4 @@
+using DatatableJS.Data;
 using Microsoft.AspNetCore.Mvc;
 using RazorKit.Datatable.Test.Models;
 using System.Diagnostics;
@@ -18,9 +19,18 @@ namespace RazorKit.Datatable.Test.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public JsonResult GetDataResult(DataRequest request)
         {
-            return View();
+            var list = new List<Person>
+            {
+                new Person{Id = 1, Name = "Jon Snow"},
+                new Person{Id = 2, Name = "Arya Stark"},
+            }.AsQueryable();
+
+            var data = list.ToDataResult(request);
+
+            return Json(data);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
