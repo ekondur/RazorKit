@@ -163,6 +163,30 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Is FixedHeader enabled?
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> FixedHeader(bool enabled)
+        {
+            Datatable.FixedHeader = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// FixedHeader Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> FixedHeader(Action<FixedHeaderBuilder> action)
+        {
+            Datatable.FixedHeader = new FixedHeader();
+            var builder = new FixedHeaderBuilder((FixedHeader)Datatable.FixedHeader);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>

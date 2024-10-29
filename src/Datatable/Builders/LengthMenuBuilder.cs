@@ -1,9 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
-using RazorKit.Datatable.Models;
+﻿using RazorKit.Datatable.Models;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Reflection.Emit;
 
 namespace RazorKit.Datatable.Builders
 {
@@ -26,9 +23,11 @@ namespace RazorKit.Datatable.Builders
         /// <returns></returns>
         public LengthMenuBuilder Items(params int[] items)
         {
-            _datatable.LengthMenu = new List<IList<object>>();
-            _datatable.LengthMenu.Add(items.Cast<object>().ToList());
-            _datatable.LengthMenu.Add(items.Cast<object>().ToList());
+            _datatable.LengthMenu = new List<IList<object>>
+            {
+                items.Cast<object>().ToList(),
+                items.Cast<object>().ToList()
+            };
             
             return this;
         }

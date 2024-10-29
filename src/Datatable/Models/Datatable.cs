@@ -75,5 +75,8 @@ namespace RazorKit.Datatable.Models
         internal string Style { get; set; }
         internal IList<Filter> Filters { get; set; } = new List<Filter>();
         internal string Name { get; set; } = "DataTableId";
+
+        [JsonConverter(typeof(ObjectOrTypeConverter<FixedHeader>))]
+        public object FixedHeader { get; set; }
     }
 }
