@@ -1,8 +1,8 @@
-using HelperJS.Chart.Test.Models;
+using RazorKit.Chart.Test.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace HelperJS.Chart.Test.Controllers
+namespace RazorKit.Chart.Test.Controllers
 {
     public class HomeController : Controller
     {

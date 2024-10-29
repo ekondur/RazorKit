@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
-namespace HelperJS
+namespace RazorKit
 {
     /// <summary>
     /// There are three possible values for this property: "round", "bevel", and "miter". 

@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System;
 
-namespace HelperJS.Chart.Converters
+namespace RazorKit.Chart.Converters
 {
     internal class EnumOrTypeConverter<TEnum> : JsonConverter where TEnum : struct, Enum
     {

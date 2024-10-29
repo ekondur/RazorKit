@@ -4,7 +4,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-@using HelperJS
+@using RazorKit
 
 @{
     var data = new List<object> { new { x = -10, y = 0 }, new { x = 0, y = 10 }, new { x = 10, y = 5 }, new { x = 0.5, y = 5.5 } };
@@ -12,7 +12,7 @@
 
 @{
     var chart =
-            Html.JS().Chart("canvasId")
+            Html.RK().Chart("canvasId")
             .Data(d => d
                 .Datasets(ds =>
                     ds.Scatter()

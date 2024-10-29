@@ -1,8 +1,8 @@
-﻿using HelperJS.Chart.Extensions;
-using HelperJS.Chart.Models;
+﻿using RazorKit.Chart.Extensions;
+using RazorKit.Chart.Models;
 using System;
 
-namespace HelperJS.Chart.Builders
+namespace RazorKit.Chart.Builders
 {
     /// <summary>
     /// Options Builder

@@ -1,7 +1,7 @@
-﻿using HelperJS.Chart.Converters;
+﻿using RazorKit.Chart.Converters;
 using Newtonsoft.Json;
 
-namespace HelperJS.Chart.Models
+namespace RazorKit.Chart.Models
 {
     internal class ScaleTitle
     {

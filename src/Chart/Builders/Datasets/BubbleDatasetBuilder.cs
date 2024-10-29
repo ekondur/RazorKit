@@ -1,6 +1,6 @@
-﻿using HelperJS.Chart.Models;
+﻿using RazorKit.Chart.Models;
 
-namespace HelperJS.Chart.Builders
+namespace RazorKit.Chart.Builders
 {
     /// <summary>
     /// Bubble Dataset Configuration.

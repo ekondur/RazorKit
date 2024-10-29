@@ -1,7 +1,7 @@
-﻿using HelperJS.Chart.Models;
+﻿using RazorKit.Chart.Models;
 using System;
 
-namespace HelperJS.Chart.Builders
+namespace RazorKit.Chart.Builders
 {
     /// <summary>
     /// Chart Builder

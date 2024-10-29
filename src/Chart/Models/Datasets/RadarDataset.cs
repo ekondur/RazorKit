@@ -1,4 +1,4 @@
-﻿namespace HelperJS.Chart.Models
+﻿namespace RazorKit.Chart.Models
 {
     internal class RadarDataset : PointDataset
     {

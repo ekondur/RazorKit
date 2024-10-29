@@ -1,4 +1,4 @@
-namespace HelperJS.Chart.Test.Models
+namespace RazorKit.Chart.Test.Models
 {
     public class ErrorViewModel
     {

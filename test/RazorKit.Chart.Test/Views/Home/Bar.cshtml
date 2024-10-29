@@ -4,11 +4,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-@using HelperJS
+@using RazorKit
 
 @{
     var chart =
-            Html.JS().Chart("canvasId")
+            Html.RK().Chart("canvasId")
             .Data(d => d
                 .Labels("January", "February", "March", "April", "May", "June", "July")
                 .Datasets(ds =>

@@ -8,14 +8,14 @@ using System.Web.Mvc;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using HelperJS.Chart.Builders;
+using RazorKit.Chart.Builders;
 
-namespace HelperJS
+namespace RazorKit
 {
     /// <summary>
     /// JSHelper
     /// </summary>
-    public partial class JSHelper
+    public partial class RKHelper
     {
         /// <summary>
         /// Chart Configuration.
@@ -39,17 +39,30 @@ namespace HelperJS
         }
     }
 
-    public static class JSHelperExtension
+    /// <summary>
+    /// RazorKit Html helper extension.
+    /// </summary>
+    public static class RKHelperExtension
     {
 #if NETCOREAPP
-        public static JSHelper JS(this IHtmlHelper htmlHelper)
+        /// <summary>
+        /// Get an instance of RazorKit Html Helper.
+        /// </summary>
+        /// <param name="htmlHelper"></param>
+        /// <returns></returns>
+        public static RKHelper RK(this IHtmlHelper htmlHelper)
         {
-            return new JSHelper();
+            return new RKHelper();
         }
 #else
-        public static JSHelper JS(this HtmlHelper htmlHelper)
+        /// <summary>
+        /// Get an instance of RazorKit Html helper.
+        /// </summary>
+        /// <param name="htmlHelper"></param>
+        /// <returns></returns>
+        public static RKHelper RK(this HtmlHelper htmlHelper)
         {
-            return new JSHelper();
+            return new RKHelper();
         }
 #endif
 

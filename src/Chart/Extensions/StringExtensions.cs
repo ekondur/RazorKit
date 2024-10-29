@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HelperJS.Chart.Extensions
+namespace RazorKit.Chart.Extensions
 {
     internal static class StringExtensions
     {

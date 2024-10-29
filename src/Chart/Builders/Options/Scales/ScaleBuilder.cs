@@ -1,8 +1,8 @@
-﻿using HelperJS.Chart.Models;
+﻿using RazorKit.Chart.Models;
 using System;
 using System.Collections.Generic;
 
-namespace HelperJS.Chart.Builders
+namespace RazorKit.Chart.Builders
 {
     /// <summary>
     /// Scale Builder

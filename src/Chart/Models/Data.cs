@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HelperJS.Chart.Models
+namespace RazorKit.Chart.Models
 {
     class Data
     {

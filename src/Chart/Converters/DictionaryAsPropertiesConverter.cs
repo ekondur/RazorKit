@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace HelperJS.Chart.Converters
+namespace RazorKit.Chart.Converters
 {
     internal class DictionaryAsPropertiesConverter<T> : JsonConverter
     {

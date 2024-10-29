@@ -1,8 +1,8 @@
-﻿using HelperJS.Chart.Converters;
+﻿using RazorKit.Chart.Converters;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace HelperJS.Chart.Models
+namespace RazorKit.Chart.Models
 {
     class BaseDataset
     {

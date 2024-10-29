@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
 
-namespace HelperJS.Chart.Converters
+namespace RazorKit.Chart.Converters
 {
     internal class NoQuotesJsonTextWriter : JsonTextWriter
     {

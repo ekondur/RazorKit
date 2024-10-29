@@ -1,7 +1,7 @@
-﻿using HelperJS.Chart.Builders.Datasets;
-using HelperJS.Chart.Models;
+﻿using RazorKit.Chart.Builders.Datasets;
+using RazorKit.Chart.Models;
 
-namespace HelperJS.Chart.Builders
+namespace RazorKit.Chart.Builders
 {
     /// <summary>
     /// Datasets Configuration.
