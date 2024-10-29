@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorKit.Chart", "src\Chart
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorKit.Chart.Test", "test\RazorKit.Chart.Test\RazorKit.Chart.Test.csproj", "{5943A691-8171-43B2-8DA3-C20F468D863A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorKit.Datatable", "src\Datatable\RazorKit.Datatable.csproj", "{6F8B2B79-BEFE-4560-9B19-50374252B90B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{5943A691-8171-43B2-8DA3-C20F468D863A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5943A691-8171-43B2-8DA3-C20F468D863A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5943A691-8171-43B2-8DA3-C20F468D863A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8B2B79-BEFE-4560-9B19-50374252B90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8B2B79-BEFE-4560-9B19-50374252B90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8B2B79-BEFE-4560-9B19-50374252B90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8B2B79-BEFE-4560-9B19-50374252B90B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6EBD483D-8EAF-43E1-84F5-E3624A02AA0B} = {5FB5AE90-2C41-4D21-8529-BFED2F90E3A2}
 		{5943A691-8171-43B2-8DA3-C20F468D863A} = {3CC9869D-3AC1-480D-9EB6-E45B27B32F5B}
+		{6F8B2B79-BEFE-4560-9B19-50374252B90B} = {5FB5AE90-2C41-4D21-8529-BFED2F90E3A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED16D522-8B24-4E3F-820A-5D1FBAE99C81}
