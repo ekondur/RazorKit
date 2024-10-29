@@ -248,7 +248,7 @@ namespace RazorKit.Datatable.Builders
         /// </summary>
         /// <param name="cssClass"></param>
         /// <returns></returns>
-        public DatatableBuilder<T> Class(string cssClass)
+        public DatatableBuilder<T> Style(string cssClass)
         {
             Datatable.Style = cssClass;
             return this;
@@ -321,6 +321,17 @@ namespace RazorKit.Datatable.Builders
         public DatatableBuilder<T> StateSave(bool stateSave)
         {
             Datatable.StateSave = stateSave;
+            return this;
+        }
+
+        /// <summary>
+        /// Set a caption for the table.
+        /// </summary>
+        /// <param name="caption"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Caption(string caption)
+        {
+            Datatable.Caption = caption;
             return this;
         }
     }
