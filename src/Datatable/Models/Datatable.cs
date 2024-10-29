@@ -10,7 +10,9 @@ namespace RazorKit.Datatable.Models
         public bool? ScrollX { get; set; }
         public bool? StateSave { get; set; }
         public bool? ServerSide { get; set; }
-        public FixedColumns FixedColumns { get; set; }
+
+        [JsonConverter(typeof(ObjectOrTypeConverter<FixedColumns>))]
+        public object FixedColumns { get; set; }
         public IList<object[]> Order { get; set; }
         public bool? Ordering { get; set; }
         public bool? Searching { get; set; }

@@ -119,7 +119,6 @@ namespace RazorKit
                     </table>";
         }
 
-
         private static string RenderScriptString<T>(DatatableBuilder<T> builder)
         {
             builder.Datatable.Ajax.Data = GetDataStr(builder);

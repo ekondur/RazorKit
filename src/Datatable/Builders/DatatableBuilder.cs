@@ -66,27 +66,27 @@ namespace RazorKit.Datatable.Builders
         /// <summary>
         /// Filter data with request.
         /// </summary>
-        /// <param name="config"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public DatatableBuilder<T> Filters(Action<FilterBuilder<T>> config)
+        public DatatableBuilder<T> Filters(Action<FilterBuilder<T>> action)
         {
             var builder = new FilterBuilder<T>(Datatable);
-            config(builder);
+            action(builder);
             return this;
         }
 
         /// <summary>
         /// Enable ordering and set default orders.
         /// </summary>
-        /// <param name="config"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public DatatableBuilder<T> Orders(Action<OrderBuilder<T>> config)
+        public DatatableBuilder<T> Orders(Action<OrderBuilder<T>> action)
         {
             Datatable.Ordering = true;
             Datatable.Order = new List<object[]>();
 
             var builder = new OrderBuilder<T>(Datatable);
-            config(builder);
+            action(builder);
             return this;
         }
 
@@ -110,6 +110,42 @@ namespace RazorKit.Datatable.Builders
         {
             Datatable.Language = new Language();
             var builder = new LanguageBuilder(Datatable.Language);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Set callback functions. <see href="https://datatables.net/reference/option/">Reference:</see>
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Callbacks(Action<CallbackBuilder> action)
+        {
+            var builder = new CallbackBuilder(Datatable);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Enable and configure the FixedColumns extension for DataTables.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> FixedColumns(bool enabled)
+        {
+            Datatable.FixedColumns = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Enable and configure the FixedColumns extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> FixedColumns(Action<FixedColumnsBuilder> action)
+        {
+            Datatable.FixedColumns = new FixedColumns();
+            var builder = new FixedColumnsBuilder((FixedColumns)Datatable.FixedColumns);
             action(builder);
             return this;
         }

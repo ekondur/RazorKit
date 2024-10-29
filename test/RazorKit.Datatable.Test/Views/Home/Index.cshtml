@@ -7,6 +7,12 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+<script>
+    function callbackTest() {
+        console.log("called!");
+    }
+</script>
+
 @using RazorKit
 
 @{
@@ -27,7 +33,10 @@
             {
                 f.Add(x => x.Id).GreaterThanOrEqual(1);
             })
+            .Callbacks(c => c.InfoCallback("callbackTest"))
+            .FixedColumns(f => f.Start(0))
             ;
 }
 
 @(datatable.Render())
+
