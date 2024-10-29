@@ -187,6 +187,30 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Enable the ColReorder extension for DataTables.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> ColReorder(bool enabled)
+        {
+            Datatable.ColReorder = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Configure the ColReorder extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> ColReorder(Action<ColReorderBuilder> action)
+        {
+            Datatable.ColReorder = new ColReorder();
+            var builder = new ColReorderBuilder((ColReorder)Datatable.ColReorder);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>
@@ -297,17 +321,6 @@ namespace RazorKit.Datatable.Builders
         public DatatableBuilder<T> StateSave(bool stateSave)
         {
             Datatable.StateSave = stateSave;
-            return this;
-        }
-        
-        /// <summary>
-        /// Is column re-ordering enabled?
-        /// </summary>
-        /// <param name="enabled"></param>
-        /// <returns></returns>
-        public DatatableBuilder<T> ColReorder(bool enabled)
-        {
-            Datatable.ColReorder = enabled;
             return this;
         }
     }

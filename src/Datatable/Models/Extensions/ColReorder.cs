@@ -3,9 +3,7 @@
     internal class ColReorder
     {
         public bool? Enable { get; set; }
-        public int? FixedColumnsLeft { get; set; }
-        public int? FixedColumnsRight { get; set; }
-        public string Order { get; set; }
-        public bool? RealTime { get; set; }
+        public int[] Order { get; set; }
+        public string Columns { get; set; }
     }
 }

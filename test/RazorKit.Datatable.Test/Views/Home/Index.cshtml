@@ -21,6 +21,7 @@
             {
                 c.Field(f => f.Id).Visible(false);
                 c.Field(f => f.Name).Title("Name");
+                c.Field(f => f.Age);
             })
             .DataSource(ds => ds.URL(Url.Action("GetDataResult")).Method("POST"))
             .ServerSide(true)
@@ -37,6 +38,7 @@
             .FixedColumns(f => f.Start(0))
             .LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll("All records"))
             .FixedHeader(fh => fh.Header(true).HeaderOffset(50))
+            .ColReorder(true)
             ;
 }
 
