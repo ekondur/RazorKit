@@ -21,10 +21,10 @@
 
     internal class Paginate
     {
-        internal string First { get; set; }
-        internal string Last { get; set; }
-        internal string Next { get; set; }
-        internal string Previous { get; set; }
+        public string First { get; set; }
+        public string Last { get; set; }
+        public string Next { get; set; }
+        public string Previous { get; set; }
     }
 
     internal class Aria

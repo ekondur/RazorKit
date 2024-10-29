@@ -18,6 +18,7 @@
             })
             .DataSource(ds => ds.URL(Url.Action("GetDataResult")).Method("POST"))
             .ServerSide(true)
+            .Language(l => l.Search("Search By: "))
             .Orders(o =>
             {
                 o.Add(x => x.Name, OrderBy.Ascending);

@@ -102,6 +102,19 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Language Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Language(Action<LanguageBuilder> action)
+        {
+            Datatable.Language = new Language();
+            var builder = new LanguageBuilder(Datatable.Language);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>
