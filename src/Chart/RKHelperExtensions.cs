@@ -49,19 +49,15 @@ namespace RazorKit
             return new ChartBuilder(canvasId, useCanvas);
         }
 
-#if NETCOREAPP
         /// <summary>
         /// Get Html string of chart.
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
+
+#if NETCOREAPP
         public static IHtmlContent Render(this ChartBuilder builder) 
 #else
-        /// <summary>
-        /// Get Html string of chart.
-        /// </summary>
-        /// <param name="builder"></param>
-        /// <returns></returns>
         public static MvcHtmlString Render(this ChartBuilder builder)
 #endif
         {
