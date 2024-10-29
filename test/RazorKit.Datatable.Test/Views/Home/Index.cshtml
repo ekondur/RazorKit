@@ -35,6 +35,7 @@
             })
             .Callbacks(c => c.InfoCallback("callbackTest"))
             .FixedColumns(f => f.Start(0))
+            .LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll("All records"))
             ;
 }
 

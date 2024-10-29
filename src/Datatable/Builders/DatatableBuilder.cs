@@ -151,6 +151,18 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Change the options in the page length select list.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> LengthMenu(Action<LengthMenuBuilder> action)
+        {
+            var builder = new LengthMenuBuilder(Datatable);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>

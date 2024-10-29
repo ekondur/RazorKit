@@ -71,7 +71,7 @@ namespace RazorKit.Datatable.Models
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string InitComplete { get; set; }
 
-        public object[] LengthMenu { get; set; }
+        public IList<IList<object>> LengthMenu { get; set; }
         internal string Style { get; set; }
         internal IList<Filter> Filters { get; set; } = new List<Filter>();
         internal string Name { get; set; } = "DataTableId";
