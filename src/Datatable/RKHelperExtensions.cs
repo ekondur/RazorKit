@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using RazorKit.Datatable.Builders;
 using System.Linq;
+using RazorKit.Datatable.Models;
 
 namespace RazorKit
 {
@@ -94,7 +95,6 @@ namespace RazorKit
 #endif
         }
 
-
         private static string RenderHtmlString<T>(DatatableBuilder<T> builder)
         {
             //var tfoot = datatable._columnSearching ?
@@ -121,7 +121,8 @@ namespace RazorKit
 
         private static string RenderScriptString<T>(DatatableBuilder<T> builder)
         {
-            builder.Datatable.Ajax.Data = GetDataStr(builder);
+            builder.Datatable.Ajax.Data = GetDataStr(builder.Datatable);
+            RenderCommands(builder.Datatable);
 
             var contractResolver = new DefaultContractResolver
             {
@@ -137,19 +138,33 @@ namespace RazorKit
             </script>";
         }
 
-        private static string GetDataStr<T>(this DatatableBuilder<T> builder)
+        private static string GetDataStr(DatatableJs datatable)
         {
-            if (builder.Datatable.Filters.Count == 0 && string.IsNullOrEmpty(builder.Datatable.Ajax.Data))
+            if (datatable.Filters.Count == 0 && string.IsNullOrEmpty(datatable.Ajax.Data))
             {
                 return null;
             }
 
-            var filters = string.Format("d.filters = {0}{1}", JsonConvert.SerializeObject(builder.Datatable.Filters), string.IsNullOrEmpty(builder.Datatable.Ajax.Data) ? string.Empty : ",");
+            var filters = string.Format("d.filters = {0}{1}", JsonConvert.SerializeObject(datatable.Filters), string.IsNullOrEmpty(datatable.Ajax.Data) ? string.Empty : ",");
 
             return $@"function (d) {{
-                    {(builder.Datatable.Filters.Count > 0 ? filters : string.Empty)}
-                    {(string.IsNullOrEmpty(builder.Datatable.Ajax.Data) ? string.Empty : string.Format("d.data = {0}()", builder.Datatable.Ajax.Data))}
+                    {(datatable.Filters.Count > 0 ? filters : string.Empty)}
+                    {(string.IsNullOrEmpty(datatable.Ajax.Data) ? string.Empty : string.Format("d.data = {0}()", datatable.Ajax.Data))}
                     }}";
+        }
+
+        private static void RenderCommands(DatatableJs datatable)
+        {
+            foreach (var command in datatable.Commands)
+            {
+                datatable.Columns.Add(new Column
+                {
+                    Orderable = false,
+                    Searchable = false,
+                    Width = command.Width,
+                    DefaultContent = $"<a href=\"#\" class=\"{command.BtnClass}\" onclick=\"{command.OnClick}(this)\"><i class=\"{command.IconClass}\"></i>{command.Text}</a>"
+                });
+            }
         }
     }
 }

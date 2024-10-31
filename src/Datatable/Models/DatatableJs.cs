@@ -80,5 +80,7 @@ namespace RazorKit.Datatable.Models
         public object FixedHeader { get; set; }
 
         public string Caption { get; set; }
+
+        internal IList<Command> Commands { get; set; } = new List<Command>();
     }
 }

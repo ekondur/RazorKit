@@ -16,7 +16,7 @@ namespace RazorKit.Datatable.Models
         public int? Width { get; set; }
 
         [JsonConverter(typeof(NoQuotesStringConverter))]
-        public string Render { get; set; } = "data";
+        public string Render { get; set; }
 
         internal string Title { get; set; }
         internal Type Type { get; set; }

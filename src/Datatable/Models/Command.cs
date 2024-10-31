@@ -2,13 +2,10 @@
 {
     public class Command
     {
-        internal string Text { get; private set; }
-        internal string OnClick { get; private set; }
-
-        internal Command(string text, string onClick)
-        {
-            Text = text;
-            OnClick = onClick;
-        }
+        internal string Text { get; set; }
+        internal string OnClick { get; set; }
+        public string IconClass { get; set; }
+        public string BtnClass { get; set; }
+        public int? Width { get; set; }
     }
 }

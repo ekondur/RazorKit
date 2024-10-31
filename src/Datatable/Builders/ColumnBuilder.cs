@@ -151,66 +151,15 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
-        /// Define a link or button.
+        /// Command (link or button) configuration.
         /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="onClick"></param>
-        /// <param name="iconClass"></param>
-        /// <param name="btnClass"></param>
-        /// <param name="text"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public ColumnBuilder<T> Command<TProp>(Expression<Func<T, TProp>> property, string onClick, string iconClass, string btnClass, string text)
+        public ColumnBuilder<T> Command(Action<CommandBuilder> action)
         {
-            _column = new Column
-            {
-                Width = 1,
-                Data = ExpressionHelpers<T>.PropertyName(property),
-                Orderable = false,
-                Searchable = false,
-                Render = $@"'<a href=""#"" class=""{(!string.IsNullOrEmpty(iconClass) && string.IsNullOrEmpty(btnClass) ? "btn btn-primary" : btnClass)}"" onClick=""{onClick}(\''+data+'\')""><i class=""{iconClass}""></i>'+{(string.IsNullOrEmpty(text) ? (string.IsNullOrEmpty(iconClass) ? "data" : "''") : string.Format("' {0}'", text))}+'</a>'"
-            };
-            _dataTable.Columns.Add(_column);
+            var builder = new CommandBuilder(_dataTable);
+            action(builder);
             return this;
-        }
-
-        /// <summary>
-        /// Define a link or button.
-        /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="onClick"></param>
-        /// <param name="iconClass"></param>
-        /// <param name="btnClass"></param>
-        /// <returns></returns>
-        public ColumnBuilder<T> Command<TProp>(Expression<Func<T, TProp>> property, string onClick, string iconClass, string btnClass)
-        {
-            return Command(property, onClick, iconClass, btnClass, "");
-        }
-
-        /// <summary>
-        /// Define a link or button.
-        /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="onClick"></param>
-        /// <param name="iconClass"></param>
-        /// <returns></returns>
-        public ColumnBuilder<T> Command<TProp>(Expression<Func<T, TProp>> property, string onClick, string iconClass)
-        {
-            return Command(property, onClick, iconClass, "", "");
-        }
-
-        /// <summary>
-        /// Define a link or button.
-        /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="onClick"></param>
-        /// <returns></returns>
-        public ColumnBuilder<T> Command<TProp>(Expression<Func<T, TProp>> property, string onClick)
-        {
-            return Command(property, onClick, "", "", "");
         }
 
         /// <summary>

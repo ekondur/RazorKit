@@ -11,6 +11,13 @@
     function callbackTest() {
         console.log("called!");
     }
+
+    function onDelete(button) {
+        var rowData = $('#DataTableId').DataTable().row($(button).parents('tr')).data();
+
+        // Perform actions with rowData
+        console.log(rowData); // Example: log data to the console
+    }
 </script>
 
 @using RazorKit
@@ -22,6 +29,8 @@
                 c.Field(f => f.Id).Visible(false);
                 c.Field(f => f.Name).Title("Name");
                 c.Field(f => f.Age);
+                c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width(5));
+                c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width(5));
             })
             .DataSource(ds => ds.URL(Url.Action("GetDataResult")).Method("POST"))
             .ServerSide(true)
