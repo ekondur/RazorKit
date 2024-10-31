@@ -1,11 +1,34 @@
-﻿namespace RazorKit.Datatable.Models
+﻿using System.Collections.Generic;
+
+namespace RazorKit.Datatable.Models
 {
-    public class Command
+    internal class Command
     {
-        internal string Text { get; set; }
-        internal string OnClick { get; set; }
+        public string Text { get; set; }
+        public string OnClick { get; set; }
         public string IconClass { get; set; }
         public string BtnClass { get; set; }
         public int? Width { get; set; }
+    }
+
+    internal class CommandGroup
+    {
+        public string Text { get; set; }
+        public string IconClass { get; set; }
+        public string BtnClass { get; set; }
+        public int? Width { get; set; }
+        public IList<CommandGroupItem> Items { get; set; } = new List<CommandGroupItem>();
+    }
+
+    internal class CommandGroupItem
+    {
+        public CommandGroupItem(string text, string onClick)
+        {
+            Text = text;
+            OnClick = onClick;
+        }
+
+        internal string Text { get; private set; }
+        internal string OnClick { get; private set; }
     }
 }

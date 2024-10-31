@@ -82,5 +82,6 @@ namespace RazorKit.Datatable.Models
         public string Caption { get; set; }
 
         internal IList<Command> Commands { get; set; } = new List<Command>();
+        internal CommandGroup CommandGroup { get; set; }
     }
 }

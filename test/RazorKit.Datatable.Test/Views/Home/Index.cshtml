@@ -18,6 +18,10 @@
         // Perform actions with rowData
         console.log(rowData); // Example: log data to the console
     }
+
+    function report() {
+        console.log("exported");
+    }
 </script>
 
 @using RazorKit
@@ -29,8 +33,10 @@
                 c.Field(f => f.Id).Visible(false);
                 c.Field(f => f.Name).Title("Name");
                 c.Field(f => f.Age);
-                c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width(5));
-                c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width(5));
+                c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width(1));
+                c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width(1));
+                c.CommandGroup(cg => cg.Text("Report").BtnClass("btn btn-sm btn-secondary").Width(1)
+                    .Item("Excel", "report").Item("Pdf", "report"));
             })
             .DataSource(ds => ds.URL(Url.Action("GetDataResult")).Method("POST"))
             .ServerSide(true)

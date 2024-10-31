@@ -151,7 +151,7 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
-        /// Command (link or button) configuration.
+        /// Command group (dropdown) configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
@@ -163,74 +163,16 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
-        /// Add multiple command to define button group.
+        /// Command (link or button) configuration.
         /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="btnText"></param>
-        /// <param name="btnClass"></param>
-        /// <param name="iconClass"></param>
-        /// <param name="commands"></param>
+        /// <param name="action"></param>
         /// <returns></returns>
-        public ColumnBuilder<T> Commands<TProp>(Expression<Func<T, TProp>> property, IEnumerable<Command> commands, string btnText, string btnClass, string iconClass)
+        public ColumnBuilder<T> CommandGroup(Action<CommandGroupBuilder> action)
         {
-            _column = new Column
-            {
-                Width = 1,
-                Data = ExpressionHelpers<T>.PropertyName(property),
-                Orderable = false,
-                Searchable = false,
-            };
-            _column.Render = $@"'<div class=""btn-group"">'+
-                        '<button type=""button"" class=""btn {btnClass} dropdown-toggle"" data-toggle=""dropdown"" data-bs-toggle=""dropdown"" aria-haspopup=""true"" aria-expanded=""false"">'+
-                            '{btnText ?? ""} <span class=""{iconClass}""></span>'+
-                        '</button>'+
-                        '<div class=""dropdown-menu"">'+
-                        {string.Join(Environment.NewLine,
-                        commands.Select(a => $@"'<a class=""dropdown-item"" href=""#"" onclick=""{a.OnClick}(\''+data+'\');return false;"">{a.Text}</a>'+"))}
-                        '</div>'+
-                    '</div>'";
-            _dataTable.Columns.Add(_column);
+            _dataTable.CommandGroup = new CommandGroup();
+            var builder = new CommandGroupBuilder(_dataTable.CommandGroup);
+            action(builder);
             return this;
-        }
-
-        /// <summary>
-        /// Add multiple command to define button group.
-        /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="commands"></param>
-        /// <returns></returns>
-        public ColumnBuilder<T> Commands<TProp>(Expression<Func<T, TProp>> property, IEnumerable<Command> commands)
-        {
-            return Commands(property, commands, null, "btn-default", "caret");
-        }
-
-        /// <summary>
-        /// Add multiple command to define button group.
-        /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="commands"></param>
-        /// <param name="btnText"></param>
-        /// <returns></returns>
-        public ColumnBuilder<T> Commands<TProp>(Expression<Func<T, TProp>> property, IEnumerable<Command> commands, string btnText)
-        {
-            return Commands(property, commands, btnText, "btn-default", "caret");
-        }
-
-        /// <summary>
-        /// Add multiple command to define button group.
-        /// </summary>
-        /// <typeparam name="TProp"></typeparam>
-        /// <param name="property"></param>
-        /// <param name="commands"></param>
-        /// <param name="btnText"></param>
-        /// <param name="btnClass"></param>
-        /// <returns></returns>
-        public ColumnBuilder<T> Commands<TProp>(Expression<Func<T, TProp>> property, IEnumerable<Command> commands, string btnText, string btnClass)
-        {
-            return Commands(property, commands, btnText, btnClass, "caret");
         }
     }
 }

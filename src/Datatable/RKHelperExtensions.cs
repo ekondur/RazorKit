@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Html;
 #else
-using System;
 using System.Web.Mvc;
 #endif
 
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using RazorKit.Datatable.Builders;
@@ -49,7 +49,7 @@ namespace RazorKit
 #if NETCOREAPP
             return new HtmlString(RenderHtmlString(builder)+ "\n" + RenderScriptString(builder));
 #else
-            return new MvcHtmlString(RenderHtmlString(builder)+ "\n" + RenderScriptString(builder));
+            return new MvcHtmlString(RenderHtmlString(builder) + "\n" + RenderScriptString(builder));
 #endif
         }
 
@@ -123,6 +123,7 @@ namespace RazorKit
         {
             builder.Datatable.Ajax.Data = GetDataStr(builder.Datatable);
             RenderCommands(builder.Datatable);
+            RenderCommandGroup(builder.Datatable);
 
             var contractResolver = new DefaultContractResolver
             {
@@ -165,6 +166,30 @@ namespace RazorKit
                     DefaultContent = $"<a href=\"#\" class=\"{command.BtnClass}\" onclick=\"{command.OnClick}(this)\"><i class=\"{command.IconClass}\"></i>{command.Text}</a>"
                 });
             }
+        }
+
+        private static void RenderCommandGroup(DatatableJs datatable)
+        {
+            if (datatable.CommandGroup == null)
+            {
+                return;
+            }
+
+            datatable.Columns.Add(new Column
+            {
+                Orderable = false,
+                Searchable = false,
+                Width = datatable.CommandGroup.Width,
+                DefaultContent = $@"<div class=""btn-group"">
+                        <button type=""button"" class=""{datatable.CommandGroup.BtnClass} dropdown-toggle"" data-toggle=""dropdown"" data-bs-toggle=""dropdown"" aria-haspopup=""true"" aria-expanded=""false"">
+                            {datatable.CommandGroup.Text ?? ""} <span class=""{datatable.CommandGroup.IconClass}""></span>
+                        </button>
+                        <div class=""dropdown-menu"">
+                        {string.Join(Environment.NewLine,
+                    datatable.CommandGroup.Items.Select(a => $@"<a class=""dropdown-item"" href=""#"" onclick=""{a.OnClick}();return false;"">{a.Text}</a>"))}
+                        </div>
+                    </div>"
+            });
         }
     }
 }
