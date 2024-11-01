@@ -68,6 +68,9 @@ namespace RazorKit.Datatable.Models
         [JsonConverter(typeof(ObjectOrTypeConverter<ColReorder>))]
         public object ColReorder { get; set; }
 
+        [JsonConverter(typeof(ObjectOrTypeConverter<RowReorder>))]
+        public object RowReorder { get; set; }
+
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string InitComplete { get; set; }
 

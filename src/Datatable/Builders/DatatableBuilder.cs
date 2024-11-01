@@ -211,6 +211,30 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Enable the RowReorder extension for DataTables.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> RowReorder(bool enabled)
+        {
+            Datatable.RowReorder = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Configure the RowReorder extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> RowReorder(Action<RowReorderBuilder> action)
+        {
+            Datatable.RowReorder = new RowReorder();
+            var builder = new RowReorderBuilder((RowReorder)Datatable.RowReorder);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>
