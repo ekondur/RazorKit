@@ -78,6 +78,12 @@ namespace RazorKit
         EndsWith
     }
 
+    public enum Convention
+    {
+        CamelCase,
+        PascalCase
+    }
+
     [JsonConverter(typeof(StringEnumConverter))]
     public enum OrderBy
     {

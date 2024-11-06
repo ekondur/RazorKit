@@ -7,11 +7,11 @@ namespace RazorKit.Datatable.Builders
     /// </summary>
     public class DataSourceBuilder
     {
-        private readonly Ajax _ajax;
+        private readonly AjaxSource _ajaxSource;
 
-        internal DataSourceBuilder(Ajax ajax)
+        internal DataSourceBuilder(AjaxSource ajaxSource)
         {
-            _ajax = ajax;
+            _ajaxSource = ajaxSource;
         }
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace RazorKit.Datatable.Builders
         /// <param name="url"></param>
         public DataSourceBuilder URL(string url)
         {
-            _ajax.Url = url;
+            _ajaxSource.Url = url;
             return this;
         }
 
@@ -31,7 +31,7 @@ namespace RazorKit.Datatable.Builders
         /// <returns></returns>
         public DataSourceBuilder Method(string method)
         {
-            _ajax.Type = method;
+            _ajaxSource.Type = method;
             return this;
         }
 
@@ -42,7 +42,18 @@ namespace RazorKit.Datatable.Builders
         /// <returns></returns>
         public DataSourceBuilder Data(string data)
         {
-            _ajax.Data = data;
+            _ajaxSource.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Set naming convention strategy.
+        /// </summary>
+        /// <param name="convention"></param>
+        /// <returns></returns>
+        public DataSourceBuilder Naming(Convention convention)
+        {
+            _ajaxSource.Convention = convention;
             return this;
         }
     }

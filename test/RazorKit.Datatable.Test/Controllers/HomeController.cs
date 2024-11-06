@@ -24,8 +24,8 @@ namespace RazorKit.Datatable.Test.Controllers
         {
             var list = new List<Person>
             {
-                new Person{Id = 1, Name = "Jon Snow", Age = 29 },
-                new Person{Id = 2, Name = "Arya Stark", Age = 18 },
+                new Person { Id = 1, Name = "Jon Snow", Age = 29, Title = "Warrior" },
+                new Person { Id = 2, Name = "Arya Stark", Age = 18, Title = "Assassin" },
             }.AsQueryable();
 
             var data = list.ToDataResult(request);

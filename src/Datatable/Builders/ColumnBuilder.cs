@@ -1,9 +1,7 @@
 ﻿using RazorKit.Datatable.Models;
 using RazorKit.Datatable.Utilities;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -34,7 +32,7 @@ namespace RazorKit.Datatable.Builders
             var propName = ExpressionHelpers<T>.PropertyName(property);
             _column = new Column
             {
-                Data = char.ToLowerInvariant(propName[0]) + propName.Substring(1),
+                Data = propName,
                 Name = propName,
                 Title = member.Member.GetCustomAttribute<DisplayAttribute>()?.Name ?? propName,
                 Render = member.Member.GetCustomAttribute<DisplayFormatAttribute>() != null ? $@"moment(data).format('{member.Member.GetCustomAttribute<DisplayFormatAttribute>().DataFormatString}')" : null,

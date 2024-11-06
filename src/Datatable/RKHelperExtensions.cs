@@ -124,6 +124,7 @@ namespace RazorKit
             builder.Datatable.Ajax.Data = GetDataStr(builder.Datatable);
             RenderCommands(builder.Datatable);
             RenderCommandGroup(builder.Datatable);
+            RenderDataNames(builder.Datatable);
 
             var contractResolver = new DefaultContractResolver
             {
@@ -190,6 +191,24 @@ namespace RazorKit
                         </div>
                     </div>"
             });
+        }
+
+        private static void RenderDataNames(DatatableJs datatable)
+        {
+            foreach (var column in datatable.Columns.Where(x => x.Data != null))
+            {
+                switch (datatable.Ajax.Convention)
+                {
+                    case Convention.CamelCase:
+                        column.Data = char.ToLowerInvariant(column.Data[0]) + column.Data.Substring(1);
+                        break;
+                    case Convention.PascalCase:
+                        column.Data = char.ToUpperInvariant(column.Data[0]) + column.Data.Substring(1);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }

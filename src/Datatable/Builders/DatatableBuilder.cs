@@ -46,7 +46,7 @@ namespace RazorKit.Datatable.Builders
         /// <returns></returns>
         public DatatableBuilder<T> DataSource(Action<DataSourceBuilder> action)
         {
-            Datatable.Ajax = new Ajax();
+            Datatable.Ajax = new AjaxSource();
             var builder = new DataSourceBuilder(Datatable.Ajax);
             action(builder);
             return this;
