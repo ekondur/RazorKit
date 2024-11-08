@@ -235,6 +235,30 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Enable the KeyTable extension for DataTables.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> KeyTable(bool enabled)
+        {
+            Datatable.Keys = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Configure the KeyTable extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> KeyTable(Action<KeyTableBuilder> action)
+        {
+            Datatable.Keys = new KeyTable();
+            var builder = new KeyTableBuilder((KeyTable)Datatable.Keys);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>
