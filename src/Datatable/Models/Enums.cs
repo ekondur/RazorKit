@@ -25,13 +25,7 @@ namespace RazorKit
         /// Enable cell selection.
         /// </summary>
         [EnumMember(Value = "cell")]
-        Cell,
-
-        /// <summary>
-        /// Enable row selection with checkbox.
-        /// </summary>
-        [EnumMember(Value = "row")]
-        Checkbox
+        Cell
     }
 
     /// <summary>
@@ -41,28 +35,36 @@ namespace RazorKit
     public enum SelectStyle
     {
         /// <summary>
-        /// Select just for single item, to select multiple just click with CTRL button.
+        /// Operating System (OS) style selection. 
+        /// This is the most comprehensive option and provides complex behaviours such as ctrl/cmd clicking to select / deselect individual items, 
+        /// shift clicking to select ranges and an unmodified click to select a single item.
         /// </summary>
         [EnumMember(Value = "os")]
-        Default,
+        OS,
 
         /// <summary>
-        /// Only single item can be selected.
+        /// Only a single item can be selected, any other selected items will be automatically deselected when a new item is selected.
         /// </summary>
         [EnumMember(Value = "single")]
         Single,
 
         /// <summary>
-        /// Multiple selectable with one click 
+        /// Multiple items can be selected. Selection is performed by simply clicking on the items to be selected.
         /// </summary>
         [EnumMember(Value = "multi")]
         Multi,
 
         /// <summary>
-        /// Multi-item with rangle selection 
+        /// A hybrid between the os style and multi, allowing easy multi-row selection without immediate de-selection when clicking on a row.
         /// </summary>
         [EnumMember(Value = "multi+shift")]
-        MultiShift
+        MultiShift,
+
+        /// <summary>
+        /// Selection can only be performed via the API.
+        /// </summary>
+        [EnumMember(Value = "api")]
+        Api
     }
 
     public enum Operand

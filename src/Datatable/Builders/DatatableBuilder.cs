@@ -259,6 +259,29 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Enable selection.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Select(bool enabled)
+        {
+            Datatable.Select = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Select Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Select(Action<SelectBuilder> action)
+        {
+            var builder = new SelectBuilder(Datatable);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>

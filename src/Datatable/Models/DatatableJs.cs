@@ -63,7 +63,9 @@ namespace RazorKit.Datatable.Models
         public AjaxSource Ajax { get; set; }
         public IList<object> Data { get; set; }
         public IList<Column> Columns { get; set; } = new List<Column>();
-        public Select Select { get; set; }
+
+        [JsonConverter(typeof(ObjectOrTypeConverter<Select>))]
+        public object Select { get; set; }
 
         [JsonConverter(typeof(ObjectOrTypeConverter<ColReorder>))]
         public object ColReorder { get; set; }

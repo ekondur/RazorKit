@@ -109,13 +109,9 @@ namespace RazorKit
                     <table id=""{builder.Datatable.Name}"" class=""{builder.Datatable.Style}"" style=""width:100%"">
                         <thead>
                             <tr>
-                                {string.Join("\n",
-                                builder.Datatable.Columns.Select(a => true && SelectItems.Cell == SelectItems.Checkbox && a.ClassName == "select-checkbox"
-                                    ? $"<th style=\"text-align:center\"><input type=\"checkbox\" id=\"{builder.Datatable.Name}_SelectAll\"></th>"
-                                    : string.Format("<th>{0}</th>", a.Title)))}
+                                {string.Join("\n", builder.Datatable.Columns.Select(a => string.Format("<th>{0}</th>", a.Title)))}
                             </tr>
                         </thead>
-                        
                     </table>";
         }
 

@@ -58,8 +58,8 @@
             .LengthMenu(lm => lm.Items(10, 25, 50, 100))
             .FixedHeader(fh => fh.Header(true).HeaderOffset(50))
             .ColReorder(true)
-            .RowReorder(true)
             .Caption("Caption of table")
+            .Select(s => s.Style(SelectStyle.Multi).HeaderCheckbox())
             ;
 }
 
