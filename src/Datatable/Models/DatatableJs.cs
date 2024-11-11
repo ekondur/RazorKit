@@ -18,6 +18,7 @@ namespace RazorKit.Datatable.Models
         public bool? Searching { get; set; }
         public bool? Paging { get; set; }
         public string Dom { get; set; }
+        public bool? Responsive { get; set; }
 
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string CreatedRow { get; set; }
