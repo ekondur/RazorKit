@@ -60,6 +60,7 @@
             .ColReorder(true)
             .Caption("Caption of table")
             .Select(s => s.Style(SelectStyle.Multi).HeaderCheckbox())
+            .Layout(x => x.Bottom(Layouts.Paging).BottomEnd(null))
             ;
 }
 

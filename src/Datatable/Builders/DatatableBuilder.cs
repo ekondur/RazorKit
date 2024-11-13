@@ -282,6 +282,19 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Define and position the table control elements to appear on the page.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Layout(Action<LayoutBuilder> action)
+        {
+            Datatable.Layout = new Layout();
+            var builder = new LayoutBuilder(Datatable.Layout);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Disable or enable ordering, default is true.
         /// </summary>
         /// <param name="ordering"></param>

@@ -47,7 +47,7 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
-        /// Set naming convention strategy.
+        /// Set naming convention strategy. If not set uses default.
         /// </summary>
         /// <param name="convention"></param>
         /// <returns></returns>

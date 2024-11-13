@@ -92,5 +92,6 @@ namespace RazorKit.Datatable.Models
 
         internal IList<Command> Commands { get; set; } = new List<Command>();
         internal CommandGroup CommandGroup { get; set; }
+        public Layout Layout { get; set; }
     }
 }

@@ -95,4 +95,40 @@ namespace RazorKit
         [EnumMember(Value = "desc")]
         Descending
     }
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum Layouts
+    {
+        /// <summary>
+        /// Table information summary.
+        /// </summary>
+        [EnumMember(Value = "info")]
+        Info,
+
+        /// <summary>
+        /// Page length control.
+        /// </summary>
+        [EnumMember(Value = "pageLength")]
+        PageLength,
+
+        /// <summary>
+        /// User input control for paging.
+        /// </summary>
+        [EnumMember(Value = "paging")]
+        Paging,
+
+        /// <summary>
+        /// Search input box.
+        /// </summary>
+        [EnumMember(Value = "search")]
+        Search,
+
+        /// <summary>
+        /// A simple placeholder element.
+        /// </summary>
+        [EnumMember(Value = "div")]
+        Div,
+
+        Null
+    }
 }
