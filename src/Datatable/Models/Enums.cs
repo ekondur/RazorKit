@@ -124,6 +124,12 @@ namespace RazorKit
         Search,
 
         /// <summary>
+        /// Buttons extension.
+        /// </summary>
+        [EnumMember(Value = "buttons")]
+        Buttons,
+
+        /// <summary>
         /// A simple placeholder element.
         /// </summary>
         [EnumMember(Value = "div")]

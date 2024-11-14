@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 
 internal class NullableEnumConverter<T> : JsonConverter where T : Enum
@@ -18,7 +19,8 @@ internal class NullableEnumConverter<T> : JsonConverter where T : Enum
         }
         else
         {
-            writer.WriteValue(value.ToString());
+            var stringEnumConverter = new StringEnumConverter();
+            stringEnumConverter.WriteJson(writer, value, serializer);
         }
     }
 

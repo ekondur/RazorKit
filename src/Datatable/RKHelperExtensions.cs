@@ -160,7 +160,7 @@ namespace RazorKit
                     Orderable = false,
                     Searchable = false,
                     Width = command.Width,
-                    DefaultContent = $"<a href=\"#\" class=\"{command.BtnClass}\" onclick=\"{command.OnClick}(this)\"><i class=\"{command.IconClass}\"></i>{command.Text}</a>"
+                    DefaultContent = $"<button class=\"{command.BtnClass}\" onclick=\"{command.OnClick}(this)\"><i class=\"{command.IconClass}\"></i>{command.Text}</button>"
                 });
             }
         }

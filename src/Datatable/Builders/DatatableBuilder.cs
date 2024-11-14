@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using RazorKit.Datatable.Models;
 
 namespace RazorKit.Datatable.Builders
@@ -290,6 +291,29 @@ namespace RazorKit.Datatable.Builders
         {
             Datatable.Layout = new Layout();
             var builder = new LayoutBuilder(Datatable.Layout);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
+        /// Add built-in buttons.
+        /// </summary>
+        /// <param name="buttons"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Buttons(params string[] buttons)
+        {
+            Datatable.Buttons = buttons.Cast<object>().ToList();
+            return this;
+        }
+
+        /// <summary>
+        /// Buttons Configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Button(Action<ButtonBuilder> action)
+        {
+            var builder = new ButtonBuilder(Datatable);
             action(builder);
             return this;
         }
