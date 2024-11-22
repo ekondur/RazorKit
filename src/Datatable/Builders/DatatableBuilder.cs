@@ -313,7 +313,12 @@ namespace RazorKit.Datatable.Builders
         /// <returns></returns>
         public DatatableBuilder<T> Button(Action<ButtonBuilder> action)
         {
-            var builder = new ButtonBuilder(Datatable);
+            if (Datatable.Buttons == null)
+            {
+                Datatable.Buttons = new List<object>();
+            }
+
+            var builder = new ButtonBuilder(Datatable.Buttons);
             action(builder);
             return this;
         }

@@ -62,7 +62,7 @@
             .Select(s => s.Style(SelectStyle.Multi).HeaderCheckbox())
             .Layout(x => x.Bottom(Layouts.Paging).BottomEnd(null).TopStart(Layouts.Buttons))
             .Buttons("copy")
-            .Button(x => x.Text("Export").Buttons("pdf", "csv").Extend("collection"))
+            .Button(x => x.Text("Export").Buttons(x => x.Add("test1", "report").Add("test2", "report")).Extend("collection"))
             ;
 }
 

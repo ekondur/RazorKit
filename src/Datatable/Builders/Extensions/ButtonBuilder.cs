@@ -1,4 +1,5 @@
 ﻿using RazorKit.Datatable.Models;
+using System;
 using System.Collections.Generic;
 
 namespace RazorKit.Datatable.Builders
@@ -9,16 +10,14 @@ namespace RazorKit.Datatable.Builders
     public class ButtonBuilder
     {
         private readonly Button _button;
-        private readonly DatatableJs _datatableJs;
+        private readonly IList<object> _buttons;
 
-        internal ButtonBuilder(DatatableJs datatable)
+        internal ButtonBuilder(IList<object> buttons)
         {
+            _buttons = buttons;
             _button = new Button();
-            if (datatable.Buttons == null)
-            {
-                datatable.Buttons = new List<object>();
-            }
-            datatable.Buttons.Add(_button);
+
+            _buttons.Add(_button);
         }
 
         /// <summary>
@@ -189,6 +188,23 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Split dropdown configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ButtonBuilder Split(Action<SplitButtonBuilder> action)
+        {
+            if (_button.Split == null)
+            {
+                _button.Split = new List<object>();
+            }
+
+            var builder = new SplitButtonBuilder(_button.Split);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Split dropdown buttons.
         /// </summary>
         /// <param name="buttons"></param>
@@ -196,6 +212,23 @@ namespace RazorKit.Datatable.Builders
         public ButtonBuilder Buttons(params string[] buttons)
         {
             _button.Buttons = buttons;
+            return this;
+        }
+
+        /// <summary>
+        /// Split dropdown configuration.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ButtonBuilder Buttons(Action<SplitButtonBuilder> action)
+        {
+            if (_button.Buttons == null)
+            {
+                _button.Buttons = new List<object>();
+            }
+
+            var builder = new SplitButtonBuilder(_button.Buttons);
+            action(builder);
             return this;
         }
 

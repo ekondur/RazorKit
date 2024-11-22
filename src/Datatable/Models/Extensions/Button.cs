@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RazorKit.Datatable.Converters;
+using System.Collections.Generic;
 
 namespace RazorKit.Datatable.Models
 {
@@ -31,8 +32,8 @@ namespace RazorKit.Datatable.Models
 
         public string Name { get; set; }
         public string Namespace { get; set; }
-        public object[] Split { get; set; }
-        public string[] Buttons { get; set; }
+        public IList<object> Split { get; set; }
+        public IList<object> Buttons { get; set; }
         public string Tag { get; set; }
         public string Text { get; set; }
         public string TitleAttr { get; set; }
