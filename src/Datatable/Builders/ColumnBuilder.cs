@@ -36,7 +36,6 @@ namespace RazorKit.Datatable.Builders
                 Name = propName,
                 Title = member.Member.GetCustomAttribute<DisplayAttribute>()?.Name ?? propName,
                 Render = member.Member.GetCustomAttribute<DisplayFormatAttribute>() != null ? $@"moment(data).format('{member.Member.GetCustomAttribute<DisplayFormatAttribute>().DataFormatString}')" : null,
-                Type = ((PropertyInfo)member.Member).PropertyType
             };
             _dataTable.Columns.Add(_column);
             return this;
@@ -50,6 +49,17 @@ namespace RazorKit.Datatable.Builders
         public ColumnBuilder<T> Title(string title)
         {
             _column.Title = title;
+            return this;
+        }
+
+        /// <summary>
+        /// Set a descriptive name for a column.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public ColumnBuilder<T> Name(string name)
+        {
+            _column.Name = name;
             return this;
         }
 
@@ -98,7 +108,7 @@ namespace RazorKit.Datatable.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
-        public ColumnBuilder<T> Width(int width)
+        public ColumnBuilder<T> Width(string width)
         {
             _column.Width = width;
             return this;
@@ -145,6 +155,50 @@ namespace RazorKit.Datatable.Builders
         public ColumnBuilder<T> Template(string template)
         {
             _column.Render = template;
+            return this;
+        }
+
+        /// <summary>
+        /// Add padding to the text content used when calculating the optimal width for a table.
+        /// </summary>
+        /// <param name="contentPadding"></param>
+        /// <returns></returns>
+        public ColumnBuilder<T> ContentPadding(string contentPadding)
+        {
+            _column.ContentPadding = contentPadding;
+            return this;
+        }
+
+        /// <summary>
+        /// Cell created callback to allow DOM manipulation.
+        /// </summary>
+        /// <param name="createdCell"></param>
+        /// <returns></returns>
+        public ColumnBuilder<T> CreatedCell(string createdCell)
+        {
+            _column.CreatedCell = createdCell;
+            return this;
+        }
+
+        /// <summary>
+        /// Set the column footer text.
+        /// </summary>
+        /// <param name="footer"></param>
+        /// <returns></returns>
+        public ColumnBuilder<T> Footer(string footer)
+        {
+            _column.Footer = footer;
+            return this;
+        }
+
+        /// <summary>
+        /// Set the column type - used for filtering and sorting string processing.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public ColumnBuilder<T> Type(ColumnType type)
+        {
+            _column.Type = type;
             return this;
         }
 

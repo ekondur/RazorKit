@@ -8,7 +8,7 @@ namespace RazorKit.Datatable.Models
         public string OnClick { get; set; }
         public string IconClass { get; set; }
         public string BtnClass { get; set; }
-        public int? Width { get; set; }
+        public string Width { get; set; }
     }
 
     internal class CommandGroup
@@ -16,7 +16,7 @@ namespace RazorKit.Datatable.Models
         public string Text { get; set; }
         public string IconClass { get; set; }
         public string BtnClass { get; set; }
-        public int? Width { get; set; }
+        public string Width { get; set; }
         public IList<CommandGroupItem> Items { get; set; } = new List<CommandGroupItem>();
     }
 

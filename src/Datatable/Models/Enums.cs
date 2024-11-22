@@ -137,4 +137,54 @@ namespace RazorKit
 
         Null
     }
+
+    /// <summary>
+    /// Column Type
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ColumnType
+    {
+        /// <summary>
+        /// Date / time values. Note that DataTables' built in date parsing works to an ISO 8601 format with 3 separators (/, - and ,).
+        /// </summary>
+        [EnumMember(Value = "date")]
+        Date,
+
+        /// <summary>
+        /// Simple number sorting.
+        /// </summary>
+        [EnumMember(Value = "num")]
+        Num,
+
+        /// <summary>
+        /// Numeric sorting of formatted numbers. Numbers which are formatted with thousands separators, 
+        /// currency symbols or a percentage indicator will be sorted numerically automatically by DataTables.
+        /// </summary>
+        [EnumMember(Value = "num-fmt")]
+        NumFmt,
+
+        /// <summary>
+        /// As per the num option, but with HTML tags also in the data.
+        /// </summary>
+        [EnumMember(Value = "html-num")]
+        HtmlNum,
+
+        /// <summary>
+        /// As per the num-fmt option, but with HTML tags also in the data.
+        /// </summary>
+        [EnumMember(Value = "html-num-fmt")]
+        HtmlNumFmt,
+
+        /// <summary>
+        /// Basic string processing for HTML tags.
+        /// </summary>
+        [EnumMember(Value = "html")]
+        Html,
+
+        /// <summary>
+        /// Fall back type if the data in the column does not match the requirements for the other data types.
+        /// </summary>
+        [EnumMember(Value = "string")]
+        String
+    }
 }

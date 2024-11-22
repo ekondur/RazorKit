@@ -66,7 +66,7 @@ namespace RazorKit.Datatable.Builders
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
-        public CommandBuilder Width(int width)
+        public CommandBuilder Width(string width)
         {
             _command.Width = width;
             return this;

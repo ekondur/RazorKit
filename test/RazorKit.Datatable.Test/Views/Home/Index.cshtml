@@ -2,11 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
 <script>
     function callbackTest() {
         console.log("called!");
@@ -32,11 +27,11 @@
             {
                 c.Field(f => f.Id).Visible(false);
                 c.Field(f => f.Name).Title("Name");
-                c.Field(f => f.Age);
+                c.Field(f => f.Age).Width("5%");
                 c.Field(f => f.Title);
-                c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width(1));
-                c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width(1));
-                c.CommandGroup(cg => cg.Text("Report").BtnClass("btn btn-sm btn-secondary").Width(1)
+                c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width("1%"));
+                c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width("1%"));
+                c.CommandGroup(cg => cg.Text("Report").BtnClass("btn btn-sm btn-secondary").Width("1%")
                     .Item("Excel", "report").Item("Pdf", "report"));
             })
             .DataSource(ds => ds
