@@ -449,14 +449,26 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
-        /// Responsive is an extension for DataTables that resolves that problem by optimising the table's layout 
-        /// for different screen sizes through the dynamic insertion and removal of columns from the table.
+        /// Enable the Responsive extension for DataTables.
         /// </summary>
         /// <param name="responsive"></param>
         /// <returns></returns>
         public DatatableBuilder<T> Responsive(bool responsive)
         {
             Datatable.Responsive = responsive;
+            return this;
+        }
+
+        /// <summary>
+        /// Configure the Responsive extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Responsive(Action<ResponsiveBuilder> action)
+        {
+            Datatable.Responsive = new Responsive();
+            var builder = new ResponsiveBuilder((Responsive)Datatable.Responsive);
+            action(builder);
             return this;
         }
     }

@@ -203,6 +203,17 @@ namespace RazorKit.Datatable.Builders
         }
 
         /// <summary>
+        /// Set column's visibility priority.
+        /// </summary>
+        /// <param name="responsivePriority"></param>
+        /// <returns></returns>
+        public ColumnBuilder<T> ResponsivePriority(int responsivePriority)
+        {
+            _column.ResponsivePriority = responsivePriority;
+            return this;
+        }
+
+        /// <summary>
         /// Command group (dropdown) configuration.
         /// </summary>
         /// <param name="action"></param>

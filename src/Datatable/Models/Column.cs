@@ -18,6 +18,7 @@ namespace RazorKit.Datatable.Models
         public string ContentPadding { get; set; }
         public string Footer { get; set; }
         public ColumnType? Type { get; set; }
+        public int? ResponsivePriority { get; set; }
 
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string Render { get; set; }

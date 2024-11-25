@@ -187,4 +187,29 @@ namespace RazorKit
         [EnumMember(Value = "string")]
         String
     }
+
+    /// <summary>
+    /// Set the child row display control type.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum DetailType
+    {
+        /// <summary>
+        /// Where the first column in the table has additional padding added to it and the :before pseudo element is used to display the button.
+        /// </summary>
+        [EnumMember(Value = "inline")]
+        Inline,
+
+        /// <summary>
+        /// Where a whole column is dedicated to the show / hide control.
+        /// </summary>
+        [EnumMember(Value = "column")]
+        Column,
+
+        /// <summary>
+        /// Don't show the show / hide icons - typically used when the user's ability to show / hide rows is removed (responsive.details.target).
+        /// </summary>
+        [EnumMember(Value = "none")]
+        None
+    }
 }
