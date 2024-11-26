@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DatatableJS.Data" Version="3.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\DataTables\RazorKit.DataTables.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,3 @@
-using DatatableJS.Data;
 using Microsoft.AspNetCore.Mvc;
 using RazorKit.DataTables.Test.Models;
 using System.Diagnostics;
