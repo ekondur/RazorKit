@@ -29,14 +29,63 @@ markdown_extensions:
   - attr_list
 nav:
   - DataTables: 
-    - Get Started: datatables/index.md
+    - datatables/index.md
+    - Options: datatables/options.md
+    - Columns: datatables/columns.md
+    - DataSource: datatables/datasource.md
+    - Callbacks: datatables/callbacks.md
+    - Command: datatables/command.md
+    - Command Group: datatables/command-group.md
+    - Language: datatables/language.md
+    - Filters: datatables/filters.md
+    - Layout: datatables/layout.md
+    - Extensions:
+        - Buttons: datatables/extensions/buttons.md
+        - ColReorder: datatables/extensions/colreorder.md
+        - FixedColumns: datatables/extensions/fixedcolumns.md
+        - FixedHeader: datatables/extensions/fixedheader.md
+        - KeyTable: datatables/extensions/keytable.md
+        - Responsive: datatables/extensions/responsive.md
+        - RowReorder: datatables/extensions/rowreorder.md
+        - Select: datatables/extensions/select.md
   - ChartJs: 
     - chartjs/index.md
-    - Chart Types: chartjs/types.md
     - Options: chartjs/options.md
-    - Plugins: chartjs/plugins.md
-    - Scales: chartjs/scales.md
-    - Elements: chartjs/elements.md
+    - Chart Types:
+        - Bar Chart: chartjs/datasets/bar.md
+        - Bubble Chart: chartjs/datasets/bubble.md
+        - Doughnut and Pie Charts: chartjs/datasets/doughnut-pie.md
+        - Line Chart: chartjs/datasets/line.md
+        - Mixed Chart Types: chartjs/datasets/mixed.md
+        - Polar Area Chart: chartjs/datasets/polar-area.md
+        - Radar Chart: chartjs/datasets/radar.md
+        - Scatter Chart: chartjs/datasets/scatter.md
+    - Plugins:
+        - Title: chartjs/plugins/title.md
+        - Subtitle: chartjs/plugins/subtitle.md
+        - Legend:
+            - chartjs/plugins/legend.md
+            - Title: chartjs/plugins/legend-title.md
+            - Labels: chartjs/plugins/legend-labels.md
+        - Tooltip:
+            - chartjs/plugins/tooltip.md
+            - Callbacks: chartjs/plugins/tooltip-callbacks.md
+        - Collors: chartjs/plugins/collors.md
+        - Decimation: chartjs/plugins/decimation.md
+        - Filler: chartjs/plugins/filler.md
+    - Elements:
+        - Arc: chartjs/elements/arc.md
+        - Bar: chartjs/elements/bar.md
+        - Line: chartjs/elements/line.md
+        - Point: chartjs/elements/point.md
+    - Scale Options: 
+        - Scales: chartjs/scales/scales.md
+        - Grid: chartjs/scales/grid.md
+        - Ticks: chartjs/scales/ticks.md
+        - Title: chartjs/scales/title.md
+        - Callbacks: chartjs/scales/callbacks.md
+        - Border: chartjs/scales/border.md
     - Layout: chartjs/layout.md
     - Animation: chartjs/animation.md
     - Interaction: chartjs/interaction.md
+    - Padding: chartjs/padding.md

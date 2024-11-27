@@ -1,5 +1,4 @@
-﻿using RazorKit.ChartJs.Builders.Datasets;
-using RazorKit.ChartJs.Models;
+﻿using RazorKit.ChartJs.Models;
 
 namespace RazorKit.ChartJs.Builders
 {

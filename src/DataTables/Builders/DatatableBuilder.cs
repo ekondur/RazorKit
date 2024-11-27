@@ -394,7 +394,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Define table page length.
+        /// Number of rows to display on a single page when using pagination. <see href="https://datatables.net/reference/option/pageLength">Reference:</see>
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>

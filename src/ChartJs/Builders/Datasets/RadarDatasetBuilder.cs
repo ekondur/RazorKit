@@ -1,6 +1,6 @@
 ﻿using RazorKit.ChartJs.Models;
 
-namespace RazorKit.ChartJs.Builders.Datasets
+namespace RazorKit.ChartJs.Builders
 {
     /// <summary>
     /// Radar Dataset Configuration
