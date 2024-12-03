@@ -6,9 +6,7 @@
 
 @using RazorKit
 
-@{
-    var chart =
-    Html.Chart("canvasId")
+@(Html.Chart("canvasId")
     .Data(d => d
         .Labels("January", "February", "March", "April", "May", "June", "July")
         .Datasets(ds => ds
@@ -19,7 +17,6 @@
             .BorderColor("rgb(75, 192, 192)")
             .Tension(0.1)
         )
-    );
-}
-
-@chart.Render()
+    )
+    .Render()
+)
