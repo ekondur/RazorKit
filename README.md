@@ -16,37 +16,35 @@ PM> Install-Package RazorKit.DataTables
 
 Add related scripts and style links and implement. [Reference:](https://datatables.net/)
 
-=== "cshtml"
 
-	```cs
-	@using RazorKit
+```csharp
+@using RazorKit
 
-	@(Html.DataTable<Person>()
-		.Columns(c =>
-		{
-			c.Field(f => f.Id).Visible(false);
-			c.Field(f => f.Name).Title("Name");
-		})
-		.DataSource(ds => ds
-			.URL(Url.Action("GetDataResult"))
-			.Method("POST")
-			.Naming(Convention.CamelCase))
-		.ServerSide(true)
-		.Render()
-	)
-	```
-=== "controller"
-
-	```cs
-	using RazorKit.DataTables;
-
-	[HttpPost]
-	public JsonResult GetDataResult(DataRequest request)
+@(Html.DataTable<Person>()
+	.Columns(c =>
 	{
-		 var result = ctx.People.ToDataResult(request);
-		 return Json(result);
-	}
-	``` 
+		c.Field(f => f.Id).Visible(false);
+		c.Field(f => f.Name).Title("Name");
+	})
+	.DataSource(ds => ds
+		.URL(Url.Action("GetDataResult"))
+		.Method("POST")
+		.Naming(Convention.CamelCase))
+	.	ServerSide(true)
+	.Render()
+)
+```
+
+```csharp
+using RazorKit.DataTables;
+
+[HttpPost]
+public JsonResult GetDataResult(DataRequest request)
+{
+	var result = ctx.People.ToDataResult(request);
+	return Json(result);
+}
+``` 
 
 ## Setup ChartJs
 
@@ -58,7 +56,7 @@ PM> Install-Package RazorKit.ChartJs
 
 Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/latest/getting-started/)
 
-```cs
+```csharp
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 @using RazorKit
