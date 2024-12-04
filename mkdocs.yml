@@ -32,7 +32,7 @@ markdown_extensions:
 nav:
   - Getting Started: index.md
   - DataTables: 
-    - datatables/index.md
+    - DataTables: datatables/index.md
     - Options: datatables/options.md
     - Columns: datatables/columns.md
     - DataSource: datatables/datasource.md
@@ -52,7 +52,7 @@ nav:
         - RowReorder: datatables/extensions/rowreorder.md
         - Select: datatables/extensions/select.md
   - ChartJs: 
-    - chartjs/index.md
+    - ChartJs: chartjs/index.md
     - Options: chartjs/options.md
     - Chart Types:
         - Bar Chart: chartjs/datasets/bar.md

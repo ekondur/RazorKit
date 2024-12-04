@@ -38,7 +38,7 @@ Add related scripts and style links and implement. [Reference:](https://datatabl
 === "controller"
 
 	```cs
-	using DatatableJS.Data;
+	using RazorKit.DataTables;
 
 	[HttpPost]
 	public JsonResult GetDataResult(DataRequest request)
