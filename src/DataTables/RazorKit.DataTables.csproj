@@ -8,14 +8,14 @@
 		<Description>RazorKit.DataTables is a powerful library that simplifies the integration of the Jquery Datatable library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable data tables.</Description>
 		<Copyright>https://github.com/ekondur/RazorKit</Copyright>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-		<PackageProjectUrl>https://squidfunk.github.io/ekondur/RazorKit/DataTables</PackageProjectUrl>
+		<PackageProjectUrl>https://ekondur.github.io/RazorKit/datatables/</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>csharp,htmlhelper,datatables,razor,javascript</PackageTags>
 		<PackageReleaseNotes>Initial</PackageReleaseNotes>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<PackageIcon>rk-logo.png</PackageIcon>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
