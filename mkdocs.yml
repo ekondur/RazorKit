@@ -4,6 +4,8 @@ repo_name: ekondur/RazorKit
 repo_url: https://github.com/ekondur/RazorKit
 theme:
     name: material
+    logo: rk-icon.png
+    favicon: rk-icon.png
     icon:
         repo: fontawesome/brands/git-alt
     features:
@@ -29,6 +31,10 @@ markdown_extensions:
   - attr_list
   - pymdownx.tabbed:
       alternate_style: true
+extra:
+  analytics:
+    provider: google
+    property: G-SNHZZKGMSL
 nav:
   - Getting Started: index.md
   - DataTables: 
