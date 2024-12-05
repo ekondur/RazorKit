@@ -1,5 +1,7 @@
 # RazorKit.DataTables
 
+[![NuGet](http://img.shields.io/nuget/v/RazorKit.DataTables.svg)](https://www.nuget.org/packages/RazorKit.DataTables/)
+
 [RazorKit.DataTables](https://www.nuget.org/packages/RazorKit.DataTables) is a powerful library that simplifies the integration of the [jQuery DataTables](https://datatables.net/) library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable data tables.
 
 ## Features
