@@ -1,10 +1,11 @@
 site_name: RazorKit
 site_author: Emrah KONDUR
+site_description: RazorKit is a collection of lightweight, fluent-style Razor HTML helpers that make it easy for developers to integrate popular JavaScript libraries into their ASP.NET applications. With RazorKit, you can quickly implement features from libraries like Chart.js and DataTables, without the hassle of writing complex JavaScript or HTML code manually.
 repo_name: ekondur/RazorKit
 repo_url: https://github.com/ekondur/RazorKit
 theme:
     name: material
-    logo: rk-icon.png
+    logo: rk-logo-m.png
     favicon: rk-icon.png
     icon:
         repo: fontawesome/brands/git-alt
@@ -21,6 +22,7 @@ theme:
         - search.share
         - search.suggest
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -31,6 +33,10 @@ markdown_extensions:
   - attr_list
   - pymdownx.tabbed:
       alternate_style: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra:
   analytics:
     provider: google

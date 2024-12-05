@@ -6,7 +6,7 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
 [DataTables]: ../datatables/
 [Chart.js]: ../chartjs/
 
-## Setup DataTables
+## Using DataTables
 
 Install the [RazorKit.DataTables](https://www.nuget.org/packages/RazorKit.DataTables/) package from nuget.
 
@@ -48,7 +48,7 @@ Add related scripts and style links and implement. [Reference:](https://datatabl
 	}
 	``` 
 
-## Setup ChartJs
+## Using ChartJs
 
 Install the [RazorKit.ChartJs](https://www.nuget.org/packages/RazorKit.ChartJs/) package from nuget.
 

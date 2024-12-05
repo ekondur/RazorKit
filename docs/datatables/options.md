@@ -1,13 +1,13 @@
 ## Name
 Default name/id is "DataTableId".
 ```csharp
-.Name("example")
+.Name("MyDataTable")
 ```
 
 ## Language
-Specify language json url from cdn or local.
+Specify language json url from cdn or local. Or [configure.](../language/)
 ```csharp
-.Language("example")
+.Language("//cdn.datatables.net/plug-ins/1.10.22/i18n/Turkish.json")
 ```
 
 ## FixedColumns
@@ -19,7 +19,13 @@ Enable and configure the FixedColumns extension for DataTables.
 ## LengthMenu
 
 ```csharp
-.LengthMenu(default)
+.LengthMenu(lm => lm.Items(10, 25, 50, 100))
+```
+```csharp
+.LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll())
+```
+```csharp
+.LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll("All Records"))
 ```
 
 ## FixedHeader
