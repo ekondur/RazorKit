@@ -1,11 +1,15 @@
+Specify language json url from cdn or local.
+```csharp
+.Language("//cdn.datatables.net/plug-ins/1.10.22/i18n/Turkish.json")
+```
+Or configure:
+```csharp
+.Language(l => l.Search("Search By: ").EmptyTable("No records"))
+```
 
-!!! note "Configuration [:octicons-link-external-16:](https://datatables.net/reference/option/language)"
+!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/language)"
 	All strings that DataTables uses in its user interface are defined in this object, allowing you to modified them individually or completely replace them all as required. 
 	This ensures that DataTables is fully internationalisable as strings for any language can be used.
-	
-	```csharp
-	.Language(l => l.Search("Search By: ").EmptyTable("No records"))
-	```
 	
 	The following is the default object that DataTables uses for its language strings (for information about each individual parameter, please see its individual documentation document):
 	```json linenums="1"
