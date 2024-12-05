@@ -1,5 +1,7 @@
 # RazorKit.ChartJs
 
+[![NuGet](http://img.shields.io/nuget/v/RazorKit.ChartJs.svg)](https://www.nuget.org/packages/RazorKit.ChartJs/)
+
 [RazorKit.ChartJs](https://www.nuget.org/packages/RazorKit.ChartJs) is a powerful library that simplifies the integration of the [Chart.js](https://www.chartjs.org/) library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable charts.
 
 ## Features
