@@ -3,7 +3,7 @@
 	This extension for DataTables provides exactly this option (for non-scrolling tables, please use the FixedHeader extension,
 	which will create sticky headers and footers for tables).
 
-Enable and configure the FixedColumns extension for DataTables.
+Enable the FixedColumns extension for DataTables.
 [:octicons-link-external-16:](https://datatables.net/reference/option/fixedColumns)
 ```csharp
 .FixedColumns(true)

@@ -109,12 +109,6 @@ Change the options in the page length select list.
 .LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll("All Records"))
 ```
 
-## FixedHeader
-Is FixedHeader enabled?
-```csharp
-.FixedHeader(true)
-```
-
 ## RowReorder
 Enable the RowReorder extension for DataTables.
 ```csharp
