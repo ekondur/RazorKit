@@ -2,7 +2,7 @@
 {
     public class DataSearch
     {
-        public string value { get; set; }
-        public bool regex { get; set; }
+        public string Value { get; set; }
+        public bool Regex { get; set; }
     }
 }

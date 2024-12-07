@@ -2,7 +2,7 @@
 {
     public class DataOrder
     {
-        public int column { get; set; }
-        public string dir { get; set; }
+        public int Column { get; set; }
+        public string Dir { get; set; }
     }
 }

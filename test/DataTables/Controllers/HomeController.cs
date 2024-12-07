@@ -19,7 +19,7 @@ namespace RazorKit.DataTables.Test.Controllers
         }
 
         [HttpPost]
-        public JsonResult GetDataResult(DataRequest request)
+        public JsonResult GetDataResult(DataRequest request, AddData data)
         {
             var list = new List<Person>
             {
@@ -27,15 +27,20 @@ namespace RazorKit.DataTables.Test.Controllers
                 new Person { Id = 2, Name = "Arya Stark", Age = 18, Title = "Assassin", BirthDate = new DateOnly(2004, 6, 15) },
             }.AsQueryable();
 
-            var data = list.ToDataResult(request);
+            var result = list.ToDataResult(request);
 
-            return Json(data);
+            return Json(result);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public class AddData
+        {
+            public string Param1 { get; set; }
         }
     }
 }

@@ -8,19 +8,19 @@ namespace RazorKit.DataTables
     /// </summary>
     public class DataRequest
     {
-        public int draw { get; set; }
-        public int start { get; set; }
-        public int length { get; set; }
-        public List<DataColumn> columns { get; set; }
-        public List<DataOrder> order { get; set; }
-        public DataSearch search { get; set; }
-        public List<DataFilter> filters { get; set; }
+        public int Draw { get; set; }
+        public int Start { get; set; }
+        public int Length { get; set; }
+        public List<DataColumn> Columns { get; set; }
+        public List<DataOrder> Order { get; set; }
+        public DataSearch Search { get; set; }
+        public List<DataFilter> Filters { get; set; }
 
         public DataRequest()
         {
-            filters = new List<DataFilter>();
-            order = new List<DataOrder>();
-            columns = new List<DataColumn>();
+            Filters = new List<DataFilter>();
+            Order = new List<DataOrder>();
+            Columns = new List<DataColumn>();
         }
     }
 }

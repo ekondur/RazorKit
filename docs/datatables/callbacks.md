@@ -1,84 +1,114 @@
+!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/?extn=DataTables%20-%20Callbacks)"
+	In jQuery DataTables, "callbacks" refer to functions that are executed at specific points in the DataTable's lifecycle or during user interaction. 
+	These callbacks allow you to customize behavior, process data, or manipulate the table during various events, such as data loading, drawing, or user interaction.
+	```javascript
+	function initCompleteTest() {
+        console.log('Table initialization complete!');
+    }
+	```
+	```javascript
+	function createdRowTest (row, data, dataIndex) {
+        if (data[4] === "Admin") {
+            $(row).addClass('highlight');
+        }
+    }
+	```
+
 ## CreatedRow
-Set createdRow function Reference:
+Callback for whenever a TR element is created for the table's body.
+[:octicons-link-external-16:](https://datatables.net/reference/option/createdRow)
 ```csharp
-.CreatedRow("example")
+.CreatedRow("functionName")
 ```
 
 ## DrawCallback
-Set drawCallback function Reference:
+Function that is called every time DataTables performs a draw. 
+[:octicons-link-external-16:](https://datatables.net/reference/option/drawCallback)
 ```csharp
-.DrawCallback("example")
+.DrawCallback("functionName")
 ```
 
 ## FooterCallback
-Set footerCallback function Reference:
+Footer display callback function.
+[:octicons-link-external-16:](https://datatables.net/reference/option/footerCallback)
 ```csharp
-.FooterCallback("example")
+.FooterCallback("functionName")
 ```
 
 ## FormatNumber
-Set formatNumber function Reference:
+Number formatting callback function.
+[:octicons-link-external-16:](https://datatables.net/reference/option/formatNumber)
 ```csharp
-.FormatNumber("example")
+.FormatNumber("functionName")
 ```
 
 ## HeaderCallback
-Set headerCallback function Reference:
+Header display callback function.
+[:octicons-link-external-16:](https://datatables.net/reference/option/headerCallback)
 ```csharp
-.HeaderCallback("example")
+.HeaderCallback("functionName")
 ```
 
 ## InfoCallback
-Set infoCallback function Reference:
+Table summary information display callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/infoCallback)
 ```csharp
-.InfoCallback("example")
+.InfoCallback("functionName")
 ```
 
 ## InitComplete
-Set initComplete function Reference:
+Initialisation complete callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/initComplete)
 ```csharp
-.InitComplete("example")
+.InitComplete("functionName")
 ```
 
 ## PreDrawCallback
-Set preDrawCallback function Reference:
+Pre-draw callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/preDrawCallback)
 ```csharp
-.PreDrawCallback("example")
+.PreDrawCallback("functionName")
 ```
 
 ## RowCallback
-Set rowCallback function Reference:
+Row draw callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/rowCallback)
 ```csharp
-.RowCallback("example")
+.RowCallback("functionName")
 ```
 
 ## StateLoadCallback
-Set stateLoadCallback function Reference:
+Callback that defines where and how a saved state should be loaded.
+[:octicons-link-external-16:](https://datatables.net/reference/option/stateLoadCallback)
 ```csharp
-.StateLoadCallback("example")
+.StateLoadCallback("functionName")
 ```
 
 ## StateLoadParams
-Set stateLoadParams function Reference:
+State loaded - data manipulation callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/stateLoadParams)
 ```csharp
-.StateLoadParams("example")
+.StateLoadParams("functionName")
 ```
 
 ## StateLoaded
-Set stateLoaded function Reference:
+State loaded callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/stateLoaded)
 ```csharp
-.StateLoaded("example")
+.StateLoaded("functionName")
 ```
 
 ## StateSaveCallback
-Set stateSaveCallback function Reference:
+Callback that defines how the table state is stored and where.
+[:octicons-link-external-16:](https://datatables.net/reference/option/stateSaveCallback)
 ```csharp
-.StateSaveCallback("example")
+.StateSaveCallback("functionName")
 ```
 
 ## StateSaveParams
-Set stateSaveParams function Reference:
+State save - data manipulation callback.
+[:octicons-link-external-16:](https://datatables.net/reference/option/stateSaveParams)
 ```csharp
-.StateSaveParams("example")
+.StateSaveParams("functionName")
 ```
 

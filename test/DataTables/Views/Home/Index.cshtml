@@ -3,6 +3,10 @@
 }
 
 <script>
+    function addParam() {
+	   return { param1: "test" };
+	}
+
     function callbackTest() {
         console.log("called!");
     }
@@ -37,7 +41,8 @@
         .DataSource(ds => ds
             .URL(Url.Action("GetDataResult"))
             .Method("POST")
-            .Naming(Convention.CamelCase))
+            .Naming(Convention.CamelCase)
+            .Data("addParam"))
         .ServerSide(true)
         .Language(l => l.Search("Search By: "))
         .Orders(o =>

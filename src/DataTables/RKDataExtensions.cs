@@ -22,11 +22,11 @@ namespace RazorKit.DataTables
         {
             var result = new DataResult<T>
             {
-                draw = request.draw
+                draw = request.Draw
             };
             result.recordsTotal = result.recordsFiltered = query.Count();
 
-            foreach (var item in request.filters)
+            foreach (var item in request.Filters)
             {
                 var exp = GetExpression<T>(item.Operand, item.Field, item.Value);
                 if (exp != null)
@@ -37,23 +37,23 @@ namespace RazorKit.DataTables
 
             var listExp = new List<FilterDef>();
 
-            if (!string.IsNullOrEmpty(request.search?.value))
+            if (!string.IsNullOrEmpty(request.Search?.Value))
             {
-                foreach (var item in request.columns.Where(a => a.searchable))
+                foreach (var item in request.Columns.Where(a => a.Searchable))
                 {
                     ParameterExpression param = Expression.Parameter(typeof(T), "t");
-                    MemberExpression member = Expression.Property(param, item.name);
+                    MemberExpression member = Expression.Property(param, item.Name);
                     var operand = member.Type == typeof(string) ? DataOperand.Contains : DataOperand.Equal;
-                    listExp.Add(new FilterDef { Operand = operand, Field = item.name, Value = request.search.value, Operator = DataOperator.Or });
+                    listExp.Add(new FilterDef { Operand = operand, Field = item.Name, Value = request.Search.Value, Operator = DataOperator.Or });
                 }
             }
 
-            foreach (var item in request.columns.Where(a => a.searchable == true && !string.IsNullOrEmpty(a.search.value)))
+            foreach (var item in request.Columns.Where(a => a.Searchable == true && !string.IsNullOrEmpty(a.Search.Value)))
             {
                 ParameterExpression param = Expression.Parameter(typeof(T), "t");
-                MemberExpression member = Expression.Property(param, item.name);
+                MemberExpression member = Expression.Property(param, item.Name);
                 var operand = member.Type == typeof(string) ? DataOperand.Contains : DataOperand.Equal;
-                listExp.Add(new FilterDef { Operand = operand, Field = item.name, Value = item.search.value, Operator = DataOperator.And });
+                listExp.Add(new FilterDef { Operand = operand, Field = item.Name, Value = item.Search.Value, Operator = DataOperator.And });
             }
 
             if (listExp.Any())
@@ -63,34 +63,34 @@ namespace RazorKit.DataTables
                 if (exp != null) query = query.Where(exp);
             }
 
-            if (listExp.Any() || request.filters.Any())
+            if (listExp.Any() || request.Filters.Any())
             {
                 result.recordsFiltered = query.Count();
             }
 
-            if (request.draw > 0)
+            if (request.Draw > 0)
             {
-                if (!request.order.Any())
+                if (!request.Order.Any())
                 {
-                    query = query.OrderBy(request.columns[0].name ?? request.columns[1].name);
+                    query = query.OrderBy(request.Columns[0].Name ?? request.Columns[1].Name);
                 }
                 else
                 {
-                    query = request.order[0].dir != "asc"
-                        ? query.OrderByDescending<T>(request.columns[request.order[0].column].name)
-                        : query.OrderBy<T>(request.columns[request.order[0].column].name);
+                    query = request.Order[0].Dir != "asc"
+                        ? query.OrderByDescending<T>(request.Columns[request.Order[0].Column].Name)
+                        : query.OrderBy<T>(request.Columns[request.Order[0].Column].Name);
 
-                    for (var i = 1; i < request.order.Count(); i++)
+                    for (var i = 1; i < request.Order.Count(); i++)
                     {
-                        query = request.order[i].dir != "asc"
-                            ? query.ThenByDescending<T>(request.columns[request.order[i].column].name)
-                            : query.ThenBy<T>(request.columns[request.order[i].column].name);
+                        query = request.Order[i].Dir != "asc"
+                            ? query.ThenByDescending<T>(request.Columns[request.Order[i].Column].Name)
+                            : query.ThenBy<T>(request.Columns[request.Order[i].Column].Name);
                     }
                 }
 
-                if (request.length != -1)
+                if (request.Length != -1)
                 {
-                    query = query.Skip(request.start).Take(request.length);
+                    query = query.Skip(request.Start).Take(request.Length);
                 }
             }
 

@@ -15,7 +15,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set createdRow function <see href="https://datatables.net/reference/option/createdRow">Reference:</see>
+        /// Callback for whenever a TR element is created for the table's body.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -26,7 +26,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set drawCallback function <see href="https://datatables.net/reference/option/drawCallback">Reference:</see>
+        /// Function that is called every time DataTables performs a draw.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -37,7 +37,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set footerCallback function <see href="https://datatables.net/reference/option/footerCallback">Reference:</see>
+        /// Footer display callback function.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -48,7 +48,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set formatNumber function <see href="https://datatables.net/reference/option/formatNumber">Reference:</see>
+        /// Number formatting callback function.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -59,7 +59,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set headerCallback function <see href="https://datatables.net/reference/option/headerCallback">Reference:</see>
+        /// Header display callback function.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -70,7 +70,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set infoCallback function <see href="https://datatables.net/reference/option/infoCallback">Reference:</see>
+        /// Table summary information display callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -81,7 +81,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set initComplete function <see href="https://datatables.net/reference/option/initComplete">Reference:</see>
+        /// Initialisation complete callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -92,7 +92,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set preDrawCallback function <see href="https://datatables.net/reference/option/preDrawCallback">Reference:</see>
+        /// Pre-draw callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -103,7 +103,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set rowCallback function <see href="https://datatables.net/reference/option/rowCallback">Reference:</see>
+        /// Row draw callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -114,7 +114,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set stateLoadCallback function <see href="https://datatables.net/reference/option/stateLoadCallback">Reference:</see>
+        /// Callback that defines where and how a saved state should be loaded.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -126,7 +126,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set stateLoadParams function <see href="https://datatables.net/reference/option/stateLoadParams">Reference:</see>
+        /// State loaded - data manipulation callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -138,7 +138,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set stateLoaded function <see href="https://datatables.net/reference/option/stateLoaded">Reference:</see>
+        /// State loaded callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -150,7 +150,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set stateSaveCallback function <see href="https://datatables.net/reference/option/stateSaveCallback">Reference:</see>
+        /// Callback that defines how the table state is stored and where.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
@@ -162,7 +162,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set stateSaveParams function <see href="https://datatables.net/reference/option/stateSaveParams">Reference:</see>
+        /// State save - data manipulation callback.
         /// </summary>
         /// <param name="functionName"></param>
         /// <returns></returns>
