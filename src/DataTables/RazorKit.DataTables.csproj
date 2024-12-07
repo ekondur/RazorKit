@@ -13,9 +13,9 @@
 		<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>csharp,htmlhelper,datatables,razor,javascript</PackageTags>
-		<PackageReleaseNotes>Initial</PackageReleaseNotes>
+		<PackageReleaseNotes>Fixed column render issues.</PackageReleaseNotes>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<PackageIcon>rk-logo.png</PackageIcon>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
