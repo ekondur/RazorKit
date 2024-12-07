@@ -121,12 +121,6 @@ Is FixedHeader enabled?
 .FixedHeader(true)
 ```
 
-## ColReorder
-Enable the ColReorder extension for DataTables.
-```csharp
-.ColReorder(true)
-```
-
 ## RowReorder
 Enable the RowReorder extension for DataTables.
 ```csharp
