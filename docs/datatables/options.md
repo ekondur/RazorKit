@@ -97,12 +97,6 @@ Enable the Responsive extension for DataTables.
 .Responsive(true)
 ```
 
-## FixedColumns
-Enable and configure the FixedColumns extension for DataTables.
-```csharp
-.FixedColumns(true)
-```
-
 ## LengthMenu
 Change the options in the page length select list.
 ```csharp
@@ -137,10 +131,4 @@ Enable the KeyTable extension for DataTables.
 Enable selection.
 ```csharp
 .Select(true)
-```
-
-## Buttons
-Add built-in buttons.
-```csharp
-.Buttons(default)
 ```
