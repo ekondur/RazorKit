@@ -23,8 +23,8 @@ namespace RazorKit.DataTables.Test.Controllers
         {
             var list = new List<Person>
             {
-                new Person { Id = 1, Name = "Jon Snow", Age = 29, Title = "Warrior" },
-                new Person { Id = 2, Name = "Arya Stark", Age = 18, Title = "Assassin" },
+                new Person { Id = 1, Name = "Jon Snow", Age = 29, Title = "Warrior", BirthDate = new DateOnly(2000, 1, 1) },
+                new Person { Id = 2, Name = "Arya Stark", Age = 18, Title = "Assassin", BirthDate = new DateOnly(2004, 6, 15) },
             }.AsQueryable();
 
             var data = list.ToDataResult(request);

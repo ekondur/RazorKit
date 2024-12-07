@@ -1,7 +1,17 @@
+!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/)"
+	DataTables and its extensions are extremely configurable libraries and almost every aspect of the enhancements they make to HTML tables can be customised. 
+	Features can be enabled, disabled or customised to meet your exact needs for your table implementations.
+
 ## Name
 Default name/id is ```"DataTableId"```.
 ```csharp
 .Name("MyDataTable")
+```
+If there are multiple grid in single page, different names should be given. Call grid if you need like this:
+```javascript
+$(document).ready(function() {
+	var table = $('#MyDataTable').DataTable();
+});
 ```
 
 ## Ordering

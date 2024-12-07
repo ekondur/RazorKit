@@ -167,13 +167,12 @@ namespace RazorKit.DataTables.Builders
         /// <summary>
         /// Language strings used for WAI-ARIA specific attributes. <see href="https://datatables.net/reference/option/language.aria">Reference:</see>
         /// </summary>
-        /// <param name="sortAscending">: activate to sort column ascending</param>
-        /// <param name="sortDescending">: activate to sort column descending</param>
         /// <returns></returns>
-        public LanguageBuilder Aria(string sortAscending, string sortDescending)
+        public LanguageBuilder Aria(Action<LanguageAriaBuilder> action)
         {
-            _language.Aria.SortAscending = sortAscending;
-            _language.Aria.SortDescending = sortDescending;
+            _language.Aria = new LanguageAria();
+            var builder = new LanguageAriaBuilder(_language.Aria);
+            action(builder);
             return this;
         }
     }

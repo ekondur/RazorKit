@@ -25,9 +25,10 @@
         .Columns(c =>
         {
             c.Field(f => f.Id).Visible(false);
-            c.Field(f => f.Name).Title("Name");
+            c.Field(f => f.Name);
             c.Field(f => f.Age).Width("5%");
             c.Field(f => f.Title);
+            c.Field(f => f.BirthDate);
             c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width("1%"));
             c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width("1%"));
             c.CommandGroup(cg => cg.Text("Report").BtnClass("btn btn-sm btn-secondary").Width("1%")
@@ -53,7 +54,7 @@
         .FixedHeader(fh => fh.Header(true).HeaderOffset(50))
         .ColReorder(true)
         .Caption("Caption of table")
-        .Select(s => s.Style(SelectStyle.Multi).HeaderCheckbox())
+        .Select(false)
         .Layout(x => x.Bottom(Layouts.Paging).BottomEnd(null).TopStart(Layouts.Buttons))
         .Buttons("copy")
         .Button(x => x.Text("Export").Buttons(x => x.Add("test1", "report").Add("test2", "report")).Extend("collection"))

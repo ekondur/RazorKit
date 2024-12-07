@@ -35,14 +35,14 @@ namespace RazorKit.DataTables.Builders
                 Data = propName,
                 Name = propName,
                 Title = member.Member.GetCustomAttribute<DisplayAttribute>()?.Name ?? propName,
-                Render = member.Member.GetCustomAttribute<DisplayFormatAttribute>() != null ? $@"moment(data).format('{member.Member.GetCustomAttribute<DisplayFormatAttribute>().DataFormatString}')" : null,
+                Render = member.Member.GetCustomAttribute<DisplayFormatAttribute>() != null ? $@"(data) => moment(data).format('{member.Member.GetCustomAttribute<DisplayFormatAttribute>().DataFormatString}')" : null,
             };
             _dataTable.Columns.Add(_column);
             return this;
         }
 
         /// <summary>
-        /// Set column title.
+        /// Set column header. Default is property name.
         /// </summary>
         /// <param name="title"></param>
         /// <returns></returns>
@@ -104,7 +104,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set column width percentage.
+        /// This parameter can be used to define the width of a column, and may take any CSS value (3em, 20px etc).
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>
@@ -119,7 +119,7 @@ namespace RazorKit.DataTables.Builders
         /// </summary>
         /// <param name="className"></param>
         /// <returns></returns>
-        public ColumnBuilder<T> Class(string className)
+        public ColumnBuilder<T> ClassName(string className)
         {
             _column.ClassName = className;
             return this;
@@ -137,13 +137,13 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Set a jquery datatable date format.
+        /// Set a jquery datatable date format using moment.js.
         /// </summary>
         /// <param name="format"></param>
         /// <returns></returns>
-        public ColumnBuilder<T> Format(string format)
+        public ColumnBuilder<T> DisplayFormat(string format)
         {
-            _column.Render = $@"moment(data).format('{format}')";
+            _column.Render = $@"(data) => moment(data).format('{format}')";
             return this;
         }
 
@@ -154,7 +154,7 @@ namespace RazorKit.DataTables.Builders
         /// <returns></returns>
         public ColumnBuilder<T> Template(string template)
         {
-            _column.Render = template;
+            _column.Render = $@"(data) => {template}"; ;
             return this;
         }
 

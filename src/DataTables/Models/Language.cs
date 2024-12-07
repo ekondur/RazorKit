@@ -15,11 +15,11 @@
         public string Processing { get; set; }
         public string Search { get; set; }
         public string ZeroRecords { get; set; }
-        public Paginate Paginate { get; set; }
-        public Aria Aria { get; set; }
+        public LanguagePaginate Paginate { get; set; }
+        public LanguageAria Aria { get; set; }
     }
 
-    internal class Paginate
+    internal class LanguagePaginate
     {
         public string First { get; set; }
         public string Last { get; set; }
@@ -27,9 +27,12 @@
         public string Previous { get; set; }
     }
 
-    internal class Aria
+    internal class LanguageAria
     {
         public string SortAscending { get; set; }
         public string SortDescending { get; set; }
+        public string Orderable { get; set; }
+        public string OrderableReverse { get; set; }
+        public string OrderableRemove { get; set; }
     }
 }

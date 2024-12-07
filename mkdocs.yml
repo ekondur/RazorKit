@@ -18,7 +18,6 @@ theme:
         - navigation.indexes
         - navigation.sections
         - navigation.tabs
-        - search.highlight
         - search.share
         - search.suggest
 markdown_extensions:
