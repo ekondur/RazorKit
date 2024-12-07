@@ -2133,25 +2133,32 @@
 
   <h1>Command</h1>
 
+<p>Command configuration:
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Columns</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">Command</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">IconClass</span><span class="p">(</span><span class="s">&quot;bi bi-trash&quot;</span><span class="p">).</span><span class="n">OnClick</span><span class="p">(</span><span class="s">&quot;onDelete&quot;</span><span class="p">).</span><span class="n">BtnClass</span><span class="p">(</span><span class="s">&quot;btn btn-sm btn-danger&quot;</span><span class="p">));</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">Command</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Edit&quot;</span><span class="p">).</span><span class="n">OnClick</span><span class="p">(</span><span class="s">&quot;onDelete&quot;</span><span class="p">).</span><span class="n">BtnClass</span><span class="p">(</span><span class="s">&quot;btn btn-sm btn-success&quot;</span><span class="p">));</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">})</span>
+</span></code></pre></div></p>
 <h2 id="text">Text</h2>
 <p>Set command text.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Delete&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="onclick">OnClick</h2>
 <p>Set onClick function name.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">OnClick</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">OnClick</span><span class="p">(</span><span class="s">&quot;onDelete&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="iconclass">IconClass</h2>
 <p>Set icon css class.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">IconClass</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">IconClass</span><span class="p">(</span><span class="s">&quot;bi bi-trash&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="btnclass">BtnClass</h2>
 <p>Set button css class.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">BtnClass</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BtnClass</span><span class="p">(</span><span class="s">&quot;btn btn-sm btn-danger&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="width">Width</h2>
 <p>Set percentage of column where the command is.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">Width</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Width</span><span class="p">(</span><span class="s">&quot;1%&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
