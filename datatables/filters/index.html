@@ -2223,44 +2223,51 @@
 
   <h1>Filters</h1>
 
+<p>Filters configuration:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Filters</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">=&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Id</span><span class="p">).</span><span class="n">GreaterThanOrEqual</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">f</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Name</span><span class="p">).</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;Jon&quot;</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">})</span>
+</span></code></pre></div>
 <h2 id="add">Add</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Id</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="equal">Equal</h2>
 <p>Equals the specified value.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="notequal">NotEqual</h2>
 <p>Nots the equal.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">NotEqual</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">NotEqual</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="greaterthan">GreaterThan</h2>
 <p>Greaters the than.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">GreaterThan</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">GreaterThan</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="contains">Contains</h2>
 <p>Determines whether this instance contains the object.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;Jon&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="endswith">EndsWith</h2>
 <p>Endses the with.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">EndsWith</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">EndsWith</span><span class="p">(</span><span class="s">&quot;Snow&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="greaterthanorequal">GreaterThanOrEqual</h2>
 <p>Greaters the than or equal.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">GreaterThanOrEqual</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">GreaterThanOrEqual</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="lessthan">LessThan</h2>
 <p>Lesses the than.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">LessThan</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">LessThan</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="lessthanorequal">LessThanOrEqual</h2>
 <p>Lesses the than or equal.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">LessThanOrEqual</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">LessThanOrEqual</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="startswith">StartsWith</h2>
 <p>Startses the with.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">&quot;Jon&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
