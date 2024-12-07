@@ -1,3 +1,8 @@
+!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/columns)"
+	The columns option in the initialisation parameter allows you to define details about the way individual columns behave. For a full list of column options that can be set, please see the related parameters below.
+	
+	Note that if you use columns to define your columns, you must have an entry in the array for every single column that you have in your table (these can be null if you don't wish to specify any options).
+
 Configure columns:
 ```csharp
 @(Html.DataTable<Person>()
@@ -10,11 +15,6 @@ Configure columns:
 	})
 ...
 ```
-
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/columns)"
-	The columns option in the initialisation parameter allows you to define details about the way individual columns behave. For a full list of column options that can be set, please see the related parameters below.
-	
-	Note that if you use columns to define your columns, you must have an entry in the array for every single column that you have in your table (these can be null if you don't wish to specify any options).
 
 ## Field
 Make a column with defined type properties.

@@ -1,30 +1,39 @@
+Command configuration:
+```csharp
+.Columns(c =>
+{
+    c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger"));
+    c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success"));
+})
+```
+
 ## Text
 Set command text.
 ```csharp
-.Text("example")
+.Text("Delete")
 ```
 
 ## OnClick
 Set onClick function name.
 ```csharp
-.OnClick("example")
+.OnClick("onDelete")
 ```
 
 ## IconClass
 Set icon css class.
 ```csharp
-.IconClass("example")
+.IconClass("bi bi-trash")
 ```
 
 ## BtnClass
 Set button css class.
 ```csharp
-.BtnClass("example")
+.BtnClass("btn btn-sm btn-danger")
 ```
 
 ## Width
 Set percentage of column where the command is.
 ```csharp
-.Width("example")
+.Width("1%")
 ```
 

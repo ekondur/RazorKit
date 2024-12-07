@@ -21,6 +21,7 @@ theme:
         - search.share
         - search.suggest
 markdown_extensions:
+  - def_list
   - admonition
   - pymdownx.highlight:
       anchor_linenums: true
