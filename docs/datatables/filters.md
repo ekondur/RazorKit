@@ -1,60 +1,70 @@
+Filters configuration:
+
+```csharp
+.Filters(f =>
+{
+    f.Add(x => x.Id).GreaterThanOrEqual(1);
+	f.Add(x => x.Name).Contains("Jon");
+})
+```
+
 ## Add
 
 ```csharp
-.Add(default)
+.Add(x => x.Id)
 ```
 
 ## Equal
 Equals the specified value.
 ```csharp
-.Equal(default)
+.Equal(1)
 ```
 
 ## NotEqual
 Nots the equal.
 ```csharp
-.NotEqual(default)
+.NotEqual(1)
 ```
 
 ## GreaterThan
 Greaters the than.
 ```csharp
-.GreaterThan(default)
+.GreaterThan(1)
 ```
 
 ## Contains
 Determines whether this instance contains the object.
 ```csharp
-.Contains(default)
+.Contains("Jon")
 ```
 
 ## EndsWith
 Endses the with.
 ```csharp
-.EndsWith(default)
+.EndsWith("Snow")
 ```
 
 ## GreaterThanOrEqual
 Greaters the than or equal.
 ```csharp
-.GreaterThanOrEqual(default)
+.GreaterThanOrEqual(5)
 ```
 
 ## LessThan
 Lesses the than.
 ```csharp
-.LessThan(default)
+.LessThan(4)
 ```
 
 ## LessThanOrEqual
 Lesses the than or equal.
 ```csharp
-.LessThanOrEqual(default)
+.LessThanOrEqual(5)
 ```
 
 ## StartsWith
 Startses the with.
 ```csharp
-.StartsWith(default)
+.StartsWith("Jon")
 ```
 
