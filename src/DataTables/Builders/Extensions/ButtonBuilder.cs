@@ -177,7 +177,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Split dropdown buttons.
+        /// Split dropdown buttons (built-in).
         /// </summary>
         /// <param name="buttons"></param>
         /// <returns></returns>
@@ -205,7 +205,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Split dropdown buttons.
+        /// Dropdown buttons (built-in).
         /// </summary>
         /// <param name="buttons"></param>
         /// <returns></returns>
@@ -216,7 +216,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Split dropdown configuration.
+        /// Dropdown configuration.
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
