@@ -133,13 +133,38 @@ Pagination string used by DataTables for the built-in pagination control types.
 ## Aria
 Language strings used for WAI-ARIA specific attributes. 
 [:octicons-link-external-16:](https://datatables.net/reference/option/language.aria)
+
+### SortAscending
+Set ARIA sort ascending string.
+[:octicons-link-external-16:](https://datatables.net/reference/option/language.aria.sortAscending)
 ```csharp
-.Language(l => l.Aria(a => a
-    .SortAscending(" - click/return to sort ascending")
-    .SortDescending(" - click/return to sort descending")
-    .Orderable(": Sort this column")
-    .OrderableReverse(": Reverse sort this column")
-    .OrderableRemove(": Remove sort from this column")
-))
+.Aria(a => a.SortAscending(" - click/return to sort ascending"))
 ```
 
+### SortDescending
+Set ARIA sort descending string.
+[:octicons-link-external-16:](https://datatables.net/reference/option/language.aria.sortDescending)
+```csharp
+.Aria(a => a.SortDescending(" - click/return to sort descending"))
+```
+
+### Orderable
+Set ARIA orderable string.
+[:octicons-link-external-16:](https://datatables.net/reference/option/language.aria.orderable)
+```csharp
+.Aria(a => a.Orderable(": Sort this column"))
+```
+
+### OrderableReverse
+Set ARIA orderableReverse string.
+[:octicons-link-external-16:](https://datatables.net/reference/option/language.aria.orderableReverse)
+```csharp
+.Aria(a => a.OrderableReverse(": Reverse sort this column"))
+```
+
+### OrderableRemove
+Set ARIA orderableRemove string.
+[:octicons-link-external-16:](https://datatables.net/reference/option/language.aria.orderableRemove)
+```csharp
+.Aria(a => a.OrderableRemove(": Remove sort from this column"))
+```

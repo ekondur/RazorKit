@@ -91,12 +91,6 @@ Set a caption for the table.
 .Caption("example")
 ```
 
-## Responsive
-Enable the Responsive extension for DataTables.
-```csharp
-.Responsive(true)
-```
-
 ## LengthMenu
 Change the options in the page length select list.
 ```csharp
