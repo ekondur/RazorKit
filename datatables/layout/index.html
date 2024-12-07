@@ -2151,27 +2151,33 @@
 
   <h1>Layout</h1>
 
+<div class="admonition note">
+<p class="admonition-title">Reference <a href="https://datatables.net/reference/option/layout"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>The layout option provides the ability to control the items that surround and control the DataTable. 
+While offering a wide range of options to control the layout around the table, the basic operation of this option is quite simple:
+use the object parameter name to place a control and then the value to state what feature should be shown, and its configuration.</p>
+</div>
 <h2 id="top">Top</h2>
 <p>Positions elements above the table but centers them horizontally. 
-            This layout places the controls centered at the top of the table.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Top</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+This layout places the controls centered at the top of the table.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Top</span><span class="p">(</span><span class="n">Layouts</span><span class="p">.</span><span class="n">PageLength</span><span class="p">,</span><span class="w"> </span><span class="n">Layouts</span><span class="p">.</span><span class="n">Search</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="bottom">Bottom</h2>
 <p>Positions elements above the table but centers them horizontally. 
-            This layout places the controls centered at the bottom of the table.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Bottom</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+This layout places the controls centered at the bottom of the table.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Bottom</span><span class="p">(</span><span class="n">Layouts</span><span class="p">.</span><span class="n">Info</span><span class="p">,</span><span class="w"> </span><span class="n">Layouts</span><span class="p">.</span><span class="n">Paging</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="topstart">TopStart</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">TopStart</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">TopStart</span><span class="p">(</span><span class="n">Layouts</span><span class="p">.</span><span class="n">PageLength</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="topend">TopEnd</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">TopEnd</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">TopEnd</span><span class="p">(</span><span class="n">Layouts</span><span class="p">.</span><span class="n">Search</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="bottomstart">BottomStart</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BottomStart</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BottomStart</span><span class="p">(</span><span class="n">Layouts</span><span class="p">.</span><span class="n">Info</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="bottomend">BottomEnd</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">BottomEnd</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">BottomEnd</span><span class="p">(</span><span class="n">Layouts</span><span class="p">.</span><span class="n">Paging</span><span class="p">)</span>
 </span></code></pre></div>
 
 
