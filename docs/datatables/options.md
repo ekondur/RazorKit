@@ -115,12 +115,6 @@ Enable the RowReorder extension for DataTables.
 .RowReorder(true)
 ```
 
-## KeyTable
-Enable the KeyTable extension for DataTables.
-```csharp
-.KeyTable(true)
-```
-
 ## Select
 Enable selection.
 ```csharp
