@@ -826,14 +826,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#details_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
-      Details
+      Display
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renderer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2086,14 +2119,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#details_1" class="md-nav__link">
+    <nav class="md-nav" aria-label="Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
-      Details
+      Display
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renderer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2117,20 +2183,55 @@
 
   <h1>Responsive</h1>
 
+<div class="admonition note">
+<p class="admonition-title">Reference <a href="https://datatables.net/extensions/responsive/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>In the modern world of responsive web design tables can often cause a particular problem for designers due to their row based layout.
+Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes
+through the dynamic insertion and removal of columns from the table.</p>
+</div>
+<p>Enable the Responsive extension for DataTables.
+<a href="https://datatables.net/reference/option/responsive"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Responsive</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div>
+Or, configure it.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Responsive</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="k">true</span><span class="p">).</span><span class="n">Orthogonal</span><span class="p">(</span><span class="s">&quot;responsive&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
 <h2 id="orthogonal">Orthogonal</h2>
 <p>Set the orthogonal data request type for the hidden information display.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Orthogonal</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<a href="https://datatables.net/reference/option/responsive.orthogonal"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Orthogonal</span><span class="p">(</span><span class="s">&quot;responsive&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="breakpoints">Breakpoints</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Breakpoints</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
-</span></code></pre></div>
+<p>Configure the breakpoints for a Responsive instance.
+<a href="https://datatables.net/reference/option/responsive.breakpoints"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Breakpoints</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;mobile-p&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">320</span><span class="p">).</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;mobile-l&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">480</span><span class="p">))</span>
+</span></code></pre></div></p>
 <h2 id="details">Details</h2>
 <p>Enable the child rows shown by Responsive for collapsed tables.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-</span></code></pre></div></p>
-<h2 id="details_1">Details</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<a href="https://datatables.net/reference/option/responsive.details"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div>
+Or, configure it.</p>
+<h3 id="display">Display</h3>
+<p>Define how the hidden information should be displayed to the end user.
+<a href="https://datatables.net/reference/option/responsive.details.display"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">Display</span><span class="p">(</span><span class="s">&quot;DataTable.Responsive.display.childRowImmediate&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="renderer">Renderer</h3>
+<p>Define the renderer used to display the child rows.
+<a href="https://datatables.net/reference/option/responsive.details.renderer"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">Renderer</span><span class="p">(</span><span class="s">&quot;DataTable.Responsive.renderer.tableAll()&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="target">Target</h3>
+<p>Column / selector for child row display control when using 'column' details type.
+<a href="https://datatables.net/reference/option/responsive.details.target"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">Target</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="type">Type</h3>
+<p>Set the child row display control type.
+<a href="https://datatables.net/reference/option/responsive.details.type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Details</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">Type</span><span class="p">(</span><span class="n">DetailType</span><span class="p">.</span><span class="n">Column</span><span class="p">))</span>
+</span></code></pre></div></p>
 
 
 

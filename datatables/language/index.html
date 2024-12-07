@@ -694,6 +694,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Aria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sortascending" class="md-nav__link">
+    <span class="md-ellipsis">
+      SortAscending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortdescending" class="md-nav__link">
+    <span class="md-ellipsis">
+      SortDescending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orderable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderablereverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderableReverse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderableremove" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderableRemove
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2273,6 +2324,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Aria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sortascending" class="md-nav__link">
+    <span class="md-ellipsis">
+      SortAscending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortdescending" class="md-nav__link">
+    <span class="md-ellipsis">
+      SortDescending
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orderable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderablereverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderableReverse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderableremove" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderableRemove
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2422,14 +2524,31 @@ This ensures that DataTables is fully internationalisable as strings for any lan
 </span></code></pre></div></p>
 <h2 id="aria">Aria</h2>
 <p>Language strings used for WAI-ARIA specific attributes. 
-<a href="https://datatables.net/reference/option/language.aria"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">Language</span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">Aria</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="p">.</span><span class="n">SortAscending</span><span class="p">(</span><span class="s">&quot; - click/return to sort ascending&quot;</span><span class="p">)</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="p">.</span><span class="n">SortDescending</span><span class="p">(</span><span class="s">&quot; - click/return to sort descending&quot;</span><span class="p">)</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="p">.</span><span class="n">Orderable</span><span class="p">(</span><span class="s">&quot;: Sort this column&quot;</span><span class="p">)</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="p">.</span><span class="n">OrderableReverse</span><span class="p">(</span><span class="s">&quot;: Reverse sort this column&quot;</span><span class="p">)</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">.</span><span class="n">OrderableRemove</span><span class="p">(</span><span class="s">&quot;: Remove sort from this column&quot;</span><span class="p">)</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">))</span>
+<a href="https://datatables.net/reference/option/language.aria"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<h3 id="sortascending">SortAscending</h3>
+<p>Set ARIA sort ascending string.
+<a href="https://datatables.net/reference/option/language.aria.sortAscending"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">Aria</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">SortAscending</span><span class="p">(</span><span class="s">&quot; - click/return to sort ascending&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="sortdescending">SortDescending</h3>
+<p>Set ARIA sort descending string.
+<a href="https://datatables.net/reference/option/language.aria.sortDescending"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">Aria</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">SortDescending</span><span class="p">(</span><span class="s">&quot; - click/return to sort descending&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="orderable">Orderable</h3>
+<p>Set ARIA orderable string.
+<a href="https://datatables.net/reference/option/language.aria.orderable"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">.</span><span class="n">Aria</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">Orderable</span><span class="p">(</span><span class="s">&quot;: Sort this column&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="orderablereverse">OrderableReverse</h3>
+<p>Set ARIA orderableReverse string.
+<a href="https://datatables.net/reference/option/language.aria.orderableReverse"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">Aria</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">OrderableReverse</span><span class="p">(</span><span class="s">&quot;: Reverse sort this column&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<h3 id="orderableremove">OrderableRemove</h3>
+<p>Set ARIA orderableRemove string.
+<a href="https://datatables.net/reference/option/language.aria.orderableRemove"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">Aria</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">OrderableRemove</span><span class="p">(</span><span class="s">&quot;: Remove sort from this column&quot;</span><span class="p">))</span>
 </span></code></pre></div></p>
 
 
