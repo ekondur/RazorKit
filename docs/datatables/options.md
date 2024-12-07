@@ -103,12 +103,6 @@ Change the options in the page length select list.
 .LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll("All Records"))
 ```
 
-## RowReorder
-Enable the RowReorder extension for DataTables.
-```csharp
-.RowReorder(true)
-```
-
 ## Select
 Enable selection.
 ```csharp
