@@ -1,4 +1,4 @@
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/extensions/fixedColumns/)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/fixedColumns/)"
 	When making use of DataTables' x-axis scrolling feature (```scrollX```), you may wish to fix the left or right most columns in place.
 	This extension for DataTables provides exactly this option (for non-scrolling tables, please use the FixedHeader extension,
 	which will create sticky headers and footers for tables).

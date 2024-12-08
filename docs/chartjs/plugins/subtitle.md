@@ -1,62 +1,70 @@
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/subtitle.html)"
+	Subtitle is a second title placed under the main title, by default. It has exactly the same configuration options with the main title.
+
+```csharp hl_lines="3"
+.Options(o => o
+    .Plugins(p => p
+        .Subtitle(t => t
+            .Text("Chart Title")
+            .Color("green")
+            .Position(TitlePosition.Top)
+    )))
+```
+
 ## Align
-Alignment of the title. default 'center'
+Alignment of the title. default ```'center'```
 ```csharp
-.Align(default)
+.Align(Align.Center)
 ```
 
 ## Color
 Color of text.
 ```csharp
-.Color("example")
+.Color("rgb(75, 192, 192)")
 ```
 
 ## Display
-Is the title shown? default 'false'
+Is the title shown? default ```false```
 ```csharp
 .Display(true)
 ```
 
 ## FullSize
 Marks that this box should take the full width/height of the canvas. 
-            If false, the box is sized and placed above/beside the chart area.
-            default 'false'.
+If false, the box is sized and placed above/beside the chart area. default ```false```.
 ```csharp
 .FullSize(true)
 ```
 
 ## Position
-Position of title. default 'top'
+Position of title. default ```'top'```
 ```csharp
-.Position(default)
+.Position(TitlePosition.Top)
 ```
 
 ## Font
-
+See font configuration. 
 ```csharp
-.Font(default)
+.Font(f => f.Size(10))
 ```
 
 ## Padding
 Padding around the title.
 ```csharp
-.Padding(15)
+.Padding(5)
 ```
-
-## Padding
-
+See padding configuration.
 ```csharp
-.Padding(default)
+.Padding(p => p.Top(5).Bottom(10))
 ```
 
 ## Text
 The string title.
 ```csharp
-.Text("example")
+.Text("Chart Title")
 ```
-
-## Text
-The string title(s).
+Define multiple title.
 ```csharp
-.Text(default)
+.Text("Title 1", "Title 2")
 ```
 

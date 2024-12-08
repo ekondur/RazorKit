@@ -1,7 +1,7 @@
-!!! note "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/title.html)"
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/title.html)"
 	The chart title defines text to draw at the top of the chart.
 
-```csharp
+```csharp hl_lines="3"
 .Options(o => o
     .Plugins(p => p
         .Title(t => t

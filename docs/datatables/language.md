@@ -7,7 +7,7 @@ Or configure:
 .Language(l => l.Search("Search By: ").EmptyTable("No records"))
 ```
 
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/language)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/language)"
 	All strings that DataTables uses in its user interface are defined in this object, allowing you to modified them individually or completely replace them all as required. 
 	This ensures that DataTables is fully internationalisable as strings for any language can be used.
 	

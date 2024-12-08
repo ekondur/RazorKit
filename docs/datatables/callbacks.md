@@ -1,4 +1,4 @@
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/?extn=DataTables%20-%20Callbacks)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/?extn=DataTables%20-%20Callbacks)"
 	In jQuery DataTables, "callbacks" refer to functions that are executed at specific points in the DataTable's lifecycle or during user interaction. 
 	These callbacks allow you to customize behavior, process data, or manipulate the table during various events, such as data loading, drawing, or user interaction.
 	Callbacks give you precise control over the table's behavior and allow you to:

@@ -1,4 +1,4 @@
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/extensions/fixedheader/)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/fixedheader/)"
 	When displaying tables with a particularly large amount of data shown on each page, 
 	it can be useful to have the table's header and / or footer fixed to the top or bottom of the scrolling window. 
 	This lets your users quickly determine what each column refers to rather than needing to scroll back to the top of the table.

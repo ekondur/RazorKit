@@ -1,4 +1,4 @@
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/extensions/keytable/)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/keytable/)"
 	Spreadsheet navigation of a DataTable makes for an attractive and rapid data input interface, 
 	and also a very familiar one for those users experienced in Excel, OpenOffice or similar, who are now transitioning to web based apps.
 	

@@ -1,4 +1,4 @@
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/extensions/buttons/)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/buttons/)"
 	A common UI paradigm to use with interactive tables is to present buttons that will trigger some action - that may be to alter the table's state, 
 	modify the data in the table, gather the data from the table or even to activate some external process. 
 	Showing such buttons is an interface that end users are comfortable with, making them feel at home with the table.

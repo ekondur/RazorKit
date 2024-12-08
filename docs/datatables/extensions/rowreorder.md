@@ -1,4 +1,4 @@
-!!! note "Reference [:octicons-link-external-16:](https://datatables.net/extensions/rowreorder/)"
+!!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/rowreorder/)"
 	DataTables is often used to show sequential data, and naturally from that comes the desire to be able to reorder that
 	data - for this the RowReorder extension is available. It provides the end user with the ability to click and drag
 	(or touch and drag on mobile devices) a row in the table and change its position. 
