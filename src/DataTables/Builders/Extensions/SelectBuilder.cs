@@ -48,7 +48,7 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Control automatic addition of header checkbox.
+        /// Control automatic addition of header checkbox. Limit with page selection.
         /// </summary>
         /// <param name="selectPage"></param>
         /// <returns></returns>

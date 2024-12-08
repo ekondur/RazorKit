@@ -21,6 +21,16 @@ Disable or enable ordering, default is ```true```.
 .Ordering(true)
 ```
 
+## Orders
+If ordering is enabled (ordering), then DataTables will perform a first pass order during initialisation. 
+Using this parameter you can define which column(s) the order is performed upon, and the ordering direction.
+```csharp
+.Orders(o => {
+    o.Add(p => p.Name, OrderBy.Descending);
+    o.Add(p => p.Age, OrderBy.Ascending);
+})
+```
+
 ## Searching
 Disable or enable searching, default is ```true```. 
 [:octicons-link-external-16:](https://datatables.net/reference/option/searching)
@@ -101,10 +111,4 @@ Change the options in the page length select list.
 ```
 ```csharp
 .LengthMenu(lm => lm.Items(10, 25, 50, 100).ShowAll("All Records"))
-```
-
-## Select
-Enable selection.
-```csharp
-.Select(true)
 ```
