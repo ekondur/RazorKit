@@ -104,3 +104,4 @@ nav:
     - Animation: chartjs/animation.md
     - Interaction: chartjs/interaction.md
     - Padding: chartjs/padding.md
+    - Font: chartjs/font.md
