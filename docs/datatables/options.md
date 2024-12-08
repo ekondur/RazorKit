@@ -98,7 +98,7 @@ Enable or disable state saving such as pagination position, display length, filt
 Set a caption for the table.
 [:octicons-link-external-16:](https://datatables.net/reference/option/caption)
 ```csharp
-.Caption("example")
+.Caption("Table 1: Pupil averages")
 ```
 
 ## LengthMenu

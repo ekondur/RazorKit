@@ -65,7 +65,7 @@ nav:
         - Select: datatables/extensions/select.md
   - ChartJs: 
     - ChartJs: chartjs/index.md
-    - Options: chartjs/options.md
+    - Configuration: chartjs/configuration.md
     - Chart Types:
         - Bar Chart: chartjs/datasets/bar.md
         - Bubble Chart: chartjs/datasets/bubble.md
