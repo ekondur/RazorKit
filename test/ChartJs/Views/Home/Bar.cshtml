@@ -6,21 +6,17 @@
 
 @using RazorKit
 
-@{
-    var chart =
-            Html.Chart("canvasId")
-            .Data(d => d
-                .Labels("January", "February", "March", "April", "May", "June", "July")
-                .Datasets(ds =>
-                    ds.Bar()
-                    .Label("Bar Chart")
-                    .Data(65, 59, 80, 81, 56, 55, 40)
-                    .BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
-                    .BorderWidth(1)
-                )
-            )
-            .Options(o => o
-                .Scales(Scales.Y, s => s.BeginAtZero(true)));
-}
+@(Html.Chart("canvasId")
+.Data(d => d
+    .Labels("January", "February", "March", "April", "May", "June", "July")
+    .Datasets(ds =>
+        ds.Bar()
+        .Label("Bar Chart")
+        .Data(65, 59, 80, 81, 56, 55, 40)
+        .BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
+        .BorderWidth(1)
+    ))
+.Options(o => o
+    .Scales(Scales.Y, s => s.BeginAtZero(true)))
+.Render())
 
-@chart.Render()

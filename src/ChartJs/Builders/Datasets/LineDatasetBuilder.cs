@@ -1,4 +1,5 @@
 ﻿using RazorKit.ChartJs.Models;
+using System.Collections.Generic;
 
 namespace RazorKit.ChartJs.Builders
 {
@@ -7,12 +8,56 @@ namespace RazorKit.ChartJs.Builders
     /// </summary>
     public class LineDatasetBuilder : PointDatasetBuilder<LineDatasetBuilder>
     {
-        private LineDataset _lineDataset;
+        private LineDataset _dataset;
 
         internal LineDatasetBuilder(LineDataset lineDataset)
             : base(lineDataset)
         {
-            _lineDataset = lineDataset;
+            _dataset = lineDataset;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public LineDatasetBuilder Data(object data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public LineDatasetBuilder Data(IList<object> data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public LineDatasetBuilder Data(params double[] data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public LineDatasetBuilder Data(params string[] data)
+        {
+            _dataset.Data = data;
+            return this;
         }
 
         /// <summary>
@@ -22,7 +67,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance.</returns>
         public LineDatasetBuilder CubicInterpolationMode(string cubicInterpolationMode)
         {
-            _lineDataset.CubicInterpolationMode = cubicInterpolationMode;
+            _dataset.CubicInterpolationMode = cubicInterpolationMode;
             return this;
         }
 
@@ -33,7 +78,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance.</returns>
         public LineDatasetBuilder DrawActiveElementsOnTop(bool drawActiveElementsOnTop)
         {
-            _lineDataset.DrawActiveElementsOnTop = drawActiveElementsOnTop;
+            _dataset.DrawActiveElementsOnTop = drawActiveElementsOnTop;
             return this;
         }
 
@@ -44,7 +89,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder IndexAxis(string indexAxis)
         {
-            _lineDataset.IndexAxis = indexAxis;
+            _dataset.IndexAxis = indexAxis;
             return this;
         }
 
@@ -55,7 +100,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder Segment(object segment)
         {
-            _lineDataset.Segment = segment;
+            _dataset.Segment = segment;
             return this;
         }
 
@@ -66,7 +111,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder ShowLine(bool showLine)
         {
-            _lineDataset.ShowLine = showLine;
+            _dataset.ShowLine = showLine;
             return this;
         }
 
@@ -77,7 +122,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder Stack(string stack)
         {
-            _lineDataset.Stack = stack;
+            _dataset.Stack = stack;
             return this;
         }
 
@@ -88,7 +133,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder Stepped(bool stepped)
         {
-            _lineDataset.Stepped = stepped;
+            _dataset.Stepped = stepped;
             return this;
         }
 
@@ -99,7 +144,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder XAxisID(string xAxisID)
         {
-            _lineDataset.XAxisID = xAxisID;
+            _dataset.XAxisID = xAxisID;
             return this;
         }
 
@@ -110,7 +155,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder YAxisID(string yAxisID)
         {
-            _lineDataset.YAxisID = yAxisID;
+            _dataset.YAxisID = yAxisID;
             return this;
         }
     }

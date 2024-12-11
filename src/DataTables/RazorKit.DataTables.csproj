@@ -5,7 +5,7 @@
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<Authors>Emrah KONDUR</Authors>
 		<Company>Emrah KONDUR</Company>
-		<Description>RazorKit.DataTables is a powerful library that simplifies the integration of the Jquery Datatable library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable data tables.</Description>
+		<Description>RazorKit.DataTables is a powerful library that simplifies the integration of the Jquery DataTables library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable data tables.</Description>
 		<Copyright>https://github.com/ekondur/RazorKit</Copyright>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageProjectUrl>https://ekondur.github.io/RazorKit/datatables/</PackageProjectUrl>

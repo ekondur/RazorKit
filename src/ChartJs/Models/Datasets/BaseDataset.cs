@@ -1,14 +1,13 @@
 ﻿using RazorKit.ChartJs.Converters;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace RazorKit.ChartJs.Models
 {
     class BaseDataset
     {
+        public object Data { get; set; }
         public string Label { get; set; }
         public string Type { get; set; }
-        public IList<object> Data { get; set; }
 
         [JsonConverter(typeof(StringOrArrayConverter))]
         public object BackgroundColor { get; set; }

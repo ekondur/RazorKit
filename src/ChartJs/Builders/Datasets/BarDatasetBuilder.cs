@@ -1,4 +1,5 @@
 ﻿using RazorKit.ChartJs.Models;
+using System.Collections.Generic;
 
 namespace RazorKit.ChartJs.Builders
 {
@@ -7,32 +8,76 @@ namespace RazorKit.ChartJs.Builders
     /// </summary>
     public class BarDatasetBuilder : BaseDatasetBuilder<BarDatasetBuilder>
     {
-        private readonly BarDataset _barDataset;
+        private readonly BarDataset _dataset;
 
         internal BarDatasetBuilder(BarDataset baseDataset) : base(baseDataset)
         {
-            _barDataset = baseDataset;
+            _dataset = baseDataset;
         }
 
         /// <summary>
-        /// Set Backgrounds colors
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public BarDatasetBuilder Data(object data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public BarDatasetBuilder Data(IList<object> data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public BarDatasetBuilder Data(params double[] data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public BarDatasetBuilder Data(params string[] data)
+        {
+            _dataset.Data = data;
+            return this;
+        }
+
+        /// <summary>
+        /// Set backgrounds colors.
         /// </summary>
         /// <param name="colors"></param>
         /// <returns></returns>
         public BarDatasetBuilder BackgroundColors(params string[] colors)
         {
-            _barDataset.BackgroundColor = colors;
+            _dataset.BackgroundColor = colors;
             return this;
         }
 
         /// <summary>
-        /// Set Border Colors
+        /// Set border colors.
         /// </summary>
         /// <param name="colors"></param>
         /// <returns></returns>
         public BarDatasetBuilder BorderColors(params string[] colors)
         {
-            _barDataset.BorderColor = colors;
+            _dataset.BorderColor = colors;
             return this;
         }
 
@@ -43,7 +88,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder Base(int value)
         {
-            _barDataset.Base = value;
+            _dataset.Base = value;
             return this;
         }
 
@@ -56,7 +101,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BarPercentage(double percentage)
         {
-            _barDataset.BarPercentage = percentage;
+            _dataset.BarPercentage = percentage;
             return this;
         }
 
@@ -68,7 +113,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BarThickness(int thickness)
         {
-            _barDataset.BarThickness = thickness;
+            _dataset.BarThickness = thickness;
             return this;
         }
 
@@ -82,7 +127,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BarThickness(string thickness)
         {
-            _barDataset.BarThickness = thickness;
+            _dataset.BarThickness = thickness;
             return this;
         }
 
@@ -94,7 +139,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BorderSkipped(string borderSkipped)
         {
-            _barDataset.BorderSkipped = borderSkipped;
+            _dataset.BorderSkipped = borderSkipped;
             return this;
         }
 
@@ -106,7 +151,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BorderSkipped(bool borderSkipped)
         {
-            _barDataset.BorderSkipped = borderSkipped;
+            _dataset.BorderSkipped = borderSkipped;
             return this;
         }
 
@@ -118,7 +163,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public new BarDatasetBuilder BorderWidth(int width)
         {
-            _barDataset.BorderWidth = width;
+            _dataset.BorderWidth = width;
             return this;
         }
 
@@ -133,7 +178,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BorderWidth(int left, int right, int top, int bottom)
         {
-            _barDataset.BorderWidth = new BorderWidth { Left = left, Right = right, Top = top, Bottom = bottom };
+            _dataset.BorderWidth = new BorderWidth { Left = left, Right = right, Top = top, Bottom = bottom };
             return this;
         }
 
@@ -145,7 +190,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BorderRadius(int radius)
         {
-            _barDataset.BorderRadius = radius;
+            _dataset.BorderRadius = radius;
             return this;
         }
 
@@ -160,7 +205,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder BorderRadius(int topLeft, int topRight, int bottomLeft, int bottomRight)
         {
-            _barDataset.BorderRadius = new BorderRadius { TopLeft = topLeft, TopRight = topRight, BottomLeft = bottomLeft, BottomRight = bottomRight };
+            _dataset.BorderRadius = new BorderRadius { TopLeft = topLeft, TopRight = topRight, BottomLeft = bottomLeft, BottomRight = bottomRight };
             return this;
         }
 
@@ -171,7 +216,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder CategoryPercentage(double percentage)
         {
-            _barDataset.CategoryPercentage = percentage;
+            _dataset.CategoryPercentage = percentage;
             return this;
         }
 
@@ -183,7 +228,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder Grouped(bool grouped)
         {
-            _barDataset.Grouped = grouped;
+            _dataset.Grouped = grouped;
             return this;
         }
 
@@ -194,7 +239,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder HoverBorderRadius(int radius)
         {
-            _barDataset.HoverBorderRadius = radius;
+            _dataset.HoverBorderRadius = radius;
             return this;
         }
 
@@ -205,7 +250,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder IndexAxis(IndexAxis axis)
         {
-            _barDataset.IndexAxis = axis;
+            _dataset.IndexAxis = axis;
             return this;
         }
 
@@ -217,7 +262,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder Order(int order)
         {
-            _barDataset.Order = order;
+            _dataset.Order = order;
             return this;
         }
 
@@ -228,7 +273,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder PointStyle(bool enabled)
         {
-            _barDataset.PointStyle = enabled;
+            _dataset.PointStyle = enabled;
             return this;
         }
 
@@ -239,7 +284,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder PointStyle(PointStyle pointStyle)
         {
-            _barDataset.PointStyle = pointStyle;
+            _dataset.PointStyle = pointStyle;
             return this;
         }
 
@@ -250,7 +295,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder SkipNull(bool skipNull)
         {
-            _barDataset.SkipNull = skipNull;
+            _dataset.SkipNull = skipNull;
             return this;
         }
 
@@ -261,7 +306,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder Stack(string stack)
         {
-            _barDataset.Stack = stack;
+            _dataset.Stack = stack;
             return this;
         }
 
@@ -272,7 +317,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder XAxisID(string axisID)
         {
-            _barDataset.XAxisID = axisID;
+            _dataset.XAxisID = axisID;
             return this;
         }
 
@@ -283,7 +328,7 @@ namespace RazorKit.ChartJs.Builders
         /// <returns></returns>
         public BarDatasetBuilder YAxisID(string axisID)
         {
-            _barDataset.YAxisID = axisID;
+            _dataset.YAxisID = axisID;
             return this;
         }
     }

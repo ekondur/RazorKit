@@ -1,4 +1,5 @@
 ﻿using RazorKit.ChartJs.Models;
+using System.Collections.Generic;
 
 namespace RazorKit.ChartJs.Builders
 {
@@ -12,6 +13,17 @@ namespace RazorKit.ChartJs.Builders
         internal BubbleDatasetBuilder(BubbleDataset dataset) : base(dataset)
         {
             _dataset = dataset;
+        }
+
+        /// <summary>
+        /// Sets the data for the Dataset.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public BubbleDatasetBuilder Data(IList<object> data)
+        {
+            _dataset.Data = data;
+            return this;
         }
 
         /// <summary>
