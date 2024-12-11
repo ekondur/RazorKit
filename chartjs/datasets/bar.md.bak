@@ -90,14 +90,10 @@ If parsing is disabled, data must be sorted and in the formats the associated ch
 ```csharp
 .Parsing(true)
 ```
-
-### Parsing
 Parsing with key.
 ```csharp
 .Parsing("key")
 ```
-
-### Parsing
 Parsing with x and y axis keys.
 ```csharp
 .Parsing("xKey", "yKey")
