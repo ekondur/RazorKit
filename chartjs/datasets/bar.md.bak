@@ -210,14 +210,14 @@ The bar border radius when hovered (in pixels). Default ```0```
 ### IndexAxis
 The base axis of the dataset. 'x' for vertical bars and 'y' for horizontal bars.
 ```csharp
-.IndexAxis(default)
+.IndexAxis(IndexAxis.X)
 ```
 
 ### Order
 The drawing order of dataset. Also affects order for stacking, tooltip and legend.
-            Default 0
+Default ```0```
 ```csharp
-.Order(15)
+.Order(1)
 ```
 
 ### PointStyle
@@ -225,9 +225,7 @@ Is style of the point enabled?
 ```csharp
 .PointStyle(true)
 ```
-
-### PointStyle
-Style of the point.
+See configuration of point style.
 ```csharp
 .PointStyle(default)
 ```
@@ -241,18 +239,18 @@ If true, null or undefined values will not be used for spacing calculations when
 ### Stack
 The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
 ```csharp
-.Stack("example")
+.Stack("bar")
 ```
 
 ### XAxisID
 The ID of the x-axis to plot this dataset on.
 ```csharp
-.XAxisID("example")
+.XAxisID("xAxis")
 ```
 
 ### YAxisID
 The ID of the y-axis to plot this dataset on.
 ```csharp
-.YAxisID("example")
+.YAxisID("yAxis")
 ```
 
