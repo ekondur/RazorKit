@@ -27,7 +27,7 @@ Add related scripts and style links and implement. [Reference:](https://datatabl
 		.URL(Url.Action("GetDataResult"))
 		.Method("POST")
 		.Naming(Convention.CamelCase))
-	.	ServerSide(true)
+		.ServerSide(true)
 	.Render()
 )
 ```
