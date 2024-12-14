@@ -16,10 +16,7 @@ namespace RazorKit.ChartJs.Models
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string OnComplete { get; set; }
 
-        [JsonConverter(typeof(TypeConverter))]
         public object From { get; set; }
-
-        [JsonConverter(typeof(TypeConverter))]
         public object To { get; set; }
     }
 }

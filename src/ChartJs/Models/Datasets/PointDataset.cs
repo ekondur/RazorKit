@@ -13,8 +13,6 @@ namespace RazorKit.ChartJs.Models
         public int[] HoverBorderDash { get; set; }
         public double? HoverBorderDashOffset { get; set; }
         public JoinStyle? HoverBorderJoinStyle { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<Fill>))]
         public object Fill { get; set; }
         public int? Order { get; set; }
         public double? Tension { get; set; }

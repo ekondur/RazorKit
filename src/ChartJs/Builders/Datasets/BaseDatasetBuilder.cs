@@ -1,5 +1,5 @@
 ﻿using RazorKit.ChartJs.Models;
-using System.Collections.Generic;
+using System;
 
 namespace RazorKit.ChartJs.Builders
 {
@@ -61,7 +61,7 @@ namespace RazorKit.ChartJs.Builders
 
         /// <summary>
         /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
-        /// 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
+        /// 0 = clip at chartArea.
         /// </summary>
         /// <param name="clip"></param>
         /// <returns>The T instance.</returns>
@@ -73,16 +73,13 @@ namespace RazorKit.ChartJs.Builders
 
         /// <summary>
         /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
-        /// 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
+        /// Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <param name="top"></param>
-        /// <param name="bottom"></param>
-        /// <returns>The T instance.</returns>
-        public T Clip(int left, int right, int top, int bottom)
+        public T Clip(Action<ClipBuilder> action)
         {
-            _dataset.Clip = new Clip(left, right, top, bottom);
+            _dataset.Clip = new Clip();
+            var builder = new ClipBuilder((Clip)_dataset.Clip);
+            action(builder);
             return (T)this;
         }
 

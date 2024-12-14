@@ -1,7 +1,4 @@
-﻿using RazorKit.ChartJs.Converters;
-using Newtonsoft.Json;
-
-namespace RazorKit.ChartJs.Models
+﻿namespace RazorKit.ChartJs.Models
 {
     partial class Scale
     {
@@ -10,15 +7,11 @@ namespace RazorKit.ChartJs.Models
         public bool? AlignToPixels { get; set; }
         public string BackgroundColor { get; set; }
         public ScaleBorder Border { get; set; }
-
-        [JsonConverter(typeof(TypeConverter))]
         public object Display { get; set; }
         public Grid Grid { get; set; }
         public int? Min { get; set; }
         public int? Max { get; set; }
         public bool? Reverse { get; set; }
-
-        [JsonConverter(typeof(TypeConverter))]
         public object Stacked { get; set; }
         public int? SuggestedMax { get; set; }
         public int? SuggestedMin { get; set; }
@@ -27,7 +20,6 @@ namespace RazorKit.ChartJs.Models
 
         // Linear Axis specific options
         public bool? BeginAtZero { get; set; }
-        [JsonConverter(typeof(TypeConverter))]
         public object Grace { get; set; }
 
         // Common options to all cartesian axes

@@ -135,23 +135,22 @@ namespace RazorKit.ChartJs.Builders
         /// This setting is used to avoid drawing the bar stroke at the base of the fill, or disable the border radius. 
         /// In general, this does not need to be changed except when creating chart types that derive from a bar chart.
         /// </summary>
-        /// <param name="borderSkipped"></param>
+        /// <param name="skipped"></param>
         /// <returns></returns>
-        public BarDatasetBuilder BorderSkipped(string borderSkipped)
+        public BarDatasetBuilder BorderSkipped(Skipped skipped)
         {
-            _dataset.BorderSkipped = borderSkipped;
+            _dataset.BorderSkipped = skipped;
             return this;
         }
 
         /// <summary>
-        /// This setting is used to avoid drawing the bar stroke at the base of the fill, or disable the border radius. 
-        /// In general, this does not need to be changed except when creating chart types that derive from a bar chart.
+        /// Skip all borders (true), or don't skip any borders (false).
         /// </summary>
-        /// <param name="borderSkipped"></param>
+        /// <param name="skipped"></param>
         /// <returns></returns>
-        public BarDatasetBuilder BorderSkipped(bool borderSkipped)
+        public BarDatasetBuilder BorderSkipped(bool skipped)
         {
-            _dataset.BorderSkipped = borderSkipped;
+            _dataset.BorderSkipped = skipped;
             return this;
         }
 

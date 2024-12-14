@@ -1,7 +1,4 @@
-﻿using RazorKit.ChartJs.Converters;
-using Newtonsoft.Json;
-
-namespace RazorKit.ChartJs.Models
+﻿namespace RazorKit.ChartJs.Models
 {
     internal class LineElement : BaseElement
     {
@@ -12,10 +9,7 @@ namespace RazorKit.ChartJs.Models
         public JoinStyle? BorderJoinStyle { get; set; }
         public bool? CapBezierPoints { get; set; }
         public string CubicInterpolationMode { get; set; }
-
-        [JsonConverter(typeof(TypeConverter))]
         public object Fill { get; set; }
-
         public bool? Stepped { get; set; }
     }
 }

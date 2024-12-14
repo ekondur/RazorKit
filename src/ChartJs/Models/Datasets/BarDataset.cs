@@ -7,19 +7,13 @@ namespace RazorKit.ChartJs.Models
     {
         public int? Base { get; set; }
         public double? BarPercentage { get; set; }
-
-        [JsonConverter(typeof(TypeConverter))]
         public object BarThickness { get; set; }
 
-        [JsonConverter(typeof(TypeConverter))]
+        [JsonConverter(typeof(EnumOrTypeConverter<Skipped>))]
         public object BorderSkipped { get; set; }
 
-        [JsonConverter(typeof(ObjectOrTypeConverter<BorderWidth>))]
         public new object BorderWidth { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<BorderRadius>))]
         public object BorderRadius { get; set; }
-
         public double? CategoryPercentage { get; set; }
         public bool? Grouped { get; set; }
         public int? HoverBorderRadius { get; set; }

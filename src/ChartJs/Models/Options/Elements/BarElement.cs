@@ -8,12 +8,8 @@ namespace RazorKit.ChartJs.Models
         [JsonConverter(typeof(EnumOrTypeConverter<Skipped>))]
         public object BorderSkipped { get; set; }
 
-        [JsonConverter(typeof(ObjectOrTypeConverter<BorderRadius>))]
         public object BorderRadius { get; set; }
-
-        [JsonConverter(typeof(TypeConverter))]
         public object InflateAmount { get; set; }
-
-        public PointStyle PointStyle { get; set; }
+        public PointStyle? PointStyle { get; set; }
     }
 }
