@@ -10,21 +10,15 @@
     var data = new List<object> { new { x = -10, y = 0 }, new { x = 0, y = 10 }, new { x = 10, y = 5 }, new { x = 0.5, y = 5.5 } };
 }
 
-@{
-    var chart =
-            Html.Chart("canvasId")
-            .Data(d => d
-                .Datasets(ds =>
-                    ds.Scatter()
-                    .Label("Scatter Dataset")
-                    .Data(data)
-                    .BackgroundColor("rgb(255, 99, 132)")
-                )
-            )
-            .Options(x => x.Scales(Scales.X, s => s
-                .Type("linear")
-                .Position(AxisPosition.Bottom)
-            ));
-}
-
-@chart.Render()
+@(Html.Chart("canvasId")
+.Data(d => d
+    .Datasets(ds => ds
+        .Scatter()
+        .Label("Scatter Dataset")
+        .Data(data)
+        .BackgroundColor("rgb(255, 99, 132)")))
+.Options(x => x.Scales(Scales.X, s => s
+    .Type("linear")
+    .Position(AxisPosition.Bottom)
+))
+.Render())

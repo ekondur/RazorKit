@@ -15,7 +15,7 @@ Add related scripts and style links and implement. [Reference:](https://datatabl
 
 === "cshtml"
 
-	```cs
+	```cs linenums="1"
 	@using RazorKit
 
 	@(Html.DataTable<Person>()
@@ -34,7 +34,7 @@ Add related scripts and style links and implement. [Reference:](https://datatabl
 	```
 === "controller"
 
-	```cs
+	```cs linenums="1"
 	using RazorKit.DataTables;
 
 	[HttpPost]
@@ -55,7 +55,7 @@ PM> Install-Package RazorKit.ChartJs
 
 Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/latest/getting-started/)
 
-```cs
+```cs linenums="1"
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 @using RazorKit

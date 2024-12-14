@@ -7,16 +7,13 @@
 @using RazorKit
 
 @(Html.Chart("canvasId")
-    .Data(d => d
-        .Labels("January", "February", "March", "April", "May", "June", "July")
-        .Datasets(ds => ds
-            .Line()
-            .Label("Line Chart")
-            .Data(65, 59, 80, 81, 56, 55, 40)
-            .Fill(false)
-            .BorderColor("rgb(75, 192, 192)")
-            .Tension(0.1)
-        )
-    )
-    .Render()
-)
+.Data(d => d
+    .Labels("January", "February", "March", "April", "May", "June", "July")
+    .Datasets(ds => ds
+        .Line()
+        .Label("Line Chart")
+        .Data(65, 59, 80, 81, 56, 55, 40)
+        .Fill(false)
+        .BorderColor("rgb(75, 192, 192)")
+        .Tension(0.1)))
+.Render())

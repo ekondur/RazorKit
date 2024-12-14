@@ -26,7 +26,7 @@ Add needed script and style links to layout: [Reference:](https://www.chartjs.or
 ```
 It is easy to implement with html helper:
 
-```cs title="cshtml"
+```cs title="cshtml" linenums="1"
 @using RazorKit
 
 @(Html.Chart("canvasId")

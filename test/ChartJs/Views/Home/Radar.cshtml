@@ -6,24 +6,19 @@
 
 @using RazorKit
 
-@{
-    var chart =
-            Html.Chart("canvasId")
-            .Data(d => d
-                .Labels("Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running")
-                .Datasets(ds =>
-                {
-                    ds.Radar()
-                    .Label("My First Dataset")
-                    .Data(65, 59, 90, 81, 56, 55, 40)
-                    .Fill(true);
+@(Html.Chart("canvasId")
+.Data(d => d
+    .Labels("Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running")
+    .Datasets(ds =>
+    {
+        ds.Radar()
+        .Label("My First Dataset")
+        .Data(65, 59, 90, 81, 56, 55, 40)
+        .Fill(true);
 
-                    ds.Radar()
-                    .Label("My Second Dataset")
-                    .Data(28, 48, 40, 19, 96, 27, 100)
-                    .Fill(true);
-                })
-            );
-}
-
-@chart.Render()
+        ds.Radar()
+        .Label("My Second Dataset")
+        .Data(28, 48, 40, 19, 96, 27, 100)
+        .Fill(true);
+    }))
+.Render())

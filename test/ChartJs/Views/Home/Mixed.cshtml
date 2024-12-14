@@ -6,22 +6,18 @@
 
 @using RazorKit
 
-@{
-    var chart =
-            Html.Chart("canvasId")
-            .Data(d => d
-                .Labels("January", "February", "March", "April")
-                .Datasets(ds =>
-                {
-                    ds.Bar()
-                    .Label("My First Dataset")
-                    .Data(10, 20, 30, 40);
+@(Html.Chart("canvasId")
+.Data(d => d
+    .Labels("January", "February", "March", "April")
+    .Datasets(ds =>
+    {
+        ds.Bar()
+        .Label("My First Dataset")
+        .Data(10, 20, 30, 40);
 
-                    ds.Line()
-                    .Label("Line Dataset")
-                    .Data(50, 40, 45, 50);
-                })
-            );
-}
-
-@chart.Render()
+        ds.Line()
+        .Label("Line Dataset")
+        .Data(50, 40, 45, 50);
+    })
+)
+.Render())

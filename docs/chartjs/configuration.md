@@ -1,16 +1,14 @@
 ## Labels
 Labels are used to define the categories or points along the ```x-axis``` or ```y-axis``` of a chart. 
 They help describe the data points visually, making the chart easier to interpret.
-```csharp hl_lines="3"
+```csharp hl_lines="3" linenums="1"
 @(Html.Chart("canvasId")
     .Data(d => d
         .Labels("January", "February", "March", "April", "May", "June", "July")
         .Datasets(ds => ds
 			...
-        )
-    )
-    .Render()
-)
+        ))
+    .Render())
 ```
 
 ## Datasets

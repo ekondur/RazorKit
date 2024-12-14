@@ -27,7 +27,7 @@ Add needed script and style links to layout: [Configuration:](https://datatables
 ```
 It is easy to implement with html helper:
 
-```cs title="cshtml"
+```cs title="cshtml" linenums="1"
 @using RazorKit
 
 @(Html.DataTable<Person>()
@@ -47,7 +47,7 @@ It is easy to implement with html helper:
 
 If you want to perform the request on backend, just call `ToDataResult()` return the response:
 
-```cs title="controller"
+```cs title="controller" linenums="1"
 using RazorKit.DataTables;
 
 [HttpPost]
