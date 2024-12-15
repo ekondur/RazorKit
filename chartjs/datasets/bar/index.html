@@ -2781,26 +2781,26 @@ This mode generates bars with different widths when data are not evenly spaced.
 In general, this does not need to be changed except when creating chart types that derive from a bar chart.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">BorderSkipped</span><span class="p">(</span><span class="n">Skipped</span><span class="p">.</span><span class="n">Start</span><span class="p">)</span>
 </span></code></pre></div>
-Skip all borders (true), or don't skip any borders (false).
+Skip all borders (<code>true</code>), or don't skip any borders (<code>false</code>).
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">BorderSkipped</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="borderwidth_1">BorderWidth</h3>
-<p>If this value is a number, it is applied to all sides of the rectangle (left, top, right, bottom), except borderSkipped.
+<p>If this value is a number, it is applied to all sides of the rectangle (<code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>), except <code>borderSkipped</code>.
 Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 </span></code></pre></div>
 If this value is an object, the left property defines the left border width. 
-Similarly, the right, top, and bottom properties can also be specified. Omitted borders and borderSkipped are skipped.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+Similarly, the right, top, and bottom properties can also be specified. Omitted borders and <code>borderSkipped</code> are skipped.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="n">bw</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">bw</span><span class="p">.</span><span class="n">Top</span><span class="p">(</span><span class="m">3</span><span class="p">).</span><span class="n">Left</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">Right</span><span class="p">(</span><span class="m">3</span><span class="p">).</span><span class="n">Bottom</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
 </span></code></pre></div></p>
 <h3 id="borderradius">BorderRadius</h3>
-<p>If this value is a number, it is applied to all corners of the rectangle (topLeft, topRight, bottomLeft, bottomRight),
-except corners touching the borderSkipped. Default <code>0</code>
+<p>If this value is a number, it is applied to all corners of the rectangle (<code>topLeft</code>, <code>topRight</code>, <code>bottomLeft</code>, <code>bottomRight</code>),
+except corners touching the <code>borderSkipped</code>. Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div>
 If this value is an object, the topLeft property defines the top-left corners border radius.
-Similarly, the topRight, bottomLeft, and bottomRight.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
+Similarly, the <code>topRight</code>, <code>bottomLeft</code>, and <code>bottomRight</code>.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="n">br</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="n">TopLeft</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">TopRight</span><span class="p">(</span><span class="m">3</span><span class="p">).</span><span class="n">BottomLeft</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">BottomRight</span><span class="p">(</span><span class="m">3</span><span class="p">))</span>
 </span></code></pre></div></p>
 <h3 id="categorypercentage">CategoryPercentage</h3>
 <p>Percent (0-1) of the available width each category should be within the sample width.
