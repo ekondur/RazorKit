@@ -1,4 +1,5 @@
 ﻿using RazorKit.ChartJs.Models;
+using System;
 using System.Collections.Generic;
 
 namespace RazorKit.ChartJs.Builders
@@ -170,14 +171,12 @@ namespace RazorKit.ChartJs.Builders
         /// If this value is an object, the left property defines the left border width. 
         /// Similarly, the right, top, and bottom properties can also be specified. Omitted borders and borderSkipped are skipped.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <param name="top"></param>
-        /// <param name="bottom"></param>
         /// <returns></returns>
-        public BarDatasetBuilder BorderWidth(int left, int right, int top, int bottom)
+        public BarDatasetBuilder BorderWidth(Action<BorderWidthBuilder> action)
         {
-            _dataset.BorderWidth = new BorderWidth { Left = left, Right = right, Top = top, Bottom = bottom };
+            _dataset.BorderWidth = new BorderWidth();
+            var builder = new BorderWidthBuilder((BorderWidth)_dataset.BorderWidth);
+            action(builder);
             return this;
         }
 
@@ -197,14 +196,12 @@ namespace RazorKit.ChartJs.Builders
         /// If this value is an object, the topLeft property defines the top-left corners border radius.
         /// Similarly, the topRight, bottomLeft, and bottomRight.
         /// </summary>
-        /// <param name="topLeft"></param>
-        /// <param name="topRight"></param>
-        /// <param name="bottomLeft"></param>
-        /// <param name="bottomRight"></param>
         /// <returns></returns>
-        public BarDatasetBuilder BorderRadius(int topLeft, int topRight, int bottomLeft, int bottomRight)
+        public BarDatasetBuilder BorderRadius(Action<BorderRadiusBuilder> action)
         {
-            _dataset.BorderRadius = new BorderRadius { TopLeft = topLeft, TopRight = topRight, BottomLeft = bottomLeft, BottomRight = bottomRight };
+            _dataset.BorderRadius = new BorderRadius();
+            var builder = new BorderRadiusBuilder((BorderRadius)_dataset.BorderRadius);
+            action(builder);
             return this;
         }
 

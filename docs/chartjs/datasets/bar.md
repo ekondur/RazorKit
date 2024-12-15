@@ -147,33 +147,33 @@ In general, this does not need to be changed except when creating chart types th
 ```csharp
 .BorderSkipped(Skipped.Start)
 ```
-Skip all borders (true), or don't skip any borders (false).
+Skip all borders (```true```), or don't skip any borders (```false```).
 ```csharp
 .BorderSkipped(true)
 ```
 
 ### BorderWidth
-If this value is a number, it is applied to all sides of the rectangle (left, top, right, bottom), except borderSkipped.
+If this value is a number, it is applied to all sides of the rectangle (```left```, ```top```, ```right```, ```bottom```), except ```borderSkipped```.
 Default ```0```
 ```csharp
 .BorderWidth(3)
 ```
 If this value is an object, the left property defines the left border width. 
-Similarly, the right, top, and bottom properties can also be specified. Omitted borders and borderSkipped are skipped.
+Similarly, the right, top, and bottom properties can also be specified. Omitted borders and ```borderSkipped``` are skipped.
 ```csharp
-.BorderWidth(1, 2, 0, 1)
+.BorderWidth(bw => bw.Top(3).Left(2).Right(3).Bottom(0))
 ```
 
 ### BorderRadius
-If this value is a number, it is applied to all corners of the rectangle (topLeft, topRight, bottomLeft, bottomRight),
-except corners touching the borderSkipped. Default ```0```
+If this value is a number, it is applied to all corners of the rectangle (```topLeft```, ```topRight```, ```bottomLeft```, ```bottomRight```),
+except corners touching the ```borderSkipped```. Default ```0```
 ```csharp
 .BorderRadius(1)
 ```
 If this value is an object, the topLeft property defines the top-left corners border radius.
-Similarly, the topRight, bottomLeft, and bottomRight.
+Similarly, the ```topRight```, ```bottomLeft```, and ```bottomRight```.
 ```csharp
-.BorderRadius(2, 2, 1, 1)
+.BorderRadius(br => br.TopLeft(2).TopRight(3).BottomLeft(2).BottomRight(3))
 ```
 
 ### CategoryPercentage

@@ -1,4 +1,5 @@
 ﻿using RazorKit.ChartJs.Models;
+using System;
 
 namespace RazorKit.ChartJs.Builders
 {
@@ -49,22 +50,14 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// The bar border radius (in pixels).
+        /// The bar border radius (in pixels). { topLeft, topRight, bottomLeft, bottomRight }
         /// </summary>
-        /// <param name="topLeft"></param>
-        /// <param name="topRight"></param>
-        /// <param name="bottomLeft"></param>
-        /// <param name="bottomRight"></param>
         /// <returns></returns>
-        public BarElementBuilder BorderRadius(int topLeft, int topRight, int bottomLeft, int bottomRight)
+        public BarElementBuilder BorderRadius(Action<BorderRadiusBuilder> action)
         {
-            _barElement.BorderRadius = new BorderRadius
-            {
-                TopLeft = topLeft,
-                TopRight = topRight,
-                BottomLeft = topLeft,
-                BottomRight = topRight
-            };
+            _barElement.BorderRadius = new BorderRadius();
+            var builder = new BorderRadiusBuilder((BorderRadius)_barElement.BorderRadius);
+            action(builder);
             return this;
         }
 
@@ -90,7 +83,7 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// Style of the point for legend.
+        /// Style of the point for legend. Default is 'circle'.
         /// </summary>
         /// <param name="style"></param>
         /// <returns></returns>
