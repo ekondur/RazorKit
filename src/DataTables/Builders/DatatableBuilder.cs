@@ -236,6 +236,30 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
+        /// Enable the RowGroup extension for DataTables.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> RowGroup(bool enabled)
+        {
+            Datatable.RowGroup = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Configure the RowGroup extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> RowGroup(Action<RowGroupBuilder> action)
+        {
+            Datatable.RowGroup = new RowGroup();
+            var builder = new RowGroupBuilder((RowGroup)Datatable.RowGroup);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Enable the KeyTable extension for DataTables.
         /// </summary>
         /// <param name="enabled"></param>

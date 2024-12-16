@@ -27,9 +27,7 @@ namespace RazorKit.DataTables.Models
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string Init { get; set; }
 
-        [JsonConverter(typeof(ObjectOrTypeConverter<ButtonKey>))]
         public object Key { get; set; }
-
         public string Name { get; set; }
         public string Namespace { get; set; }
         public IList<object> Split { get; set; }

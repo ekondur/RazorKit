@@ -8,8 +8,6 @@ namespace RazorKit.DataTables.Models
     {
         public string Orthogonal { get; set; }
         public IList<Breakpoint> Breakpoints { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<Details>))]
         public object Details { get; set; }
     }
 

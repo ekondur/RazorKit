@@ -27,9 +27,6 @@ namespace RazorKit.DataTables.Models
         public AjaxSource Ajax { get; set; }
         public Layout Layout { get; set; }
 
-        [JsonConverter(typeof(ObjectOrTypeConverter<FixedColumns>))]
-        public object FixedColumns { get; set; }
-
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string CreatedRow { get; set; }
 
@@ -69,25 +66,16 @@ namespace RazorKit.DataTables.Models
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string StateSaveParams { get; set; }
 
-        [JsonConverter(typeof(ObjectOrTypeConverter<Select>))]
-        public object Select { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<ColReorder>))]
-        public object ColReorder { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<RowReorder>))]
-        public object RowReorder { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<KeyTable>))]
-        public object Keys { get; set; }
-
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string InitComplete { get; set; }
 
-        [JsonConverter(typeof(ObjectOrTypeConverter<FixedHeader>))]
+        public object Select { get; set; }
+        public object ColReorder { get; set; }
+        public object RowReorder { get; set; }
+        public object RowGroup { get; set; }
+        public object Keys { get; set; }
+        public object FixedColumns { get; set; }
         public object FixedHeader { get; set; }
-
-        [JsonConverter(typeof(ObjectOrTypeConverter<Responsive>))]
         public object Responsive { get; set; }
 
         internal string Style { get; set; } = "display dataTable";
