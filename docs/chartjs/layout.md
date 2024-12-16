@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 ## AutoPadding
 Apply automatic padding so visible elements are completely drawn.
             default true, scriptable no

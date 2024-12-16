@@ -1,5 +1,5 @@
 ---
-icon: material/format-title
+icon: material/menu-right
 ---
 
 ## Display

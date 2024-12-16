@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 ## Family
 Default font family for all text, follows CSS font-family options.
 ```csharp

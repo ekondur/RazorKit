@@ -1,5 +1,5 @@
 ---
-icon: material/chart-timeline-variant-shimmer
+icon: material/menu-right
 ---
 
 ## BackdropColor

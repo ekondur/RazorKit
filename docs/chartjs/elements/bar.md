@@ -1,5 +1,5 @@
 ---
-icon: material/chart-bar-stacked
+icon: material/menu-right
 ---
 
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#bar-configuration)"

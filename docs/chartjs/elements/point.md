@@ -1,5 +1,5 @@
 ---
-icon: material/chart-timeline-variant
+icon: material/menu-right
 ---
 
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration)"

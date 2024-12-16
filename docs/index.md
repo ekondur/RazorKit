@@ -14,7 +14,7 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
 
     [:octicons-arrow-right-24: Getting started](https://ekondur.github.io/RazorKit/datatables/)
 
--   :material-chart-pie:{ .lg .middle } __ChartJs__
+-   :simple-chartdotjs:{ .lg .middle } __ChartJs__
 
     ---
 

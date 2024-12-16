@@ -1,5 +1,5 @@
 ---
-icon: material/grid
+icon: material/menu-right
 ---
 
 ## Circular

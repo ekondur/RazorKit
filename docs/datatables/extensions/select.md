@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/select/)"
 	Select adds item selection capabilities to a DataTable. Items can be rows, columns or cells, which can be selected independently, or together. 
 	Item selection can be particularly useful in interactive tables where users can perform some action on the table, 

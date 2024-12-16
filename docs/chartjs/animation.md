@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 ## Duration
 The number of milliseconds an animation takes. Default 1000
 ```csharp

@@ -1,5 +1,5 @@
 ---
-icon: material/border-inside
+icon: material/menu-right
 ---
 
 ## Display

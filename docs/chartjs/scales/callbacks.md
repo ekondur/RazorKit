@@ -1,5 +1,5 @@
 ---
-icon: material/function
+icon: material/menu-right
 ---
 
 ## BeforeUpdate

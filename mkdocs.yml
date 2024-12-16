@@ -62,6 +62,7 @@ nav:
         - FixedHeader: datatables/extensions/fixedheader.md
         - KeyTable: datatables/extensions/keytable.md
         - Responsive: datatables/extensions/responsive.md
+        - RowGroup: datatables/extensions/rowgroup.md
         - RowReorder: datatables/extensions/rowreorder.md
         - Select: datatables/extensions/select.md
   - ChartJs: 
@@ -101,8 +102,9 @@ nav:
         - Title: chartjs/scales/title.md
         - Callbacks: chartjs/scales/callbacks.md
         - Border: chartjs/scales/border.md
-    - Layout: chartjs/layout.md
-    - Animation: chartjs/animation.md
-    - Interaction: chartjs/interaction.md
-    - Padding: chartjs/padding.md
-    - Font: chartjs/font.md
+    - Other Options:
+        - Layout: chartjs/layout.md
+        - Animation: chartjs/animation.md
+        - Interaction: chartjs/interaction.md
+        - Padding: chartjs/padding.md
+        - Font: chartjs/font.md

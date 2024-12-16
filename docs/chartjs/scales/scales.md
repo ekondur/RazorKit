@@ -1,5 +1,5 @@
 ---
-icon: material/chart-multiple
+icon: material/menu-right
 ---
 
 ## Type

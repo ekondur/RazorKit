@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 ## Left
 Left
 ```csharp

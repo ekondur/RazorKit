@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 ## Mode
 Sets which elements appear in the interaction. Default 'nearest'
 ```csharp

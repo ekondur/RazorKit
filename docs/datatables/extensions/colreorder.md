@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://datatables.net/extensions/colreorder/)"
 	ColReorder adds the ability for the end user to be able to reorder columns in a DataTable through a click and drag operation.
 	This can be useful when presenting data in a table, letting the user move columns that they wish to compare next to each other for easier comparison.
