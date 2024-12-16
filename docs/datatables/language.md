@@ -1,3 +1,7 @@
+---
+icon: material/flag-outline
+---
+
 Specify language json url from cdn or local.
 ```csharp
 .Language("//cdn.datatables.net/plug-ins/1.10.22/i18n/Turkish.json")

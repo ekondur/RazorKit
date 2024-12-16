@@ -1,3 +1,7 @@
+---
+icon: material/filter-outline
+---
+
 Filters configuration:
 
 ```csharp

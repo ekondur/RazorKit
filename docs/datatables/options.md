@@ -1,3 +1,7 @@
+---
+icon: material/code-json
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/)"
 	DataTables and its extensions are extremely configurable libraries and almost every aspect of the enhancements they make to HTML tables can be customised. 
 	Features can be enabled, disabled or customised to meet your exact needs for your table implementations.

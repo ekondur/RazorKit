@@ -1,3 +1,7 @@
+---
+icon: material/database-cog
+---
+
 DataSource configuration:
 ```csharp
 .DataSource(ds => ds

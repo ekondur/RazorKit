@@ -1,3 +1,7 @@
+---
+icon: material/cursor-default-click-outline
+---
+
 Command configuration:
 ```csharp
 .Columns(c =>

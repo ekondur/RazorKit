@@ -1,3 +1,7 @@
+---
+icon: material/cursor-default-click
+---
+
 Command Group configuration:
 ```csharp
 .Columns(c =>

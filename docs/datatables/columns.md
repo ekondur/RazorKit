@@ -1,3 +1,7 @@
+---
+icon: material/table-column-plus-before
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://datatables.net/reference/option/columns)"
 	The columns option in the initialisation parameter allows you to define details about the way individual columns behave. For a full list of column options that can be set, please see the related parameters below.
 	
