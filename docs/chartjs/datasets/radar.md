@@ -106,6 +106,167 @@ Parsing with x and y axis keys.
 .Parsing("xKey", "yKey")
 ```
 
+## Point Dataset Options
+
+### BorderCapStyle
+Cap style of the line. Default ```'butt'```
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap)
+```csharp
+.BorderCapStyle(CapStyle.Square)
+```
+
+### BorderDash
+Length and spacing of dashes.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
+```csharp
+.BorderDash(15, 3, 3, 3)
+```
+
+### BorderDashOffset
+Offset for line dashes. Default ```0.0```
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
+```csharp
+.BorderDashOffset(0.1)
+```
+
+### BorderJoinStyle
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+Line joint style. Default ```'miter'```
+```csharp
+.BorderJoinStyle(JoinStyle.Bevel)
+```
+
+### HoverBorderCapStyle
+Border cap style when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap)
+```csharp
+.HoverBorderCapStyle(CapStyle.Square)
+```
+
+### HoverBorderDash
+Length and spacing of dashes when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
+```csharp
+.HoverBorderDash(15, 3, 3, 3)
+```
+
+### HoverBorderDashOffset
+Offset for line dashes when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
+```csharp
+.HoverBorderDashOffset(0.1)
+```
+
+### HoverBorderJoinStyle
+Line joint style when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+```csharp
+.HoverBorderJoinStyle(oinStyle.Bevel)
+```
+
+### Fill
+Is enabled? Default ```false```
+```csharp
+.Fill(true)
+```
+How to fill the area under the line. 
+```csharp
+.Fill("stack")
+```
+Fill with configuration.
+```csharp
+.Fill(f => f.Above("Blue").Below("Red"))
+```
+
+### Order
+The drawing order of dataset. Also affects order for stacking, tooltip and legend.
+```csharp
+.Order(1)
+```
+
+### PointBackgroundColor
+The fill color for points.
+```csharp
+.PointBackgroundColor("green")
+```
+
+### PointBorderColor
+The border color for points.
+```csharp
+.PointBorderColor("grey")
+```
+
+### PointBorderWidth
+The width of the point border in pixels. Default ```1```
+```csharp
+.PointBorderWidth(2)
+```
+
+### PointHitRadius
+The pixel size of the non-displayed point that reacts to mouse events. Default ```1```
+```csharp
+.PointHitRadius(2)
+```
+
+### PointHoverBackgroundColor
+Point background color when hovered.
+```csharp
+.PointHoverBackgroundColor("green")
+```
+
+### PointHoverBorderColor
+Point border color when hovered.
+```csharp
+.PointHoverBorderColor("grey")
+```
+
+### PointHoverBorderWidth
+Border width of point when hovered. Default ```1```
+```csharp
+.PointHoverBorderWidth(2)
+```
+
+### PointHoverRadius
+The radius of the point when hovered. Default ```4```
+```csharp
+.PointHoverRadius(5)
+```
+
+### PointRadius
+The radius of the point shape. If set to 0, the point is not rendered. Default ```3```
+```csharp
+.PointRadius(2)
+```
+
+### PointRotation
+The rotation of the point in degrees. Default ```0```
+```csharp
+.PointRotation(1)
+```
+
+### PointStyle
+Is style of the point enabled?
+```csharp
+.PointStyle(true)
+```
+Style of the point. Default ```'circle'```
+```csharp
+.PointStyle(PointStyle.Cross)
+```
+
+### SpanGaps
+If ```true```, lines will be drawn between points with no or null data. If ```false```, points with null data will create a break in the line.
+Can also be a number specifying the maximum gap length to span. The unit of the value depends on the scale used.
+```csharp
+.SpanGaps(true)
+```
+
+### Tension
+Bezier curve tension of the line. Set to ```0``` to draw straightlines. This option is ignored if monotone cubic interpolation is used.
+```csharp
+.Tension(0.1)
+```
+
 ## Radar Dataset Options
 
 ### Data

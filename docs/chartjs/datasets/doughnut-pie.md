@@ -118,48 +118,108 @@ Parsing with x and y axis keys.
 .Parsing("xKey", "yKey")
 ```
 
+## Arc Dataset Options
+
+### BackgroundColors
+Set backgrounds colors.
+```csharp
+.BackgroundColors("green", "yellow", "blue")
+```
+
+### BorderAlign
+Default ```'center'```
+```csharp
+.BorderAlign(BorderAlign.Inner)
+```
+
+### BorderDash
+Arc border length and spacing of dashes.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
+```csharp
+.BorderDash(15, 3, 3, 3)
+```
+
+### BorderDashOffset
+Arc border offset for line dashes. Default ```0.0```
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
+```csharp
+.BorderDashOffset(0.1)
+```
+
+### BorderJoinStyle
+Arc border join style.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+```csharp
+.BorderJoinStyle(JoinStyle.Bevel)
+```
+
+### Data
+Set Data for arc chart.
+```csharp
+.Data(3, 5, 2, 4)
+```
+
+### HoverBorderDash
+Arc border length and spacing of dashes when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
+```csharp
+.HoverBorderDash(15, 3, 3, 3)
+```
+
+### HoverBorderDashOffset
+Arc border offset for line dashes when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
+```csharp
+.HoverBorderDashOffset(0.1)
+```
+
+### HoverBorderJoinStyle
+Arc border join style when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+```csharp
+.HoverBorderJoinStyle(JoinStyle.Bevel)
+```
+
 ## Dougnut&Pie Dataset Options
 
 ### Circumference
 Per-dataset override for the sweep that the arcs cover.
 ```csharp
-.Circumference(15)
+.Circumference(2)
 ```
 
 ### HoverOffset
-arc offset when hovered (in pixels).
+Arc offset when hovered (in pixels). Default ```0```
 ```csharp
-.HoverOffset(15)
+.HoverOffset(1)
 ```
 
 ### Offset
-arc offset (in pixels).
+Arc offset (in pixels). Default ```0```
 ```csharp
-.Offset(15)
+.Offset(1)
 ```
-
-### Offset
-arc offset (in pixels).
+Arc offset (in pixels). (multiple)
 ```csharp
-.Offset(default)
+.Offset(1, 2)
 ```
 
 ### Rotation
 Per-dataset override for the starting angle to draw arcs from.
 ```csharp
-.Rotation(15)
+.Rotation(1)
 ```
 
 ### Spacing
-Fixed arc offset (in pixels). Similar to offset but applies to all arcs. Default 0
+Fixed arc offset (in pixels). Similar to offset but applies to all arcs. Default ```0```
 ```csharp
-.Spacing(15)
+.Spacing(1)
 ```
 
 ### Weight
 The relative thickness of the dataset. Providing a value for weight will cause the pie or doughnut dataset to be drawn with
-            a thickness relative to the sum of all the dataset weight values. Default 1
+a thickness relative to the sum of all the dataset weight values. Default ```1```
 ```csharp
-.Weight(15)
+.Weight(2)
 ```
 

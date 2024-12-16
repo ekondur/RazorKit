@@ -99,6 +99,68 @@ Parsing with x and y axis keys.
 .Parsing("xKey", "yKey")
 ```
 
+## Arc Dataset Options
+
+### BackgroundColors
+Set backgrounds colors.
+```csharp
+.BackgroundColors("green", "yellow", "blue")
+```
+
+### BorderAlign
+Default ```'center'```
+```csharp
+.BorderAlign(BorderAlign.Inner)
+```
+
+### BorderDash
+Arc border length and spacing of dashes.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
+```csharp
+.BorderDash(15, 3, 3, 3)
+```
+
+### BorderDashOffset
+Arc border offset for line dashes. Default ```0.0```
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
+```csharp
+.BorderDashOffset(0.1)
+```
+
+### BorderJoinStyle
+Arc border join style.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+```csharp
+.BorderJoinStyle(JoinStyle.Bevel)
+```
+
+### Data
+Set Data for arc chart.
+```csharp
+.Data(3, 5, 2, 4)
+```
+
+### HoverBorderDash
+Arc border length and spacing of dashes when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash)
+```csharp
+.HoverBorderDash(15, 3, 3, 3)
+```
+
+### HoverBorderDashOffset
+Arc border offset for line dashes when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset)
+```csharp
+.HoverBorderDashOffset(0.1)
+```
+
+### HoverBorderJoinStyle
+Arc border join style when hovered.
+[:octicons-link-external-16:](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin)
+```csharp
+.HoverBorderJoinStyle(JoinStyle.Bevel)
+```
+
 ## Polar Area Dataset Options
 
 ### Circular
