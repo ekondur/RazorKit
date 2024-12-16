@@ -1,3 +1,7 @@
+---
+icon: material/code-json
+---
+
 ## Labels
 Labels are used to define the categories or points along the ```x-axis``` or ```y-axis``` of a chart. 
 They help describe the data points visually, making the chart easier to interpret.

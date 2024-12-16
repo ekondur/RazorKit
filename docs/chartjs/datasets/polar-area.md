@@ -1,3 +1,7 @@
+---
+icon: material/chart-donut-variant
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/polar.html)"
 	Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.
 	This type of chart is often useful when we want to show a comparison data similar to a pie chart, but also show a scale of values for context.

@@ -1,3 +1,8 @@
+---
+icon: material/format-title
+---
+
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/title.html)"
 	The chart title defines text to draw at the top of the chart.
 

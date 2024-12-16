@@ -43,7 +43,7 @@ extra:
     provider: google
     property: G-SNHZZKGMSL
 nav:
-  - Getting Started: index.md
+  - Home: index.md
   - DataTables: 
     - DataTables: datatables/index.md
     - Options: datatables/options.md

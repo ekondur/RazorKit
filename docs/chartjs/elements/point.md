@@ -1,3 +1,7 @@
+---
+icon: material/chart-timeline-variant
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration)"
 	Point elements are used to represent the points in a line, radar or bubble chart.
 

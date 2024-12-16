@@ -1,3 +1,7 @@
+---
+icon: material/chart-bubble
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/bubble.html)"
 	A bubble chart is used to display three dimensions of data at the same time. 
 	The location of the bubble is determined by the first two dimensions and the corresponding horizontal and vertical axes.

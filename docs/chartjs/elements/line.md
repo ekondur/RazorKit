@@ -1,3 +1,7 @@
+---
+icon: material/chart-line-variant
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration)"
 	Line elements are used to represent the line in a line chart.
 

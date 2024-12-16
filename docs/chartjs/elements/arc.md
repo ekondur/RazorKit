@@ -1,3 +1,7 @@
+---
+icon: material/chart-arc
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#arc-configuration)"
 	Arcs are used in the polar area, doughnut and pie charts.
 

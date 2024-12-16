@@ -1,3 +1,7 @@
+---
+icon: material/chart-line
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/line.html)"
 	A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.
 

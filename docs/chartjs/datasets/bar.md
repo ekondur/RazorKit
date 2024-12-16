@@ -1,3 +1,7 @@
+---
+icon: material/chart-bar
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/bar.html)"
 	A bar chart provides a way of showing data values represented as vertical bars. 
 	It is sometimes used to show trend data, and the comparison of multiple data sets side by side.

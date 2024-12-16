@@ -1,3 +1,7 @@
+---
+icon: material/format-color-fill
+---
+
 ## Enabled
 If you don't have any preference for colors, you can use the built-in Colors plugin.
             It will cycle through a palette of seven Chart.js brand colors. Default true

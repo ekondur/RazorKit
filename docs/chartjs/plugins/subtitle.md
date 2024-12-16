@@ -1,3 +1,7 @@
+---
+icon: material/subtitles-outline
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/subtitle.html)"
 	Subtitle is a second title placed under the main title, by default. It has exactly the same configuration options with the main title.
 
