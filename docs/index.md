@@ -3,72 +3,24 @@
 RazorKit is a collection of lightweight, fluent-style Razor HTML helpers that make it easy for developers to integrate popular JavaScript libraries into their ASP.NET applications. 
 With RazorKit, you can quickly implement features from libraries like [Chart.js](https://ekondur.github.io/RazorKit/chartjs/) and [DataTables](https://ekondur.github.io/RazorKit/datatables/), without the hassle of writing complex JavaScript or HTML code manually.
 
-## Using DataTables
+<div class="grid cards" markdown>
 
-Install the [RazorKit.DataTables](https://www.nuget.org/packages/RazorKit.DataTables/) package from nuget.
+-   :octicons-table-24:{ .lg .middle } __DataTables__
 
-```
-PM> Install-Package RazorKit.DataTables
-```
+    ---
 
-Add related scripts and style links and implement. [Reference:](https://datatables.net/)
+    ```RazorKit.DataTables``` is a powerful library that simplifies the integration of the jQuery DataTables
+	library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable data tables.
 
-=== "cshtml"
+    [:octicons-arrow-right-24: Getting started](https://ekondur.github.io/RazorKit/datatables/)
 
-	```cs linenums="1"
-	@using RazorKit
+-   :material-chart-pie:{ .lg .middle } __ChartJs__
 
-	@(Html.DataTable<Person>()
-		.Columns(c =>
-		{
-			c.Field(f => f.Id).Visible(false);
-			c.Field(f => f.Name).Title("Name");
-		})
-		.DataSource(ds => ds
-			.URL(Url.Action("GetDataResult"))
-			.Method("POST")
-			.Naming(Convention.CamelCase))
-		.ServerSide(true)
-		.Render()
-	)
-	```
-=== "controller"
+    ---
 
-	```cs linenums="1"
-	using RazorKit.DataTables;
+    ```RazorKit.ChartJs``` is a powerful library that simplifies the integration of the Chart.js library into Razor views. 
+	With a fluent builder style, developers can effortlessly create highly functional and customizable charts.
 
-	[HttpPost]
-	public JsonResult GetDataResult(DataRequest request)
-	{
-		 var result = ctx.People.ToDataResult(request);
-		 return Json(result);
-	}
-	``` 
+    [:octicons-arrow-right-24: Getting started](https://ekondur.github.io/RazorKit/chartjs/)
 
-## Using ChartJs
-
-Install the [RazorKit.ChartJs](https://www.nuget.org/packages/RazorKit.ChartJs/) package from nuget.
-
-```
-PM> Install-Package RazorKit.ChartJs
-```
-
-Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/latest/getting-started/)
-
-```cs linenums="1"
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-@using RazorKit
-
-@(Html.Chart("canvasId")
-    .Data(d => d
-        .Labels("January", "February", "March", "April", "May", "June", "July")
-        .Datasets(ds => ds
-            .Line()
-            .Label("Line Chart")
-            .Data(65, 59, 80, 81, 56, 55, 40)
-        )
-    )
-    .Render()
-)
-```
+</div>
