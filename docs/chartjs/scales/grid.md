@@ -1,3 +1,7 @@
+---
+icon: material/grid
+---
+
 ## Circular
 If true, gridlines are circular (on radar and polar area charts only). Default false
 ```csharp

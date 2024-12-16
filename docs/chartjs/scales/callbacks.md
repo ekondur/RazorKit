@@ -1,3 +1,7 @@
+---
+icon: material/function
+---
+
 ## BeforeUpdate
 Callback called before the update process starts.
 ```csharp

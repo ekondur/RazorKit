@@ -1,3 +1,7 @@
+---
+icon: material/format-title
+---
+
 ## Display
 If true, display the axis title. Default false
 ```csharp

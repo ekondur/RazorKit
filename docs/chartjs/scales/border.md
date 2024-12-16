@@ -1,3 +1,7 @@
+---
+icon: material/border-inside
+---
+
 ## Display
 If true, draw a border at the edge between the axis and the chart area.
             Default true

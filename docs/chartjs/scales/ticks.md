@@ -1,3 +1,7 @@
+---
+icon: material/chart-timeline-variant-shimmer
+---
+
 ## BackdropColor
 Color of label backdrops.
 ```csharp

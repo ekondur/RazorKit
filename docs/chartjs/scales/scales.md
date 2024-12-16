@@ -1,3 +1,7 @@
+---
+icon: material/chart-multiple
+---
+
 ## Type
 Type of scale being employed. Custom scales can be created and registered with a string key. 
             This allows changing the type of an axis for a chart.
