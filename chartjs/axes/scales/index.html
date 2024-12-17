@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../callbacks/">
+        <link rel="prev" href="../../elements/point/">
       
       
-        <link rel="next" href="../../layout/">
+        <link rel="next" href="../grid/">
       
       
       <link rel="icon" href="../../../rk-icon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Border - RazorKit</title>
+        <title>Scales - RazorKit</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#display" class="md-skip">
+        <a href="#common-options-to-all-axes" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Border
+              Scales
             
           </span>
         </div>
@@ -1824,7 +1824,7 @@
             
   
   <span class="md-ellipsis">
-    Scale Options
+    Axes
   </span>
   
 
@@ -1834,7 +1834,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
-            Scale Options
+            Axes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1842,10 +1842,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../scales/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Scales
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
@@ -1856,6 +1876,249 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-options-to-all-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common options to all axes:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common options to all axes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aligntopixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      AlignToPixels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backgroundcolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      BackgroundColor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    <span class="md-ellipsis">
+      Max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reverse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stacked" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stacked
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggestedmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      SuggestedMax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggestedmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      SuggestedMin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-axis-specific-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Axis specific options:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Axis specific options:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginatzero" class="md-nav__link">
+    <span class="md-ellipsis">
+      BeginAtZero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartesian-axis-specific-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartesian Axis specific options:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cartesian Axis specific options:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stackweight" class="md-nav__link">
+    <span class="md-ellipsis">
+      StackWeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1957,30 +2220,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
-  
-  <span class="md-ellipsis">
-    Border
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../border/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
@@ -1991,78 +2234,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#display" class="md-nav__link">
-    <span class="md-ellipsis">
-      Display
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#color" class="md-nav__link">
-    <span class="md-ellipsis">
-      Color
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#width" class="md-nav__link">
-    <span class="md-ellipsis">
-      Width
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dash" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dash
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dashoffset" class="md-nav__link">
-    <span class="md-ellipsis">
-      DashOffset
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#z" class="md-nav__link">
-    <span class="md-ellipsis">
-      Z
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2286,6 +2457,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#common-options-to-all-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common options to all axes:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common options to all axes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aligntopixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      AlignToPixels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backgroundcolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      BackgroundColor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
       Display
@@ -2293,49 +2501,183 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#color" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
     <span class="md-ellipsis">
-      Color
+      Min
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#width" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
     <span class="md-ellipsis">
-      Width
+      Max
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dash" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
     <span class="md-ellipsis">
-      Dash
+      Reverse
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dashoffset" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#stacked" class="md-nav__link">
     <span class="md-ellipsis">
-      DashOffset
+      Stacked
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#z" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#suggestedmax" class="md-nav__link">
     <span class="md-ellipsis">
-      Z
+      SuggestedMax
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suggestedmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      SuggestedMin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-axis-specific-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Axis specific options:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Axis specific options:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beginatzero" class="md-nav__link">
+    <span class="md-ellipsis">
+      BeginAtZero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartesian-axis-specific-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartesian Axis specific options:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cartesian Axis specific options:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" class="md-nav__link">
+    <span class="md-ellipsis">
+      Position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stackweight" class="md-nav__link">
+    <span class="md-ellipsis">
+      StackWeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Axis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Offset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2357,33 +2699,134 @@
   
 
 
-  <h1>Border</h1>
+  <h1>Scales</h1>
 
-<h2 id="display">Display</h2>
-<p>If true, draw a border at the edge between the axis and the chart area.
-            Default true
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Display</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<div class="admonition info">
+<p class="admonition-title">Reference <a href="https://www.chartjs.org/docs/latest/axes/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>Axes are an integral part of a chart. They are used to determine how data maps to a pixel value on the chart.
+In a cartesian chart, there is 1 or more X-axis and 1 or more Y-axis to map points onto the 2-dimensional canvas. These axes are known as 'cartesian axes'.
+In a radial chart, such as a radar chart or a polar area chart, there is a single axis that maps points in the angular and radial directions. These are known as 'radial axes'.</p>
+</div>
+<p><div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Scales</span><span class="p">(</span><span class="n">Scales</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">BeginAtZero</span><span class="p">(</span><span class="k">true</span><span class="p">)))</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Scales</span><span class="p">(</span><span class="s">&quot;xAxis&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">BeginAtZero</span><span class="p">(</span><span class="k">true</span><span class="p">)))</span>
 </span></code></pre></div></p>
-<h2 id="color">Color</h2>
-<p>The color of the border line.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<h2 id="common-options-to-all-axes">Common options to all axes:</h2>
+<p>These are only the common options supported by all axes. Please see specific axis documentation for all the available options for that axis.
+<a href="https://www.chartjs.org/docs/latest/axes/#common-options-to-all-axes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<h3 id="type">Type</h3>
+<p>Type of scale being employed. Custom scales can be created and registered with a string key. 
+This allows changing the type of an axis for a chart.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Type</span><span class="p">(</span><span class="s">&quot;logarithmic&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h2 id="width">Width</h2>
-<p>The width of the border line. Default 1
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Width</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<h3 id="aligntopixels">AlignToPixels</h3>
+<p>Align pixel values to device pixels. Default <code>false</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">AlignToPixels</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h2 id="dash">Dash</h2>
-<p>Length and spacing of dashes on grid lines. Default []
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Dash</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<h3 id="backgroundcolor">BackgroundColor</h3>
+<p>Background color of the scale area.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BackgroundColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h2 id="dashoffset">DashOffset</h2>
-<p>Offset for line dashes. Default 0.0
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">DashOffset</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<h3 id="display">Display</h3>
+<p>Controls the axis global visibility (visible when <code>true</code>, hidden when <code>false</code>).
+Default <code>true</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Display</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div>
+When display: <code>'auto'</code>, the axis is visible only if at least one associated dataset is visible.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">Display</span><span class="p">(</span><span class="s">&quot;auto&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h2 id="z">Z</h2>
-<p>z-index of the border layer. Values less than equal 0 are drawn under datasets, grater than 0 on top.
-            Default 0
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Z</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<h3 id="min">Min</h3>
+<p>User defined minimum number for the scale, overrides minimum value from data.
+<a href="https://www.chartjs.org/docs/latest/axes/#axis-range-settings"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">Min</span><span class="p">(</span><span class="m">50</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="max">Max</h3>
+<p>User defined maximum number for the scale, overrides maximum value from data.
+<a href="https://www.chartjs.org/docs/latest/axes/#axis-range-settings"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Max</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="reverse">Reverse</h3>
+<p>Reverse the scale. Default <code>false</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">Reverse</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="stacked">Stacked</h3>
+<p>Should the data be stacked. Default <code>false</code>
+<a href="https://www.chartjs.org/docs/latest/axes/#stacking"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">Stacked</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div>
+For some charts, you might want to stack positive and negative values together. 
+That can be achieved by specifying stacked: <code>'single'</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">Stacked</span><span class="p">(</span><span class="s">&quot;single&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="suggestedmax">SuggestedMax</h3>
+<p>Adjustment used when calculating the maximum data value.
+<a href="https://www.chartjs.org/docs/latest/axes/#axis-range-settings"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">SuggestedMax</span><span class="p">(</span><span class="m">50</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="suggestedmin">SuggestedMin</h3>
+<p>Adjustment used when calculating the minimum data value.
+<a href="https://www.chartjs.org/docs/latest/axes/#axis-range-settings"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">SuggestedMin</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="weight">Weight</h3>
+<p>The weight used to sort the axis. Higher weights are further away from the chart area.
+Default <code>0</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">Weight</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h2 id="linear-axis-specific-options">Linear Axis specific options:</h2>
+<p>The linear scale is used to chart numerical data. It can be placed on either the x or y-axis. 
+The scatter chart type automatically configures a line chart to use one of these scales for the x-axis. As the name suggests, linear interpolation is used to determine where a value lies on the axis.
+<a href="https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#linear-axis-specific-options"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<h3 id="beginatzero">BeginAtZero</h3>
+<p>if <code>true</code>, scale will include <code>0</code> if it is not already included.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="n">BeginAtZero</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="grace">Grace</h3>
+<p>Percentage (string ending with %) for added room in the scale range above and below data.
+<a href="https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#grace"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">Grace</span><span class="p">(</span><span class="s">&quot;5%&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+Amount (number) for added room in the scale range above and below data.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">Grace</span><span class="p">(</span><span class="m">50</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h2 id="cartesian-axis-specific-options">Cartesian Axis specific options:</h2>
+<p>Axes that follow a cartesian grid are known as 'Cartesian Axes'. Cartesian axes are used for line, bar, and bubble charts. Four cartesian axes are included in Chart.js by default.
+<a href="https://www.chartjs.org/docs/latest/axes/cartesian/#common-options-to-all-cartesian-axes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<h3 id="bounds">Bounds</h3>
+<p>Determines the scale bounds. Default <code>'ticks'</code>
+<a href="https://www.chartjs.org/docs/latest/axes/cartesian/#scale-bounds"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">Bounds</span><span class="p">.</span><span class="n">Data</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="clip">Clip</h3>
+<p>If true, clip the dataset drawing against the size of the scale instead of chart area.
+Default <code>true</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="position">Position</h3>
+<p>Position of the axis.
+<a href="https://www.chartjs.org/docs/latest/axes/cartesian/#axis-position"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">Position</span><span class="p">(</span><span class="n">AxisPosition</span><span class="p">.</span><span class="n">Top</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="stack">Stack</h3>
+<p>Stack group. Axes at the same <code>position</code> with same <code>stack</code> are stacked.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">Stack</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="stackweight">StackWeight</h3>
+<p>Weight of the scale in stack group. Used to determine the amount of allocated space for the scale within the group.
+Default <code>1</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">StackWeight</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="axis">Axis</h3>
+<p>Which type of axis this is. Possible values are: <code>'x'</code>, <code>'y'</code>. 
+If not set, this is inferred from the first character of the ID which should be <code>'x'</code> or <code>'y'</code>.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">Axis</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="offset">Offset</h3>
+<p>If <code>true</code>, extra space is added to the both edges and the axis is scaled to fit into the chart area.
+This is set to <code>true</code> for a bar chart by default, for others <code>false</code>.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">Offset</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
@@ -2419,7 +2862,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../callbacks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Callbacks">
+          <a href="../../elements/point/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Point">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2429,20 +2872,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Callbacks
+                Point
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../layout/" class="md-footer__link md-footer__link--next" aria-label="Next: Layout">
+          <a href="../grid/" class="md-footer__link md-footer__link--next" aria-label="Next: Grid">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Layout
+                Grid
               </div>
             </div>
             <div class="md-footer__button md-icon">
