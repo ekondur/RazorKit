@@ -308,13 +308,6 @@ namespace RazorKit
         Touchstart
     }
 
-    public enum Scales
-    {
-        X,
-        Y,
-        R
-    }
-
     public enum Animations
     {
         X,

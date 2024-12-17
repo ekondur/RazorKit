@@ -18,8 +18,9 @@ icon: material/chart-scatter-plot
         .Label("Scatter Dataset")
         .Data(data)
         .BackgroundColor("rgb(255, 99, 132)")))
-.Options(x => x.Scales(Scales.X, s => s
-    .Type("linear")
+.Options(x => x.Scales(s => s
+    .AxisId("x")
+	.Type("linear")
     .Position(AxisPosition.Bottom)
 ))
 .Render())

@@ -25,7 +25,8 @@
                     .Loop(true)
                     .From(1)
                     .To(0))
-                .Scales(Scales.Y, s => s
+                .Scales(s => s
+                    .AxisId("y")
                     .Min(0)
                     .Max(100)
                 )

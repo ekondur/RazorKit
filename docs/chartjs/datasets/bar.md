@@ -18,7 +18,7 @@ icon: material/chart-bar
         .BorderWidth(1)
     ))
 .Options(o => o
-    .Scales(Scales.Y, s => s.BeginAtZero(true)))
+    .Scales(s => s.AxisId("y").BeginAtZero(true)))
 .Render())
 ```
 

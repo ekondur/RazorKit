@@ -1,6 +1,7 @@
 ﻿using RazorKit.ChartJs.Extensions;
 using RazorKit.ChartJs.Models;
 using System;
+using System.Collections.Generic;
 
 namespace RazorKit.ChartJs.Builders
 {
@@ -180,22 +181,10 @@ namespace RazorKit.ChartJs.Builders
         /// <param name="id"></param>
         /// <param name="action"></param>
         /// <returns></returns>
-        public OptionsBuilder Scales(Scales id, Action<ScaleBuilder> action)
+        public OptionsBuilder Scales(Action<ScaleBuilder> action)
         {
-            var builder = new ScaleBuilder(_options, id.ToCamelCaseString());
-            action(builder);
-            return this;
-        }
-
-        /// <summary>
-        /// Scales Configuration.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="action"></param>
-        /// <returns></returns>
-        public OptionsBuilder Scales(string id, Action<ScaleBuilder> action)
-        {
-            var builder = new ScaleBuilder(_options, id);
+            _options.Scales = new Dictionary<string, Scale>();
+            var builder = new ScaleBuilder(_options.Scales);
             action(builder);
             return this;
         }

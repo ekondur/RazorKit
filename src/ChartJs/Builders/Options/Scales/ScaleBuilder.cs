@@ -9,16 +9,24 @@ namespace RazorKit.ChartJs.Builders
     /// </summary>
     public class ScaleBuilder
     {
-        private readonly Scale _scale;
+        private Scale _scale;
+        private readonly Dictionary<string, Scale> _scales;
 
-        internal ScaleBuilder(Options options, string id)
+        internal ScaleBuilder(Dictionary<string, Scale> scales)
+        {
+            _scales = scales;
+        }
+
+        /// <summary>
+        /// Adding a new scale with axisId.
+        /// </summary>
+        /// <param name="axisId"></param>
+        /// <returns></returns>
+        public ScaleBuilder AxisId(string axisId)
         {
             _scale = new Scale();
-            if (options.Scales == null)
-            {
-                options.Scales = new Dictionary<string, Scale>();
-            }
-            options.Scales.Add(id, _scale);
+            _scales.Add(axisId, _scale);
+            return this;
         }
 
         #region Common options to all axes

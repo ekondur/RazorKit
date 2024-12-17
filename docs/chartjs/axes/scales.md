@@ -7,14 +7,26 @@ icon: material/menu-right
 	In a cartesian chart, there is 1 or more X-axis and 1 or more Y-axis to map points onto the 2-dimensional canvas. These axes are known as 'cartesian axes'.
 	In a radial chart, such as a radar chart or a polar area chart, there is a single axis that maps points in the angular and radial directions. These are known as 'radial axes'.
 
-```csharp
+```csharp hl_lines="3" linenums="1"
 .Options(o => o
-    .Scales(Scales.Y, s => s.BeginAtZero(true)))
+    .Scales(s => s
+		.AxisId("x")
+		.BeginAtZero(true)))
 ```
-```csharp
-.Options(o => o
-    .Scales("xAxis", s => s.BeginAtZero(true)))
+```csharp linenums="1"
+.Data(d => d
+    .Datasets(ds => ds
+        .Line()
+        .XAxisID("first-x-axis")
+        .YAxisID("first-y-axis")))
+.Options(x => x.Scales(s =>
+    {
+        s.AxisId("first-x-axis").Type("linear");
+        s.AxisId("first-y-axis").Type("linear");
+    }
+))
 ```
+The configuration must include the ```AxisId("id")``` method. ```x```, ```y```, ```r``` or a custom id can be assigned.
 
 ## Common options to all axes:
 These are only the common options supported by all axes. Please see specific axis documentation for all the available options for that axis.

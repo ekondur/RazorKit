@@ -17,7 +17,8 @@
         .Label("Scatter Dataset")
         .Data(data)
         .BackgroundColor("rgb(255, 99, 132)")))
-.Options(x => x.Scales(Scales.X, s => s
+.Options(x => x.Scales(s => s
+    .AxisId("y")
     .Type("linear")
     .Position(AxisPosition.Bottom)
 ))

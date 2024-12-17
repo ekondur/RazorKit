@@ -17,6 +17,11 @@
         .BorderWidth(1)
     ))
 .Options(o => o
-    .Scales(Scales.Y, s => s.BeginAtZero(true)))
+    .Scales(s => s
+        .AxisId("y")
+        .BeginAtZero(true)
+        .Grid(g => g
+            .Color("red")
+            .LineWidth(1))))
 .Render())
 

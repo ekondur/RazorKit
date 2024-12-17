@@ -2,6 +2,20 @@
 icon: material/menu-right
 ---
 
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/samples/scale-options/grid.html)"
+	This sample shows how to use scriptable grid options for an axis to control styling. In this case, the Y axis grid lines are colored based on their value. 
+	In addition, booleans are provided to toggle different parts of the X axis grid visibility.
+
+```csharp hl_lines="5" linenums="1"
+.Options(o => o
+    .Scales(s => s
+		.AxisId("y")
+        .BeginAtZero(true)
+        .Grid(g => g
+            .Color("red")
+            .LineWidth(1))))
+```
+
 ## Circular
 If true, gridlines are circular (on radar and polar area charts only). Default false
 ```csharp
