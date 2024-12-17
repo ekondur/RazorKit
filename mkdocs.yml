@@ -95,13 +95,13 @@ nav:
         - Bar: chartjs/elements/bar.md
         - Line: chartjs/elements/line.md
         - Point: chartjs/elements/point.md
-    - Scale Options: 
-        - Scales: chartjs/scales/scales.md
-        - Grid: chartjs/scales/grid.md
-        - Ticks: chartjs/scales/ticks.md
-        - Title: chartjs/scales/title.md
-        - Callbacks: chartjs/scales/callbacks.md
-        - Border: chartjs/scales/border.md
+    - Axes: 
+        - Scales: chartjs/axes/scales.md
+        - Grid: chartjs/axes/grid.md
+        - Ticks: chartjs/axes/ticks.md
+        - Title: chartjs/axes/title.md
+        - Callbacks: chartjs/axes/callbacks.md
+        - Border: chartjs/axes/border.md
     - Other Options:
         - Layout: chartjs/layout.md
         - Animation: chartjs/animation.md

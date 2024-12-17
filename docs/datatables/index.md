@@ -6,6 +6,8 @@
 - **Fluent API:** Create tables using an intuitive builder pattern.
 - **Customization:** Easily configure columns, data sources, and advanced features.
 - **Integration:** Designed to work seamlessly with jQuery DataTables.
+- **Data Manipulation:** ```ToDataResult``` is typically used to transform data (such as collections or query results) into a structured result that DataTables can consume,
+ especially when dealing with server-side operations such as paging, filtering, and sorting.
 
 ## Setup
 
