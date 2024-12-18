@@ -7,41 +7,27 @@ icon: material/layers-outline
 	While offering a wide range of options to control the layout around the table, the basic operation of this option is quite simple:
 	use the object parameter name to place a control and then the value to state what feature should be shown, and its configuration.
 
+## Set
+Set a new position for feature.
+```csharp
+.Set("bottomEnd", "paging")
+```
+Or, disable a feature.
+```csharp
+.Set("bottomStart", null)
+```
+
 ## Top
 Positions elements above the table but centers them horizontally. 
 This layout places the controls centered at the top of the table.
 ```csharp
-.Top(Layouts.PageLength, Layouts.Search)
+.Top("pageLength", "search")
 ```
 
 ## Bottom
 Positions elements above the table but centers them horizontally. 
 This layout places the controls centered at the bottom of the table.
 ```csharp
-.Bottom(Layouts.Info, Layouts.Paging)
-```
-
-## TopStart
-
-```csharp
-.TopStart(Layouts.PageLength)
-```
-
-## TopEnd
-
-```csharp
-.TopEnd(Layouts.Search)
-```
-
-## BottomStart
-
-```csharp
-.BottomStart(Layouts.Info)
-```
-
-## BottomEnd
-
-```csharp
-.BottomEnd(Layouts.Paging)
+.Bottom("info", "paging")
 ```
 
