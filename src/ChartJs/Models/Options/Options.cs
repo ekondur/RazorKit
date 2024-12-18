@@ -22,18 +22,13 @@ namespace RazorKit.ChartJs.Models
         public ChartEvent[] Events { get; set; }
         public int? ResizeDelay { get; set; }
         public string Locale { get; set; }
+        public object Parsing { get; set; }
         public Animation Animation { get; set; }
         public Plugins Plugins { get; set; }
         public Layout Layout { get; set; }
         public Interaction Interaction { get; set; }
         public Elements Elements { get; set; }
-
-        [JsonConverter(typeof(DictionaryAsPropertiesConverter<Scale>))]
         public Dictionary<string, Scale> Scales { get; set; }
-
-        [JsonConverter(typeof(DictionaryAsPropertiesConverter<Animation>))]
         public Dictionary<string, Animation> Animations { get; set; }
-
-        public object Parsing { get; set; }
     }
 }
