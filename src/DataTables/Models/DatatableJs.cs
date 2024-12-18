@@ -25,7 +25,8 @@ namespace RazorKit.DataTables.Models
 
         public Language Language { get; set; }
         public AjaxSource Ajax { get; set; }
-        public Layout Layout { get; set; }
+
+        public Dictionary<string, object> Layout { get; set; }
 
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string CreatedRow { get; set; }

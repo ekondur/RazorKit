@@ -311,10 +311,10 @@ namespace RazorKit.DataTables.Builders
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public DatatableBuilder<T> Layout(Action<LayoutBuilder> action)
+        public DatatableBuilder<T> Layout(Action<LayoutsBuilder> action)
         {
-            Datatable.Layout = new Layout();
-            var builder = new LayoutBuilder(Datatable.Layout);
+            Datatable.Layout = new Dictionary<string, object>();
+            var builder = new LayoutsBuilder(Datatable.Layout);
             action(builder);
             return this;
         }
