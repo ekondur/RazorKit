@@ -13,7 +13,7 @@ Filters configuration:
 ```
 
 ## Add
-
+Add the specified property for filter.
 ```csharp
 .Add(x => x.Id)
 ```
