@@ -2,85 +2,100 @@
 icon: material/menu-right
 ---
 
-## BackdropColor
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/samples/scale-options/ticks.html)"
+	This sample shows how to use different tick features to control how tick labels are shown on the X axis. These features include:
+
+	- Multi-line labels
+	- Filtering labels
+	- Changing the tick color
+	- Changing the tick alignment for the X axis
+
+## Common tick options to all axes
+These are the common tick options supported by all axes.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/axes/cartesian/#common-tick-options-to-all-axes)
+
+### BackdropColor
 Color of label backdrops.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.BackdropColor("example")
+.BackdropColor("rgba(255, 255, 255, 0.75)")
 ```
 
-## BackdropPadding
-Padding of label backdrop. Default 2
+### BackdropPadding
+Padding of label backdrop. Default ```2```
 ```csharp
-.BackdropPadding(15)
+.BackdropPadding(3)
 ```
 
-## BackdropPadding
+### BackdropPadding
 
 ```csharp
 .BackdropPadding(default)
 ```
 
-## Callback
+### Callback
 Returns the string representation of the tick value as it should be displayed on the chart.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/axes/labelling.html#creating-custom-tick-formats)
 ```csharp
-.Callback("example")
+.Callback("functionName")
 ```
 
-## Display
-If true, show tick labels. Default true
+### Display
+If ```true```, show tick labels. Default ```true```
 ```csharp
-.Display(true)
+.Display(false)
 ```
 
-## Color
+### Color
 Color of ticks.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.Color("example")
+.Color("#666")
 ```
 
-## Font
+### Font
 
 ```csharp
 .Font(default)
 ```
 
-## Major
+### Major
 If true, major ticks are generated. 
-            A major tick will affect autoskipping and major will be defined on ticks in the scriptable options context.
-            Default false
+A major tick will affect autoskipping and major will be defined on ticks in the scriptable options context.
+Default ```false```
 ```csharp
 .Major(true)
 ```
 
-## Padding
-Sets the offset of the tick labels from the axis. Default 3
+### Padding
+Sets the offset of the tick labels from the axis. Default ```3```
 ```csharp
-.Padding(15)
+.Padding(2)
 ```
 
-## ShowLabelBackdrop
+### ShowLabelBackdrop
 If true, draw a background behind the tick labels.
-            Default is true for radial scale, false otherwise.
+Default is ```true``` for radial scale, ```false``` otherwise.
 ```csharp
 .ShowLabelBackdrop(true)
 ```
 
-## TextStrokeColor
+### TextStrokeColor
 The color of the stroke around the text.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.TextStrokeColor("example")
+.TextStrokeColor("#666")
 ```
 
-## TextStrokeWidth
-Stroke width around the text. Default 0
+### TextStrokeWidth
+Stroke width around the text. Default ```0```
 ```csharp
-.TextStrokeWidth(15)
+.TextStrokeWidth(1)
 ```
 
-## Z
-z-index of tick layer. Useful when ticks are drawn on chart area. 
-            Values less than equal 0 are drawn under datasets, grater than 0 on top
+### Z
+z-index of tick layer. Useful when ticks are drawn on chart area. Values ```<= 0``` are drawn under datasets, ```> 0``` on top.
 ```csharp
-.Z(15)
+.Z(-1)
 ```
 
