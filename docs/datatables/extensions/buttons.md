@@ -115,23 +115,23 @@ Unique namespace for every button.
 Split dropdown buttons (built-in).
 [:octicons-link-external-16:](https://datatables.net/reference/option/buttons.buttons.split)
 ```csharp
-.Split("copy", "csv", "print")
+.Button(b => b.Split("copy", "csv", "print"))
 ```
 
 Split dropdown buttons with configuration.
 ```csharp
-.Split(x => x.Add("pdf", "report").Add("word", "report"))
+.Button(b => b.Split(x => x.Add("pdf", "report").Add("word", "report")))
 ```
 
 ## Buttons
 Dropdown buttons (built-in).
 [:octicons-link-external-16:](https://datatables.net/reference/option/buttons.buttons.split)
 ```csharp
-.Buttons("copy", "csv", "print")
+.Button(b => b.Buttons("copy", "csv", "print"))
 ```
 Dropdown buttons with configuration.
 ```csharp
-.Buttons(x => x.Add("pdf", "report").Add("word", "report"))
+.Button(b => b.Buttons(x => x.Add("pdf", "report").Add("word", "report")))
 ```
 
 ## Tag
