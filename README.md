@@ -18,18 +18,17 @@ Add related scripts and style links and implement. [Reference:](https://datatabl
 @using RazorKit
 
 @(Html.DataTable<Person>()
-	.Columns(c =>
-	{
-		c.Field(f => f.Id).Visible(false);
-		c.Field(f => f.Name).Title("Name");
-	})
-	.DataSource(ds => ds
-		.URL(Url.Action("GetDataResult"))
-		.Method("POST")
-		.Naming(Convention.CamelCase))
-		.ServerSide(true)
-	.Render()
-)
+.Columns(c =>
+{
+    c.Field(f => f.Id).Visible(false);
+    c.Field(f => f.Name).Title("Name");
+})
+.DataSource(ds => ds
+    .URL(Url.Action("GetDataResult"))
+    .Method("POST")
+    .Naming(Convention.CamelCase))
+.ServerSide(true)
+.Render())
 ```
 
 ```csharp
@@ -38,8 +37,8 @@ using RazorKit.DataTables;
 [HttpPost]
 public JsonResult GetDataResult(DataRequest request)
 {
-	var result = ctx.People.ToDataResult(request);
-	return Json(result);
+    var result = ctx.People.ToDataResult(request);
+    return Json(result);
 }
 ``` 
 
@@ -64,9 +63,6 @@ Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/lat
         .Datasets(ds => ds
             .Line()
             .Label("Line Chart")
-            .Data(65, 59, 80, 81, 56, 55, 40)
-        )
-    )
-    .Render()
-)
+            .Data(65, 59, 80, 81, 56, 55, 40)))
+    .Render())
 ```
