@@ -1,6 +1,6 @@
 ﻿namespace RazorKit.ChartJs.Models
 {
-    internal class Major
+    internal class TicksMajor
     {
         public bool? Enabled { get; set; }
     }

@@ -486,4 +486,37 @@ namespace RazorKit
         [EnumMember(Value = "beforeDatasetsDraw")]
         BeforeDatasetsDraw
     }
+
+    /// <summary>
+    /// The tick alignment along the axis.
+    /// </summary>
+    public enum TicksAlign
+    {
+        [EnumMember(Value = "start")]
+        Start,
+
+        [EnumMember(Value = "center")]
+        Center,
+
+        [EnumMember(Value = "end")]
+        End,
+
+        [EnumMember(Value = "inner")]
+        Inner
+    }
+
+    /// <summary>
+    /// The tick alignment perpendicular to the axis.
+    /// </summary>
+    public enum TicksCrossAlign
+    {
+        [EnumMember(Value = "near")]
+        Near,
+
+        [EnumMember(Value = "center")]
+        Center,
+
+        [EnumMember(Value = "far")]
+        Far
+    }
 }
