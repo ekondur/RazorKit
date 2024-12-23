@@ -169,7 +169,7 @@ Padding around the title.
 .Padding(2)
 ```
 Or configure it:
-[:octicons-link-external-16:](/chartjs/padding/)
+[:octicons-link-external-16:](../padding.md)
 
 ### Text
 The string title.
