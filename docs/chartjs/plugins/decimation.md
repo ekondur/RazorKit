@@ -1,5 +1,5 @@
 ---
-icon: material/decimal
+icon: material/menu-right
 ---
 
 ## Enabled

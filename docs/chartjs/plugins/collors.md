@@ -1,5 +1,5 @@
 ---
-icon: material/format-color-fill
+icon: material/menu-right
 ---
 
 ## Enabled

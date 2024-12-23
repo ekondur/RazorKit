@@ -1,5 +1,5 @@
 ---
-icon: material/chart-areaspline-variant
+icon: material/menu-right
 ---
 
 ## Propagate

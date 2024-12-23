@@ -1,5 +1,5 @@
 ---
-icon: material/subtitles-outline
+icon: material/menu-right
 ---
 
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/subtitle.html)"

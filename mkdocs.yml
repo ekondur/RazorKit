@@ -80,13 +80,8 @@ nav:
     - Plugins:
         - Title: chartjs/plugins/title.md
         - Subtitle: chartjs/plugins/subtitle.md
-        - Legend:
-            - chartjs/plugins/legend.md
-            - Title: chartjs/plugins/legend-title.md
-            - Labels: chartjs/plugins/legend-labels.md
-        - Tooltip:
-            - chartjs/plugins/tooltip.md
-            - Callbacks: chartjs/plugins/tooltip-callbacks.md
+        - Legend: chartjs/plugins/legend.md
+        - Tooltip: chartjs/plugins/tooltip.md
         - Collors: chartjs/plugins/collors.md
         - Decimation: chartjs/plugins/decimation.md
         - Filler: chartjs/plugins/filler.md

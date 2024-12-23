@@ -1,3 +1,7 @@
+---
+icon: material/menu-right
+---
+
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/legend.html)"
 	The chart legend displays data about the datasets that are appearing on the chart.
 	
@@ -107,3 +111,159 @@ regardless of the css specified on the canvas.
 .TextDirection("example")
 ```
 
+## Title Settings
+
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-title-configuration)"
+	Set the legent title configuration.
+	
+	Namespace: ```options.plugins.legend.title```
+	
+=== "razor"
+	```csharp hl_lines="3 5" linenums="1"
+	.Options(o => o
+    .Plugins(p => p
+        .Legend(l => l
+            .Display(true)
+            .Title(t => t
+                .Text("Legend Title")
+                .Color("rgb(75, 192, 192)")))))
+	```
+
+=== "js"
+	The script is produced:
+	```js linenums="1"
+	"options": {
+		"plugins": {
+		  "legend": {
+			"display": true,
+			"title": {
+			  "color": "rgb(75, 192, 192)",
+			  "text": "Legend Title"
+			}
+		  }
+		}
+	}
+	```
+
+### Color
+Color of text.
+```csharp
+.Color("example")
+```
+
+### Display
+Is the legend title displayed.
+```csharp
+.Display(true)
+```
+
+### Font
+
+```csharp
+.Font(default)
+```
+
+### Padding
+Padding around the title.
+```csharp
+.Padding(2)
+```
+Or configure it:
+[:octicons-link-external-16:](/chartjs/padding/)
+
+### Text
+The string title.
+```csharp
+.Text("example")
+```
+
+## Labels Settings
+
+### BoxWidth
+Width of coloured box. default 40
+```csharp
+.BoxWidth(15)
+```
+
+### BoxHeight
+Height of the coloured box.
+```csharp
+.BoxHeight(15)
+```
+
+### Color
+Color of label and the strikethrough.
+```csharp
+.Color("example")
+```
+
+### Font
+
+```csharp
+.Font(default)
+```
+
+### Padding
+Padding between rows of colored boxes. Default 10
+```csharp
+.Padding(15)
+```
+
+### GenerateLabels
+Generates legend items for each thing in the legend.
+            Default implementation returns the text + styling for the color box.
+```csharp
+.GenerateLabels("example")
+```
+
+### Filter
+Filters legend items out of the legend. Receives 2 parameters, a Legend Item and the chart data.
+```csharp
+.Filter("example")
+```
+
+### Sort
+Sorts legend items. Type is : sort(a: LegendItem, b: LegendItem, data: ChartData): number;.
+            Receives 3 parameters, two Legend Items and the chart data. 
+            The return value of the function is a number that indicates the order of the two legend item parameters. 
+            The ordering matches the return value of Array.prototype.sort()
+```csharp
+.Sort("example")
+```
+
+### PointStyle
+If specified, this style of point is used for the legend. Only used if usePointStyle is true. default 'circle'
+```csharp
+.PointStyle(default)
+```
+
+### TextAlign
+Horizontal alignment of the label text. Options are: 'left', 'right' or 'center'. default 'center'
+```csharp
+.TextAlign(default)
+```
+
+### UsePointStyle
+Label style will match corresponding point style (size is based on pointStyleWidth or the minimum value between boxWidth and font.size).
+            default false
+```csharp
+.UsePointStyle(true)
+```
+
+### PointStyleWidth
+If UsePointStyle is true, the width of the point style used for the legend.
+```csharp
+.PointStyleWidth(15)
+```
+
+### UseBorderRadius
+Label borderRadius will match corresponding borderRadius. default false
+```csharp
+.UseBorderRadius(true)
+```
+
+### BorderRadius
+Override the borderRadius to use.
+```csharp
+.BorderRadius(default)
+```
