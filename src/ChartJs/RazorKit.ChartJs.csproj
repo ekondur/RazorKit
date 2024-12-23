@@ -13,9 +13,9 @@
 	<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>csharp,htmlhelper,razor,javascript,chartjs</PackageTags>
-	<PackageReleaseNotes>Added Ticks cartesian options.</PackageReleaseNotes>
+	<PackageReleaseNotes>Fixed public enum issues.</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Version>1.0.6</Version>
+	<Version>1.0.7</Version>
 	<PackageIcon>rk-logo.png</PackageIcon>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<EmbedUntrackedSources>true</EmbedUntrackedSources>
