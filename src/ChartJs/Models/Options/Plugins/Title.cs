@@ -5,7 +5,7 @@ namespace RazorKit.ChartJs.Models
 {
     class Title
     {
-        public Align? Align { get; set; }
+        public TitleAlign? Align { get; set; }
 
         public string Color { get; set; }
 

@@ -42,7 +42,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="align"></param>
         /// <returns></returns>
-        public LegendBuilder Align(Align align)
+        public LegendBuilder Align(LegendAlign align)
         {
             _legend.Align = align;
             return this;

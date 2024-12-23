@@ -20,7 +20,7 @@ icon: material/menu-right
             .BackdropColor("green"))))
 ```
 
-## Common Axes Options
+## Common Axis Options
 These are the common tick options supported by all axes.
 [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/axes/cartesian/#common-tick-options-to-all-axes)
 
@@ -109,7 +109,7 @@ z-index of tick layer. Useful when ticks are drawn on chart area. Values ```<= 0
 .Z(-1)
 ```
 
-## Cartesian Axes Options
+## Cartesian Axis Options
 
 ### Align
 The tick alignment along the axis. ```'inner'``` alignment means align 'start' for first tick and 'end' for the last tick of horizontal axis.

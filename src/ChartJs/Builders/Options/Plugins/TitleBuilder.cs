@@ -20,7 +20,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="align"></param>
         /// <returns></returns>
-        public TitleBuilder Align(Align align)
+        public TitleBuilder Align(TitleAlign align)
         {
             _title.Align = align;
             return this;

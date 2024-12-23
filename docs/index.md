@@ -12,7 +12,7 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
     ```RazorKit.DataTables``` is a powerful library that simplifies the integration of the jQuery DataTables
 	library into Razor views. With a fluent builder style, developers can effortlessly create highly functional and customizable data tables.
 
-    [:octicons-arrow-right-24: Getting started](https://ekondur.github.io/RazorKit/datatables/)
+    [:octicons-arrow-right-24: Getting started](datatables/)
 
 -   :simple-chartdotjs:{ .lg .middle } __ChartJs__
 
@@ -21,6 +21,6 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
     ```RazorKit.ChartJs``` is a powerful library that simplifies the integration of the Chart.js library into Razor views. 
 	With a fluent builder style, developers can effortlessly create highly functional and customizable charts.
 
-    [:octicons-arrow-right-24: Getting started](https://ekondur.github.io/RazorKit/chartjs/)
+    [:octicons-arrow-right-24: Getting started](chartjs/)
 
 </div>

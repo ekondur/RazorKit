@@ -42,7 +42,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="mode"></param>
         /// <returns></returns>
-        public TooltipBuilder Mode(Mode mode)
+        public TooltipBuilder Mode(InteractionMode mode)
         {
             _toolTip.Mode = mode.ToString().ToLower();
             return this;
@@ -76,7 +76,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="position"></param>
         /// <returns></returns>
-        public TooltipBuilder Position(Position position)
+        public TooltipBuilder Position(TooltipPosition position)
         {
             _toolTip.Position = position.ToString().ToLower();
             return this;

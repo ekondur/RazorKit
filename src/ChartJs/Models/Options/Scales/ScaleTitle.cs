@@ -6,7 +6,7 @@ namespace RazorKit.ChartJs.Models
     internal class ScaleTitle
     {
         public bool? Display { get; set; }
-        public Align? Align { get; set; }
+        public TitleAlign? Align { get; set; }
 
         [JsonConverter(typeof(StringOrArrayConverter))]
         public object Text { get; set; }

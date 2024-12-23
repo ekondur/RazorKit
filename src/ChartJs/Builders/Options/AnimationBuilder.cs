@@ -41,7 +41,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="easing"></param>
         /// <returns></returns>
-        public AnimationBuilder Easing(Easing easing)
+        public AnimationBuilder Easing(AnimationEasing easing)
         {
             _animation.Easing = easing;
             return this;

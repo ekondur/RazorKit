@@ -6,8 +6,8 @@ namespace RazorKit.ChartJs.Models
     class Legend
     {
         public bool? Display { get; set; }
-        public LegendPosition Position { get; set; }
-        public Align Align { get; set; }
+        public LegendPosition? Position { get; set; }
+        public LegendAlign? Align { get; set; }
         public int? MaxHeight { get; set; }
         public int? MaxWidth { get; set; }
         public bool? FullSize { get; set; }

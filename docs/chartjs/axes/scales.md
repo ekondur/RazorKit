@@ -28,7 +28,7 @@ icon: material/menu-right
 ```
 The configuration must include the ```AxisId("id")``` method. ```x```, ```y```, ```r``` or a custom id can be assigned.
 
-## Common options to all axes:
+## Common Axis Options:
 These are only the common options supported by all axes. Please see specific axis documentation for all the available options for that axis.
 [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/axes/#common-options-to-all-axes)
 
@@ -115,7 +115,7 @@ Default ```0```
 .Weight(1)
 ```
 
-## Linear Axis specific options:
+## Linear Axis Options:
 The linear scale is used to chart numerical data. It can be placed on either the x or y-axis. 
 The scatter chart type automatically configures a line chart to use one of these scales for the x-axis. As the name suggests, linear interpolation is used to determine where a value lies on the axis.
 [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/axes/cartesian/linear.html#linear-axis-specific-options)
@@ -137,7 +137,7 @@ Amount (number) for added room in the scale range above and below data.
 .Grace(50)
 ```
 
-## Cartesian Axis specific options:
+## Cartesian Axis Options:
 Axes that follow a cartesian grid are known as 'Cartesian Axes'. Cartesian axes are used for line, bar, and bubble charts. Four cartesian axes are included in Chart.js by default.
 [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/axes/cartesian/#common-options-to-all-cartesian-axes)
 

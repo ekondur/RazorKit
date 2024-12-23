@@ -71,7 +71,7 @@ namespace RazorKit
     /// Easing function to use.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum Easing
+    public enum AnimationEasing
     {
         [EnumMember(Value = "linear")]
         Linear,
@@ -168,10 +168,26 @@ namespace RazorKit
     }
 
     /// <summary>
-    /// Alignment
+    /// Alignment of Title, Subtitle
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum Align
+    public enum TitleAlign
+    {
+        [EnumMember(Value = "center")]
+        Center,
+
+        [EnumMember(Value = "start")]
+        Start,
+
+        [EnumMember(Value = "end")]
+        End
+    }
+
+    /// <summary>
+    /// Alignment of Legent
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum LegendAlign
     {
         [EnumMember(Value = "center")]
         Center,
@@ -218,7 +234,7 @@ namespace RazorKit
     /// <summary>
     /// Weight
     /// </summary>
-    public enum Weight
+    public enum FontWeight
     {
         Normal,
 
@@ -254,7 +270,7 @@ namespace RazorKit
     /// <summary>
     /// Mode
     /// </summary>
-    public enum Mode
+    public enum InteractionMode
     {
         Point,
         Nearest,
@@ -267,7 +283,7 @@ namespace RazorKit
     /// <summary>
     /// Position
     /// </summary>
-    public enum Position
+    public enum TooltipPosition
     {
         Average,
         Nearest

@@ -6,7 +6,7 @@ namespace RazorKit.ChartJs.Models
     class Animation
     {
         public int? Duration { get; set; }
-        public Easing? Easing { get; set; }
+        public AnimationEasing? Easing { get; set; }
         public int? Delay { get; set; }
         public bool? Loop { get; set; }
 

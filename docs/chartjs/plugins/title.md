@@ -19,7 +19,7 @@ icon: material/format-title
 ## Align
 Alignment of the title. default ```'center'```
 ```csharp
-.Align(Align.Center)
+.Align(TitleAlign.Center)
 ```
 
 ## Color

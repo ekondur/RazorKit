@@ -19,7 +19,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="mode"></param>
         /// <returns></returns>
-        public InteractionBuilder Mode(Mode mode)
+        public InteractionBuilder Mode(InteractionMode mode)
         {
             _interaction.Mode = mode;
             return this;

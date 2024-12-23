@@ -53,7 +53,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="weight"></param>
         /// <returns></returns>
-        public FontBuilder Weight(Weight weight)
+        public FontBuilder Weight(FontWeight weight)
         {
             _font.Weight = weight.ToString().ToLower();
             return this;

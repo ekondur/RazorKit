@@ -32,7 +32,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="align"></param>
         /// <returns></returns>
-        public ScaleTitleBuilder Align(Align align)
+        public ScaleTitleBuilder Align(TitleAlign align)
         {
             _scaleTitle.Align = align;
             return this;
