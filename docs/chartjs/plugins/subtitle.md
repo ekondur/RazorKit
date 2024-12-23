@@ -11,8 +11,7 @@ icon: material/menu-right
         .Subtitle(t => t
             .Text("Chart Title")
             .Color("green")
-            .Position(TitlePosition.Top)
-    )))
+            .Position(TitlePosition.Top))))
 ```
 
 ## Align

@@ -7,7 +7,7 @@ icon: material/menu-right
 	
 	Namespace: ```options.plugins.legend```
 
-=== "razor"
+=== "helper"
 	```csharp hl_lines="3" linenums="1"
 	.Options(o => o
 		.Plugins(p => p
@@ -17,7 +17,7 @@ icon: material/menu-right
 					.Color("rgb(255, 99, 132)")))))
 	```
 
-=== "js"
+=== "js output"
 	The script is produced:
 	```js linenums="1"
 	"options": {
