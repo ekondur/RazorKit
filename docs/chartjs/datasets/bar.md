@@ -6,23 +6,69 @@ icon: material/chart-bar
 	A bar chart provides a way of showing data values represented as vertical bars. 
 	It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
 
-```csharp hl_lines="5" linenums="1"
-@(Html.Chart("canvasId")
-.Data(d => d
-    .Labels("January", "February", "March", "April", "May", "June", "July")
-    .Datasets(ds =>
-        ds.Bar()
-        .Label("Bar Chart")
-        .Data(65, 59, 80, 81, 56, 55, 40)
-        .BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
-        .BorderWidth(1)
-    ))
-.Options(o => o
-    .Scales(s => s.AxisId("y").BeginAtZero(true)))
-.Render())
-```
+=== "helper"
+	```csharp hl_lines="5" linenums="1"
+	@(Html.Chart("canvasId")
+	.Data(d => d
+		.Labels("January", "February", "March", "April", "May", "June", "July")
+		.Datasets(ds =>
+			ds.Bar()
+			.Label("Bar Chart")
+			.Data(65, 59, 80, 81, 56, 55, 40)
+			.BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
+			.BorderWidth(1)
+		))
+	.Options(o => o
+		.Scales(s => s.AxisId("y").BeginAtZero(true)))
+	.Render())
+	```
 
-## Base Dataset Options
+=== "js output"
+	```js linenums="1"
+	new Chart(document.getElementById('canvasId'),
+	{
+	  "data": {
+		"labels": [
+		  "January",
+		  "February",
+		  "March",
+		  "April",
+		  "May",
+		  "June",
+		  "July"
+		],
+		"datasets": [
+		  {
+			"borderWidth": 1,
+			"data": [
+			  65.0,
+			  59.0,
+			  80.0,
+			  81.0,
+			  56.0,
+			  55.0,
+			  40.0
+			],
+			"label": "Bar Chart",
+			"type": "bar",
+			"backgroundColor": [
+			  "rgba(255, 99, 132, 0.2)",
+			  "rgba(255, 159, 64, 0.2)"
+			]
+		  }
+		]
+	  },
+	  "options": {
+		"scales": {
+		  "y": {
+			"beginAtZero": true
+		  }
+		}
+	  }
+	});
+	```
+
+## Common Dataset Options
 These options are common to all datasets.
 
 ### BackgroundColor
@@ -104,6 +150,7 @@ Parsing with x and y axis keys.
 ```
 
 ## Bar Dataset Options
+Bar chart specific dataset options.
 
 ### BackgroundColors
 Set backgrounds colors.
@@ -189,14 +236,20 @@ Percent (0-1) of the available width each category should be within the sample w
 ### Data
 Sets the data for the Dataset.
 ```csharp
-.Data(default)
+.Data(1, 3, 5, 7)
+```
+```csharp
+.Data(1.0, 3.2, 5.0, 7.0)
+```
+```csharp
+.Data(IList<object> data)
 ```
 
 ### Grouped
 Should the bars be grouped on index axis. When true, all the datasets at same index value will be placed next to each other centering on that index value. 
 When false, each bar is placed on its actual index-axis value. Default ```true```
 ```csharp
-.Grouped(true)
+.Grouped(false)
 ```
 
 ### HoverBorderRadius
@@ -206,7 +259,7 @@ The bar border radius when hovered (in pixels). Default ```0```
 ```
 
 ### IndexAxis
-The base axis of the dataset. 'x' for vertical bars and 'y' for horizontal bars.
+The base axis of the dataset. ```'x'``` for vertical bars and ```'y'``` for horizontal bars.
 ```csharp
 .IndexAxis(IndexAxis.X)
 ```
@@ -219,13 +272,14 @@ Default ```0```
 ```
 
 ### PointStyle
-Is style of the point enabled?
+Is style of the point enabled?  Default ```'circle'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#types)
 ```csharp
 .PointStyle(true)
 ```
-See configuration of point style.
+Style of the point.
 ```csharp
-.PointStyle(default)
+.PointStyle(PointStyle.Cross)
 ```
 
 ### SkipNull
@@ -235,7 +289,7 @@ If true, null or undefined values will not be used for spacing calculations when
 ```
 
 ### Stack
-The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
+The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Default ```'bar'```
 ```csharp
 .Stack("bar")
 ```

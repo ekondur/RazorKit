@@ -62,6 +62,19 @@ Disable or enable paging, default is ```true```.
 .Paging(true)
 ```
 
+## Render
+The Render method finalizes the control configuration and outputs the necessary HTML and scripts for the control.
+```csharp
+.Render()
+```
+It is possible to separate script and HTML rendering.
+```csharp
+.RenderHtml()
+```
+```csharp
+.RenderScript()
+```
+
 ## ServerSide
 Enable server-side processing mode, default is ```false```. 
 [:octicons-link-external-16:](https://datatables.net/reference/option/serverSide)

@@ -7,21 +7,49 @@ icon: material/chart-bubble
 	The location of the bubble is determined by the first two dimensions and the corresponding horizontal and vertical axes.
 	The third dimension is represented by the size of the individual bubbles.
 
-```csharp hl_lines="8" linenums="1"
-@{
-    var data = new List<object> { new { x = 20, y = 30, r = 15 }, new { x = 40, y = 10, r = 10 } };
-}
+=== "helper"
+	```csharp hl_lines="8" linenums="1"
+	@{
+		var data = new List<object> { new { x = 20, y = 30, r = 15 }, new { x = 40, y = 10, r = 10 } };
+	}
 
-@(Html.Chart("canvasId")
-.Data(d => d
-    .Datasets(ds => ds
-        .Bubble()
-        .Label("Bubble Dataset")
-        .Data(data)))
-.Render())
-```
+	@(Html.Chart("canvasId")
+	.Data(d => d
+		.Datasets(ds => ds
+			.Bubble()
+			.Label("Bubble Dataset")
+			.Data(data)))
+	.Render())
+	```
 
-## Base Dataset Options
+=== "js output"
+	```js linenums="1"
+	new Chart(document.getElementById('canvasId'),
+    {
+	  "data": {
+		"datasets": [
+		  {
+			"data": [
+			  {
+				"x": 20,
+				"y": 30,
+				"r": 15
+			  },
+			  {
+				"x": 40,
+				"y": 10,
+				"r": 10
+			  }
+			],
+			"label": "Bubble Dataset",
+			"type": "bubble"
+		  }
+		]
+	  }
+	});
+	```
+
+## Common Dataset Options
 These options are common to all datasets.
 
 ### BackgroundColor
@@ -103,52 +131,52 @@ Parsing with x and y axis keys.
 ```
 
 ## Bubble Dataset Options
+Bubble chart specific dataset options.
 
 ### DrawActiveElementsOnTop
-Draw the active bubbles of a dataset over the other bubbles of the dataset. Default true
+Draw the active bubbles of a dataset over the other bubbles of the dataset. Default ```true```
 ```csharp
-.DrawActiveElementsOnTop(true)
+.DrawActiveElementsOnTop(false)
 ```
 
 ### HoverRadius
-bubble additional radius when hovered (in pixels). Default 4
+bubble additional radius when hovered (in pixels). Default ```4```
 ```csharp
-.HoverRadius(15)
+.HoverRadius(3)
 ```
 
 ### HitRadius
-bubble additional radius for hit detection (in pixels). Default 1
+bubble additional radius for hit detection (in pixels). Default ```1```
 ```csharp
-.HitRadius(15)
+.HitRadius(2)
 ```
 
 ### Order
-The drawing order of dataset. Also affects order for tooltip and legend. Default 0
+The drawing order of dataset. Also affects order for tooltip and legend. Default ```0```
 ```csharp
-.Order(15)
+.Order(1)
 ```
 
 ### PointStyle
-Set point style. Default 'circle'
-```csharp
-.PointStyle(default)
-```
-
-### PointStyle
-Is point style enabled?
+Is style of the point enabled?  Default ```'circle'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#types)
 ```csharp
 .PointStyle(true)
 ```
+Style of the point.
+```csharp
+.PointStyle(PointStyle.Cross)
+```
 
 ### Rotation
-bubble rotation (in degrees). Default 0
+bubble rotation (in degrees). Default ```0```
 ```csharp
-.Rotation(15)
+.Rotation(1)
 ```
 
 ### Radius
-bubble radius (in pixels). Default 3
+bubble radius (in pixels). Default ```3```
 ```csharp
-.Radius(15)
+.Radius(1)
 ```
 

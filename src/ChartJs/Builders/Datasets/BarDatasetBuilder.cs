@@ -274,7 +274,7 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// Style of the point.
+        /// Style of the point. Default 'circle'
         /// </summary>
         /// <param name="pointStyle"></param>
         /// <returns></returns>
@@ -297,6 +297,7 @@ namespace RazorKit.ChartJs.Builders
 
         /// <summary>
         /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
+        /// Default 'bar'
         /// </summary>
         /// <param name="stack"></param>
         /// <returns></returns>

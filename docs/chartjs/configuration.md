@@ -2,6 +2,16 @@
 icon: material/code-json
 ---
 
+## Chart
+The Chart method is typically invoked through the ```@Html``` helper in an MVC Razor view. It initializes the Chart control and allows you to configure its options, datasets, plugins, and other features using a fluent API.
+```csharp
+@(Html.Chart("canvasId"))
+```
+Chart method produces script and canvas. It is possible to render only script.
+```csharp
+@(Html.Chart("canvasId", useCanvas: false))
+```
+
 ## Labels
 Labels are used to define the categories or points along the ```x-axis``` or ```y-axis``` of a chart. 
 They help describe the data points visually, making the chart easier to interpret.
@@ -32,6 +42,12 @@ Each dataset corresponds to a specific series or group of data points, and its a
     ds.Bar().Label("Bar Dataset").Data(10, 20, 30, 40);
     ds.Line().Label("Line Dataset").Data(50, 40, 45, 50);
 })
+```
+
+## Render
+The Render method finalizes the control configuration and outputs the necessary HTML and scripts for the control.
+```csharp
+.Render()
 ```
 
 ## Responsive Charts
