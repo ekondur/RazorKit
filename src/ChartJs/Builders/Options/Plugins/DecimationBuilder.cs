@@ -26,7 +26,7 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// 
+        /// Decimation algorithm to use.
         /// </summary>
         /// <param name="algorithm"></param>
         /// <returns></returns>

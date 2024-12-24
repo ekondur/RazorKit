@@ -15,7 +15,6 @@ icon: material/menu-right
 	```
 
 === "js output"
-	The script is produced:
 	```js linenums="1"
 	"options": {
 		"plugins": {
