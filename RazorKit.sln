@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorKit.DataTables.Test", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorKit.ChartJs.Test", "test\ChartJs\RazorKit.ChartJs.Test.csproj", "{3D0DCDB5-761F-47E3-8278-392A4B1814E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorKit.SweetAlert2", "src\SweetAlert2\RazorKit.SweetAlert2.csproj", "{EC97587E-8FE0-4EAA-8872-872E143D7CB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{3D0DCDB5-761F-47E3-8278-392A4B1814E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0DCDB5-761F-47E3-8278-392A4B1814E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0DCDB5-761F-47E3-8278-392A4B1814E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC97587E-8FE0-4EAA-8872-872E143D7CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC97587E-8FE0-4EAA-8872-872E143D7CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC97587E-8FE0-4EAA-8872-872E143D7CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC97587E-8FE0-4EAA-8872-872E143D7CB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{34D24E10-8EB7-4B8C-90C4-4002DA486B92} = {5FB5AE90-2C41-4D21-8529-BFED2F90E3A2}
 		{5FF309CA-1C10-4040-A0A1-C2214F848541} = {3CC9869D-3AC1-480D-9EB6-E45B27B32F5B}
 		{3D0DCDB5-761F-47E3-8278-392A4B1814E4} = {3CC9869D-3AC1-480D-9EB6-E45B27B32F5B}
+		{EC97587E-8FE0-4EAA-8872-872E143D7CB3} = {5FB5AE90-2C41-4D21-8529-BFED2F90E3A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED16D522-8B24-4E3F-820A-5D1FBAE99C81}
