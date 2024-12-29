@@ -2218,6 +2218,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -2275,6 +2283,98 @@
   
   <span class="md-ellipsis">
     Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sweetalert2/general/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    General Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sweetalert2/button/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Button Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sweetalert2/functions/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sweetalert2/custom-class/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Custom Class
   </span>
   
 
@@ -2482,14 +2582,14 @@
 
   <h1>Configuration</h1>
 
-<h2 id="chart">Chart</h2>
+<h2 id="chart">Chart<a class="headerlink" href="#chart" title="Permanent link">&para;</a></h2>
 <p>The Chart method is typically invoked through the <code>@Html</code> helper in an MVC Razor view. It initializes the Chart control and allows you to configure its options, datasets, plugins, and other features using a fluent API.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">@</span><span class="p">(</span><span class="n">Html</span><span class="p">.</span><span class="n">Chart</span><span class="p">(</span><span class="s">&quot;canvasId&quot;</span><span class="p">))</span>
 </span></code></pre></div>
 Chart method produces script and canvas. It is possible to render only script.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">@</span><span class="p">(</span><span class="n">Html</span><span class="p">.</span><span class="n">Chart</span><span class="p">(</span><span class="s">&quot;canvasId&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">useCanvas</span><span class="p">:</span><span class="w"> </span><span class="k">false</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h2 id="labels">Labels</h2>
+<h2 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h2>
 <p>Labels are used to define the categories or points along the <code>x-axis</code> or <code>y-axis</code> of a chart. 
 They help describe the data points visually, making the chart easier to interpret.
 <div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -2506,7 +2606,7 @@ They help describe the data points visually, making the chart easier to interpre
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="p">))</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="p">.</span><span class="n">Render</span><span class="p">())</span>
 </span></code></pre></div></td></tr></table></div></p>
-<h2 id="datasets">Datasets</h2>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
 <p>A dataset represents a group of related data that is displayed in a chart.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Datasets</span><span class="p">(</span><span class="n">ds</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">ds</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Line</span><span class="p">()</span>
@@ -2522,58 +2622,58 @@ Each dataset corresponds to a specific series or group of data points, and its a
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">ds</span><span class="p">.</span><span class="n">Line</span><span class="p">().</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;Line Dataset&quot;</span><span class="p">).</span><span class="n">Data</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">);</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">})</span>
 </span></code></pre></div></p>
-<h2 id="render">Render</h2>
+<h2 id="render">Render<a class="headerlink" href="#render" title="Permanent link">&para;</a></h2>
 <p>The Render method finalizes the control configuration and outputs the necessary HTML and scripts for the control.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Render</span><span class="p">()</span>
 </span></code></pre></div></p>
-<h2 id="responsive-charts">Responsive Charts</h2>
+<h2 id="responsive-charts">Responsive Charts<a class="headerlink" href="#responsive-charts" title="Permanent link">&para;</a></h2>
 <p>When it comes to changing the chart size based on the window size, a major limitation is that the canvas render size (<code>canvas.width</code> and <code>.height</code>)
 can not be expressed with relative values, contrary to the display size (<code>canvas.style.width</code> and <code>.height</code>). 
 Furthermore, these sizes are independent of each other and thus the canvas render size does not adjust automatically based on the display size, making the rendering inaccurate.
 <a href="https://www.chartjs.org/docs/latest/configuration/responsive.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
-<h3 id="responsive">Responsive</h3>
+<h3 id="responsive">Responsive<a class="headerlink" href="#responsive" title="Permanent link">&para;</a></h3>
 <p>Resizes the chart canvas when its container does. Default <code>true</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Responsive</span><span class="p">(</span><span class="k">false</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="maintainaspectratio">MaintainAspectRatio</h3>
+<h3 id="maintainaspectratio">MaintainAspectRatio<a class="headerlink" href="#maintainaspectratio" title="Permanent link">&para;</a></h3>
 <p>Maintain the original canvas aspect ratio (<code>width / height</code>) when resizing. Default <code>true</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">MaintainAspectRatio</span><span class="p">(</span><span class="k">false</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="aspectratio">AspectRatio</h3>
+<h3 id="aspectratio">AspectRatio<a class="headerlink" href="#aspectratio" title="Permanent link">&para;</a></h3>
 <p>Canvas aspect ratio (i.e. width / height, a value of 1 representing a square canvas).
 Note that this option is ignored if the height is explicitly defined either as attribute or via the style.
 The default value varies by chart type; Radial charts (<code>doughnut, pie, polarArea, radar</code>) default to <code>1</code> and others default to <code>2</code>.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">AspectRatio</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="onresize">OnResize</h3>
+<h3 id="onresize">OnResize<a class="headerlink" href="#onresize" title="Permanent link">&para;</a></h3>
 <p>Called when a resize occurs. Gets passed two arguments: the chart instance and the new size.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OnResize</span><span class="p">(</span><span class="s">&quot;onResize&quot;</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="resizedelay">ResizeDelay</h3>
+<h3 id="resizedelay">ResizeDelay<a class="headerlink" href="#resizedelay" title="Permanent link">&para;</a></h3>
 <p>Delay the resize update by the given amount of milliseconds.
 This can ease the resize process by debouncing the update of the elements. Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">ResizeDelay</span><span class="p">(</span><span class="m">100</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h2 id="events">Events</h2>
+<h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
 <p>The events option defines the browser events that the chart should listen to for. Each of these events trigger hover and are passed to plugins.
 <a href="https://www.chartjs.org/docs/latest/configuration/interactions.html#events"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Events</span><span class="p">(</span><span class="n">ChartEvent</span><span class="p">.</span><span class="n">Mousemove</span><span class="p">,</span><span class="w"> </span><span class="n">ChartEvent</span><span class="p">.</span><span class="n">Touchstart</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="onhover">OnHover</h3>
+<h3 id="onhover">OnHover<a class="headerlink" href="#onhover" title="Permanent link">&para;</a></h3>
 <p>Called when any of the events fire over chartArea. Passed the event, an array of active elements (bars, points, etc), and the chart.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OnHover</span><span class="p">(</span><span class="s">&quot;onHover&quot;</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="onclick">OnClick</h3>
+<h3 id="onclick">OnClick<a class="headerlink" href="#onclick" title="Permanent link">&para;</a></h3>
 <p>Called if the event is of type 'mouseup', 'click' or 'contextmenu' over chartArea. Passed the event, an array of active elements, and the chart.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OnClick</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h2 id="locale">Locale</h2>
+<h2 id="locale">Locale<a class="headerlink" href="#locale" title="Permanent link">&para;</a></h2>
 <p>For applications where the numbers of ticks on scales must be formatted accordingly with a language sensitive number formatting,
 you can enable this kind of formatting by setting the locale option.
 <a href="https://www.chartjs.org/docs/latest/configuration/locale.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Locale</span><span class="p">(</span><span class="s">&quot;en-US&quot;</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h2 id="parsing">Parsing</h2>
+<h2 id="parsing">Parsing<a class="headerlink" href="#parsing" title="Permanent link">&para;</a></h2>
 <p>How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. 
 If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.
 <a href="https://www.chartjs.org/docs/latest/api/interfaces/ParsingOptions.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>

@@ -2364,6 +2364,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -2421,6 +2429,98 @@
   
   <span class="md-ellipsis">
     Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sweetalert2/general/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    General Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sweetalert2/button/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Button Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sweetalert2/functions/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sweetalert2/custom-class/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5z"/></svg>
+  
+  <span class="md-ellipsis">
+    Custom Class
   </span>
   
 
@@ -2893,21 +2993,21 @@ It is sometimes used to show trend data, and the comparison of multiple data set
 </div>
 </div>
 </div>
-<h2 id="common-dataset-options">Common Dataset Options</h2>
+<h2 id="common-dataset-options">Common Dataset Options<a class="headerlink" href="#common-dataset-options" title="Permanent link">&para;</a></h2>
 <p>These options are common to all datasets.</p>
-<h3 id="backgroundcolor">BackgroundColor</h3>
+<h3 id="backgroundcolor">BackgroundColor<a class="headerlink" href="#backgroundcolor" title="Permanent link">&para;</a></h3>
 <p>The line fill color.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">BackgroundColor</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="bordercolor">BorderColor</h3>
+<h3 id="bordercolor">BorderColor<a class="headerlink" href="#bordercolor" title="Permanent link">&para;</a></h3>
 <p>The line color.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">BorderColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="borderwidth">BorderWidth</h3>
+<h3 id="borderwidth">BorderWidth<a class="headerlink" href="#borderwidth" title="Permanent link">&para;</a></h3>
 <p>The line width (in pixels).
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="clip">Clip</h3>
+<h3 id="clip">Clip<a class="headerlink" href="#clip" title="Permanent link">&para;</a></h3>
 <p>How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
 0 = clip at chartArea.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
@@ -2918,27 +3018,27 @@ Is clip enabled?
 Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">Left</span><span class="p">(</span><span class="m">5</span><span class="p">).</span><span class="n">Top</span><span class="p">(</span><span class="k">false</span><span class="p">).</span><span class="n">Right</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="p">).</span><span class="n">Bottom</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="hidden">Hidden</h3>
+<h3 id="hidden">Hidden<a class="headerlink" href="#hidden" title="Permanent link">&para;</a></h3>
 <p>Configure the visibility of the dataset. Using hidden: true will hide the dataset from being rendered in the Chart.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Hidden</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="hoverbackgroundcolor">HoverBackgroundColor</h3>
+<h3 id="hoverbackgroundcolor">HoverBackgroundColor<a class="headerlink" href="#hoverbackgroundcolor" title="Permanent link">&para;</a></h3>
 <p>Background color when hovered.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">HoverBackgroundColor</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="hoverbordercolor">HoverBorderColor</h3>
+<h3 id="hoverbordercolor">HoverBorderColor<a class="headerlink" href="#hoverbordercolor" title="Permanent link">&para;</a></h3>
 <p>Border color when hovered.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">HoverBorderColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="hoverborderwidth">HoverBorderWidth</h3>
+<h3 id="hoverborderwidth">HoverBorderWidth<a class="headerlink" href="#hoverborderwidth" title="Permanent link">&para;</a></h3>
 <p>The line width (in pixels) when hovered.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">HoverBorderWidth</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="label">Label</h3>
+<h3 id="label">Label<a class="headerlink" href="#label" title="Permanent link">&para;</a></h3>
 <p>The label for the dataset which appears in the legend and tooltips.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;First Bar Dataset&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="parsing">Parsing</h3>
+<h3 id="parsing">Parsing<a class="headerlink" href="#parsing" title="Permanent link">&para;</a></h3>
 <p>How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. 
 If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
@@ -2949,27 +3049,27 @@ Parsing with key.
 Parsing with x and y axis keys.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="s">&quot;xKey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yKey&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h2 id="bar-dataset-options">Bar Dataset Options</h2>
+<h2 id="bar-dataset-options">Bar Dataset Options<a class="headerlink" href="#bar-dataset-options" title="Permanent link">&para;</a></h2>
 <p>Bar chart specific dataset options.</p>
-<h3 id="backgroundcolors">BackgroundColors</h3>
+<h3 id="backgroundcolors">BackgroundColors<a class="headerlink" href="#backgroundcolors" title="Permanent link">&para;</a></h3>
 <p>Set backgrounds colors.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;rgba(255, 99, 132, 0.2)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba(255, 159, 64, 0.2)&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="bordercolors">BorderColors</h3>
+<h3 id="bordercolors">BorderColors<a class="headerlink" href="#bordercolors" title="Permanent link">&para;</a></h3>
 <p>Set border colors.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">BorderColors</span><span class="p">(</span><span class="s">&quot;yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="base">Base</h3>
+<h3 id="base">Base<a class="headerlink" href="#base" title="Permanent link">&para;</a></h3>
 <p>Base value for the bar in data units along the value axis. If not set, defaults to the value axis base value.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">.</span><span class="n">Base</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="barpercentage">BarPercentage</h3>
+<h3 id="barpercentage">BarPercentage<a class="headerlink" href="#barpercentage" title="Permanent link">&para;</a></h3>
 <p>Percent (0-1) of the available width each bar should be within the category width.
 <code>1.0</code> will take the whole category width and put the bars right next to each other.
 Default <code>0.9</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">BarPercentage</span><span class="p">(</span><span class="m">0.4</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="barthickness">BarThickness</h3>
+<h3 id="barthickness">BarThickness<a class="headerlink" href="#barthickness" title="Permanent link">&para;</a></h3>
 <p>If this value is a number, it is applied to the width of each bar, in pixels. 
 When this is enforced, barPercentage and categoryPercentage are ignored.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">BarThickness</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
@@ -2980,7 +3080,7 @@ There is no gap when the percentage options are <code>1</code>.
 This mode generates bars with different widths when data are not evenly spaced.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">BarThickness</span><span class="p">(</span><span class="s">&quot;flex&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="borderskipped">BorderSkipped</h3>
+<h3 id="borderskipped">BorderSkipped<a class="headerlink" href="#borderskipped" title="Permanent link">&para;</a></h3>
 <p>This setting is used to avoid drawing the bar stroke at the base of the fill, or disable the border radius. 
 In general, this does not need to be changed except when creating chart types that derive from a bar chart.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">BorderSkipped</span><span class="p">(</span><span class="n">Skipped</span><span class="p">.</span><span class="n">Start</span><span class="p">)</span>
@@ -2988,7 +3088,7 @@ In general, this does not need to be changed except when creating chart types th
 Skip all borders (<code>true</code>), or don't skip any borders (<code>false</code>).
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">BorderSkipped</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="borderwidth_1">BorderWidth</h3>
+<h3 id="borderwidth_1">BorderWidth<a class="headerlink" href="#borderwidth_1" title="Permanent link">&para;</a></h3>
 <p>If this value is a number, it is applied to all sides of the rectangle (<code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>), except <code>borderSkipped</code>.
 Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
@@ -2997,7 +3097,7 @@ If this value is an object, the left property defines the left border width.
 Similarly, the right, top, and bottom properties can also be specified. Omitted borders and <code>borderSkipped</code> are skipped.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="n">bw</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">bw</span><span class="p">.</span><span class="n">Top</span><span class="p">(</span><span class="m">3</span><span class="p">).</span><span class="n">Left</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">Right</span><span class="p">(</span><span class="m">3</span><span class="p">).</span><span class="n">Bottom</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="borderradius">BorderRadius</h3>
+<h3 id="borderradius">BorderRadius<a class="headerlink" href="#borderradius" title="Permanent link">&para;</a></h3>
 <p>If this value is a number, it is applied to all corners of the rectangle (<code>topLeft</code>, <code>topRight</code>, <code>bottomLeft</code>, <code>bottomRight</code>),
 except corners touching the <code>borderSkipped</code>. Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
@@ -3006,11 +3106,11 @@ If this value is an object, the topLeft property defines the top-left corners bo
 Similarly, the <code>topRight</code>, <code>bottomLeft</code>, and <code>bottomRight</code>.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="n">br</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="n">TopLeft</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">TopRight</span><span class="p">(</span><span class="m">3</span><span class="p">).</span><span class="n">BottomLeft</span><span class="p">(</span><span class="m">2</span><span class="p">).</span><span class="n">BottomRight</span><span class="p">(</span><span class="m">3</span><span class="p">))</span>
 </span></code></pre></div></p>
-<h3 id="categorypercentage">CategoryPercentage</h3>
+<h3 id="categorypercentage">CategoryPercentage<a class="headerlink" href="#categorypercentage" title="Permanent link">&para;</a></h3>
 <p>Percent (0-1) of the available width each category should be within the sample width.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">.</span><span class="n">CategoryPercentage</span><span class="p">(</span><span class="m">0.3</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="data">Data</h3>
+<h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
 <p>Sets the data for the Dataset.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
 </span></code></pre></div>
@@ -3018,25 +3118,25 @@ Similarly, the <code>topRight</code>, <code>bottomLeft</code>, and <code>bottomR
 </span></code></pre></div>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="n">IList</span><span class="o">&lt;</span><span class="kt">object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="grouped">Grouped</h3>
+<h3 id="grouped">Grouped<a class="headerlink" href="#grouped" title="Permanent link">&para;</a></h3>
 <p>Should the bars be grouped on index axis. When true, all the datasets at same index value will be placed next to each other centering on that index value. 
 When false, each bar is placed on its actual index-axis value. Default <code>true</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="p">.</span><span class="n">Grouped</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="hoverborderradius">HoverBorderRadius</h3>
+<h3 id="hoverborderradius">HoverBorderRadius<a class="headerlink" href="#hoverborderradius" title="Permanent link">&para;</a></h3>
 <p>The bar border radius when hovered (in pixels). Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">.</span><span class="n">HoverBorderRadius</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="indexaxis">IndexAxis</h3>
+<h3 id="indexaxis">IndexAxis<a class="headerlink" href="#indexaxis" title="Permanent link">&para;</a></h3>
 <p>The base axis of the dataset. <code>'x'</code> for vertical bars and <code>'y'</code> for horizontal bars.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="p">.</span><span class="n">IndexAxis</span><span class="p">(</span><span class="n">IndexAxis</span><span class="p">.</span><span class="n">X</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="order">Order</h3>
+<h3 id="order">Order<a class="headerlink" href="#order" title="Permanent link">&para;</a></h3>
 <p>The drawing order of dataset. Also affects order for stacking, tooltip and legend.
 Default <code>0</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="p">.</span><span class="n">Order</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="pointstyle">PointStyle</h3>
+<h3 id="pointstyle">PointStyle<a class="headerlink" href="#pointstyle" title="Permanent link">&para;</a></h3>
 <p>Is style of the point enabled?  Default <code>'circle'</code>
 <a href="https://www.chartjs.org/docs/latest/configuration/elements.html#types"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="p">.</span><span class="n">PointStyle</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
@@ -3044,19 +3144,19 @@ Default <code>0</code>
 Style of the point.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="p">.</span><span class="n">PointStyle</span><span class="p">(</span><span class="n">PointStyle</span><span class="p">.</span><span class="n">Cross</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="skipnull">SkipNull</h3>
+<h3 id="skipnull">SkipNull<a class="headerlink" href="#skipnull" title="Permanent link">&para;</a></h3>
 <p>If true, null or undefined values will not be used for spacing calculations when determining bar size.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="p">.</span><span class="n">SkipNull</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="stack">Stack</h3>
+<h3 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link">&para;</a></h3>
 <p>The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Default <code>'bar'</code>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="p">.</span><span class="n">Stack</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="xaxisid">XAxisID</h3>
+<h3 id="xaxisid">XAxisID<a class="headerlink" href="#xaxisid" title="Permanent link">&para;</a></h3>
 <p>The ID of the x-axis to plot this dataset on.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="p">.</span><span class="n">XAxisID</span><span class="p">(</span><span class="s">&quot;xAxis&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<h3 id="yaxisid">YAxisID</h3>
+<h3 id="yaxisid">YAxisID<a class="headerlink" href="#yaxisid" title="Permanent link">&para;</a></h3>
 <p>The ID of the y-axis to plot this dataset on.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="p">.</span><span class="n">YAxisID</span><span class="p">(</span><span class="s">&quot;yAxis&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
