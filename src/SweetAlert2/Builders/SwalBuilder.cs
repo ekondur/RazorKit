@@ -51,7 +51,7 @@ namespace RazorKit.SweetAlert2.Builders
         }
 
         /// <summary>
-        /// The title of the popup, as text. Useful to avoid HTML injection.
+        /// A description for the popup. If text and html parameters are provided in the same time,html will be used.
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
@@ -155,8 +155,20 @@ namespace RazorKit.SweetAlert2.Builders
         }
 
         /// <summary>
+        /// Whether or not SweetAlert2 should show a full screen click-to-dismiss backdrop. 
+        /// Can be either a boolean or a string which will be assigned to the CSS background property.
+        /// </summary>
+        /// <param name="backdrop"></param>
+        /// <returns></returns>
+        public SwalBuilder Backdrop(string backdrop)
+        {
+            Swal.Backdrop = backdrop;
+            return this;
+        }
+
+        /// <summary>
         /// Whether or not an alert should be treated as a toast notification. 
-        /// This option is normally coupled with theposition parameter and a timer. Toasts are NEVER autofocused.
+        /// This option is normally coupled with the position parameter and a timer. Toasts are NEVER autofocused.
         /// </summary>
         /// <param name="toast"></param>
         /// <returns></returns>
@@ -182,7 +194,7 @@ namespace RazorKit.SweetAlert2.Builders
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public SwalBuilder Input(string input)
+        public SwalBuilder Input(SwalInput input)
         {
             Swal.Input = input;
             return this;
@@ -705,7 +717,7 @@ namespace RazorKit.SweetAlert2.Builders
         /// Input field initial value.
         /// If the input type is select, inputValue will represent the selected option tag.
         /// If the input type is checkbox, inputValue will represent the checked state.
-        /// If the input type is email, number, tel,text, email, number, telor textarea, a Promise can be accepted as inputValue.
+        /// If the input type is email, number, tel, text, email, number, tel or textarea, a Promise can be accepted as inputValue.
         /// </summary>
         /// <param name="inputValue"></param>
         /// <returns></returns>
@@ -832,7 +844,7 @@ namespace RazorKit.SweetAlert2.Builders
         /// Popup lifecycle hook. Synchronously runs after the popup DOM has been updated (i.e. just before the popup is repainted on the screen). 
         /// didRender is called before willOpen.  Provides popup DOM element as the argument.
         /// Typically, this will happen after Swal.fire() or Swal.update().
-        /// If you want to perform changes in the popup's DOM, that survive Swal.update(), preferdidRender over willOpen.
+        /// If you want to perform changes in the popup's DOM, that survive Swal.update(), prefer didRender over willOpen.
         /// In previous versions, this hook was named onRender.
         /// </summary>
         /// <param name="didRender"></param>
@@ -893,7 +905,7 @@ namespace RazorKit.SweetAlert2.Builders
 
         /// <summary>
         /// Popup lifecycle hook. Synchronously runs after popup has been destroyed either by user interaction or by another popup.
-        /// If you have cleanup operations that you need to reliably execute each time a popup is closed, preferdidDestroy over didClose.
+        /// If you have cleanup operations that you need to reliably execute each time a popup is closed, prefer didDestroy over didClose.
         /// In previous versions, this hook was named onDestroy.
         /// </summary>
         /// <param name="didDestroy"></param>

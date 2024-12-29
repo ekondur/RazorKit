@@ -17,10 +17,10 @@ namespace RazorKit.SweetAlert2.Models
         public SwalClass ShowClass { get; set; }
         public SwalClass HideClass { get; set; }
         public string Footer { get; set; }
-        public bool? Backdrop { get; set; }
+        public object Backdrop { get; set; }
         public bool? Toast { get; set; }
         public string Target { get; set; }
-        public string Input { get; set; }
+        public SwalInput Input { get; set; }
         public string Width { get; set; }
         public string Padding { get; set; }
         public string Color { get; set; }
