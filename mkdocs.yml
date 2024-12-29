@@ -38,6 +38,8 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - toc:
+        permalink: true
 extra:
   analytics:
     provider: google
@@ -105,3 +107,8 @@ nav:
         - Font: chartjs/font.md
   - SweetAlert2: 
     - SweetAlert2: sweetalert2/index.md
+    - Configuration: sweetalert2/configuration.md
+    - General Options: sweetalert2/general.md
+    - Button Options: sweetalert2/button.md
+    - Functions: sweetalert2/functions.md
+    - Custom Class: sweetalert2/custom-class.md
