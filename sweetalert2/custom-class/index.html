@@ -2595,59 +2595,113 @@
 
   <h1>Custom Class</h1>
 
+<div class="admonition info">
+<p class="admonition-title">Reference <a href="https://sweetalert2.github.io/#customClass"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>In SweetAlert2, customClass is a property that allows you to assign custom CSS classes to various elements of the popup. 
+This is particularly useful for customizing the appearance of a SweetAlert2 popup without directly modifying the default styles or themes.</p>
+</div>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">my-popup-class</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f0f0f0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">.</span><span class="nc">my-title-class</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0000</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">.</span><span class="nc">my-confirm-button-class</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">helper</label><label for="__tabbed_1_2">js output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">CustomClass</span><span class="p">(</span><span class="n">cs</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cs</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Title</span><span class="p">(</span><span class="s">&quot;my-title-class&quot;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">.</span><span class="n">Popup</span><span class="p">(</span><span class="s">&quot;my-icon-class&quot;</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">.</span><span class="n">ConfirmButton</span><span class="p">(</span><span class="s">&quot;my-confirm-button-class&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">cus</span><span class="kc">t</span><span class="err">omClass</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="err">co</span><span class="kc">nta</span><span class="err">i</span><span class="kc">ner</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="err">popup</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="err">header</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="err">closeBu</span><span class="kc">tt</span><span class="err">o</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="err">ico</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="err">image</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="err">h</span><span class="kc">t</span><span class="err">mlCo</span><span class="kc">nta</span><span class="err">i</span><span class="kc">ner</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="err">i</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="err">i</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span><span class="err">Label</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="err">valida</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">Message</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="err">ac</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="err">co</span><span class="kc">nf</span><span class="err">irmBu</span><span class="kc">tt</span><span class="err">o</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="err">de</span><span class="kc">n</span><span class="err">yBu</span><span class="kc">tt</span><span class="err">o</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="err">ca</span><span class="kc">n</span><span class="err">celBu</span><span class="kc">tt</span><span class="err">o</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="err">loader</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;...&#39;</span><span class="p">,</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="kc">f</span><span class="err">oo</span><span class="kc">ter</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;....&#39;</span><span class="p">,</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">  </span><span class="kc">t</span><span class="err">imerProgressBar</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;....&#39;</span><span class="p">,</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Container</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Container</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="popup">Popup<a class="headerlink" href="#popup" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Popup</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">Popup</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Header</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Header</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="title">Title<a class="headerlink" href="#title" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Title</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">Title</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="closebutton">CloseButton<a class="headerlink" href="#closebutton" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">CloseButton</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">CloseButton</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="icon">Icon<a class="headerlink" href="#icon" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Icon</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Icon</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">Image</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">Image</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="htmlcontainer">HtmlContainer<a class="headerlink" href="#htmlcontainer" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">HtmlContainer</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">HtmlContainer</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="inputlabel">InputLabel<a class="headerlink" href="#inputlabel" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">InputLabel</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">InputLabel</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="validationmessage">ValidationMessage<a class="headerlink" href="#validationmessage" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">ValidationMessage</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">ValidationMessage</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">Actions</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">Actions</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="confirmbutton">ConfirmButton<a class="headerlink" href="#confirmbutton" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">ConfirmButton</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="n">ConfirmButton</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="denybutton">DenyButton<a class="headerlink" href="#denybutton" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">DenyButton</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">DenyButton</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="cancelbutton">CancelButton<a class="headerlink" href="#cancelbutton" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">CancelButton</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">CancelButton</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="loader">Loader<a class="headerlink" href="#loader" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="n">Loader</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">.</span><span class="n">Loader</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="footer">Footer<a class="headerlink" href="#footer" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">Footer</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">Footer</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="timerprogressbar">TimerProgressBar<a class="headerlink" href="#timerprogressbar" title="Permanent link">&para;</a></h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">TimerProgressBar</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">TimerProgressBar</span><span class="p">(</span><span class="s">&quot;my-class&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 
 
