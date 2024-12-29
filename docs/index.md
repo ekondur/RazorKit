@@ -24,3 +24,16 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
     [:octicons-arrow-right-24: Getting started](chartjs/index.md)
 
 </div>
+
+<div class="grid cards" markdown>
+
+-   :material-disc-alert:{ .lg .middle } __SweetAlert2__
+
+    ---
+
+    ```RazorKit.SweetAlert2``` is a lightweight and intuitive library that allows developers to create and configure beautiful SweetAlert2
+	alerts directly in Razor views using a fluent builder style. Simplify the process of creating highly customizable and interactive alerts in your ASP.NET MVC projects!
+
+    [:octicons-arrow-right-24: Getting started](sweetalert2/index.md)
+
+</div>

@@ -14,7 +14,7 @@ Install the NuGet package:
 ```bash
 dotnet add package RazorKit.ChartJs
 ```
-or
+Or via the NuGet Package Manager:
 ```bash
 PM> Install-Package RazorKit.ChartJs
 ```
@@ -24,6 +24,8 @@ Add needed script and style links to layout: [Reference:](https://www.chartjs.or
 ```html
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 ```
+
+## Usage
 It is easy to implement with html helper:
 
 ```cs title="cshtml" linenums="1"

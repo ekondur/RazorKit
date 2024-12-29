@@ -103,3 +103,5 @@ nav:
         - Interaction: chartjs/interaction.md
         - Padding: chartjs/padding.md
         - Font: chartjs/font.md
+  - SweetAlert2: 
+    - SweetAlert2: sweetalert2/index.md

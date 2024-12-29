@@ -16,7 +16,7 @@ Install the NuGet package:
 ```bash
 dotnet add package RazorKit.DataTables
 ```
-or
+Or via the NuGet Package Manager:
 ```bash
 PM> Install-Package RazorKit.DataTables
 ```
@@ -27,6 +27,8 @@ Add needed script and style links to layout: [Configuration:](https://datatables
 <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css" />
 <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
 ```
+
+## Usage
 It is easy to implement with html helper:
 
 ```cs title="cshtml" linenums="1"
