@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DataTables\RazorKit.DataTables.csproj" />
+    <ProjectReference Include="..\..\src\SweetAlert2\RazorKit.SweetAlert2.csproj" />
   </ItemGroup>
 
 </Project>

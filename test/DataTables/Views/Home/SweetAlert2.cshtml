@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<button id="alertButton">Show Alert</button>
+
+@using RazorKit
+@{
+    var alert = 
+    Html.Swal()             
+    .Title("Good job!")
+    .Text("You clicked the button!")
+    .Icon(SwalIcon.Question)
+    .IconColor("red")
+    .ShowClass(sc => sc
+        .Popup("swal2-show")
+        .Backdrop("swal2-backdrop-show")
+        .Icon("swal2-icon-show"))
+     .Footer("footer of the alert")
+     .InputAttributes(ia => ia
+         .Add("maxlength", "10")
+         .Add("autocapitalize", "off")
+         .Add("autocorrect", "off"));
+}
+
+<script>
+document.getElementById('alertButton').addEventListener('click', function () {
+        Swal.fire(@alert.Render())
+        .then((result) => {
+          if (result.isConfirmed) {
+            console.log("confirmed")
+          } else if (result.isDenied) {
+            
+          }
+        })      
+    });
+</script>

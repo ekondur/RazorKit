@@ -16,6 +16,11 @@ namespace RazorKit.DataTables.Test.Controllers
         public IActionResult Index()
         {
             return View();
+        }        
+        
+        public IActionResult SweetAlert2()
+        {
+            return View();
         }
 
         [HttpPost]
