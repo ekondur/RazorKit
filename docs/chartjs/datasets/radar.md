@@ -25,7 +25,7 @@ icon: material/chart-line-stacked
 .Render())
 ```
 
-## Base Dataset Options
+## Common Dataset Options
 These options are common to all datasets.
 
 ### BackgroundColor
@@ -272,6 +272,5 @@ Bezier curve tension of the line. Set to ```0``` to draw straightlines. This opt
 ### Data
 Sets the data for the Radar Dataset.
 ```csharp
-.Data(default)
+.Data(1.0, 3.2, 5.0, 7.0)
 ```
-

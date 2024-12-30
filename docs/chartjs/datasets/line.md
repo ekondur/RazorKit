@@ -19,7 +19,7 @@ icon: material/chart-line
 .Render())
 ```
 
-## Base Dataset Options
+## Common Dataset Options
 These options are common to all datasets.
 
 ### BackgroundColor
@@ -264,56 +264,81 @@ Bezier curve tension of the line. Set to ```0``` to draw straightlines. This opt
 ## Line Dataset Options
 
 ### CubicInterpolationMode
-The following interpolation modes are supported, 'default' and 'monotone'.
+The following interpolation modes are supported, ```'default'``` and ```'monotone'```.
 ```csharp
-.CubicInterpolationMode("example")
+.CubicInterpolationMode(InterpolationMode.Monotone)
+```
+
+### Data
+Sets the data for the Dataset.
+```csharp
+.Data(1, 3, 5, 7)
+```
+```csharp
+.Data(1.0, 3.2, 5.0, 7.0)
+```
+```csharp
+.Data(IList<object> data)
 ```
 
 ### DrawActiveElementsOnTop
-Draw the active points of a dataset over the other points of the dataset.
+Draw the active points of a dataset over the other points of the dataset. Default ```true```
 ```csharp
-.DrawActiveElementsOnTop(true)
+.DrawActiveElementsOnTop(false)
 ```
 
 ### IndexAxis
-The base axis of the dataset. 'x' for horizontal lines and 'y' for vertical lines.
+The base axis of the dataset. ```'x'``` for horizontal lines and ```'y'``` for vertical lines. Default ```'x'```
 ```csharp
-.IndexAxis("example")
+.IndexAxis(IndexAxis.Y)
 ```
 
 ### Segment
 Line segment styles can be overridden by scriptable options in the segment object.
+To get the segment object from a function, set a funtion name.
 ```csharp
-.Segment(default)
+.Segment("segmentStyleFunction")
+```
+```js
+function segmentStyleFunction(ctx) {
+	return {
+        borderColor: ctx => skipped(ctx, 'rgb(0,0,0,0.2)') || down(ctx, 'rgb(192,75,75)'),
+        borderDash: ctx => skipped(ctx, [6, 6]),
+      };
+}
 ```
 
 ### ShowLine
-If false, the line is not drawn for this dataset.
+If ```false```, the line is not drawn for this dataset. Default ```true```
 ```csharp
-.ShowLine(true)
+.ShowLine(false)
 ```
 
 ### Stack
-The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
+The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Default ```'line'```
 ```csharp
-.Stack("example")
+.Stack("line")
 ```
 
 ### Stepped
-If the stepped value is set to anything other than false, 'tension' will be ignored.
+If the stepped value is set to anything other than ```false```, ```'tension'``` will be ignored.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/line.html#stepped)
 ```csharp
 .Stepped(true)
+```
+```csharp
+.Stepped("after")
 ```
 
 ### XAxisID
 The ID of the x-axis to plot this dataset on.
 ```csharp
-.XAxisID("example")
+.XAxisID("my-x-axis")
 ```
 
 ### YAxisID
 The ID of the y-axis to plot this dataset on.
 ```csharp
-.YAxisID("example")
+.YAxisID("my-y-axis")
 ```
 

@@ -37,7 +37,7 @@ icon: material/chart-pie
 	.Render())
 	```
 
-## Base Dataset Options
+## Common Dataset Options
 These options are common to all datasets.
 
 ### BackgroundColor
