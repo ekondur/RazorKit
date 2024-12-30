@@ -98,7 +98,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="segment"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder Segment(object segment)
+        public LineDatasetBuilder Segment(string segment)
         {
             _dataset.Segment = segment;
             return this;
