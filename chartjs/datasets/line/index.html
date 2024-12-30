@@ -1527,6 +1527,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#drawactiveelementsontop" class="md-nav__link">
     <span class="md-ellipsis">
       DrawActiveElementsOnTop
@@ -3040,6 +3049,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#drawactiveelementsontop" class="md-nav__link">
     <span class="md-ellipsis">
       DrawActiveElementsOnTop
@@ -3331,40 +3349,59 @@ Can also be a number specifying the maximum gap length to span. The unit of the 
 </span></code></pre></div></p>
 <h2 id="line-dataset-options">Line Dataset Options<a class="headerlink" href="#line-dataset-options" title="Permanent link">&para;</a></h2>
 <h3 id="cubicinterpolationmode">CubicInterpolationMode<a class="headerlink" href="#cubicinterpolationmode" title="Permanent link">&para;</a></h3>
-<p>The following interpolation modes are supported, 'default' and 'monotone'.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="p">.</span><span class="n">CubicInterpolationMode</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<p>The following interpolation modes are supported, <code>'default'</code> and <code>'monotone'</code>.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="p">.</span><span class="n">CubicInterpolationMode</span><span class="p">(</span><span class="n">InterpolationMode</span><span class="p">.</span><span class="n">Monotone</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
+<p>Sets the data for the Dataset.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">1.0</span><span class="p">,</span><span class="w"> </span><span class="m">3.2</span><span class="p">,</span><span class="w"> </span><span class="m">5.0</span><span class="p">,</span><span class="w"> </span><span class="m">7.0</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="n">IList</span><span class="o">&lt;</span><span class="kt">object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="drawactiveelementsontop">DrawActiveElementsOnTop<a class="headerlink" href="#drawactiveelementsontop" title="Permanent link">&para;</a></h3>
-<p>Draw the active points of a dataset over the other points of the dataset.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="p">.</span><span class="n">DrawActiveElementsOnTop</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<p>Draw the active points of a dataset over the other points of the dataset. Default <code>true</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="p">.</span><span class="n">DrawActiveElementsOnTop</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="indexaxis">IndexAxis<a class="headerlink" href="#indexaxis" title="Permanent link">&para;</a></h3>
-<p>The base axis of the dataset. 'x' for horizontal lines and 'y' for vertical lines.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="p">.</span><span class="n">IndexAxis</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<p>The base axis of the dataset. <code>'x'</code> for horizontal lines and <code>'y'</code> for vertical lines. Default <code>'x'</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="p">.</span><span class="n">IndexAxis</span><span class="p">(</span><span class="n">IndexAxis</span><span class="p">.</span><span class="n">Y</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="segment">Segment<a class="headerlink" href="#segment" title="Permanent link">&para;</a></h3>
 <p>Line segment styles can be overridden by scriptable options in the segment object.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="p">.</span><span class="n">Segment</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+To get the segment object from a function, set a funtion name.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="p">.</span><span class="n">Segment</span><span class="p">(</span><span class="s">&quot;segmentStyleFunction&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">segmentStyleFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">        </span><span class="nx">borderColor</span><span class="o">:</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">skipped</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rgb(0,0,0,0.2)&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">down</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rgb(192,75,75)&#39;</span><span class="p">),</span>
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="w">        </span><span class="nx">borderDash</span><span class="o">:</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">skipped</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">]),</span>
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="w">      </span><span class="p">};</span>
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h3 id="showline">ShowLine<a class="headerlink" href="#showline" title="Permanent link">&para;</a></h3>
-<p>If false, the line is not drawn for this dataset.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="p">.</span><span class="n">ShowLine</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<p>If <code>false</code>, the line is not drawn for this dataset. Default <code>true</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="p">.</span><span class="n">ShowLine</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link">&para;</a></h3>
-<p>The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="p">.</span><span class="n">Stack</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<p>The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Default <code>'line'</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="p">.</span><span class="n">Stack</span><span class="p">(</span><span class="s">&quot;line&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="stepped">Stepped<a class="headerlink" href="#stepped" title="Permanent link">&para;</a></h3>
-<p>If the stepped value is set to anything other than false, 'tension' will be ignored.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="p">.</span><span class="n">Stepped</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<p>If the stepped value is set to anything other than <code>false</code>, <code>'tension'</code> will be ignored.
+<a href="https://www.chartjs.org/docs/latest/charts/line.html#stepped"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="p">.</span><span class="n">Stepped</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="p">.</span><span class="n">Stepped</span><span class="p">(</span><span class="s">&quot;after&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="xaxisid">XAxisID<a class="headerlink" href="#xaxisid" title="Permanent link">&para;</a></h3>
 <p>The ID of the x-axis to plot this dataset on.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="p">.</span><span class="n">XAxisID</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="p">.</span><span class="n">XAxisID</span><span class="p">(</span><span class="s">&quot;my-x-axis&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="yaxisid">YAxisID<a class="headerlink" href="#yaxisid" title="Permanent link">&para;</a></h3>
 <p>The ID of the y-axis to plot this dataset on.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="p">.</span><span class="n">YAxisID</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="p">.</span><span class="n">YAxisID</span><span class="p">(</span><span class="s">&quot;my-y-axis&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
