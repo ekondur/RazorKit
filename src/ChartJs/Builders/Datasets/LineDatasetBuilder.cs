@@ -95,6 +95,7 @@ namespace RazorKit.ChartJs.Builders
 
         /// <summary>
         /// Line segment styles can be overridden by scriptable options in the segment object.
+        /// To get the segment object from a function, set a funtion name.
         /// </summary>
         /// <param name="segment"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
