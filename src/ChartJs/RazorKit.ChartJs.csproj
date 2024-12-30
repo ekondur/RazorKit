@@ -13,9 +13,9 @@
 	<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>csharp,htmlhelper,razor,javascript,chartjs</PackageTags>
-	<PackageReleaseNotes>Fixed public enum issues.</PackageReleaseNotes>
+	<PackageReleaseNotes>Updated line dataset options</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Version>1.0.7</Version>
+	<Version>1.0.8</Version>
 	<PackageIcon>rk-logo.png</PackageIcon>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<EmbedUntrackedSources>true</EmbedUntrackedSources>
