@@ -535,4 +535,24 @@ namespace RazorKit
         [EnumMember(Value = "far")]
         Far
     }
+
+    /// <summary>
+    /// Interpolation Mode
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum InterpolationMode
+    {
+        /// <summary>
+        /// It uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets.
+        /// </summary>
+        [EnumMember(Value = "default")]
+        Default,
+
+        /// <summary>
+        /// It is more suited to y = f(x) datasets: it preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, 
+        /// and ensures local extremums (if any) stay at input data points.
+        /// </summary>
+        [EnumMember(Value = "monotone")]
+        Monotone
+    }
 }

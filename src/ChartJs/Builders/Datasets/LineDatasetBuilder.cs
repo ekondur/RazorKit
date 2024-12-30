@@ -65,7 +65,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="cubicInterpolationMode"></param>
         /// <returns>The LineDatasetBuilder instance.</returns>
-        public LineDatasetBuilder CubicInterpolationMode(string cubicInterpolationMode)
+        public LineDatasetBuilder CubicInterpolationMode(InterpolationMode cubicInterpolationMode)
         {
             _dataset.CubicInterpolationMode = cubicInterpolationMode;
             return this;
@@ -87,7 +87,7 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="indexAxis"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
-        public LineDatasetBuilder IndexAxis(string indexAxis)
+        public LineDatasetBuilder IndexAxis(IndexAxis indexAxis)
         {
             _dataset.IndexAxis = indexAxis;
             return this;
@@ -132,6 +132,17 @@ namespace RazorKit.ChartJs.Builders
         /// <param name="stepped"></param>
         /// <returns>The LineDatasetBuilder instance with the set data.</returns>
         public LineDatasetBuilder Stepped(bool stepped)
+        {
+            _dataset.Stepped = stepped;
+            return this;
+        }
+
+        /// <summary>
+        /// If the stepped value is set to anything other than false, 'tension' will be ignored.
+        /// </summary>
+        /// <param name="stepped"></param>
+        /// <returns>The LineDatasetBuilder instance with the set data.</returns>
+        public LineDatasetBuilder Stepped(string stepped)
         {
             _dataset.Stepped = stepped;
             return this;
