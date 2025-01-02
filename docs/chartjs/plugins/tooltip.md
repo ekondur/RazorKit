@@ -296,6 +296,9 @@ Namespace: ```options.plugins.tooltip.callbacks```, the tooltip has the followin
 For all functions, ```this``` will be the tooltip object created from the ```Tooltip``` constructor. 
 If the callback returns ```undefined```, then the default callback will be used. To remove things from the tooltip callback should return an empty string.
 [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#tooltip-callbacks)
+```csharp
+.Callbacks(c => c.BeforeTitle("...").Title("..."))
+```
 
 ### BeforeTitle
 Returns the text to render before the title.
