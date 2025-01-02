@@ -66,3 +66,34 @@ Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/lat
             .Data(65, 59, 80, 81, 56, 55, 40)))
     .Render())
 ```
+
+## Setup SweetAlert2
+
+Install the [RazorKit.ChartJs](https://www.nuget.org/packages/RazorKit.SweetAlert2/) package from nuget.
+
+```
+PM> Install-Package RazorKit.SweetAlert2
+```
+
+Add related scripts and implement. [Reference:](https://sweetalert2.github.io/#download)
+
+```csharp
+<button id="alertButton">Show Alert</button>
+
+@using RazorKit
+
+@{
+    var alert = 
+    Html.Swal()             
+    .Title("Good job!")
+    .Text("You clicked the button!")
+    .Icon(SwalIcon.Question)
+    .Footer("footer of the alert");
+}
+
+<script>
+    document.getElementById('alertButton').addEventListener('click', function () {
+        @alert.Fire()
+    });
+</script>
+```
