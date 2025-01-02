@@ -47,9 +47,10 @@ Position of title. default ```'top'```
 ```
 
 ## Font
-See font configuration. 
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.Font(f => f.Size(10))
+.Font(f => f.Family("...").Size(10))
 ```
 
 ## Padding

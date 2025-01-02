@@ -16,9 +16,8 @@ icon: material/menu-right
 				.Labels(lb => lb
 					.Color("rgb(255, 99, 132)")))))
 	```
-
 === "js output"
-	```js linenums="1"
+	```json linenums="1"
 	"options": {
 		"plugins": {
 		  "legend": {
@@ -157,9 +156,10 @@ Is the legend title displayed.
 ```
 
 ### Font
-
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.Font(default)
+.Font(f => f.Family("...").Size(10))
 ```
 
 ### Padding
@@ -197,9 +197,10 @@ Color of label and the strikethrough.
 ```
 
 ### Font
-
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.Font(default)
+.Font(f => f.Family("...").Size(10))
 ```
 
 ### Padding

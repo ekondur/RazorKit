@@ -38,17 +38,6 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// Sets which elements appear in the tooltip.
-        /// </summary>
-        /// <param name="mode"></param>
-        /// <returns></returns>
-        public TooltipBuilder Mode(InteractionMode mode)
-        {
-            _toolTip.Mode = mode.ToString().ToLower();
-            return this;
-        }
-
-        /// <summary>
         /// Sets which elements appear in the tooltip. 'Custom mode'
         /// </summary>
         /// <param name="mode">function name</param>
@@ -267,7 +256,7 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// Horizontal alignment of the footer text lines. defautl 'left'
+        /// Horizontal alignment of the footer text lines. default 'left'
         /// </summary>
         /// <param name="align"></param>
         /// <returns></returns>

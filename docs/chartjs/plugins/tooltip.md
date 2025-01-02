@@ -2,161 +2,192 @@
 icon: material/menu-right
 ---
 
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html)"
+	The tooltip extension is a feature that allows you to customize the behavior and appearance of tooltips displayed when users interact with chart elements. 
+	Tooltips provide additional information about a data point when the user hovers over or taps on it.
+	
+	Namespace: ```options.plugins.tooltip```
+	
+=== "helper"
+	```csharp hl_lines="3" linenums="1"
+	.Options(o => o
+		.Plugins(p => p
+			.Tooltip(t => t
+				.Enabled(true)
+				.Mode("index")
+				.Intersect(false)
+				.TitleColor("#fff"))))
+	```
+=== "js output"
+	```json linenums="1"
+	"options": {
+		"plugins": {
+		  "tooltip": {
+			"enabled": true,
+			"mode": "index",
+			"intersect": false,
+			"titleColor": '#fff'
+		  }
+		}
+    }
+	```
+
 ## Enabled
-Are on-canvas tooltips enabled? default true
+Are on-canvas tooltips enabled? Default ```true```
 ```csharp
-.Enabled(true)
+.Enabled(false)
 ```
 
 ## External
 External function name.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#external-custom-tooltips)
 ```csharp
-.External("example")
+.External("myExternalFunction")
 ```
 
 ## Mode
-Sets which elements appear in the tooltip.
+Sets which elements appear in the tooltip. Default ```interaction.mode```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/interactions.html#modes)
 ```csharp
-.Mode(default)
-```
-
-## Mode
-Sets which elements appear in the tooltip. 'Custom mode'
-```csharp
-.Mode("example")
+.Mode("index")
 ```
 
 ## Intersect
-If true, the tooltip mode applies only when the mouse position intersects with an element. 
-            If false, the mode will be applied at all times.
+If ```true```, the tooltip mode applies only when the mouse position intersects with an element. 
+If ```false```, the mode will be applied at all times. Default ```interaction.intersect```
 ```csharp
 .Intersect(true)
 ```
 
 ## Position
-The mode for positioning the tooltip. default 'average'
+The mode for positioning the tooltip. Default ```'average'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#position-modes)
 ```csharp
-.Position(default)
+.Position(TooltipPosition.Nearest)
 ```
-
-## Position
-The mode for positioning the tooltip. 'Custom position'
+Or, set the custom position.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#custom-position-modes)
 ```csharp
-.Position("example")
-```
-
-## Callbacks
-
-```csharp
-.Callbacks(default)
+.Position("myCustomPosition")
 ```
 
 ## ItemSort
-Sort tooltip items.
+Sort tooltip items. Default ```function```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#sort-callback)
 ```csharp
-.ItemSort("example")
+.ItemSort("mySortFunction")
 ```
 
 ## Filter
-Filter tooltip items.
+Filter tooltip items. Default ```function```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#filter-callback)
 ```csharp
-.Filter("example")
+.Filter("myFilterFunction")
 ```
 
 ## BackgroundColor
 Background color of the tooltip.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.BackgroundColor("example")
+.BackgroundColor("rgba(0, 0, 0, 0.8)")
 ```
 
 ## TitleColor
-Color of title text. default '#fff'
+Color of title text. Default ```'#fff'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.TitleColor("example")
+.TitleColor("#fff")
 ```
 
 ## TitleFont
-
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.TitleFont(default)
+.TitleFont(f => f.Family("...").Size(10))
 ```
 
 ## TitleAlign
-Horizontal alignment of the title text lines. default 'left'
+Horizontal alignment of the title text lines. Default ```'left'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#text-alignment)
 ```csharp
-.TitleAlign(default)
+.TitleAlign(TextAlign.Center)
 ```
 
 ## TitleSpacing
-Spacing to add to top and bottom of each title line. default 2
+Spacing to add to top and bottom of each title line. Default ```2```
 ```csharp
-.TitleSpacing(15)
+.TitleSpacing(3)
 ```
 
 ## TitleMarginBottom
-Margin to add on bottom of title section. default 6
+Margin to add on bottom of title section. Default ```6```
 ```csharp
-.TitleMarginBottom(15)
+.TitleMarginBottom(5)
 ```
 
 ## BodyColor
-Color of body text. defautl '#fff'
+Color of body text. defautl ```'#fff'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.BodyColor("example")
+.BodyColor("#fff")
 ```
 
 ## BodyFont
-
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.BodyFont(default)
+.BodyFont(f => f.Family("...").Size(10))
 ```
 
 ## BodyAlign
-Horizontal alignment of the body text lines. default 'left'
+Horizontal alignment of the body text lines. Default ```'left'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#text-alignment)
 ```csharp
-.BodyAlign(default)
+.BodyAlign(TextAlign.Center)
 ```
 
 ## BodySpacing
-Spacing to add to top and bottom of each tooltip item. default 2
+Spacing to add to top and bottom of each tooltip item. Default ```2```
 ```csharp
-.BodySpacing(15)
+.BodySpacing(3)
 ```
 
 ## FooterColor
-Color of footer text. default '#fff'
+Color of footer text. Default ```'#fff'```
 ```csharp
-.FooterColor("example")
+.FooterColor("#fff")
 ```
 
 ## FooterFont
-
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.FooterFont(default)
+.FooterFont(f => f.Family("...").Size(10))
 ```
 
 ## FooterAlign
-Horizontal alignment of the footer text lines. defautl 'left'
+Horizontal alignment of the footer text lines. Default ```'left'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#text-alignment)
 ```csharp
-.FooterAlign(default)
+.FooterAlign(TextAlign.Center)
 ```
 
 ## FooterSpacing
-Spacing to add to top and bottom of each footer line. default 2
+Spacing to add to top and bottom of each footer line. Default ```2```
 ```csharp
-.FooterSpacing(15)
+.FooterSpacing(3)
 ```
 
 ## FooterMarginTop
-Margin to add before drawing the footer. default 6
+Margin to add before drawing the footer. Default ```6```
 ```csharp
-.FooterMarginTop(15)
+.FooterMarginTop(5)
 ```
 
 ## Padding
-Padding inside the tooltip. default 6
+Padding inside the tooltip. Default ```6```
 ```csharp
-.Padding(15)
+.Padding(5)
 ```
 
 ## Padding
@@ -166,180 +197,187 @@ Padding inside the tooltip. default 6
 ```
 
 ## CaretPadding
-Extra distance to move the end of the tooltip arrow away from the tooltip point. default 2
+Extra distance to move the end of the tooltip arrow away from the tooltip point. Default ```2```
 ```csharp
 .CaretPadding(15)
 ```
 
 ## CaretSize
-Size, in px, of the tooltip arrow. default 5
+Size, in px, of the tooltip arrow. Default ```5```
 ```csharp
-.CaretSize(15)
+.CaretSize(4)
 ```
 
 ## CornerRadius
-Radius of tooltip corner curves. default 6
+Radius of tooltip corner curves. Default ```6```
 ```csharp
-.CornerRadius(15)
+.CornerRadius(5)
 ```
 
 ## MultiKeyBackground
-Color to draw behind the colored boxes when multiple items are in the tooltip. default '#fff'
+Color to draw behind the colored boxes when multiple items are in the tooltip. Default ```'#fff'```
 ```csharp
-.MultiKeyBackground("example")
+.MultiKeyBackground("#fff")
 ```
 
 ## DisplayColors
-If true, color boxes are shown in the tooltip. default true
+If ```true```, color boxes are shown in the tooltip. Default ```true```
 ```csharp
-.DisplayColors(true)
+.DisplayColors(false)
 ```
 
 ## BoxWidth
-Width of the color box if displayColors is true.
+Width of the color box if displayColors is ```true```. Default ```bodyFont.size```
 ```csharp
 .BoxWidth(15)
 ```
 
 ## BoxHeight
-Height of the color box if displayColors is true.
+Height of the color box if displayColors is ```true```. Default ```bodyFont.size```
 ```csharp
 .BoxHeight(15)
 ```
 
 ## BoxPadding
-Padding between the color box and the text. default 1
+Padding between the color box and the text. Default ```1```
 ```csharp
-.BoxPadding(15)
+.BoxPadding(2)
 ```
 
 ## UsePointStyle
 Use the corresponding point style (from dataset options) instead of color boxes, ex: star, triangle etc.
-            (size is based on the minimum value between boxWidth and boxHeight). default false
+(size is based on the minimum value between ```boxWidth``` and ```boxHeight```). Default ```false```
 ```csharp
 .UsePointStyle(true)
 ```
 
 ## BorderColor
 Color of the border.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.BorderColor("example")
+.BorderColor("'rgba(0, 0, 0, 0)'")
 ```
 
 ## BorderWidth
-Size of the border. default 0
+Size of the border. Default ```0```
 ```csharp
-.BorderWidth(15)
+.BorderWidth(1)
 ```
 
 ## Rtl
-true for rendering the tooltip from right to left.
+```true``` for rendering the tooltip from right to left.
 ```csharp
 .Rtl(true)
 ```
 
 ## TextDirection
-This will force the text direction 'rtl' or 'ltr' on the canvas for rendering the tooltips, 
-            regardless of the css specified on the canvas.
+This will force the text direction ```'rtl'``` or ```'ltr'``` on the canvas for rendering the tooltips, 
+regardless of the css specified on the canvas.
 ```csharp
-.TextDirection("example")
+.TextDirection("rtl")
 ```
 
 ## XAlign
 Position of the tooltip caret in the X direction.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#tooltip-alignment)
 ```csharp
-.XAlign("example")
+.XAlign("left")
 ```
 
 ## YAlign
 Position of the tooltip caret in the Y direction.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#tooltip-alignment)
 ```csharp
-.YAlign("example")
+.YAlign("left")
 ```
 
 ## Callbacks
+Namespace: ```options.plugins.tooltip.callbacks```, the tooltip has the following callbacks for providing text. 
+For all functions, ```this``` will be the tooltip object created from the ```Tooltip``` constructor. 
+If the callback returns ```undefined```, then the default callback will be used. To remove things from the tooltip callback should return an empty string.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/tooltip.html#tooltip-callbacks)
 
 ### BeforeTitle
 Returns the text to render before the title.
 ```csharp
-.BeforeTitle("example")
+.BeforeTitle("myFunction")
 ```
 
 ### Title
 Returns text to render as the title of the tooltip.
 ```csharp
-.Title("example")
+.Title("myFunction")
 ```
 
 ### AfterTitle
 Returns text to render after the title.
 ```csharp
-.AfterTitle("example")
+.AfterTitle("myFunction")
 ```
 
 ### BeforeBody
 Returns text to render before the body section.
 ```csharp
-.BeforeBody("example")
+.BeforeBody("myFunction")
 ```
 
 ### BeforeLabel
 Returns text to render before an individual label. This will be called for each item in the tooltip.
 ```csharp
-.BeforeLabel("example")
+.BeforeLabel("myFunction")
 ```
 
 ### Label
 Returns text to render for an individual item in the tooltip.
 ```csharp
-.Label("example")
+.Label("myFunction")
 ```
 
 ### LabelColor
 Returns the colors to render for the tooltip item.
 ```csharp
-.LabelColor("example")
+.LabelColor("myFunction")
 ```
 
 ### LabelTextColor
 Returns the colors for the text of the label for the tooltip item.
 ```csharp
-.LabelTextColor("example")
+.LabelTextColor("myFunction")
 ```
 
 ### LabelPointStyle
 Returns the point style to use instead of color boxes if usePointStyle is true (object with values pointStyle and rotation).
-            Default implementation uses the point style from the dataset points.
+Default implementation uses the point style from the dataset points.
 ```csharp
-.LabelPointStyle("example")
+.LabelPointStyle("myFunction")
 ```
 
 ### AfterLabel
 Returns text to render after an individual label.
 ```csharp
-.AfterLabel("example")
+.AfterLabel("myFunction")
 ```
 
 ### AfterBody
 Returns text to render after the body section.
 ```csharp
-.AfterBody("example")
+.AfterBody("myFunction")
 ```
 
 ### BeforeFooter
 Returns text to render before the footer section.
 ```csharp
-.BeforeFooter("example")
+.BeforeFooter("myFunction")
 ```
 
 ### Footer
 Returns text to render as the footer of the tooltip.
 ```csharp
-.Footer("example")
+.Footer("myFunction")
 ```
 
 ### AfterFooter
 Text to render after the footer section.
 ```csharp
-.AfterFooter("example")
+.AfterFooter("myFunction")
 ```

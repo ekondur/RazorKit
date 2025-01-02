@@ -34,9 +34,10 @@ Color of label.
 ```
 
 ## Font
-
+See font configuration.
+[:link:](../font.md)
 ```csharp
-.Font(default)
+.Font(f => f.Family("...").Size(10))
 ```
 
 ## Padding
