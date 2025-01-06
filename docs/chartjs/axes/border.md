@@ -10,7 +10,7 @@ icon: material/menu-right
 ```csharp hl_lines="5" linenums="1"
 .Options(o => o
     .Scales(s => s
-		.AxisId("y")
+		.ScaleId("y")
         .BeginAtZero(true)
         .Border(b => b
             .Color("#666")

@@ -12,7 +12,7 @@ icon: material/menu-right
 ```csharp hl_lines="3" linenums="1"
 .Options(o => o
     .Scales(s => s
-		.AxisId("x")
+		.ScaleId("x")
 		.BeginAtZero(true)))
 ```
 ```csharp linenums="1"
@@ -23,12 +23,12 @@ icon: material/menu-right
         .YAxisID("first-y-axis")))
 .Options(x => x.Scales(s =>
     {
-        s.AxisId("first-x-axis").Type("linear");
-        s.AxisId("first-y-axis").Type("linear");
+        s.ScaleId("first-x-axis").Type("linear");
+        s.ScaleId("first-y-axis").Type("linear");
     }
 ))
 ```
-The configuration must include the ```AxisId("id")``` method. ```x```, ```y```, ```r``` or a custom id can be assigned.
+The configuration must include the ```ScaleId("id")``` method. ```x```, ```y```, ```r``` or a custom id can be assigned.
 
 ## Common Axis Options:
 These are only the common options supported by all axes. Please see specific axis documentation for all the available options for that axis.

@@ -13,7 +13,7 @@ icon: material/menu-right
 ```csharp hl_lines="4" linenums="1"
 .Options(o => o
     .Scales(s => s
-        .AxisId("y")
+        .ScaleId("y")
         .Ticks(t => t
             .AutoSkip(false)
             .CrossAlign(TicksCrossAlign.Far)
