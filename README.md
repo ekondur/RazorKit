@@ -69,7 +69,7 @@ Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/lat
 
 ## Setup SweetAlert2
 
-Install the [RazorKit.ChartJs](https://www.nuget.org/packages/RazorKit.SweetAlert2/) package from nuget.
+Install the [RazorKit.SweetAlert2](https://www.nuget.org/packages/RazorKit.SweetAlert2/) package from nuget.
 
 ```
 PM> Install-Package RazorKit.SweetAlert2
