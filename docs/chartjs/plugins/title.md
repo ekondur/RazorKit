@@ -6,7 +6,7 @@ icon: material/menu-right
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/title.html)"
 	The chart title defines text to draw at the top of the chart.
 
-```csharp hl_lines="3"
+```csharp hl_lines="3" linenums="1"
 .Options(o => o
     .Plugins(p => p
         .Title(t => t
@@ -59,6 +59,7 @@ Padding around the title.
 .Padding(5)
 ```
 See padding configuration.
+[:link:](../padding.md)
 ```csharp
 .Padding(p => p.Top(5).Bottom(10))
 ```

@@ -116,7 +116,7 @@ regardless of the css specified on the canvas.
 	
 	Namespace: ```options.plugins.legend.title```
 	
-=== "razor"
+=== "helper"
 	```csharp hl_lines="3 5" linenums="1"
 	.Options(o => o
     .Plugins(p => p
@@ -127,8 +127,7 @@ regardless of the css specified on the canvas.
                 .Color("rgb(75, 192, 192)")))))
 	```
 
-=== "js"
-	The script is produced:
+=== "js output"
 	```js linenums="1"
 	"options": {
 		"plugins": {
@@ -167,8 +166,11 @@ Padding around the title.
 ```csharp
 .Padding(2)
 ```
-Or configure it:
-[:octicons-link-external-16:](../padding.md)
+See padding configuration.
+[:link:](../padding.md)
+```csharp
+.Padding(p => p.Top(5).Bottom(10))
+```
 
 ### Text
 The string title.
@@ -204,14 +206,14 @@ See font configuration.
 ```
 
 ### Padding
-Padding between rows of colored boxes. Default 10
+Padding between rows of colored boxes. Default ```10```
 ```csharp
 .Padding(15)
 ```
 
 ### GenerateLabels
 Generates legend items for each thing in the legend.
-            Default implementation returns the text + styling for the color box.
+Default implementation returns the text + styling for the color box.
 ```csharp
 .GenerateLabels("example")
 ```

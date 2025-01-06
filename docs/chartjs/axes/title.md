@@ -42,14 +42,13 @@ See font configuration.
 
 ## Padding
 Padding to apply around scale labels. Only top, bottom and y are implemented.
-            Default 4
+Default ```4```
 ```csharp
-.Padding(15)
+.Padding(2)
 ```
-
-## Padding
-
+See padding configuration.
+[:link:](../padding.md)
 ```csharp
-.Padding(default)
+.Padding(p => p.Top(5).Bottom(10))
 ```
 

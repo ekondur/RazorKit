@@ -36,11 +36,10 @@ Padding of label backdrop. Default ```2```
 ```csharp
 .BackdropPadding(3)
 ```
-
-### BackdropPadding
-
+See padding configuration.
+[:link:](../padding.md)
 ```csharp
-.BackdropPadding(default)
+.BackdropPadding(p => p.Top(5).Bottom(10))
 ```
 
 ### Callback

@@ -189,11 +189,10 @@ Padding inside the tooltip. Default ```6```
 ```csharp
 .Padding(5)
 ```
-
-## Padding
-
+See padding configuration.
+[:link:](../padding.md)
 ```csharp
-.Padding(default)
+.Padding(p => p.Top(5).Bottom(10))
 ```
 
 ## CaretPadding

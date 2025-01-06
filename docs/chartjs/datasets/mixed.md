@@ -6,7 +6,7 @@ icon: material/chart-box-multiple
 	With Chart.js, it is possible to create mixed charts that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset.
 	When creating a mixed chart, we specify the chart type on each dataset.
 
-```csharp hl_lines="6 10"
+```csharp hl_lines="6 10" linenums="1"
 @(Html.Chart("canvasId")
 .Data(d => d
     .Labels("January", "February", "March", "April")
@@ -23,3 +23,9 @@ icon: material/chart-box-multiple
 )
 .Render())
 ```
+
+By default, datasets are drawn such that the first one is top-most. This can be altered by specifying ```order``` option to datasets. ```order``` defaults to ```0```. 
+Note that this also affects stacking, legend, and tooltip. So it's essentially the same as reordering the datasets.
+
+The ```order``` property behaves like a weight instead of a specific order, so the higher the number, 
+the sooner that dataset is drawn on the canvas and thus other datasets with a lower order number will get drawn over it.
