@@ -18,14 +18,14 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// Adding a new scale with axisId.
+        /// Adding a new scale with scaleId. For example: "x", "y", or "myScale"
         /// </summary>
-        /// <param name="axisId"></param>
+        /// <param name="scaleId"></param>
         /// <returns></returns>
-        public ScaleBuilder AxisId(string axisId)
+        public ScaleBuilder ScaleId(string scaleId)
         {
             _scale = new Scale();
-            _scales.Add(axisId, _scale);
+            _scales.Add(scaleId, _scale);
             return this;
         }
 

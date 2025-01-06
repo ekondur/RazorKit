@@ -1,5 +1,4 @@
-﻿using RazorKit.ChartJs.Extensions;
-using RazorKit.ChartJs.Models;
+﻿using RazorKit.ChartJs.Models;
 using System;
 using System.Collections.Generic;
 
@@ -192,12 +191,12 @@ namespace RazorKit.ChartJs.Builders
         /// <summary>
         /// Animations options configures which element properties are animated and how.
         /// </summary>
-        /// <param name="animations"></param>
         /// <param name="action"></param>
         /// <returns></returns>
-        public OptionsBuilder Animations(Animations animations, Action<AnimationBuilder> action)
+        public OptionsBuilder Animations(Action<AnimationBuilder> action)
         {
-            var builder = new AnimationBuilder(_options, animations.ToCamelCaseString());
+            _options.Animations = new Dictionary<string, Animation>();
+            var builder = new AnimationBuilder(_options.Animations);
             action(builder);
             return this;
         }

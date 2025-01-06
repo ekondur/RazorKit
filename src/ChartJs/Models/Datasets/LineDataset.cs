@@ -5,9 +5,9 @@ namespace RazorKit.ChartJs.Models
 {
     class LineDataset : PointDataset
     {
-        public InterpolationMode CubicInterpolationMode { get; set; }
+        public InterpolationMode? CubicInterpolationMode { get; set; }
         public bool? DrawActiveElementsOnTop { get; set; }
-        public IndexAxis IndexAxis { get; set; }
+        public IndexAxis? IndexAxis { get; set; }
 
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string Segment { get; set; }

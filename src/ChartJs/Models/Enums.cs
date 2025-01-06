@@ -324,15 +324,6 @@ namespace RazorKit
         Touchstart
     }
 
-    public enum Animations
-    {
-        X,
-        Y,
-        BorderWidth,
-        Radius,
-        Tension
-    }
-
     /// <summary>
     /// The bounds property controls the scale boundary strategy (bypassed by min/max options).
     /// </summary>

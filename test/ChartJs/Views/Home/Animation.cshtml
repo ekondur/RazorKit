@@ -19,14 +19,15 @@
                 )
             )
             .Options(o => o
-                .Animations(Animations.Tension, a => a
+                .Animations(a => a
+                    .Animation("tension")
                     .Duration(1000)
                     .Easing(AnimationEasing.Linear)
                     .Loop(true)
                     .From(1)
                     .To(0))
                 .Scales(s => s
-                    .AxisId("y")
+                    .ScaleId("y")
                     .Min(0)
                     .Max(100)
                 )

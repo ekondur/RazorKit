@@ -8,21 +8,29 @@ namespace RazorKit.ChartJs.Builders
     /// </summary>
     public class AnimationBuilder
     {
-        private readonly Animation _animation;
+        private Animation _animation;
+        private readonly Dictionary<string, Animation> _animations;
 
         internal AnimationBuilder(Animation animation)
         {
             _animation = animation;
         }
 
-        internal AnimationBuilder(Options options, string animation)
+        internal AnimationBuilder(Dictionary<string, Animation> animations)
+        {
+            _animations = animations;
+        }
+
+        /// <summary>
+        /// Namespace: options.animations[animation] for example: "x", "y", "borderWidth", "radius", "tension"
+        /// </summary>
+        /// <param name="animation"></param>
+        /// <returns></returns>
+        public AnimationBuilder Animation(string animation)
         {
             _animation = new Animation();
-            if (options.Animations == null)
-            {
-                options.Animations = new Dictionary<string, Animation>();
-            }
-            options.Animations.Add(animation, _animation);
+            _animations.Add(animation, _animation);
+            return this;
         }
 
         /// <summary>
