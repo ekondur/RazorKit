@@ -3014,7 +3014,7 @@ regardless of the css specified on the canvas.
 <p>Set the legent title configuration.</p>
 <p>Namespace: <code>options.plugins.legend.title</code></p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">razor</label><label for="__tabbed_2_2">js</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">helper</label><label for="__tabbed_2_2">js output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
@@ -3033,7 +3033,6 @@ regardless of the css specified on the canvas.
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<p>The script is produced:
 <div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
@@ -3055,7 +3054,7 @@ regardless of the css specified on the canvas.
 </span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">      </span><span class="p">}</span>
 </span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div></p>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
@@ -3076,74 +3075,76 @@ regardless of the css specified on the canvas.
 <p>Padding around the title.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">Padding</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </span></code></pre></div>
-Or configure it:
-<a href="../../padding/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+See padding configuration.
+<a href="../../padding/"><img alt="🔗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f517.svg" title=":link:" /></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">Padding</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Top</span><span class="p">(</span><span class="m">5</span><span class="p">).</span><span class="n">Bottom</span><span class="p">(</span><span class="m">10</span><span class="p">))</span>
+</span></code></pre></div></p>
 <h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h3>
 <p>The string title.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="labels-settings">Labels Settings<a class="headerlink" href="#labels-settings" title="Permanent link">&para;</a></h2>
 <h3 id="boxwidth">BoxWidth<a class="headerlink" href="#boxwidth" title="Permanent link">&para;</a></h3>
 <p>Width of coloured box. default 40
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">BoxWidth</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">BoxWidth</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="boxheight">BoxHeight<a class="headerlink" href="#boxheight" title="Permanent link">&para;</a></h3>
 <p>Height of the coloured box.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">BoxHeight</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">BoxHeight</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="color_1">Color<a class="headerlink" href="#color_1" title="Permanent link">&para;</a></h3>
 <p>Color of label and the strikethrough.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="font_1">Font<a class="headerlink" href="#font_1" title="Permanent link">&para;</a></h3>
 <p>See font configuration.
 <a href="../../font/"><img alt="🔗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f517.svg" title=":link:" /></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">Font</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Family</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">).</span><span class="n">Size</span><span class="p">(</span><span class="m">10</span><span class="p">))</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">Font</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Family</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">).</span><span class="n">Size</span><span class="p">(</span><span class="m">10</span><span class="p">))</span>
 </span></code></pre></div></p>
 <h3 id="padding_1">Padding<a class="headerlink" href="#padding_1" title="Permanent link">&para;</a></h3>
-<p>Padding between rows of colored boxes. Default 10
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">Padding</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<p>Padding between rows of colored boxes. Default <code>10</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">Padding</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="generatelabels">GenerateLabels<a class="headerlink" href="#generatelabels" title="Permanent link">&para;</a></h3>
 <p>Generates legend items for each thing in the legend.
-            Default implementation returns the text + styling for the color box.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">GenerateLabels</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+Default implementation returns the text + styling for the color box.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">.</span><span class="n">GenerateLabels</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
 <p>Filters legend items out of the legend. Receives 2 parameters, a Legend Item and the chart data.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">.</span><span class="n">Filter</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">.</span><span class="n">Filter</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="sort">Sort<a class="headerlink" href="#sort" title="Permanent link">&para;</a></h3>
 <p>Sorts legend items. Type is : sort(a: LegendItem, b: LegendItem, data: ChartData): number;.
             Receives 3 parameters, two Legend Items and the chart data. 
             The return value of the function is a number that indicates the order of the two legend item parameters. 
             The ordering matches the return value of Array.prototype.sort()
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">.</span><span class="n">Sort</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">.</span><span class="n">Sort</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="pointstyle">PointStyle<a class="headerlink" href="#pointstyle" title="Permanent link">&para;</a></h3>
 <p>If specified, this style of point is used for the legend. Only used if usePointStyle is true. default 'circle'
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">.</span><span class="n">PointStyle</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="p">.</span><span class="n">PointStyle</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="textalign">TextAlign<a class="headerlink" href="#textalign" title="Permanent link">&para;</a></h3>
 <p>Horizontal alignment of the label text. Options are: 'left', 'right' or 'center'. default 'center'
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="p">.</span><span class="n">TextAlign</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">.</span><span class="n">TextAlign</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="usepointstyle">UsePointStyle<a class="headerlink" href="#usepointstyle" title="Permanent link">&para;</a></h3>
 <p>Label style will match corresponding point style (size is based on pointStyleWidth or the minimum value between boxWidth and font.size).
             default false
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">.</span><span class="n">UsePointStyle</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="p">.</span><span class="n">UsePointStyle</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="pointstylewidth">PointStyleWidth<a class="headerlink" href="#pointstylewidth" title="Permanent link">&para;</a></h3>
 <p>If UsePointStyle is true, the width of the point style used for the legend.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="p">.</span><span class="n">PointStyleWidth</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">.</span><span class="n">PointStyleWidth</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="useborderradius">UseBorderRadius<a class="headerlink" href="#useborderradius" title="Permanent link">&para;</a></h3>
 <p>Label borderRadius will match corresponding borderRadius. default false
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">.</span><span class="n">UseBorderRadius</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="p">.</span><span class="n">UseBorderRadius</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="borderradius">BorderRadius<a class="headerlink" href="#borderradius" title="Permanent link">&para;</a></h3>
 <p>Override the borderRadius to use.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="p">.</span><span class="n">BorderRadius</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
