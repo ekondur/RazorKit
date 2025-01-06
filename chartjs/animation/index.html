@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#duration" class="md-skip">
+        <a href="#animation" class="md-skip">
           Skip to content
         </a>
       
@@ -1966,6 +1966,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#duration" class="md-nav__link">
     <span class="md-ellipsis">
       Duration
@@ -2029,43 +2038,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#from_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      From
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      From
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#to" class="md-nav__link">
-    <span class="md-ellipsis">
-      To
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      To
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_2" class="md-nav__link">
     <span class="md-ellipsis">
       To
     </span>
@@ -2379,6 +2352,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#duration" class="md-nav__link">
     <span class="md-ellipsis">
       Duration
@@ -2442,43 +2424,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#from_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      From
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      From
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#to" class="md-nav__link">
-    <span class="md-ellipsis">
-      To
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      To
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#to_2" class="md-nav__link">
     <span class="md-ellipsis">
       To
     </span>
@@ -2506,53 +2452,88 @@
 
   <h1>Animation</h1>
 
+<div class="admonition info">
+<p class="admonition-title">Reference <a href="https://www.chartjs.org/docs/latest/configuration/animations.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>Chart.js animates charts out of the box. A number of options are provided to configure how the animation looks and how long it takes.</p>
+<p>Namespace: <code>options.animation</code> or <code>options.animations[animation]</code></p>
+</div>
+<div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Animations</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="p">.</span><span class="n">Animation</span><span class="p">(</span><span class="s">&quot;tension&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="p">.</span><span class="n">Duration</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="p">.</span><span class="n">Easing</span><span class="p">(</span><span class="n">AnimationEasing</span><span class="p">.</span><span class="n">Linear</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="p">.</span><span class="n">Loop</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="p">.</span><span class="n">Scales</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">.</span><span class="n">ScaleId</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="p">.</span><span class="n">Min</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="p">.</span><span class="n">Max</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="animation">Animation<a class="headerlink" href="#animation" title="Permanent link">&para;</a></h2>
+<p>Set animation like: <code>"x"</code>, <code>"y"</code>, <code>"borderWidth"</code>, <code>"radius"</code>, <code>"tension"</code>
+<a href="https://www.chartjs.org/docs/latest/configuration/animations.html#default-animations"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Animation</span><span class="p">(</span><span class="s">&quot;tension&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
 <h2 id="duration">Duration<a class="headerlink" href="#duration" title="Permanent link">&para;</a></h2>
-<p>The number of milliseconds an animation takes. Default 1000
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Duration</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<p>The number of milliseconds an animation takes. Default <code>1000</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Duration</span><span class="p">(</span><span class="m">2000</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="easing">Easing<a class="headerlink" href="#easing" title="Permanent link">&para;</a></h2>
-<p>Easing function to use. Default 'easeOutQuart'
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Easing</span><span class="p">(</span><span class="k">default</span><span class="p">)</span>
+<p>Easing function to use. Default <code>'easeOutQuart'</code>
+<a href="https://www.chartjs.org/docs/latest/configuration/animations.html#easing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Easing</span><span class="p">(</span><span class="n">AnimationEasing</span><span class="p">.</span><span class="n">Linear</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="delay">Delay<a class="headerlink" href="#delay" title="Permanent link">&para;</a></h2>
 <p>Delay before starting the animations.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">Delay</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">Delay</span><span class="p">(</span><span class="m">500</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="loop">Loop<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h2>
-<p>If set to true, the animations loop endlessly.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">Loop</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<p>If set to <code>true</code>, the animations loop endlessly.
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Loop</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="onprogress">OnProgress<a class="headerlink" href="#onprogress" title="Permanent link">&para;</a></h2>
 <p>Callback called on each step of an animation.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">OnProgress</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">OnProgress</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="oncomplete">OnComplete<a class="headerlink" href="#oncomplete" title="Permanent link">&para;</a></h2>
 <p>Callback called when all animations are completed.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">OnComplete</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">OnComplete</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="from">From<a class="headerlink" href="#from" title="Permanent link">&para;</a></h2>
 <p>Start value for the animation. Current value is used when undefined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-</span></code></pre></div></p>
-<h2 id="from_1">From<a class="headerlink" href="#from_1" title="Permanent link">&para;</a></h2>
-<p>Start value for the animation. Current value is used when undefined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
-</span></code></pre></div></p>
-<h2 id="from_2">From<a class="headerlink" href="#from_2" title="Permanent link">&para;</a></h2>
-<p>Start value for the animation. Current value is used when undefined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div>
+Or, number:
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+</span></code></pre></div>
+Or, color:
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="to">To<a class="headerlink" href="#to" title="Permanent link">&para;</a></h2>
 <p>End value for the animation. Updated value is used when undefined
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-</span></code></pre></div></p>
-<h2 id="to_1">To<a class="headerlink" href="#to_1" title="Permanent link">&para;</a></h2>
-<p>End value for the animation. Updated value is used when undefined
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="m">15</span><span class="p">)</span>
-</span></code></pre></div></p>
-<h2 id="to_2">To<a class="headerlink" href="#to_2" title="Permanent link">&para;</a></h2>
-<p>End value for the animation. Updated value is used when undefined
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></code></pre></div>
+Or, number:
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span></code></pre></div>
+Or, color:
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">To</span><span class="p">(</span><span class="s">&quot;yellow&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
