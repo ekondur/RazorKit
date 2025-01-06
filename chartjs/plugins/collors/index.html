@@ -2326,16 +2326,26 @@
 
   <h1>Collors</h1>
 
+<div class="admonition info">
+<p class="admonition-title">Reference <a href="https://www.chartjs.org/docs/latest/general/colors.html#default-color-palette"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>If you don't have any preference for colors, you can use the built-in <code>Colors</code> plugin. It will cycle through a palette of seven Chart.js brand colors:</p>
+</div>
+<div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Plugins</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">p</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">Colors</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">ForceOverride</span><span class="p">(</span><span class="k">true</span><span class="p">))))</span>
+</span></span></code></pre></div></td></tr></table></div>
 <h2 id="enabled">Enabled<a class="headerlink" href="#enabled" title="Permanent link">&para;</a></h2>
-<p>If you don't have any preference for colors, you can use the built-in Colors plugin.
-            It will cycle through a palette of seven Chart.js brand colors. Default true
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">Enabled</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<p>It will cycle through a palette of seven Chart.js brand colors. Default <code>true</code>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">Enabled</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="forceoverride">ForceOverride<a class="headerlink" href="#forceoverride" title="Permanent link">&para;</a></h2>
 <p>By default, the colors plugin only works when you initialize the chart without any colors for the border or background specified.
-            If you want to force the colors plugin to always color your datasets, for example,
-            when using dynamic datasets at runtime you will need to set the forceOverride option to true.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">ForceOverride</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+If you want to force the colors plugin to always color your datasets, for example,
+when using dynamic datasets at runtime you will need to set the <code>forceOverride</code> option to <code>true</code>.
+<a href="https://www.chartjs.org/docs/latest/general/colors.html#dynamic-datasets-at-runtime"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">ForceOverride</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 

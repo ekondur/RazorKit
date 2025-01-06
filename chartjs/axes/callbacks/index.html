@@ -2542,61 +2542,81 @@
 
   <h1>Callbacks</h1>
 
+<div class="admonition info">
+<p class="admonition-title">Reference <a href="https://www.chartjs.org/docs/latest/axes/#callbacks"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a></p>
+<p>There are a number of config callbacks that can be used to change parameters in the scale at different points in the update process. 
+The options are supplied at the top level of the axis options.</p>
+<p>Namespace: <code>options.scales[scaleId]</code></p>
+</div>
+<div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">.</span><span class="n">Options</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="p">.</span><span class="n">Scales</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="p">.</span><span class="n">AxisId</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="p">.</span><span class="n">BeginAtZero</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">Callbacks</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">            </span><span class="p">.</span><span class="n">BeforeUpdate</span><span class="p">(</span><span class="s">&quot;onBeforeUpdate&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="p">.</span><span class="n">AfterUpdate</span><span class="p">(</span><span class="s">&quot;onAfterUpdate&quot;</span><span class="p">))))</span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="beforeupdate">BeforeUpdate<a class="headerlink" href="#beforeupdate" title="Permanent link">&para;</a></h2>
 <p>Callback called before the update process starts.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="n">BeforeUpdate</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">BeforeUpdate</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="afterupdate">AfterUpdate<a class="headerlink" href="#afterupdate" title="Permanent link">&para;</a></h2>
 <p>Callback that runs at the end of the update process.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="n">AfterUpdate</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">AfterUpdate</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="beforesetdimensions">BeforeSetDimensions<a class="headerlink" href="#beforesetdimensions" title="Permanent link">&para;</a></h2>
 <p>Callback that runs before dimensions are set.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">BeforeSetDimensions</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">BeforeSetDimensions</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="aftersetdimensions">AfterSetDimensions<a class="headerlink" href="#aftersetdimensions" title="Permanent link">&para;</a></h2>
 <p>Callback that runs after dimensions are set.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">AfterSetDimensions</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">AfterSetDimensions</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="beforedatalimits">BeforeDataLimits<a class="headerlink" href="#beforedatalimits" title="Permanent link">&para;</a></h2>
 <p>Callback that runs before data limits are determined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BeforeDataLimits</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">BeforeDataLimits</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="afterdatalimits">AfterDataLimits<a class="headerlink" href="#afterdatalimits" title="Permanent link">&para;</a></h2>
 <p>Callback that runs after data limits are determined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">AfterDataLimits</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">AfterDataLimits</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="beforebuildticks">BeforeBuildTicks<a class="headerlink" href="#beforebuildticks" title="Permanent link">&para;</a></h2>
 <p>Callback that runs before ticks are created.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">BeforeBuildTicks</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">BeforeBuildTicks</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="afterbuildticks">AfterBuildTicks<a class="headerlink" href="#afterbuildticks" title="Permanent link">&para;</a></h2>
 <p>Callback that runs after ticks are created. Useful for filtering ticks.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">AfterBuildTicks</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">AfterBuildTicks</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="beforeticktolabelconversion">BeforeTickToLabelConversion<a class="headerlink" href="#beforeticktolabelconversion" title="Permanent link">&para;</a></h2>
 <p>Callback that runs before ticks are converted into strings.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">BeforeTickToLabelConversion</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">BeforeTickToLabelConversion</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="afterticktolabelconversion">AfterTickToLabelConversion<a class="headerlink" href="#afterticktolabelconversion" title="Permanent link">&para;</a></h2>
 <p>Callback that runs after ticks are converted into strings.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">AfterTickToLabelConversion</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">AfterTickToLabelConversion</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="beforecalculatelabelrotation">BeforeCalculateLabelRotation<a class="headerlink" href="#beforecalculatelabelrotation" title="Permanent link">&para;</a></h2>
 <p>Callback that runs before tick rotation is determined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">BeforeCalculateLabelRotation</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">BeforeCalculateLabelRotation</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="aftercalculatelabelrotation">AfterCalculateLabelRotation<a class="headerlink" href="#aftercalculatelabelrotation" title="Permanent link">&para;</a></h2>
 <p>Callback that runs after tick rotation is determined.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">AfterCalculateLabelRotation</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">AfterCalculateLabelRotation</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="beforefit">BeforeFit<a class="headerlink" href="#beforefit" title="Permanent link">&para;</a></h2>
 <p>Callback that runs before the scale fits to the canvas.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">BeforeFit</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">BeforeFit</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="afterfit">AfterFit<a class="headerlink" href="#afterfit" title="Permanent link">&para;</a></h2>
 <p>Callback that runs after the scale fits to the canvas.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">AfterFit</span><span class="p">(</span><span class="s">&quot;example&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">AfterFit</span><span class="p">(</span><span class="s">&quot;functionName&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
