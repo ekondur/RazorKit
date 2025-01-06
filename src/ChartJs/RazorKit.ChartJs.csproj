@@ -13,9 +13,9 @@
 	<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>csharp,htmlhelper,razor,javascript,chartjs</PackageTags>
-	<PackageReleaseNotes>Updated line dataset options</PackageReleaseNotes>
+	<PackageReleaseNotes>Fixed Scales and Animations defining issue</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Version>1.0.8</Version>
+	<Version>1.0.9</Version>
 	<PackageIcon>rk-logo.png</PackageIcon>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<EmbedUntrackedSources>true</EmbedUntrackedSources>
