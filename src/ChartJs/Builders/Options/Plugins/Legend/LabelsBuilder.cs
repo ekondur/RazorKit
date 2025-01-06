@@ -144,7 +144,7 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// If UsePointStyle is true, the width of the point style used for the legend.
+        /// If usePointStyle is true, the width of the point style used for the legend.
         /// </summary>
         /// <param name="width"></param>
         /// <returns></returns>

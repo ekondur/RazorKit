@@ -4,8 +4,10 @@ icon: material/menu-right
 
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/subtitle.html)"
 	Subtitle is a second title placed under the main title, by default. It has exactly the same configuration options with the main title.
+	
+	Namespace: ```options.plugins.subtitle```
 
-```csharp hl_lines="3"
+```csharp hl_lines="3" linenums="1"
 .Options(o => o
     .Plugins(p => p
         .Subtitle(t => t

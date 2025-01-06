@@ -26,7 +26,7 @@ icon: material/menu-right
 			"enabled": true,
 			"mode": "index",
 			"intersect": false,
-			"titleColor": '#fff'
+			"titleColor": "#fff"
 		  }
 		}
     }

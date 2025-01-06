@@ -144,12 +144,13 @@ regardless of the css specified on the canvas.
 
 ### Color
 Color of text.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.Color("example")
+.Color("rgb(75, 192, 192)")
 ```
 
 ### Display
-Is the legend title displayed.
+Is the legend title displayed. Default ```false```
 ```csharp
 .Display(true)
 ```
@@ -158,7 +159,7 @@ Is the legend title displayed.
 See font configuration.
 [:link:](../font.md)
 ```csharp
-.Font(f => f.Family("...").Size(10))
+.Font(f => f.Family("Helvetica").Size(10))
 ```
 
 ### Padding
@@ -175,27 +176,59 @@ See padding configuration.
 ### Text
 The string title.
 ```csharp
-.Text("example")
+.Text("Legend Text")
 ```
 
 ## Labels Settings
 
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-label-configuration)"
+	Set the legent labels configuration.
+	
+	Namespace: ```options.plugins.legend.labels```
+	
+=== "helper"
+	```csharp hl_lines="3 5" linenums="1"
+	.Options(o => o
+    .Plugins(p => p
+        .Legend(l => l
+            .Display(true)
+            .Labels(l => l
+                .BoxWidth(50)
+                .Color("rgb(75, 192, 192)")))))
+	```
+
+=== "js output"
+	```js linenums="1"
+	"options": {
+		"plugins": {
+		  "legend": {
+			"display": true,
+			"labels": {
+			  "color": "rgb(75, 192, 192)",
+			  "boxWidth": 50
+			}
+		  }
+		}
+	}
+	```
+
 ### BoxWidth
-Width of coloured box. default 40
+Width of coloured box. Default ```40```
 ```csharp
-.BoxWidth(15)
+.BoxWidth(50)
 ```
 
 ### BoxHeight
-Height of the coloured box.
+Height of the coloured box. Default ```font.size```
 ```csharp
-.BoxHeight(15)
+.BoxHeight(10)
 ```
 
 ### Color
 Color of label and the strikethrough.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.Color("example")
+.Color("rgb(75, 192, 192)")
 ```
 
 ### Font
@@ -214,52 +247,54 @@ Padding between rows of colored boxes. Default ```10```
 ### GenerateLabels
 Generates legend items for each thing in the legend.
 Default implementation returns the text + styling for the color box.
+See [Legend Item](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) for details.
 ```csharp
-.GenerateLabels("example")
+.GenerateLabels("functionName")
 ```
 
 ### Filter
-Filters legend items out of the legend. Receives 2 parameters, a Legend Item and the chart data.
+Filters legend items out of the legend. Receives 2 parameters, a [Legend Item](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) and the chart data.
 ```csharp
-.Filter("example")
+.Filter("functionName")
 ```
 
 ### Sort
-Sorts legend items. Type is : sort(a: LegendItem, b: LegendItem, data: ChartData): number;.
-            Receives 3 parameters, two Legend Items and the chart data. 
-            The return value of the function is a number that indicates the order of the two legend item parameters. 
-            The ordering matches the return value of Array.prototype.sort()
+Sorts legend items. Type is: ```sort(a: LegendItem, b: LegendItem, data: ChartData): number;```.
+Receives 3 parameters, two [Legend Items](https://www.chartjs.org/docs/latest/configuration/legend.html#legend-item-interface) and the chart data. 
+The return value of the function is a number that indicates the order of the two legend item parameters. 
+The ordering matches the return value of ```Array.prototype.sort()```
 ```csharp
-.Sort("example")
+.Sort("functionName")
 ```
 
 ### PointStyle
-If specified, this style of point is used for the legend. Only used if usePointStyle is true. default 'circle'
+If specified, this style of point is used for the legend. Only used if usePointStyle is true. Default ```'circle'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/elements.html#point-styles)
 ```csharp
-.PointStyle(default)
+.PointStyle(PointStyle.Dash)
 ```
 
 ### TextAlign
-Horizontal alignment of the label text. Options are: 'left', 'right' or 'center'. default 'center'
+Horizontal alignment of the label text. Options are: ```'left'```, ```'right'``` or ```'center'```. Default ```'center'```
 ```csharp
-.TextAlign(default)
+.TextAlign(TextAlign.Left)
 ```
 
 ### UsePointStyle
-Label style will match corresponding point style (size is based on pointStyleWidth or the minimum value between boxWidth and font.size).
-            default false
+Label style will match corresponding point style (size is based on ```pointStyleWidth``` or the minimum value between ```boxWidth``` and ```font.size```).
+Default ```false```
 ```csharp
 .UsePointStyle(true)
 ```
 
 ### PointStyleWidth
-If UsePointStyle is true, the width of the point style used for the legend.
+If ```usePointStyle``` is ```true```, the width of the point style used for the legend.
 ```csharp
-.PointStyleWidth(15)
+.PointStyleWidth(1)
 ```
 
 ### UseBorderRadius
-Label borderRadius will match corresponding borderRadius. default false
+Label borderRadius will match corresponding borderRadius. Default ```false```
 ```csharp
 .UseBorderRadius(true)
 ```
@@ -267,5 +302,5 @@ Label borderRadius will match corresponding borderRadius. default false
 ### BorderRadius
 Override the borderRadius to use.
 ```csharp
-.BorderRadius(default)
+.BorderRadius(1.2)
 ```

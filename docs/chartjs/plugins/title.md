@@ -5,6 +5,8 @@ icon: material/menu-right
 
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/title.html)"
 	The chart title defines text to draw at the top of the chart.
+	
+	Namespace: ```options.plugins.title```
 
 ```csharp hl_lines="3" linenums="1"
 .Options(o => o

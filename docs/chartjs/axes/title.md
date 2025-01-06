@@ -2,42 +2,55 @@
 icon: material/menu-right
 ---
 
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/samples/scale-options/titles.html)"
+	A scale title is the label that appears alongside the axes (scales) of the chart, providing descriptive information about the data represented by that axis.
+	It helps users understand the context of the chart by explaining what the axis values mean.
+	
+```csharp hl_lines="5" linenums="1"
+.Options(o => o
+    .Scales(s => s
+		.AxisId("y")
+        .BeginAtZero(true)
+        .Title(t => t
+			.Display(true)
+            .Color("#191")
+            .Text("Value"))))
+```
+	
 ## Display
-If true, display the axis title. Default false
+If true, display the axis title. Default ```false```
 ```csharp
 .Display(true)
 ```
 
 ## Align
-Alignment of the axis title. Possible options are 'start', 'center' and 'end'.
-            Default 'center'
+Alignment of the axis title. Possible options are ```'start'```, ```'center'``` and ```'end'```. Default ```'center'```
 ```csharp
-.Align(default)
+.Align(TitleAlign.Start)
 ```
 
 ## Text
 The text for the title. (i.e. "# of People" or "Response Choices").
 ```csharp
-.Text("example")
+.Text("Response Choices")
 ```
-
-## Text
 The text for the title(s).
 ```csharp
-.Text(default)
+.Text("text1", "text2")
 ```
 
 ## Color
 Color of label.
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
-.Color("example")
+.Color("#191")
 ```
 
 ## Font
 See font configuration.
 [:link:](../font.md)
 ```csharp
-.Font(f => f.Family("...").Size(10))
+.Font(f => f.Family("Helvetica").Size(10))
 ```
 
 ## Padding
