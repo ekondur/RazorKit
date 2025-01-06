@@ -2,26 +2,56 @@
 icon: material/menu-right
 ---
 
-## Duration
-The number of milliseconds an animation takes. Default 1000
+!!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/animations.html)"
+	Chart.js animates charts out of the box. A number of options are provided to configure how the animation looks and how long it takes.
+	
+	Namespace: ```options.animation``` or ```options.animations[animation]```
+	
+```csharp linenums="1"
+.Options(o => o
+    .Animations(a => a
+        .Animation("tension")
+        .Duration(1000)
+        .Easing(AnimationEasing.Linear)
+        .Loop(true)
+        .From(1)
+        .To(0))
+    .Scales(s => s
+        .ScaleId("y")
+        .Min(0)
+        .Max(100)
+    )
+)
+```
+
+## Animation
+Set animation like: ```"x"```, ```"y"```, ```"borderWidth"```, ```"radius"```, ```"tension"```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/animations.html#default-animations)
 ```csharp
-.Duration(15)
+.Animation("tension")
+```
+
+## Duration
+The number of milliseconds an animation takes. Default ```1000```
+```csharp
+.Duration(2000)
 ```
 
 ## Easing
-Easing function to use. Default 'easeOutQuart'
+Easing function to use. Default ```'easeOutQuart'```
+[:octicons-link-external-16:](https://www.chartjs.org/docs/latest/configuration/animations.html#easing)
 ```csharp
-.Easing(default)
+.Easing(AnimationEasing.Linear)
 ```
 
 ## Delay
 Delay before starting the animations.
 ```csharp
-.Delay(15)
+.Delay(500)
 ```
 
 ## Loop
-If set to true, the animations loop endlessly.
+If set to ```true```, the animations loop endlessly.
 ```csharp
 .Loop(true)
 ```
@@ -29,13 +59,13 @@ If set to true, the animations loop endlessly.
 ## OnProgress
 Callback called on each step of an animation.
 ```csharp
-.OnProgress("example")
+.OnProgress("functionName")
 ```
 
 ## OnComplete
 Callback called when all animations are completed.
 ```csharp
-.OnComplete("example")
+.OnComplete("functionName")
 ```
 
 ## From
@@ -43,17 +73,13 @@ Start value for the animation. Current value is used when undefined.
 ```csharp
 .From(true)
 ```
-
-## From
-Start value for the animation. Current value is used when undefined.
+Or, number:
 ```csharp
-.From(15)
+.From(0)
 ```
-
-## From
-Start value for the animation. Current value is used when undefined.
+Or, color:
 ```csharp
-.From("example")
+.From("green")
 ```
 
 ## To
@@ -61,16 +87,12 @@ End value for the animation. Updated value is used when undefined
 ```csharp
 .To(true)
 ```
-
-## To
-End value for the animation. Updated value is used when undefined
+Or, number:
 ```csharp
-.To(15)
+.To(1)
 ```
-
-## To
-End value for the animation. Updated value is used when undefined
+Or, color:
 ```csharp
-.To("example")
+.To("yellow")
 ```
 
