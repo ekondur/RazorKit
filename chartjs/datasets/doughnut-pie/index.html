@@ -2838,7 +2838,79 @@ Pie and doughnut charts are effectively the same class in Chart.js, but have one
 <p>This defaults to <code>0</code> for pie charts, and <code>'50%'</code> for doughnuts.
 They are also registered under two aliases in the Chart core. Other than their different default value, and different alias, they are exactly the same.</p>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Doughnut</label><label for="__tabbed_1_2">Pie</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><canvas id="canvasId1"></canvas>
+<script>
+    new Chart(document.getElementById('canvasId1'),
+            {
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "hoverOffset": 4,
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "label": "Doughnut Dataset",
+        "type": "doughnut",
+        "backgroundColor": [
+          "#0e9afd",
+          "#ff6285",
+          "#ff9f46"
+        ]
+      }
+    ]
+  }
+}
+    );
+</script></p>
+</div>
+<div class="tabbed-block">
+<p><canvas id="canvasId2"></canvas>
+<script>
+    new Chart(document.getElementById('canvasId2'),
+            {
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "hoverOffset": 4,
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "label": "Doughnut Dataset",
+        "type": "pie",
+        "backgroundColor": [
+          "#0e9afd",
+          "#ff6285",
+          "#ff9f46"
+        ]
+      }
+    ]
+  }
+}
+    );
+</script></p>
+</div>
+</div>
+</div>
+</hr>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Doughnut</label><label for="__tabbed_2_2">Pie</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -2857,7 +2929,7 @@ They are also registered under two aliases in the Chart core. Other than their d
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">Doughnut</span><span class="p">()</span>
 </span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;Doughnut Dataset&quot;</span><span class="p">)</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">300</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;#9BD0F5&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#FFB1C1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#cc65fe&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;#0e9afd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#ff6285&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#ff9f46&quot;</span><span class="p">)</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="p">.</span><span class="n">HoverOffset</span><span class="p">(</span><span class="m">4</span><span class="p">)))</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">.</span><span class="n">Render</span><span class="p">())</span>
 </span></code></pre></div></td></tr></table></div>
@@ -2879,7 +2951,7 @@ They are also registered under two aliases in the Chart core. Other than their d
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">Pie</span><span class="p">()</span>
 </span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;Doughnut Dataset&quot;</span><span class="p">)</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">300</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;#9BD0F5&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#FFB1C1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#cc65fe&quot;</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;#0e9afd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#ff6285&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;#ff9f46&quot;</span><span class="p">)</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="p">.</span><span class="n">HoverOffset</span><span class="p">(</span><span class="m">4</span><span class="p">)))</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">.</span><span class="n">Render</span><span class="p">())</span>
 </span></code></pre></div></td></tr></table></div>

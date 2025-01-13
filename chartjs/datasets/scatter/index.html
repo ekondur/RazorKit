@@ -2331,6 +2331,49 @@
 <p>Scatter charts are based on basic line charts with the x-axis changed to a linear axis. 
 To use a scatter chart, data must be passed as objects containing X and Y properties. The example below creates a scatter chart with 4 points.</p>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+new Chart(document.getElementById('canvasId'),
+    {
+      "data": {
+        "datasets": [
+          {
+            "data": [
+              {
+                "x": -10,
+                "y": 0
+              },
+              {
+                "x": 0,
+                "y": 10
+              },
+              {
+                "x": 10,
+                "y": 5
+              },
+              {
+                "x": 0.5,
+                "y": 5.5
+              }
+            ],
+            "label": "Scatter Dataset",
+            "type": "scatter",
+            "backgroundColor": "rgb(255, 99, 132)"
+          }
+        ]
+      },
+      "options": {
+        "scales": {
+          "y": {
+            "type": "linear",
+            "position": "bottom"
+          }
+        }
+      }
+    });
+</script>
+
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">helper</label><label for="__tabbed_1_2">js output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
