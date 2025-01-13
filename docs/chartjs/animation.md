@@ -6,23 +6,129 @@ icon: material/menu-right
 	Chart.js animates charts out of the box. A number of options are provided to configure how the animation looks and how long it takes.
 	
 	Namespace: ```options.animation``` or ```options.animations[animation]```
-	
-```csharp linenums="1"
-.Options(o => o
-    .Animations(a => a
-        .Animation("tension")
-        .Duration(1000)
-        .Easing(AnimationEasing.Linear)
-        .Loop(true)
-        .From(1)
-        .To(0))
-    .Scales(s => s
-        .ScaleId("y")
-        .Min(0)
-        .Max(100)
-    )
-)
-```
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+    new Chart(document.getElementById('canvasId'),
+            {
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "fill": false,
+        "data": [
+          65.0,
+          59.0,
+          80.0,
+          81.0,
+          26.0,
+          55.0,
+          40.0
+        ],
+        "label": "Looping tension",
+        "type": "line",
+        "borderColor": "rgb(75, 192, 192)"
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "min": 0,
+        "max": 100
+      }
+    },
+    "animations": {
+      "tension": {
+        "duration": 1000,
+        "easing": "linear",
+        "loop": true,
+        "from": 1,
+        "to": 0
+      }
+    }
+  }
+}
+    );
+</script>	
+
+=== "helper"
+	```csharp linenums="1"
+	.Options(o => o
+		.Animations(a => a
+			.Animation("tension")
+			.Duration(1000)
+			.Easing(AnimationEasing.Linear)
+			.Loop(true)
+			.From(1)
+			.To(0))
+		.Scales(s => s
+			.ScaleId("y")
+			.Min(0)
+			.Max(100)
+		)
+	)
+	```
+=== "js output"
+	```js linenums="1"
+	new Chart(document.getElementById('canvasId'),
+    {
+	  "data": {
+		"labels": [
+		  "January",
+		  "February",
+		  "March",
+		  "April",
+		  "May",
+		  "June",
+		  "July"
+		],
+		"datasets": [
+		  {
+			"fill": false,
+			"data": [
+			  65.0,
+			  59.0,
+			  80.0,
+			  81.0,
+			  26.0,
+			  55.0,
+			  40.0
+			],
+			"label": "Looping tension",
+			"type": "line",
+			"borderColor": "rgb(75, 192, 192)"
+		  }
+		]
+	  },
+	  "options": {
+		"scales": {
+		  "y": {
+			"min": 0,
+			"max": 100
+		  }
+		},
+		"animations": {
+		  "tension": {
+			"duration": 1000,
+			"easing": "linear",
+			"loop": true,
+			"from": 1,
+			"to": 0
+		  }
+		}
+	  }
+	});
+	```
 
 ## Animation
 Set animation like: ```"x"```, ```"y"```, ```"borderWidth"```, ```"radius"```, ```"tension"```

@@ -4,20 +4,94 @@ icon: material/chart-line
 
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/line.html)"
 	A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+    new Chart(document.getElementById('canvasId'),
+            {
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "fill": false,
+        "tension": 0.1,
+        "data": [
+          65.0,
+          59.0,
+          80.0,
+          81.0,
+          56.0,
+          55.0,
+          40.0
+        ],
+        "label": "Line Chart",
+        "type": "line",
+        "borderColor": "rgb(75, 192, 192)"
+      }
+    ]
+  }
+}
+    );
+</script>
 
-```csharp hl_lines="5" linenums="1"
-@(Html.Chart("canvasId")
-.Data(d => d
-    .Labels("January", "February", "March", "April", "May", "June", "July")
-    .Datasets(ds => ds
-        .Line()
-        .Label("Line Chart")
-        .Data(65, 59, 80, 81, 56, 55, 40)
-        .Fill(false)
-        .BorderColor("rgb(75, 192, 192)")
-        .Tension(0.1)))
-.Render())
-```
+=== "helper"
+	```csharp hl_lines="5" linenums="1"
+	@(Html.Chart("canvasId")
+	.Data(d => d
+		.Labels("January", "February", "March", "April", "May", "June", "July")
+		.Datasets(ds => ds
+			.Line()
+			.Label("Line Chart")
+			.Data(65, 59, 80, 81, 56, 55, 40)
+			.Fill(false)
+			.BorderColor("rgb(75, 192, 192)")
+			.Tension(0.1)))
+	.Render())
+	```
+=== "js output"
+	```js linenums="1"
+	new Chart(document.getElementById('canvasId'),
+    {
+	  "data": {
+		"labels": [
+		  "January",
+		  "February",
+		  "March",
+		  "April",
+		  "May",
+		  "June",
+		  "July"
+		],
+		"datasets": [
+		  {
+			"fill": false,
+			"tension": 0.1,
+			"data": [
+			  65.0,
+			  59.0,
+			  80.0,
+			  81.0,
+			  56.0,
+			  55.0,
+			  40.0
+			],
+			"label": "Line Chart",
+			"type": "line",
+			"borderColor": "rgb(75, 192, 192)"
+		  }
+		]
+	  }
+	});
+	```
 
 ## Common Dataset Options
 These options are common to all datasets.

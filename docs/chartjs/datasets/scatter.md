@@ -6,6 +6,49 @@ icon: material/chart-scatter-plot
 	Scatter charts are based on basic line charts with the x-axis changed to a linear axis. 
 	To use a scatter chart, data must be passed as objects containing X and Y properties. The example below creates a scatter chart with 4 points.
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+new Chart(document.getElementById('canvasId'),
+	{
+	  "data": {
+		"datasets": [
+		  {
+			"data": [
+			  {
+				"x": -10,
+				"y": 0
+			  },
+			  {
+				"x": 0,
+				"y": 10
+			  },
+			  {
+				"x": 10,
+				"y": 5
+			  },
+			  {
+				"x": 0.5,
+				"y": 5.5
+			  }
+			],
+			"label": "Scatter Dataset",
+			"type": "scatter",
+			"backgroundColor": "rgb(255, 99, 132)"
+		  }
+		]
+	  },
+	  "options": {
+		"scales": {
+		  "y": {
+			"type": "linear",
+			"position": "bottom"
+		  }
+		}
+	  }
+	});
+</script>
+
 === "helper"
 	```csharp hl_lines="8" linenums="1"
 	@{

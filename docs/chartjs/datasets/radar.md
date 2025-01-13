@@ -6,24 +6,121 @@ icon: material/chart-line-stacked
 	A radar chart is a way of showing multiple data points and the variation between them.
 	They are often useful for comparing the points of two or more different data sets.
 
-```csharp hl_lines="6 11" linenums="1"
-@(Html.Chart("canvasId")
-.Data(d => d
-    .Labels("Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running")
-    .Datasets(ds =>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+new Chart(document.getElementById('canvasId'),
     {
-        ds.Radar()
-        .Label("My First Dataset")
-        .Data(65, 59, 90, 81, 56, 55, 40)
-        .Fill(true);
+	  "data": {
+		"labels": [
+		  "Eating",
+		  "Drinking",
+		  "Sleeping",
+		  "Designing",
+		  "Coding",
+		  "Cycling",
+		  "Running"
+		],
+		"datasets": [
+		  {
+			"data": [
+			  65.0,
+			  59.0,
+			  90.0,
+			  81.0,
+			  56.0,
+			  55.0,
+			  40.0
+			],
+			"fill": true,
+			"label": "My First Dataset",
+			"type": "radar"
+		  },
+		  {
+			"data": [
+			  28.0,
+			  48.0,
+			  40.0,
+			  19.0,
+			  96.0,
+			  27.0,
+			  100.0
+			],
+			"fill": true,
+			"label": "My Second Dataset",
+			"type": "radar"
+		  }
+		]
+	  }
+	});
+</script>
 
-        ds.Radar()
-        .Label("My Second Dataset")
-        .Data(28, 48, 40, 19, 96, 27, 100)
-        .Fill(true);
-    }))
-.Render())
-```
+=== "helper"
+	```csharp hl_lines="6 11" linenums="1"
+	@(Html.Chart("canvasId")
+	.Data(d => d
+		.Labels("Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running")
+		.Datasets(ds =>
+		{
+			ds.Radar()
+			.Label("My First Dataset")
+			.Data(65, 59, 90, 81, 56, 55, 40)
+			.Fill(true);
+
+			ds.Radar()
+			.Label("My Second Dataset")
+			.Data(28, 48, 40, 19, 96, 27, 100)
+			.Fill(true);
+		}))
+	.Render())
+	```
+=== "js output"
+	```js linenums="1"
+	new Chart(document.getElementById('canvasId'),
+    {
+	  "data": {
+		"labels": [
+		  "Eating",
+		  "Drinking",
+		  "Sleeping",
+		  "Designing",
+		  "Coding",
+		  "Cycling",
+		  "Running"
+		],
+		"datasets": [
+		  {
+			"data": [
+			  65.0,
+			  59.0,
+			  90.0,
+			  81.0,
+			  56.0,
+			  55.0,
+			  40.0
+			],
+			"fill": true,
+			"label": "My First Dataset",
+			"type": "radar"
+		  },
+		  {
+			"data": [
+			  28.0,
+			  48.0,
+			  40.0,
+			  19.0,
+			  96.0,
+			  27.0,
+			  100.0
+			],
+			"fill": true,
+			"label": "My Second Dataset",
+			"type": "radar"
+		  }
+		]
+	  }
+	});
+	```
 
 ## Common Dataset Options
 These options are common to all datasets.

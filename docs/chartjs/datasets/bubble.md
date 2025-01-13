@@ -7,6 +7,34 @@ icon: material/chart-bubble
 	The location of the bubble is determined by the first two dimensions and the corresponding horizontal and vertical axes.
 	The third dimension is represented by the size of the individual bubbles.
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>	
+<script>
+new Chart(document.getElementById('canvasId'),
+{
+  "data": {
+    "datasets": [
+      {
+        "data": [
+          {
+            "x": 20,
+            "y": 30,
+            "r": 15
+          },
+          {
+            "x": 40,
+            "y": 10,
+            "r": 10
+          }
+        ],
+        "label": "Bubble Dataset",
+        "type": "bubble"
+      }
+    ]
+  }
+});
+</script>
+
 === "helper"
 	```csharp hl_lines="8" linenums="1"
 	@{

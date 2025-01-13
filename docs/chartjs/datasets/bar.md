@@ -5,6 +5,52 @@ icon: material/chart-bar
 !!! info "Reference [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/charts/bar.html)"
 	A bar chart provides a way of showing data values represented as vertical bars. 
 	It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+new Chart(document.getElementById('canvasId'),
+{
+  "data": {
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July"
+    ],
+    "datasets": [
+      {
+        "borderWidth": 1,
+        "data": [
+          65.0,
+          59.0,
+          80.0,
+          81.0,
+          56.0,
+          55.0,
+          40.0
+        ],
+        "label": "Bar Chart",
+        "type": "bar",
+        "backgroundColor": [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(255, 159, 64, 0.2)"
+        ]
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "y": {
+        "beginAtZero": true
+      }
+    }
+  }
+});
+</script>
 
 === "helper"
 	```csharp hl_lines="5" linenums="1"

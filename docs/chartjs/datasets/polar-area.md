@@ -6,17 +6,90 @@ icon: material/chart-donut-variant
 	Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.
 	This type of chart is often useful when we want to show a comparison data similar to a pie chart, but also show a scale of values for context.
 
-```csharp hl_lines="5"
-@(Html.Chart("canvasId")
-.Data(d => d
-    .Labels("Red", "Green", "Yellow", "Grey", "Blue")
-    .Datasets(ds => ds
-        .PolarArea()
-        .Label("Polar Area Dataset")
-        .Data(11, 16, 7, 3, 14)
-        .BackgroundColors("rgb(255, 99, 132)", "rgb(75, 192, 192)", "rgb(255, 205, 86)", "rgb(201, 203, 207)", "rgb(54, 162, 235)")))
-.Render())
-```
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="canvasId"></canvas>
+<script>
+new Chart(document.getElementById('canvasId'),
+    {
+	  "data": {
+		"labels": [
+		  "Red",
+		  "Green",
+		  "Yellow",
+		  "Grey",
+		  "Blue"
+		],
+		"datasets": [
+		  {
+			"data": [
+			  11,
+			  16,
+			  7,
+			  3,
+			  14
+			],
+			"label": "Polar Area Dataset",
+			"type": "polarArea",
+			"backgroundColor": [
+			  "rgb(255, 99, 132)",
+			  "rgb(75, 192, 192)",
+			  "rgb(255, 205, 86)",
+			  "rgb(201, 203, 207)",
+			  "rgb(54, 162, 235)"
+			]
+		  }
+		]
+	  }
+	});
+</script>
+
+=== "helper"
+	```csharp hl_lines="5" linenums="1"
+	@(Html.Chart("canvasId")
+	.Data(d => d
+		.Labels("Red", "Green", "Yellow", "Grey", "Blue")
+		.Datasets(ds => ds
+			.PolarArea()
+			.Label("Polar Area Dataset")
+			.Data(11, 16, 7, 3, 14)
+			.BackgroundColors("rgb(255, 99, 132)", "rgb(75, 192, 192)", "rgb(255, 205, 86)", "rgb(201, 203, 207)", "rgb(54, 162, 235)")))
+	.Render())
+	```
+=== "js output"
+	```js linenums="1"
+	new Chart(document.getElementById('canvasId'),
+    {
+	  "data": {
+		"labels": [
+		  "Red",
+		  "Green",
+		  "Yellow",
+		  "Grey",
+		  "Blue"
+		],
+		"datasets": [
+		  {
+			"data": [
+			  11,
+			  16,
+			  7,
+			  3,
+			  14
+			],
+			"label": "Polar Area Dataset",
+			"type": "polarArea",
+			"backgroundColor": [
+			  "rgb(255, 99, 132)",
+			  "rgb(75, 192, 192)",
+			  "rgb(255, 205, 86)",
+			  "rgb(201, 203, 207)",
+			  "rgb(54, 162, 235)"
+			]
+		  }
+		]
+	  }
+	});
+	```
 
 ## Common Dataset Options
 These options are common to all datasets.

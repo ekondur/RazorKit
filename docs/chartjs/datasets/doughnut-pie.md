@@ -9,6 +9,75 @@ icon: material/chart-pie
 	
 	This defaults to ```0``` for pie charts, and ```'50%'``` for doughnuts.
 	They are also registered under two aliases in the Chart core. Other than their different default value, and different alias, they are exactly the same.
+	
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+=== "Doughnut"
+	<canvas id="canvasId1"></canvas>
+	<script>
+		new Chart(document.getElementById('canvasId1'),
+				{
+	  "data": {
+		"labels": [
+		  "Red",
+		  "Blue",
+		  "Yellow"
+		],
+		"datasets": [
+		  {
+			"hoverOffset": 4,
+			"data": [
+			  300,
+			  50,
+			  100
+			],
+			"label": "Doughnut Dataset",
+			"type": "doughnut",
+			"backgroundColor": [
+			  "#0e9afd",
+			  "#ff6285",
+			  "#ff9f46"
+			]
+		  }
+		]
+	  }
+	}
+		);
+	</script>
+
+=== "Pie"
+	<canvas id="canvasId2"></canvas>
+	<script>
+		new Chart(document.getElementById('canvasId2'),
+				{
+	  "data": {
+		"labels": [
+		  "Red",
+		  "Blue",
+		  "Yellow"
+		],
+		"datasets": [
+		  {
+			"hoverOffset": 4,
+			"data": [
+			  300,
+			  50,
+			  100
+			],
+			"label": "Doughnut Dataset",
+			"type": "pie",
+			"backgroundColor": [
+			  "#0e9afd",
+			  "#ff6285",
+			  "#ff9f46"
+			]
+		  }
+		]
+	  }
+	}
+		);
+	</script>
+
+</hr>
 
 === "Doughnut"
 	```csharp hl_lines="5" linenums="1"
@@ -19,7 +88,7 @@ icon: material/chart-pie
 			.Doughnut()
 			.Label("Doughnut Dataset")
 			.Data(300, 50, 100)
-			.BackgroundColors("#9BD0F5", "#FFB1C1", "#cc65fe")
+			.BackgroundColors("#0e9afd", "#ff6285", "#ff9f46")
 			.HoverOffset(4)))
 	.Render())
 	```
@@ -32,7 +101,7 @@ icon: material/chart-pie
 			.Pie()
 			.Label("Doughnut Dataset")
 			.Data(300, 50, 100)
-			.BackgroundColors("#9BD0F5", "#FFB1C1", "#cc65fe")
+			.BackgroundColors("#0e9afd", "#ff6285", "#ff9f46")
 			.HoverOffset(4)))
 	.Render())
 	```
