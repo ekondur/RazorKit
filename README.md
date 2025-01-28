@@ -3,7 +3,7 @@
 RazorKit is a collection of lightweight, fluent-style Razor HTML helpers that make it easy for developers to integrate popular JavaScript libraries into their ASP.NET applications. 
 With RazorKit, you can quickly implement features from libraries like [Chart.js](https://ekondur.github.io/RazorKit/chartjs/) and [DataTables](https://ekondur.github.io/RazorKit/datatables/), without the hassle of writing complex JavaScript or HTML code manually.
 
-## Setup DataTables
+## Using DataTables
 
 Install the [RazorKit.DataTables](https://www.nuget.org/packages/RazorKit.DataTables/) package from nuget.
 
@@ -42,7 +42,7 @@ public JsonResult GetDataResult(DataRequest request)
 }
 ``` 
 
-## Setup ChartJs
+## Using ChartJs
 
 Install the [RazorKit.ChartJs](https://www.nuget.org/packages/RazorKit.ChartJs/) package from nuget.
 
@@ -67,7 +67,7 @@ Add related scripts and implement. [Reference:](https://www.chartjs.org/docs/lat
     .Render())
 ```
 
-## Setup SweetAlert2
+## Using SweetAlert2
 
 Install the [RazorKit.SweetAlert2](https://www.nuget.org/packages/RazorKit.SweetAlert2/) package from nuget.
 
