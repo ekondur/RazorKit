@@ -106,6 +106,17 @@ namespace RazorKit.SweetAlert2.Builders
         }
 
         /// <summary>
+        /// Theme of the popup. 'light', 'dark', 'auto', and 'borderless' for now.
+        /// </summary>
+        /// <param name="theme"></param>
+        /// <returns></returns>
+        public SwalBuilder Theme(SwalTheme theme)
+        {
+            Swal.Theme = theme;
+            return this;
+        }
+
+        /// <summary>
         /// CSS classes for animations when showing a popup (fade in).
         /// </summary>
         /// <param name="action"></param>

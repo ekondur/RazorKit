@@ -120,4 +120,23 @@ namespace RazorKit
         [EnumMember(Value = "bottom-end")]
         BottomEnd
     }
+
+    /// <summary>
+    /// Theme of the popup.
+    /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum SwalTheme
+    {
+        [EnumMember(Value = "light")]
+        Light,
+
+        [EnumMember(Value = "dark")]
+        Dark,
+
+        [EnumMember(Value = "auto")]
+        Auto,
+
+        [EnumMember(Value = "borderless")]
+        Borderless
+    }
 }
