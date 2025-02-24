@@ -75,6 +75,7 @@ namespace RazorKit.SweetAlert2.Models
         public string[] ProgressSteps { get; set; }
         public string CurrentProgressStep { get; set; }
         public string ProgressStepsDistance { get; set; }
+        public bool? Draggable { get; set; }
 
         [JsonConverter(typeof(NoQuotesStringConverter))]
         public string PreConfirm { get; set; }

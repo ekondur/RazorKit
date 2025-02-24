@@ -808,6 +808,17 @@ namespace RazorKit.SweetAlert2.Builders
         }
 
         /// <summary>
+        /// Enable draggable modal.
+        /// </summary>
+        /// <param name="draggable"></param>
+        /// <returns></returns>
+        public SwalBuilder Draggable(bool draggable)
+        {
+            Swal.Draggable = draggable;
+            return this;
+        }
+
+        /// <summary>
         /// Function to execute before confirming, may be async (Promise-returning) or sync.
         /// </summary>
         /// <param name="preConfirm"></param>
