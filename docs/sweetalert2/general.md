@@ -62,6 +62,13 @@ If set to ```false```, the popup animation will be disabled. Default ```true```
 .Animation(false)
 ```
 
+## Theme
+Theme of the popup. ```'light'```, ```'dark'```, ```'auto'```, and ```'borderless'``` for now.
+[:octicons-link-external-16:](https://sweetalert2.github.io/#theme)
+```csharp
+.Theme(SwalTheme.Borderless)
+```
+
 ## ShowClass
 CSS classes for animations when showing a popup (fade in).
 [:octicons-link-external-16:](https://sweetalert2.github.io/#showClass)
@@ -157,6 +164,13 @@ Popup window position. Default ```'center'```
 [:octicons-link-external-16:](https://sweetalert2.github.io/#position)
 ```csharp
 .Position(SwalPosition.Top)
+```
+
+## Draggable
+Enable draggable modal. Default ```false```
+[:octicons-link-external-16:](https://sweetalert2.github.io/#examples)
+```csharp
+.Draggable(true)
 ```
 
 ## Grow
