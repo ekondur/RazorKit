@@ -307,6 +307,30 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
+        /// Enable the AutoFill extension for DataTables.
+        /// </summary>
+        /// <param name="enabled"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> AutoFill(bool enabled)
+        {
+            Datatable.AutoFill = enabled;
+            return this;
+        }
+
+        /// <summary>
+        /// Configure the AutoFill extension for DataTables.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> AutoFill(Action<AutoFillBuilder> action)
+        {
+            Datatable.AutoFill = new AutoFill();
+            var builder = new AutoFillBuilder((AutoFill)Datatable.AutoFill);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Define and position the table control elements to appear on the page.
         /// </summary>
         /// <param name="action"></param>

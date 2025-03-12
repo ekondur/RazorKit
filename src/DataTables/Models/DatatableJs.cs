@@ -78,6 +78,7 @@ namespace RazorKit.DataTables.Models
         public object FixedColumns { get; set; }
         public object FixedHeader { get; set; }
         public object Responsive { get; set; }
+        public object AutoFill { get; set; }
 
         internal string Style { get; set; } = "display dataTable";
         internal IList<Filter> Filters { get; set; } = new List<Filter>();
