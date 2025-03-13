@@ -1,4 +1,5 @@
 site_name: RazorKit
+site_url: https://ekondur.github.io/RazorKit/
 site_author: Emrah KONDUR
 site_description: RazorKit is a collection of lightweight, fluent-style Razor HTML helpers that make it easy for developers to integrate popular JavaScript libraries into their ASP.NET applications. With RazorKit, you can quickly implement features from libraries like Chart.js and DataTables, without the hassle of writing complex JavaScript or HTML code manually.
 repo_name: ekondur/RazorKit
@@ -58,6 +59,7 @@ nav:
     - Filters: datatables/filters.md
     - Layout: datatables/layout.md
     - Extensions:
+        - AutoFill: datatables/extensions/autofill.md
         - Buttons: datatables/extensions/buttons.md
         - ColReorder: datatables/extensions/colreorder.md
         - FixedColumns: datatables/extensions/fixedcolumns.md
