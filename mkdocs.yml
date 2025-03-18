@@ -86,7 +86,7 @@ nav:
         - Subtitle: chartjs/plugins/subtitle.md
         - Legend: chartjs/plugins/legend.md
         - Tooltip: chartjs/plugins/tooltip.md
-        - Collors: chartjs/plugins/collors.md
+        - Colors: chartjs/plugins/colors.md
         - Decimation: chartjs/plugins/decimation.md
         - Filler: chartjs/plugins/filler.md
     - Elements:
