@@ -20,6 +20,9 @@ Fill color.
 ```csharp
 .BackgroundColor("blue")
 ```
+```csharp
+.BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
+```
 
 ### BorderWidth
 Stroke width.
@@ -31,6 +34,9 @@ Stroke width.
 Stroke color.
 ```csharp
 .BorderColor("grey")
+```
+```csharp
+.BorderColors("yellow", "blue")
 ```
 
 ## Arc Element Settings

@@ -122,11 +122,17 @@ The line fill color.
 ```csharp
 .BackgroundColor("green")
 ```
+```csharp
+.BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
+```
 
 ### BorderColor
 The line color.
 ```csharp
 .BorderColor("grey")
+```
+```csharp
+.BorderColors("yellow", "blue")
 ```
 
 ### BorderWidth
@@ -161,11 +167,17 @@ Background color when hovered.
 ```csharp
 .HoverBackgroundColor("blue")
 ```
+```csharp
+.HoverBackgroundColors("blue", "green")
+```
 
 ### HoverBorderColor
 Border color when hovered.
 ```csharp
 .HoverBorderColor("grey")
+```
+```csharp
+.HoverBorderColors("grey", "blue")
 ```
 
 ### HoverBorderWidth
@@ -197,18 +209,6 @@ Parsing with x and y axis keys.
 
 ## Bar Dataset Options
 Bar chart specific dataset options.
-
-### BackgroundColors
-Set backgrounds colors.
-```csharp
-.BackgroundColors("rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)")
-```
-
-### BorderColors
-Set border colors.
-```csharp
-.BorderColors("yellow", "blue")
-```
 
 ### Base
 Base value for the bar in data units along the value axis. If not set, defaults to the value axis base value.
