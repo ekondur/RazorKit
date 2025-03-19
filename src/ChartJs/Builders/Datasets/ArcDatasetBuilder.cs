@@ -16,17 +16,6 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
-        /// Set Backgrounds colors
-        /// </summary>
-        /// <param name="colors"></param>
-        /// <returns></returns>
-        public T BackgroundColors(params string[] colors)
-        {
-            _dataset.BackgroundColor = colors;
-            return (T)this;
-        }
-
-        /// <summary>
         /// Default 'center'
         /// </summary>
         /// <param name="borderAlign"></param>
