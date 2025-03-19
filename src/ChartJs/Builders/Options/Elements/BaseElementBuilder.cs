@@ -27,6 +27,17 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
+        /// Fill colors.
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns></returns>
+        public T BackgroundColors(params string[] colors)
+        {
+            _baseElement.BackgroundColor = colors;
+            return (T)this;
+        }
+
+        /// <summary>
         /// Stroke width.
         /// </summary>
         /// <param name="width"></param>
@@ -45,6 +56,17 @@ namespace RazorKit.ChartJs.Builders
         public T BorderColor(string color)
         {
             _baseElement.BorderColor = color;
+            return (T)this;
+        }
+
+        /// <summary>
+        /// Stroke colors.
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns></returns>
+        public T BorderColors(params string[] colors)
+        {
+            _baseElement.BorderColor = colors;
             return (T)this;
         }
     }

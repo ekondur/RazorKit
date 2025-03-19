@@ -38,6 +38,17 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
+        /// The line fill colors.
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns>The T instance.</returns>
+        public T BackgroundColors(params string[] colors)
+        {
+            _dataset.BackgroundColor = colors;
+            return (T)this;
+        }
+
+        /// <summary>
         /// The line color.
         /// </summary>
         /// <param name="color"></param>
@@ -45,6 +56,17 @@ namespace RazorKit.ChartJs.Builders
         public T BorderColor(string color)
         {
             _dataset.BorderColor = color;
+            return (T)this;
+        }
+
+        /// <summary>
+        /// The line colors.
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns>The T instance.</returns>
+        public T BorderColors(params string[] colors)
+        {
+            _dataset.BorderColor = colors;
             return (T)this;
         }
 
@@ -106,6 +128,17 @@ namespace RazorKit.ChartJs.Builders
         }
 
         /// <summary>
+        /// Background colors when hovered.
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns>The T instance with the set data.</returns>
+        public T HoverBackgroundColors(params string[] colors)
+        {
+            _dataset.HoverBackgroundColor = colors;
+            return (T)this;
+        }
+
+        /// <summary>
         /// Border color when hovered.
         /// </summary>
         /// <param name="color"></param>
@@ -113,6 +146,17 @@ namespace RazorKit.ChartJs.Builders
         public T HoverBorderColor(string color)
         {
             _dataset.HoverBorderColor = color;
+            return (T)this;
+        }
+
+        /// <summary>
+        /// Border colors when hovered.
+        /// </summary>
+        /// <param name="colors"></param>
+        /// <returns>The T instance with the set data.</returns>
+        public T HoverBorderColors(params string[] colors)
+        {
+            _dataset.HoverBorderColor = colors;
             return (T)this;
         }
 

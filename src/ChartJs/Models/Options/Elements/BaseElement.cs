@@ -2,8 +2,8 @@
 {
     internal class BaseElement
     {
-        public string BackgroundColor { get; set; }
+        public object BackgroundColor { get; set; }
         public int? BorderWidth { get; set; }
-        public string BorderColor { get; set; }
+        public object BorderColor { get; set; }
     }
 }
