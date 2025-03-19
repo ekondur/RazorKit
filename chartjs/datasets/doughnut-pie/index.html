@@ -1300,15 +1300,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#backgroundcolors" class="md-nav__link">
-    <span class="md-ellipsis">
-      BackgroundColors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#borderalign" class="md-nav__link">
     <span class="md-ellipsis">
       BorderAlign
@@ -2683,15 +2674,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#backgroundcolors" class="md-nav__link">
-    <span class="md-ellipsis">
-      BackgroundColors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#borderalign" class="md-nav__link">
     <span class="md-ellipsis">
       BorderAlign
@@ -2990,128 +2972,132 @@ They are also registered under two aliases in the Chart core. Other than their d
 <h3 id="backgroundcolor">BackgroundColor<a class="headerlink" href="#backgroundcolor" title="Permanent link">&para;</a></h3>
 <p>The line fill color.
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">.</span><span class="n">BackgroundColor</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;rgba(255, 99, 132, 0.2)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rgba(255, 159, 64, 0.2)&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="bordercolor">BorderColor<a class="headerlink" href="#bordercolor" title="Permanent link">&para;</a></h3>
 <p>The line color.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="n">BorderColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BorderColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">BorderColors</span><span class="p">(</span><span class="s">&quot;yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="borderwidth">BorderWidth<a class="headerlink" href="#borderwidth" title="Permanent link">&para;</a></h3>
 <p>The line width (in pixels).
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">BorderWidth</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="clip">Clip<a class="headerlink" href="#clip" title="Permanent link">&para;</a></h3>
 <p>How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea.
 0 = clip at chartArea.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 </span></code></pre></div>
 Is clip enabled?
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
 </span></code></pre></div>
 Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">Left</span><span class="p">(</span><span class="m">5</span><span class="p">).</span><span class="n">Top</span><span class="p">(</span><span class="k">false</span><span class="p">).</span><span class="n">Right</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="p">).</span><span class="n">Bottom</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">Clip</span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">Left</span><span class="p">(</span><span class="m">5</span><span class="p">).</span><span class="n">Top</span><span class="p">(</span><span class="k">false</span><span class="p">).</span><span class="n">Right</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="p">).</span><span class="n">Bottom</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
 </span></code></pre></div></p>
 <h3 id="hidden">Hidden<a class="headerlink" href="#hidden" title="Permanent link">&para;</a></h3>
 <p>Configure the visibility of the dataset. Using hidden: true will hide the dataset from being rendered in the Chart.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">.</span><span class="n">Hidden</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">Hidden</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoverbackgroundcolor">HoverBackgroundColor<a class="headerlink" href="#hoverbackgroundcolor" title="Permanent link">&para;</a></h3>
 <p>Background color when hovered.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">.</span><span class="n">HoverBackgroundColor</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">HoverBackgroundColor</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">HoverBackgroundColors</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;green&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoverbordercolor">HoverBorderColor<a class="headerlink" href="#hoverbordercolor" title="Permanent link">&para;</a></h3>
 <p>Border color when hovered.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">.</span><span class="n">HoverBorderColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">HoverBorderColor</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">HoverBorderColors</span><span class="p">(</span><span class="s">&quot;grey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoverborderwidth">HoverBorderWidth<a class="headerlink" href="#hoverborderwidth" title="Permanent link">&para;</a></h3>
 <p>The line width (in pixels) when hovered.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">.</span><span class="n">HoverBorderWidth</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="n">HoverBorderWidth</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="label">Label<a class="headerlink" href="#label" title="Permanent link">&para;</a></h3>
 <p>The label for the dataset which appears in the legend and tooltips.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;First Bar Dataset&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;First Bar Dataset&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="parsing">Parsing<a class="headerlink" href="#parsing" title="Permanent link">&para;</a></h3>
 <p>How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. 
 If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
 </span></code></pre></div>
 Parsing with key.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 Parsing with x and y axis keys.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="s">&quot;xKey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yKey&quot;</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">Parsing</span><span class="p">(</span><span class="s">&quot;xKey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yKey&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="arc-dataset-options">Arc Dataset Options<a class="headerlink" href="#arc-dataset-options" title="Permanent link">&para;</a></h2>
-<h3 id="backgroundcolors">BackgroundColors<a class="headerlink" href="#backgroundcolors" title="Permanent link">&para;</a></h3>
-<p>Set backgrounds colors.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">.</span><span class="n">BackgroundColors</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
-</span></code></pre></div></p>
 <h3 id="borderalign">BorderAlign<a class="headerlink" href="#borderalign" title="Permanent link">&para;</a></h3>
 <p>Default <code>'center'</code>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">.</span><span class="n">BorderAlign</span><span class="p">(</span><span class="n">BorderAlign</span><span class="p">.</span><span class="n">Inner</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">BorderAlign</span><span class="p">(</span><span class="n">BorderAlign</span><span class="p">.</span><span class="n">Inner</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="borderdash">BorderDash<a class="headerlink" href="#borderdash" title="Permanent link">&para;</a></h3>
 <p>Arc border length and spacing of dashes.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">.</span><span class="n">BorderDash</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">BorderDash</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="borderdashoffset">BorderDashOffset<a class="headerlink" href="#borderdashoffset" title="Permanent link">&para;</a></h3>
 <p>Arc border offset for line dashes. Default <code>0.0</code>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">.</span><span class="n">BorderDashOffset</span><span class="p">(</span><span class="m">0.1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">BorderDashOffset</span><span class="p">(</span><span class="m">0.1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="borderjoinstyle">BorderJoinStyle<a class="headerlink" href="#borderjoinstyle" title="Permanent link">&para;</a></h3>
 <p>Arc border join style.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">.</span><span class="n">BorderJoinStyle</span><span class="p">(</span><span class="n">JoinStyle</span><span class="p">.</span><span class="n">Bevel</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">BorderJoinStyle</span><span class="p">(</span><span class="n">JoinStyle</span><span class="p">.</span><span class="n">Bevel</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
 <p>Set Data for arc chart.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">Data</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoverborderdash">HoverBorderDash<a class="headerlink" href="#hoverborderdash" title="Permanent link">&para;</a></h3>
 <p>Arc border length and spacing of dashes when hovered.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">.</span><span class="n">HoverBorderDash</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">HoverBorderDash</span><span class="p">(</span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoverborderdashoffset">HoverBorderDashOffset<a class="headerlink" href="#hoverborderdashoffset" title="Permanent link">&para;</a></h3>
 <p>Arc border offset for line dashes when hovered.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">.</span><span class="n">HoverBorderDashOffset</span><span class="p">(</span><span class="m">0.1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">HoverBorderDashOffset</span><span class="p">(</span><span class="m">0.1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoverborderjoinstyle">HoverBorderJoinStyle<a class="headerlink" href="#hoverborderjoinstyle" title="Permanent link">&para;</a></h3>
 <p>Arc border join style when hovered.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></a>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">.</span><span class="n">HoverBorderJoinStyle</span><span class="p">(</span><span class="n">JoinStyle</span><span class="p">.</span><span class="n">Bevel</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">.</span><span class="n">HoverBorderJoinStyle</span><span class="p">(</span><span class="n">JoinStyle</span><span class="p">.</span><span class="n">Bevel</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h2 id="dougnutpie-dataset-options">Dougnut&amp;Pie Dataset Options<a class="headerlink" href="#dougnutpie-dataset-options" title="Permanent link">&para;</a></h2>
 <h3 id="circumference">Circumference<a class="headerlink" href="#circumference" title="Permanent link">&para;</a></h3>
 <p>Per-dataset override for the sweep that the arcs cover.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">.</span><span class="n">Circumference</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">.</span><span class="n">Circumference</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="hoveroffset">HoverOffset<a class="headerlink" href="#hoveroffset" title="Permanent link">&para;</a></h3>
 <p>Arc offset when hovered (in pixels). Default <code>0</code>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">.</span><span class="n">HoverOffset</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">.</span><span class="n">HoverOffset</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="offset">Offset<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h3>
 <p>Arc offset (in pixels). Default <code>0</code>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">.</span><span class="n">Offset</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="p">.</span><span class="n">Offset</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div>
 Arc offset (in pixels). (multiple)
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">.</span><span class="n">Offset</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">.</span><span class="n">Offset</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="rotation">Rotation<a class="headerlink" href="#rotation" title="Permanent link">&para;</a></h3>
 <p>Per-dataset override for the starting angle to draw arcs from.
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">.</span><span class="n">Rotation</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="p">.</span><span class="n">Rotation</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="spacing">Spacing<a class="headerlink" href="#spacing" title="Permanent link">&para;</a></h3>
 <p>Fixed arc offset (in pixels). Similar to offset but applies to all arcs. Default <code>0</code>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="p">.</span><span class="n">Spacing</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">.</span><span class="n">Spacing</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 </span></code></pre></div></p>
 <h3 id="weight">Weight<a class="headerlink" href="#weight" title="Permanent link">&para;</a></h3>
 <p>The relative thickness of the dataset. Providing a value for weight will cause the pie or doughnut dataset to be drawn with
 a thickness relative to the sum of all the dataset weight values. Default <code>1</code>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">.</span><span class="n">Weight</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="p">.</span><span class="n">Weight</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </span></code></pre></div></p>
 
 
