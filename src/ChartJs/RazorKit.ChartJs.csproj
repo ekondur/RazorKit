@@ -13,9 +13,9 @@
 	<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>csharp,htmlhelper,razor,javascript,chartjs</PackageTags>
-	<PackageReleaseNotes>Fixed Scales and Animations defining issue</PackageReleaseNotes>
+	<PackageReleaseNotes>Allow arrays in background color</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Version>1.0.9</Version>
+	<Version>1.1.0</Version>
 	<PackageIcon>rk-logo.png</PackageIcon>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<EmbedUntrackedSources>true</EmbedUntrackedSources>
