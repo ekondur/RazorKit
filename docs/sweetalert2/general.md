@@ -38,7 +38,7 @@ A description for the popup. If ```text``` and ```html``` parameters are provide
 The icon of the popup. SweetAlert2 comes with 5 built-in icon which will show a corresponding icon animation.
 [:octicons-link-external-16:](https://sweetalert2.github.io/#icon)
 ```csharp
-.Icon(SwalIcon.Info)
+.Icon("info")
 ```
 
 ## IconColor
@@ -63,10 +63,10 @@ If set to ```false```, the popup animation will be disabled. Default ```true```
 ```
 
 ## Theme
-Theme of the popup. ```'light'```, ```'dark'```, ```'auto'```, and ```'borderless'``` for now.
+Theme of the popup.
 [:octicons-link-external-16:](https://sweetalert2.github.io/#theme)
 ```csharp
-.Theme(SwalTheme.Borderless)
+.Theme("dark")
 ```
 
 ## ShowClass
@@ -118,7 +118,7 @@ Default ```false```
 
 ## Target
 The container element for adding popup into. Default ```'body'```
-[:octicons-link-external-16:](https://sweetalert2.github.io/#)
+[:octicons-link-external-16:](https://sweetalert2.github.io/#target)
 ```csharp
 .Target("body")
 ```
@@ -127,7 +127,7 @@ The container element for adding popup into. Default ```'body'```
 Input field type.
 [:octicons-link-external-16:](https://sweetalert2.github.io/#input-types)
 ```csharp
-.Input(SwalInput.Email)
+.Input("email")
 ```
 
 ## Width
@@ -163,7 +163,7 @@ Popup window background (CSS background property). The default background is ```
 Popup window position. Default ```'center'```
 [:octicons-link-external-16:](https://sweetalert2.github.io/#position)
 ```csharp
-.Position(SwalPosition.Top)
+.Position("top")
 ```
 
 ## Draggable

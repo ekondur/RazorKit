@@ -13,9 +13,9 @@
 		<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>csharp,htmlhelper,razor,javascript,sweetalert2</PackageTags>
-		<PackageReleaseNotes>Draggable and Theme support</PackageReleaseNotes>
+		<PackageReleaseNotes>.Net9 support and removed enums.</PackageReleaseNotes>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<PackageIcon>rk-logo.png</PackageIcon>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
