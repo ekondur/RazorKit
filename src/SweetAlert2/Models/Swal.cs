@@ -10,23 +10,23 @@ namespace RazorKit.SweetAlert2.Models
         public string TitleText { get; set; }
         public string Html { get; set; }
         public string Text { get; set; }
-        public SwalIcon? Icon { get; set; }
+        public string Icon { get; set; }
         public string IconColor { get; set; }
         public string IconHtml { get; set; }
         public bool? Animation { get; set; }
-        public SwalTheme? Theme { get; set; }
+        public string Theme { get; set; }
         public SwalClass ShowClass { get; set; }
         public SwalClass HideClass { get; set; }
         public string Footer { get; set; }
         public object Backdrop { get; set; }
         public bool? Toast { get; set; }
         public string Target { get; set; }
-        public SwalInput? Input { get; set; }
+        public string Input { get; set; }
         public string Width { get; set; }
         public string Padding { get; set; }
         public string Color { get; set; }
         public string Background { get; set; }
-        public SwalPosition? Position { get; set; }
+        public string Position { get; set; }
         public object Grow { get; set; }
         public CustomClass CustomClass { get; set; }
         public int? Timer { get; set; }

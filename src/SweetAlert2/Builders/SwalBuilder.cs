@@ -66,7 +66,7 @@ namespace RazorKit.SweetAlert2.Builders
         /// </summary>
         /// <param name="icon"></param>
         /// <returns></returns>
-        public SwalBuilder Icon(SwalIcon icon)
+        public SwalBuilder Icon(string icon)
         {
             Swal.Icon = icon;
             return this;
@@ -106,11 +106,11 @@ namespace RazorKit.SweetAlert2.Builders
         }
 
         /// <summary>
-        /// Theme of the popup. 'light', 'dark', 'auto', and 'borderless' for now.
+        /// Theme of the popup.
         /// </summary>
         /// <param name="theme"></param>
         /// <returns></returns>
-        public SwalBuilder Theme(SwalTheme theme)
+        public SwalBuilder Theme(string theme)
         {
             Swal.Theme = theme;
             return this;
@@ -205,7 +205,7 @@ namespace RazorKit.SweetAlert2.Builders
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public SwalBuilder Input(SwalInput input)
+        public SwalBuilder Input(string input)
         {
             Swal.Input = input;
             return this;
@@ -260,7 +260,7 @@ namespace RazorKit.SweetAlert2.Builders
         /// </summary>
         /// <param name="position"></param>
         /// <returns></returns>
-        public SwalBuilder Position(SwalPosition position)
+        public SwalBuilder Position(string position)
         {
             Swal.Position = position;
             return this;
