@@ -87,7 +87,7 @@ Add related scripts and implement. [Reference:](https://sweetalert2.github.io/#d
     Html.Swal()             
     .Title("Good job!")
     .Text("You clicked the button!")
-    .Icon(SwalIcon.Question)
+    .Icon("question")
     .Footer("footer of the alert");
 }
 
