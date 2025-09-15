@@ -3,7 +3,7 @@
     internal class Grid
     {
         public bool? Circular { get; set; }
-        public string Color { get; set; }
+        public string[] Color { get; set; }
         public bool? Display { get; set; }
         public bool? DrawOnChartArea { get; set; }
         public bool? DrawTicks { get; set; }
