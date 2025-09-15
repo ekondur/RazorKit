@@ -31,11 +31,12 @@ namespace RazorKit.ChartJs.Builders
         /// </summary>
         /// <param name="color"></param>
         /// <returns></returns>
-        public GridBuilder Color(string[] color)
+        public GridBuilder Color(params string[] color)
         {
             _scaleGrid.Color = color;
             return this;
         }
+        
 
         /// <summary>
         /// If false, do not display grid lines for this axis. Default true
