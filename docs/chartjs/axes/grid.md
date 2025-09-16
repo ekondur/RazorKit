@@ -26,10 +26,14 @@ If true, gridlines are circular (on radar and polar area charts only). Default `
 
 ## Color
 The color of the grid lines. If specified as an array, the first color applies to the first grid line,
-the second to the second grid line, and so on.
+the second to the second grid line, and so on. If there are less colors than lines, the pattern will repeat.
 [:octicons-link-external-16:](https://www.chartjs.org/docs/latest/general/colors.html)
 ```csharp
 .Color("#666")
+```
+or, for each lines;
+```csharp
+.Color("#666", "#555")
 ```
 
 ## Display

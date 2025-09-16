@@ -13,9 +13,9 @@
 	<RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>csharp,htmlhelper,razor,javascript,chartjs</PackageTags>
-	<PackageReleaseNotes>Allow arrays in background color</PackageReleaseNotes>
+	<PackageReleaseNotes>https://github.com/ekondur/RazorKit/releases/tag/ChartJs-v1.1.1</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Version>1.1.0</Version>
+	<Version>1.1.1</Version>
 	<PackageIcon>rk-logo.png</PackageIcon>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<EmbedUntrackedSources>true</EmbedUntrackedSources>
