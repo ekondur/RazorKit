@@ -27,15 +27,16 @@ namespace RazorKit.ChartJs.Builders
 
         /// <summary>
         /// The color of the grid lines. If specified as an array, the first color applies to the first grid line,
-        /// the second to the second grid line, and so on.
+        /// the second to the second grid line, and so on. If there are less colors than lines, the pattern will repeat.
         /// </summary>
         /// <param name="color"></param>
         /// <returns></returns>
-        public GridBuilder Color(string color)
+        public GridBuilder Color(params string[] color)
         {
             _scaleGrid.Color = color;
             return this;
         }
+        
 
         /// <summary>
         /// If false, do not display grid lines for this axis. Default true
