@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net471;net472;net48;net481;netcoreapp3.1;net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net471;net472;net48;net481;netcoreapp3.1;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<Authors>Emrah KONDUR</Authors>
 	<Company>Emrah KONDUR</Company>
