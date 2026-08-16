@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using RazorKit.DataTables.Models;
+using System;
+using System.Collections.Generic;
 
 namespace RazorKit.DataTables.Builders
 {
@@ -47,6 +49,22 @@ namespace RazorKit.DataTables.Builders
         public LayoutsBuilder Bottom(params string[] features)
         {
             _layouts.Add("bottom", features);
+            return this;
+        }
+
+        /// <summary>
+        /// Positions elements at the specified location within a configuration object.
+        /// This layout enables placing multiple controls at different positions and levels at once.
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public LayoutsBuilder Position(string position, Action<LayoutOptionsBuilder> action)
+        {
+            LayoutOptions options = new LayoutOptions();
+            var builder = new LayoutOptionsBuilder(options);
+            action(builder);
+            _layouts.Add(position, options);
             return this;
         }
     }

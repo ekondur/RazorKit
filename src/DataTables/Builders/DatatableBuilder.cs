@@ -394,6 +394,19 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
+        /// Search configuration
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public DatatableBuilder<T> Search(Action<SearchingBuilder> action)
+        {
+            Datatable.Search = new Searching();
+            var builder = new SearchingBuilder((Searching)Datatable.Search);
+            action(builder);
+            return this;
+        }
+
+        /// <summary>
         /// Dom allow to control position of datatable elements
         /// </summary>
         /// <param name="dom"></param>

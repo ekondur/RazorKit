@@ -1,4 +1,5 @@
-﻿using RazorKit.DataTables.Models;
+﻿using RazorKit.DataTables.Builders.Extensions;
+using RazorKit.DataTables.Models;
 using System;
 using System.Collections.Generic;
 
@@ -212,6 +213,22 @@ namespace RazorKit.DataTables.Builders
         public ButtonBuilder Buttons(params string[] buttons)
         {
             _button.Buttons = buttons;
+            return this;
+        }
+
+        /// <summary>
+        /// Collection buttons when using extend type 'Collection'
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        public ButtonBuilder Buttons(Action<CollectionButtonBuilder> action)
+        {
+            if (_button.Buttons == null)
+            {
+                _button.Buttons = new List<object>();
+            }
+            var builder = new CollectionButtonBuilder(_button.Buttons);
+            action(builder);
             return this;
         }
 

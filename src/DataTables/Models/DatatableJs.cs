@@ -12,6 +12,7 @@ namespace RazorKit.DataTables.Models
         public bool? ServerSide { get; set; }
         public bool? Ordering { get; set; }
         public bool? Searching { get; set; }
+        public object Search { get; set; }
         public bool? Paging { get; set; }
         public string Dom { get; set; }
         public string Caption { get; set; }
