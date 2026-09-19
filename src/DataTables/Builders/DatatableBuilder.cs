@@ -398,10 +398,10 @@ namespace RazorKit.DataTables.Builders
         /// </summary>
         /// <param name="action"></param>
         /// <returns></returns>
-        public DatatableBuilder<T> Search(Action<SearchingBuilder> action)
+        public DatatableBuilder<T> Search(Action<SearchOptionsBuilder> action)
         {
-            Datatable.Search = new Searching();
-            var builder = new SearchingBuilder((Searching)Datatable.Search);
+            Datatable.Search = new SearchOptions();
+            var builder = new SearchOptionsBuilder((SearchOptions)Datatable.Search);
             action(builder);
             return this;
         }

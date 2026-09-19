@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace RazorKit.DataTables.Models
 {
     /// <summary>
-    /// Represents the DataTables Search option
+    /// Represent the Search options for the DataTable. 
+    /// Since <see cref="JsonSerializerSettings"/> will ignore null values, 
+    /// all values are optional preventing to search options to fail silently.
+    /// <see cref="https://datatables.net/ref/core/type/DataTable.SearchOptions#top"/>
     /// </summary>
-    internal class Searching
+    public class SearchOptions
     {
-        public bool Return { get; set; }
+        public bool? Return { get; set; }
         public string Placeholder { get; set; } = default;
-        public bool Boundary { get; set; } = false;
-        public bool Smart { get; set; } = false;
-        public bool CaseInsensitive { get; set; } = false;
-        public string Regex { get; set; } = default;
         public string Search { get; set; } = default;
+        public bool? Boundary { get; set; }
+        public bool? Smart { get; set; }
+        public bool? CaseInsensitive { get; set; }
+        public bool? Regex { get; set; }
     }
 }

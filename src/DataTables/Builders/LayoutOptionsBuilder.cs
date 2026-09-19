@@ -17,10 +17,10 @@ namespace RazorKit.DataTables.Builders
         {
             _options = options;
         }
-        public LayoutOptionsBuilder Search(Action<SearchingBuilder> action)
+        public LayoutOptionsBuilder Search(Action<SearchOptionsBuilder> action)
         {
-            _options.Search = new Searching();
-            var builder = new SearchingBuilder((Searching)_options.Search);
+            _options.Search = new SearchOptions();
+            var builder = new SearchOptionsBuilder(_options.Search);
             action(builder);
             return this;
         }

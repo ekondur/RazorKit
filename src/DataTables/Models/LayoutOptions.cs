@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace RazorKit.DataTables.Models
 {
@@ -12,6 +8,6 @@ namespace RazorKit.DataTables.Models
     public class LayoutOptions
     {
         public IList<object> Buttons = default;
-        public object Search = default;
+        public SearchOptions Search = default;
     }
 }

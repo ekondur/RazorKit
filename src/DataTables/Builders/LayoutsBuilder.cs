@@ -53,8 +53,15 @@ namespace RazorKit.DataTables.Builders
         }
 
         /// <summary>
-        /// Positions elements at the specified location within a configuration object.
-        /// This layout enables placing multiple controls at different positions and levels at once.
+        /// Specifies the names of the parameters in the layout object tell DataTables where to place the feature. 
+        /// It is made up of three parts:
+        /// <list type="bullet">
+        /// <item>top or bottom - to dictate if the feature appears above or below the table</item>
+        /// <item>A number(optional) - allows multiple rows in the layout grid.If omitted, it appears next to the table.</item>
+        /// <item>Start or End (optional) - if the feature should appear at the start or the end of the row.
+        ///       If omitted it will take up the entire width of the container.
+        /// </item>
+        /// </list>
         /// </summary>
         /// <param name="position"></param>
         /// <param name="action"></param>
