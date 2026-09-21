@@ -60,8 +60,30 @@
         .RowGroup(rg => rg.DataSrc("age"))
         .ColReorder(true)
         .Caption("Caption of table")
-        .Select(false)
-        .Layout(x => x.Set("bottomEnd", "paging").Set("bottomStart", null).Top("info", "div"))
+        .Select(false).Layout(x =>
+        {
+            x.Position("topStart", top =>
+            {
+                top.Button(btn => btn.Text("Custom button").Action(@$"function(){{ alert('hello from layout options')}}"));
+                top.Buttons("selectAll", "selectNone");
+                top.Button(btn => btn.Text("Page length").Extend("pageLength"));
+                top.Button(btn => btn.Text("Column visibility").Extend("colvis"));
+                top.Button(btn =>
+                {
+                    btn.Text("Custom Export").Extend("collection").Buttons(btn =>
+                    {
+                        btn.Button(p => p.Text("PDF"));
+                        btn.Button(p => p.Text("Excel"));
+                    });
+                });
+            });
+            x.Position("topEnd", end =>
+            {
+                end.Search(s => s.Placeholder("Type here for search..."));
+            });
+            x.Set("bottomStart", "info");
+            x.Set("bottomEnd", "paging");
+        })                           
         .Buttons("copy")
         .Button(x => x.Text("Export").Buttons(x => x.Add("test1", "report").Add("test2", "report")).Extend("collection"))
         .Render()
