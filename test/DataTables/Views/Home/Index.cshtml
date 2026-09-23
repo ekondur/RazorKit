@@ -25,6 +25,8 @@
 
 @using RazorKit
 
+<p class="text-muted">PDF and Excel exports include the current page, or selected rows.</p>
+
 @(Html.DataTable<Person>()
         .Columns(c =>
         {
@@ -44,6 +46,7 @@
             .Naming(Convention.CamelCase)
             .Data("addParam"))
         .ServerSide(true)
+        .ScrollX(true)
         .Language(l => l.Search("Search By: "))
         .Orders(o =>
         {
@@ -60,20 +63,21 @@
         .RowGroup(rg => rg.DataSrc("age"))
         .ColReorder(true)
         .Caption("Caption of table")
+        .Search(search => search.Return(true))
         .Select(false).Layout(x =>
         {
             x.Position("topStart", top =>
             {
-                top.Button(btn => btn.Text("Custom button").Action(@$"function(){{ alert('hello from layout options')}}"));
                 top.Buttons("selectAll", "selectNone");
+                top.Button(btn => btn.Text("Custom button").Action(@$"function(){{ alert('hello from layout options')}}"));
                 top.Button(btn => btn.Text("Page length").Extend("pageLength"));
                 top.Button(btn => btn.Text("Column visibility").Extend("colvis"));
                 top.Button(btn =>
                 {
                     btn.Text("Custom Export").Extend("collection").Buttons(btn =>
                     {
-                        btn.Button(p => p.Text("PDF"));
-                        btn.Button(p => p.Text("Excel"));
+                        btn.Button(p => p.Text("PDF").Extend("pdfHtml5"));
+                        btn.Button(p => p.Text("Excel").Extend("excelHtml5"));
                     });
                 });
             });

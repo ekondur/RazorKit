@@ -5,7 +5,7 @@ namespace RazorKit.DataTables.Builders
 {
     /// <summary>
     /// Search Configuration.
-    /// <see cref="https://datatables.net/ref/core/type/DataTable.SearchOptions#top"/>
+    /// <see href="https://datatables.net/ref/core/type/DataTable.SearchOptions"/>
     /// </summary>
     public class SearchOptionsBuilder
     {
@@ -14,16 +14,6 @@ namespace RazorKit.DataTables.Builders
         internal SearchOptionsBuilder(SearchOptions searching)
         {
             _search = searching;
-        }
-        /// <summary>
-        /// Set the placeholder attribute for the input element that the search feature uses to allow global search in a DataTable.
-        /// </summary>
-        /// <param name="placeholder"></param>
-        /// <returns><see cref="SearchOptionsBuilder"/></returns>
-        public SearchOptionsBuilder Placeholder(string placeholder)
-        {
-            _search.Placeholder = placeholder;
-            return this;
         }
         /// <summary>
         /// Search term that should be applied to the table.
