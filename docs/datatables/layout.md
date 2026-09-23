@@ -14,6 +14,30 @@ icon: material/layers-outline
 	.Top("info", "div"))
 ```
 
+## Position
+
+Configure buttons and the search input at a layout position. Built-in buttons can
+be added before or after custom buttons.
+
+```csharp
+.Search(search => search.Return(true).Smart(true))
+.Layout(layout => layout
+    .Position("topStart", position => position
+        .Buttons("copy", "excel")
+        .Button(button => button.Text("Refresh").Action("function(e, dt) { dt.ajax.reload(); }")))
+    .Position("topEnd", position => position
+        .Search(search => search.Placeholder("Search records..."))))
+```
+
+Layout search uses `LayoutSearchOptionsBuilder` for input presentation.
+Use the table's `Search(...)` method for `Return`, `DefaultSearch`,
+`CaseInsensitive`, `Regex`, `Boundary`, and `Smart`.
+DataTables reads these behavior options from the root `search` object.
+
+If migrating from the shared `SearchOptionsBuilder`, move behavior options out
+of layout search callbacks and move `Placeholder(...)` into layout search.
+Explicitly typed layout callbacks should use `LayoutSearchOptionsBuilder`.
+
 ## Set
 Set a new position for feature.
 ```csharp

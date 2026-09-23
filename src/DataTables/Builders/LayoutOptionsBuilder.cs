@@ -1,9 +1,6 @@
 ﻿using RazorKit.DataTables.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RazorKit.DataTables.Builders
 {
@@ -17,15 +14,23 @@ namespace RazorKit.DataTables.Builders
         {
             _options = options;
         }
-        public LayoutOptionsBuilder Search(Action<SearchOptionsBuilder> action)
+        /// <summary>
+        /// Configure the search input. Configure filtering behavior with DatatableBuilder.Search.
+        /// </summary>
+        /// <param name="action">Search input configuration.</param>
+        /// <returns>The layout options builder.</returns>
+        public LayoutOptionsBuilder Search(Action<LayoutSearchOptionsBuilder> action)
         {
-            _options.Search = new SearchOptions();
-            var builder = new SearchOptionsBuilder(_options.Search);
+            _options.Search = new LayoutSearchOptions();
+            var builder = new LayoutSearchOptionsBuilder(_options.Search);
             action(builder);
             return this;
         }
         public LayoutOptionsBuilder Buttons(params string[] buttons)
         {
+            if (_options.Buttons == null)
+                _options.Buttons = new List<object>();
+
             _options.Buttons.Add(buttons);
             return this;
         }

@@ -8,6 +8,6 @@ namespace RazorKit.DataTables.Models
     public class LayoutOptions
     {
         public IList<object> Buttons = default;
-        public SearchOptions Search = default;
+        public LayoutSearchOptions Search = default;
     }
 }
