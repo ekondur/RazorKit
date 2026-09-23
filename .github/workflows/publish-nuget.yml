@@ -1,0 +1,85 @@
+name: Publish NuGet packages
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-nuget-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      id-token: write
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out tagged commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate tag and main ancestry
+        id: version
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          $version = $env:RELEASE_TAG -replace '^v', ''
+          if ($version -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?$') {
+            throw "Expected a version tag such as v3.1.3 or v3.1.3-rc.1."
+          }
+          git fetch origin main
+          if ($LASTEXITCODE -ne 0) { throw 'Could not fetch main.' }
+          git merge-base --is-ancestor HEAD origin/main
+          if ($LASTEXITCODE -ne 0) { throw 'The tagged commit must belong to main history.' }
+          "version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Pack all three projects
+        env:
+          PACKAGE_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          $projects = @(
+            'src/ChartJs/RazorKit.ChartJs.csproj',
+            'src/DataTables/RazorKit.DataTables.csproj',
+            'src/SweetAlert2/RazorKit.SweetAlert2.csproj'
+          )
+          foreach ($project in $projects) {
+            dotnet pack $project --configuration Release --output artifacts/nuget `
+              -p:Version=$env:PACKAGE_VERSION -p:PackageVersion=$env:PACKAGE_VERSION `
+              -p:GeneratePackageOnBuild=false -p:ContinuousIntegrationBuild=true `
+              "-p:PackageReleaseNotes=https://github.com/$env:GITHUB_REPOSITORY/releases/tag/v$env:PACKAGE_VERSION"
+            if ($LASTEXITCODE -ne 0) { throw "Packing failed: $project" }
+          }
+
+      # Configure a NuGet.org Trusted Publishing policy for
+      # ekondur/RazorKit, workflow publish-nuget.yml, with no environment.
+      - name: Log in to NuGet.org using Trusted Publishing
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ekondur
+
+      - name: Publish packages to NuGet.org
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: |
+          $packages = @(Get-ChildItem artifacts/nuget/*.nupkg)
+          if ($packages.Count -ne 3) { throw 'Expected exactly three NuGet packages.' }
+          foreach ($package in $packages) {
+            dotnet nuget push $package.FullName --source https://api.nuget.org/v3/index.json `
+              --api-key $env:NUGET_API_KEY --skip-duplicate
+            if ($LASTEXITCODE -ne 0) { throw "Publishing failed: $($package.Name)" }
+          }
