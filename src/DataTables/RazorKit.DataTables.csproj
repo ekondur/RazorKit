@@ -15,7 +15,7 @@
 		<PackageTags>csharp,htmlhelper,datatables,razor,javascript</PackageTags>
 		<PackageReleaseNotes>AutoFill extension support.</PackageReleaseNotes>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.0.5</Version>
+		<Version>2.0.0</Version>
 		<PackageIcon>rk-logo.png</PackageIcon>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
