@@ -306,10 +306,11 @@ public class TomSelectTests(BrowserFixture fixture) : IClassFixture<BrowserFixtu
     public async Task MigratedSweetAlertExampleOpensAndCloses()
     {
         await _page.GotoAsync(fixture.BaseUrl + "/Home/SweetAlert2");
-        await _page.GetByRole(AriaRole.Button, new() { Name = "Show Alert" }).ClickAsync();
-        await Expect(_page.Locator(".swal2-title")).ToHaveTextAsync("Good job!");
+        await _page.Locator("#run-alert").ClickAsync();
+        await Expect(_page.Locator(".swal2-title")).ToHaveTextAsync("Export complete");
         await _page.Locator(".swal2-confirm").ClickAsync();
         await Expect(_page.Locator(".swal2-popup")).ToHaveCountAsync(0);
+        await Expect(_page.Locator("#result-alert")).ToHaveTextAsync("Export acknowledged.");
     }
 
     [Fact]
