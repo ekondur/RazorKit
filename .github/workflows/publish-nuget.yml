@@ -47,14 +47,15 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Pack all three projects
+      - name: Pack all four projects
         env:
           PACKAGE_VERSION: ${{ steps.version.outputs.version }}
         run: |
           $projects = @(
             'src/ChartJs/RazorKit.ChartJs.csproj',
             'src/DataTables/RazorKit.DataTables.csproj',
-            'src/SweetAlert2/RazorKit.SweetAlert2.csproj'
+            'src/SweetAlert2/RazorKit.SweetAlert2.csproj',
+            'src/TomSelect/RazorKit.TomSelect.csproj'
           )
           foreach ($project in $projects) {
             dotnet pack $project --configuration Release --output artifacts/nuget `
@@ -77,7 +78,7 @@ jobs:
           NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
         run: |
           $packages = @(Get-ChildItem artifacts/nuget/*.nupkg)
-          if ($packages.Count -ne 3) { throw 'Expected exactly three NuGet packages.' }
+          if ($packages.Count -ne 4) { throw 'Expected exactly four NuGet packages.' }
           foreach ($package in $packages) {
             dotnet nuget push $package.FullName --source https://api.nuget.org/v3/index.json `
               --api-key $env:NUGET_API_KEY --skip-duplicate

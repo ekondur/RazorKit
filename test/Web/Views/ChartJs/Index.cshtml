@@ -1,0 +1,7 @@
+@{ ViewData["Title"] = "Chart.js examples"; }
+<h1>Chart.js examples</h1>
+<ul>
+@foreach (var name in new[] { "Line", "Bar", "Bubble", "Doughnut", "Pie", "Mixed", "PolarArea", "Radar", "Scatter", "Animation" }) {
+    <li><a asp-controller="ChartJs" asp-action="@name">@name</a></li>
+}
+</ul>

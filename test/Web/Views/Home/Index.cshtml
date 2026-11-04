@@ -1,0 +1,16 @@
+@{ ViewData["Title"] = "RazorKit examples"; }
+<h1>RazorKit examples</h1>
+<p>Explore and test all RazorKit helpers in one application.</p>
+<div class="row g-3">
+    @foreach (var example in new[] {
+        new { Controller = "Home", Action = "DataTables", Title = "DataTables", Description = "Server-side data, filtering, ordering and export buttons." },
+        new { Controller = "ChartJs", Action = "Index", Title = "Chart.js", Description = "Ten chart and animation examples." },
+        new { Controller = "Home", Action = "SweetAlert2", Title = "SweetAlert2", Description = "Interactive alerts and confirmations." },
+        new { Controller = "TomSelect", Action = "Index", Title = "Tom Select", Description = "Model binding, remote search, tags, groups, templates and plugins." }
+    }) {
+        <div class="col-md-6"><div class="card h-100"><div class="card-body">
+            <h2 class="h4"><a asp-controller="@example.Controller" asp-action="@example.Action">@example.Title</a></h2>
+            <p>@example.Description</p>
+        </div></div></div>
+    }
+</div>

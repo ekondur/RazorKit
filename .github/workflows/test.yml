@@ -1,0 +1,49 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+      - name: Build solution
+        run: dotnet build RazorKit.sln -c Release -p:GeneratePackageOnBuild=false
+      - name: Unit tests on all target frameworks
+        run: |
+          dotnet test test/DataTables.UnitTests -c Release --no-build --logger trx --results-directory artifacts/test-results/datatables
+          if ($LASTEXITCODE -ne 0) { throw 'DataTables tests failed.' }
+          dotnet test test/TomSelect.UnitTests -c Release --no-build --logger trx --results-directory artifacts/test-results/tomselect
+          if ($LASTEXITCODE -ne 0) { throw 'Tom Select tests failed.' }
+      - name: Install Chromium and Firefox
+        run: ./test/UiTests/bin/Release/net8.0/playwright.ps1 install chromium firefox
+      - name: Browser tests
+        run: |
+          foreach ($browser in @('chromium', 'firefox')) {
+            $env:PLAYWRIGHT_BROWSER = $browser
+            dotnet test test/UiTests -c Release --no-build --logger trx --results-directory "artifacts/test-results/$browser"
+            if ($LASTEXITCODE -ne 0) { throw "Browser tests failed: $browser" }
+          }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: |
+            artifacts/test-results
+            artifacts/playwright
+            artifacts/tom-select.png
