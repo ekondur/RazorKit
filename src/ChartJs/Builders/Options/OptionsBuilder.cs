@@ -1,4 +1,4 @@
-﻿using RazorKit.ChartJs.Models;
+using RazorKit.ChartJs.Models;
 using System;
 using System.Collections.Generic;
 
@@ -177,8 +177,7 @@ namespace RazorKit.ChartJs.Builders
         /// <summary>
         /// Configure Scales.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="action"></param>
+        /// <param name="action">Configures the scales for this chart.</param>
         /// <returns></returns>
         public OptionsBuilder Scales(Action<ScaleBuilder> action)
         {
