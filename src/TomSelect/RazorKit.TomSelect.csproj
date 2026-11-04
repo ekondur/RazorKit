@@ -13,7 +13,8 @@
     <RepositoryUrl>https://github.com/ekondur/RazorKit</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>csharp;htmlhelper;razor;javascript;tomselect</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageReleaseNotes>https://github.com/ekondur/RazorKit/releases/tag/v2.0.0</PackageReleaseNotes>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
