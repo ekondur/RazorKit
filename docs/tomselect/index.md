@@ -1,3 +1,7 @@
+---
+icon: material/form-dropdown
+---
+
 # Tom Select
 
 RazorKit.TomSelect brings fluent C# configuration and Razor model binding to [Tom Select](https://tom-select.js.org/). It targets MVC 5 on .NET Framework 4.8 and ASP.NET Core MVC on .NET 8 and .NET 10. Examples and browser tests use Tom Select **2.6.2**.

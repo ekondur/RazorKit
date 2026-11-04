@@ -1,3 +1,7 @@
+---
+icon: material/cloud-download-outline
+---
+
 # Remote data
 
 ```cshtml

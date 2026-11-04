@@ -1,3 +1,7 @@
+---
+icon: material/home-outline
+---
+
 # Welcome to RazorKit
 
 RazorKit is a collection of lightweight, fluent-style Razor HTML helpers that make it easy for developers to integrate popular JavaScript libraries into their ASP.NET applications. 
@@ -23,18 +27,6 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
 
     [:octicons-arrow-right-24: Getting started](chartjs/index.md)
 
--   :material-form-select:{ .lg .middle } __Tom Select__
-
-    ---
-
-    `RazorKit.TomSelect` adds model-bound selects, remote search, tags, templates and all bundled Tom Select plugins through a fluent Razor API.
-
-    [:octicons-arrow-right-24: Getting started](tomselect/index.md)
-
-</div>
-
-<div class="grid cards" markdown>
-
 -   :material-disc-alert:{ .lg .middle } __SweetAlert2__
 
     ---
@@ -43,5 +35,13 @@ With RazorKit, you can quickly implement features from libraries like [Chart.js]
 	alerts directly in Razor views using a fluent builder style. Simplify the process of creating highly customizable and interactive alerts in your ASP.NET MVC projects!
 
     [:octicons-arrow-right-24: Getting started](sweetalert2/index.md)
+
+-   :material-form-select:{ .lg .middle } __Tom Select__
+
+    ---
+
+    `RazorKit.TomSelect` adds model-bound selects, remote search, tags, templates and all bundled Tom Select plugins through a fluent Razor API.
+
+    [:octicons-arrow-right-24: Getting started](tomselect/index.md)
 
 </div>

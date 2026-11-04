@@ -1,3 +1,7 @@
+---
+icon: material/message-alert-outline
+---
+
 # RazorKit.SweetAlert2
 
 [RazorKit.SweetAlert2](https://www.nuget.org/packages/RazorKit.SweetAlert2) is a lightweight and intuitive library that allows developers to create and configure beautiful 

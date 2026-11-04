@@ -1,3 +1,7 @@
+---
+icon: material/puzzle-outline
+---
+
 # Plugins and templates
 
 Load `tom-select.complete` or explicitly load each plugin you enable. RazorKit configures plugins; it does not download their scripts.

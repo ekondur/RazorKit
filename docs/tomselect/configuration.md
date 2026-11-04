@@ -1,3 +1,7 @@
+---
+icon: material/code-json
+---
+
 # Configuration
 
 Methods use the upstream [Tom Select settings](https://tom-select.js.org/docs/) names in PascalCase. Unset settings are omitted, allowing Tom Select to apply its defaults. Explicit `false` and `null` values are preserved.

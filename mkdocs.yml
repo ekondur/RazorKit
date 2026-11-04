@@ -56,11 +56,6 @@ extra:
     property: G-SNHZZKGMSL
 nav:
   - Home: index.md
-  - Tom Select:
-    - Getting started: tomselect/index.md
-    - Configuration: tomselect/configuration.md
-    - Remote data: tomselect/remote-data.md
-    - Plugins and templates: tomselect/plugins.md
   - DataTables: 
     - DataTables: datatables/index.md
     - Options: datatables/options.md
@@ -128,3 +123,8 @@ nav:
     - Button Options: sweetalert2/button.md
     - Functions: sweetalert2/functions.md
     - Custom Class: sweetalert2/custom-class.md
+  - Tom Select:
+    - Getting started: tomselect/index.md
+    - Configuration: tomselect/configuration.md
+    - Remote data: tomselect/remote-data.md
+    - Plugins and templates: tomselect/plugins.md
