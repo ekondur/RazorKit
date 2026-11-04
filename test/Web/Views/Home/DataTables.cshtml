@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script>
+    function addParam() {
+	   return { param1: "test" };
+	}
+
+    function callbackTest() {
+        console.log("called!");
+    }
+
+    function onDelete(button) {
+        var rowData = $('#DataTableId').DataTable().row($(button).parents('tr')).data();
+
+        // Perform actions with rowData
+        console.log(rowData); // Example: log data to the console
+    }
+
+    function report() {
+        console.log("exported");
+    }
+</script>
+
+@using RazorKit
+
+<p class="text-muted">PDF and Excel exports include the current page, or selected rows.</p>
+
+@(Html.DataTable<Person>()
+        .Columns(c =>
+        {
+            c.Field(f => f.Id).Visible(false);
+            c.Field(f => f.Name);
+            c.Field(f => f.Age).Width("5%");
+            c.Field(f => f.Title);
+            c.Field(f => f.BirthDate);
+            c.Command(c => c.IconClass("bi bi-trash").OnClick("onDelete").BtnClass("btn btn-sm btn-danger").Width("1%"));
+            c.Command(c => c.Text("Edit").OnClick("onDelete").BtnClass("btn btn-sm btn-success").Width("1%"));
+            c.CommandGroup(cg => cg.Text("Report").BtnClass("btn btn-sm btn-secondary").Width("1%")
+                .Item("Excel", "report").Item("Pdf", "report"));
+        })
+        .DataSource(ds => ds
+            .URL(Url.Action("GetDataResult"))
+            .Method("POST")
+            .Naming(Convention.CamelCase)
+            .Data("addParam"))
+        .ServerSide(true)
+        .ScrollX(true)
+        .Language(l => l.Search("Search By: "))
+        .Orders(o =>
+        {
+            o.Add(x => x.Name, OrderBy.Ascending);
+        })
+        .Filters(f =>
+        {
+            f.Add(x => x.Id).GreaterThanOrEqual(1);
+        })
+        .Callbacks(c => c.InfoCallback("callbackTest"))
+        .FixedColumns(f => f.Start(0))
+        .LengthMenu(lm => lm.Items(10, 25, 50, 100))
+        .FixedHeader(fh => fh.Header(true).HeaderOffset(50))
+        .RowGroup(rg => rg.DataSrc("age"))
+        .ColReorder(true)
+        .Caption("Caption of table")
+        .Search(search => search.Return(true))
+        .Select(false).Layout(x =>
+        {
+            x.Position("topStart", top =>
+            {
+                top.Buttons("selectAll", "selectNone");
+                top.Button(btn => btn.Text("Custom button").Action(@$"function(){{ alert('hello from layout options')}}"));
+                top.Button(btn => btn.Text("Page length").Extend("pageLength"));
+                top.Button(btn => btn.Text("Column visibility").Extend("colvis"));
+                top.Button(btn =>
+                {
+                    btn.Text("Custom Export").Extend("collection").Buttons(btn =>
+                    {
+                        btn.Button(p => p.Text("PDF").Extend("pdfHtml5"));
+                        btn.Button(p => p.Text("Excel").Extend("excelHtml5"));
+                    });
+                });
+            });
+            x.Position("topEnd", end =>
+            {
+                end.Search(s => s.Placeholder("Type here for search..."));
+            });
+            x.Set("bottomStart", "info");
+            x.Set("bottomEnd", "paging");
+        })                           
+        .Buttons("copy")
+        .Button(x => x.Text("Export").Buttons(x => x.Add("test1", "report").Add("test2", "report")).Extend("collection"))
+        .Render()
+)
+

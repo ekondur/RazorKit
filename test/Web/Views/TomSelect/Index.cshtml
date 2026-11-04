@@ -1,0 +1,126 @@
+@model TomSelectViewModel
+@using RazorKit
+@using RazorKit.TomSelect
+@{
+    ViewData["Title"] = "Tom Select examples";
+    var countries = new[] { new { value = "tr", text = "Türkiye" }, new { value = "de", text = "Germany" }, new { value = "jp", text = "Japan" } };
+    var languages = new[] { new { value = "cs", text = "C#" }, new { value = "js", text = "JavaScript" }, new { value = "py", text = "Python" } };
+}
+@section Styles {
+    <link rel="stylesheet" href="~/lib/tom-select/tom-select.default.min.css" />
+    <style>.example { margin-bottom: 2rem; max-width: 48rem; } .example label { font-weight: 600; margin-bottom: .4rem; } .ts-dropdown { z-index: 1050; } #event-log { min-height: 1.5rem; }</style>
+}
+<script src="~/lib/tom-select/tom-select.complete.min.js"></script>
+<h1>Tom Select</h1>
+<p>Model-bound forms, remote data, custom rendering, keyboard interaction and bundled plugins.</p>
+<p><a href="#remote-examples">Remote loading</a> · <a href="#plugins">Plugin gallery</a> · <a asp-action="Binding">More binding examples</a></p>
+
+<h2>Model-bound form</h2>
+@if (ViewData["Submitted"] is string submitted) { <p id="submitted" class="alert alert-success">@submitted</p> }
+<form asp-action="Index" method="post" id="binding-form" novalidate>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="example">
+        <label asp-for="Country">Country</label>
+        @(Html.TomSelectFor(m => m.Country).Options(countries).Placeholder("Choose a country")
+            .Plugins(p => p.ClearButton()).Render())
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+    <div class="example">
+        <label asp-for="Languages">Languages</label>
+        @(Html.TomSelectFor(m => m.Languages).Options(languages).MaxItems(3)
+            .Plugins(p => p.RemoveButton().CheckboxOptions()).Render())
+    </div>
+    <div class="example">
+        <label asp-for="Remote">Remote person (initial selection)</label>
+        @(Html.TomSelectFor(m => m.Remote).ValueField("id").LabelField("name").SearchField("name")
+            .Options(new[] { new { id = "42", name = "Person 42" } })
+            .DataSource(ds => ds.Url(Url.Action("Search")!).ResultsField("results").MinimumQueryLength(2))
+            .LoadThrottle(50).Render())
+    </div>
+    <div class="example">
+        <label asp-for="Address.Country">Nested country</label>
+        @(Html.TomSelectFor(m => m.Address.Country).Options(countries).Render())
+    </div>
+    <button class="btn btn-primary" type="submit">Submit selections</button>
+</form>
+<hr />
+
+<h2>Selection and rendering</h2>
+<div class="example">
+    <label for="tags">Create tags (letters only)</label>
+    @(Html.TomSelect("tags").Multiple().Create().CreateFilter("^[A-Za-z]+$").Persist(false)
+        .SplitOn(new JavaScript("/[,;]+/")).Plugins(p => p.RemoveButton().CaretPosition()).Render())
+</div>
+<div class="example">
+    <label for="groups">Grouped options</label>
+    @(Html.TomSelect("groups").Optgroups(g => g.Add("web", "Web").Add("systems", "Systems"))
+        .Options(o => o.Add("js", "JavaScript", "web").Add("ts", "TypeScript", "web")
+            .Add("rs", "Rust", "systems").Add("cpp", "C++ (disabled)", "systems", true))
+        .LockOptgroupOrder().Plugins(p => p.OptgroupColumns()).Render())
+</div>
+<div class="example">
+    <label for="custom">Custom templates and weighted search</label>
+    @(Html.TomSelect("custom").Options(new[] {
+        new { value = "safe", text = "<img src=x onerror=alert(1)>", description = "Escaped content" },
+        new { value = "normal", text = "Normal", description = "Searchable description" }
+    }).SearchField(s => s.Add("text", 2).Add("description", .5))
+      .SortField(s => s.Add("$score", "desc").Add("text"))
+      .Templates(t => t.Option("function(data, escape){return '<div class=\"custom-option\"><strong>' + escape(data.text) + '</strong><small> ' + escape(data.description) + '</small></div>';}"))
+      .Callbacks(c => c.OnChange("function(value){document.getElementById('event-log').textContent = 'Selected: ' + value;}"))
+      .Render())
+    <p id="event-log" aria-live="polite"></p>
+</div>
+<div class="example">
+    <label for="disabled">Disabled control</label>
+    @(Html.TomSelect("disabled").Options(countries).Items("tr").Disabled().Render())
+</div>
+<div class="example">
+    <label for="limited">Maximum two selections</label>
+    @(Html.TomSelect("limited").Multiple().Options(languages).MaxItems(2).Plugins(p => p.RemoveButton()).Render())
+</div>
+<div class="example">
+    <label for="split-render">Separate HTML and script rendering</label>
+    @{ var separate = Html.TomSelect("split-render").Options(countries).SelectOnTab(); }
+    @separate.RenderHtml()
+    @separate.RenderScript()
+    @separate.RenderScript()
+</div>
+
+<h2 id="remote-examples">Remote loading</h2>
+<div class="example">
+    <label for="remote-post">POST search with antiforgery header</label>
+    @(Html.TomSelect("remote-post").ValueField("id").LabelField("name").SearchField()
+        .DataSource(ds => ds.Url(Url.Action("SearchPost")!).Method("POST").QueryParameter("query")
+            .Header("RequestVerificationToken", Antiforgery.GetAndStoreTokens(Context).RequestToken!)
+            .ResultsField("results").MinimumQueryLength(2)).LoadThrottle(50).Render())
+</div>
+<div class="example">
+    <label for="remote-error">Failed request recovery</label>
+    @(Html.TomSelect("remote-error").DataSource(ds => ds.Url(Url.Action("Failure")!)
+        .OnError("function(){document.getElementById('remote-status').textContent='Request failed; loading released';}"))
+        .Render())
+    <p id="remote-status" aria-live="polite"></p>
+</div>
+<div class="example">
+    <label for="virtual">Virtual scrolling (80 people)</label>
+    @(Html.TomSelect("virtual").ValueField("id").LabelField("name").SearchField().MaxOptions(100)
+        .Plugins(p => p.VirtualScroll()).LoadThrottle(0)
+        .FirstUrl("function(query){return '/TomSelect/Search?q=' + encodeURIComponent(query);}")
+        .Load(@"function(query, callback) {
+            var self = this;
+            fetch(self.getUrl(query)).then(function(response){if(!response.ok)throw new Error(response.status);return response.json();})
+            .then(function(data){self.setNextUrl(query, data.next);callback(data.results);},function(){callback();});
+        }").Render())
+</div>
+
+<h2 id="plugins">Plugin gallery</h2>
+<p>Each control enables one bundled plugin. Virtual scrolling and option group columns are demonstrated above.</p>
+@foreach (var plugin in new[] { "caret_position", "change_listener", "checkbox_options", "clear_button", "drag_drop", "dropdown_header", "dropdown_input", "input_autogrow", "no_active_items", "no_backspace_delete", "remove_button", "restore_on_backspace" }) {
+    <div class="example" data-plugin="@plugin">
+        <label for="plugin-@plugin">@plugin</label>
+        @(Html.TomSelect("plugin-" + plugin).Multiple().Options(languages).Items("cs", "js")
+            .Plugins(p => p.Add(plugin)).Render())
+    </div>
+}
+
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery

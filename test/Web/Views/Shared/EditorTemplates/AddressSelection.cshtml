@@ -1,0 +1,4 @@
+@model AddressSelection
+@using RazorKit
+<label asp-for="Country">Prefixed country</label>
+@(Html.TomSelectFor(m => m.Country).Options(o => o.Add("tr", "Türkiye").Add("de", "Germany")).Render())

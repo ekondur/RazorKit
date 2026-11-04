@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Doughnut Chart";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using RazorKit
+
+@(Html.Chart("canvasId")
+.Data(d => d
+    .Labels("Red", "Blue", "Yellow")
+    .Datasets(ds => ds
+        .Doughnut()
+        .Label("Doughnut Dataset")
+        .Data(300, 50, 100)
+        .BackgroundColors("#9BD0F5", "#FFB1C1", "#cc65fe")
+        .HoverOffset(4)))
+.Render())

@@ -34,16 +34,12 @@
 
 	<ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp'">
 		<!-- .NET Core-specific dependencies -->
-		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 		<PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
 		<Reference Include="System.ComponentModel.DataAnnotations" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
 	</ItemGroup>
 
 	<ItemGroup>

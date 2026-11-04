@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Animation Line Chart";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using RazorKit
+
+@{
+    var chart =
+            Html.Chart("canvasId")
+            .Data(d => d
+                .Labels("January", "February", "March", "April", "May", "June", "July")
+                .Datasets(ds => ds
+                    .Line().Label("Looping tension")
+                    .Data(65, 59, 80, 81, 26, 55, 40)
+                    .Fill(false)
+                    .BorderColor("rgb(75, 192, 192)")
+                )
+            )
+            .Options(o => o
+                .Animations(a => a
+                    .Animation("tension")
+                    .Duration(1000)
+                    .Easing(AnimationEasing.Linear)
+                    .Loop(true)
+                    .From(1)
+                    .To(0))
+                .Scales(s => s
+                    .ScaleId("y")
+                    .Min(0)
+                    .Max(100)
+                )
+            );
+}
+
+@chart.Render()

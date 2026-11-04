@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Mixed Charts";
+}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@using RazorKit
+
+@(Html.Chart("canvasId")
+.Data(d => d
+    .Labels("January", "February", "March", "April")
+    .Datasets(ds =>
+    {
+        ds.Bar()
+        .Label("My First Dataset")
+        .Data(10, 20, 30, 40);
+
+        ds.Line()
+        .Label("Line Dataset")
+        .Data(50, 40, 45, 50);
+    })
+)
+.Render())

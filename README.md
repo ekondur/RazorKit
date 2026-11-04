@@ -3,6 +3,24 @@
 RazorKit is a collection of lightweight, fluent-style Razor HTML helpers that make it easy for developers to integrate popular JavaScript libraries into their ASP.NET applications. 
 With RazorKit, you can quickly implement features from libraries like [Chart.js](https://ekondur.github.io/RazorKit/chartjs/) and [DataTables](https://ekondur.github.io/RazorKit/datatables/), without the hassle of writing complex JavaScript or HTML code manually.
 
+## Using Tom Select
+
+Install `RazorKit.TomSelect`, load Tom Select's JavaScript/CSS, and configure a model-bound select:
+
+```csharp
+@(Html.TomSelectFor(m => m.CategoryId)
+    .Options(o => o.Add("1", "Books").Add("2", "Music"))
+    .Placeholder("Choose a category")
+    .Plugins(p => p.ClearButton())
+    .Render())
+```
+
+Supports multiple selection, option creation, remote search, custom templates, callbacks and all bundled plugins. [Setup and examples](src/TomSelect/README.md) · [Full documentation](https://ekondur.github.io/RazorKit/tomselect/).
+
+## Running examples and tests
+
+Run `dotnet run --project test/Web --launch-profile http` and open http://localhost:5161. The shared application's home page links to **DataTables, Chart.js, SweetAlert2 and Tom Select**. See [test instructions](test/README.md) for unit tests and automated Playwright browser tests.
+
 ## Using DataTables
 
 Install the [RazorKit.DataTables](https://www.nuget.org/packages/RazorKit.DataTables/) package from nuget.

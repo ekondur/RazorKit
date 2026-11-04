@@ -1,0 +1,18 @@
+@model BindingViewModel
+@using RazorKit
+@{ ViewData["Title"] = "Tom Select binding examples"; }
+@section Styles { <link rel="stylesheet" href="~/lib/tom-select/tom-select.default.min.css" /> }
+<script src="~/lib/tom-select/tom-select.complete.min.js"></script>
+<h1>Binding examples</h1>
+<form asp-action="Binding" method="post" novalidate>
+    <label asp-for="Number">Nullable number</label>
+    @(Html.TomSelectFor(m => m.Number).Options(o => o.Add("1", "One").Add("2", "Two").Add("3", "Three")).Render())
+    <label asp-for="Numbers">Number collection</label>
+    @(Html.TomSelectFor(m => m.Numbers).Options(o => o.Add("1", "One").Add("2", "Two").Add("3", "Three")).Render())
+    <label asp-for="Choice">Enum</label>
+    @(Html.TomSelectFor(m => m.Choice).Options(o => o.Add("1", "First").Add("2", "Second")).Render())
+    <label asp-for="Unknown">Remote value without local data</label>
+    @(Html.TomSelectFor(m => m.Unknown).Render())
+    @Html.EditorFor(m => m.Shipping)
+    <button type="submit">Submit binding examples</button>
+</form>
